@@ -1,0 +1,214 @@
+%\graysec{Electromagnétisme}
+% \squishlist
+% \item $\vec F = q ( \vec E + {v}\cross{B})$
+%  \item charge élémentaire: $|e| = 1.6 \cdot 10^{-19} \quad [C] = [As]$
+%  \item densité volumique de charge: $\rho = \frac{\ud q}{\ud \omega} \quad [\frac{C}{m^3}]$
+%  \item densité superficielle de charge: $\rho_s = \frac{\ud q}{\ud \sigma} \quad %[\frac{C}{m^2}]$
+%  \item permittivité du vide: $\varepsilon_0 = 8.854 \cdot 10^{-12} \ [\frac{C^2}{m^2 N}] = %[\frac{F}{m}]$
+%  \item $\emc 1 = 10^{-7} c^2 = 9.0 \cdot 10^9$
+% \squishend
+ 
+%\input{electrostatique.tex}
+ 
+ \graypar{Magnétostatique}
+  \squishlist
+   \item \textbf{Force de Lorentz}: $\vec F = q(\vec E + {v}\cross{B})$, (v $e^-$)
+    \squishlist
+     \item force magnétique: $\vec F = q {v}\cross{B}$, $\vec{\overline B}_{\textrm{terre}} = 2 \cdot 10^{-5} T$ \\
+           $\vec F_{\textrm{mag}}$ force passive $\rightarrow$ pas de changement de $E^{cin}$
+     \item $\vec B$ uniforme et $\perp \vec v_0$: trajectoire cercle de \\
+           $R = \frac{mv}{qB} = \frac{\sqrt{2mE^{\textrm{cin}}}}{qB}$, $f_{\textrm{cyclo}} = \frac{1}{2 \pi} \frac{q}{m} B$
+    % \item $\vec B$ uniforme et \emph{ne pas} $\perp \vec v_0$: traj. hélicoïdale
+    % \item bouteille magnétique: Sym. axiale, $B_{\textrm{extr.}} > B_{\textrm{centre}}$
+     \item courant dans un conducteur: $\vec F = I \int_L {\ud l}\cross{B}$
+     \item spire rect.: $\vec C = {m}\cross{B}$, moment mag.: $\vec m = IS \univec e_n$ \\
+           $\Delta E_{\alpha_0 \rightarrow \alpha}^{\textrm{pot}} = - \|\vec m\| B (\cos \alpha - \cos \alpha_0)$
+     \item En. potentielle: $E_{pot} = -\vec{m\cdot B}$
+     \item effet Hall: $V_H = \frac{I B}{n q b}$, $n$ dens. de charges libres
+    \squishend
+
+   \item \textbf{Champ d'ind. mag. créé par des charges en mvt}
+    \squishlist
+     \item \textbf{loi de Biot-Savart}: $\vec B(\vec x) = \frac{\mu_0}{4 \pi} I \oint \frac{\univec e_\tau \cross \univec e_r}{r^2} \ud l$
+     %\item perméabilité mag. du vide: $\mu_0 = 4 \pi \cdot 10^{-7} \ [\frac{Vs}{mA}]$
+     \item fil rectiligne ($l = \infty$): $\vec B = \frac{\mu_0 I}{2 \pi R} \univec e_\phi$
+     \item spire (rayon $a$), sur l'axe: $\vec B = \frac{\mu_0 I a^2}{2(a^2 + z^2)^{3/2}} \univec e_z$
+     \item \emph{dipôle magnétique}: loin de la spire $\rightarrow B(z) = \frac{\mu_0 m}{2 \pi z^3}$ 
+     %\\      $m$ = moment dipolaire magnétique
+     %\item bobines de Helmholtz: 2 spires, $d = a$, ch. homogène
+     \item solénoïde: $B = \mu_0 I n$, $n = \frac{\textrm{\# spires}}{\textrm{unité de long.}}$
+    \squishend
+
+   \item \textbf{Lois fondamentales de la magnétostatique}
+    \squishlist
+     \item \emph{flux magnétique}: $\phi_{\vec B} = \int_{\Sigma_f} \scalar{B}{\ud \sigma} = 0 \ [\textrm{Weber}]$ \\
+           forme locale: $\udiv \vec B = 0$
+     \item \emph{loi d'Ampère}: $\oint_L \scalar{B}{\ud l} = \mu_0 \sum_j I_j = \mu_0 \int_\Sigma \scalar{J}{\ud \sigma}$ \\
+           forme locale: $\urot \vec B = \mu_0 \vec J$
+    \squishend
+
+   \item \textbf{Potentiel vecteur}: $\vec B(\vec x) = \urot \vec A(\vec x)$
+    \squishlist
+     \item $\vec A' = \vec A + \ugrad \phi \Rightarrow \urot \vec A' = \urot \vec A$
+     \item choix de $\vec A \Leftrightarrow$ choix de jauge
+     \item $\ugrad (\udiv \vec A) - \ulap \vec A = \mu_0 \vec J$ \\
+           jauge de Coulomb ($\udiv \vec A = 0$): $\ulap \vec A = - \mu_0 \vec J$
+     \item ext. d'un fil: $\vec A(\vec x) = \frac{\mu_0}{4 \pi} \int_L \frac{I}{\| \vec x - \vec x_0 \|} \vec{\ud l}$
+    \squishend
+
+   \item \textbf{Potentiel vecteur + dipôle magnétique}
+    \squishlist
+     \item $\vec A = \frac{\mu_0}{4 \pi} \left( \frac{\vec m \wedge \univec e_r}{r^2} \right) \univec e_\phi$,
+           $\vec m = I \pi R^2 \univec e_z$
+     \item $\vec B = \frac{\mu_0}{4 \pi} \frac{3 ( \vec m \cdot \univec e_r) \univec e_r - \vec m}{r^3}$
+    \squishend
+  \squishend
+
+ \graypar{Aimantation de la matière}
+  \squishlist
+   \item \textbf{Moment magnétique et aimantation}
+    \squishlist
+     \item courant particulaire de l'$e^-$: $I = \frac{e}{2 \pi a} v \ [A]$ \\
+           moment dipôlaire magnétique: $\vec m = \frac{q}{2} {a}\cross{v} \ [Am^2]$
+     \item aimantation: $\vec M (\vec x) = \frac{1}{\Omega} \sum_i \vec m_i [\frac{A}{m}]$,
+           \ $M = I_m$ \\
+           cylindre long et mince: $\vec B = \mu_0 \vec M$
+     \item dipôle mag., translation: $\vec F = -\ugrad E_{pot} = \ugrad (\vec{m\cdot B_{ext}}) = Jac \vec{B}^t_{ext} \vec{m}$
+    \squishend
+
+   \item \textbf{Champ magnétique}: $\vec H = \frac{1}{\mu_0} \vec B - \vec M \ [\frac{A}{m}]$
+    \squishlist
+     \item $\oint \scalar{H}{\ud l} = \sum I_l \qquad \urot \vec H = \vec J_l$
+     \item $B_\perp$ et $H_\parallel$ sont continues au passage de 2 matériaux
+    \squishend
+
+   \item \textbf{Susceptibilité magnétique et perméabilité relative}
+    \squishlist
+     \item $\vec M = \chi_m \vec H$, $\chi_m$ = susceptibilité magnétique
+     \item $\vec B = \mu \vec H$, $\mu = \mu_r \mu_0 = (1+\chi_m) \mu_0$
+     %\\  $\mu$ = perméabilité du milieu, $\mu_r$ = perméabilité relative
+    \squishend
+
+   \item diamagnétiques: $\chi_m < 0$, $\mu_r \approx 1$, $M = 0$ sans $B_\textrm{ext}$
+   \item paramagnétiques: $\chi_m > 0$, $\mu_r \approx 1$, $M = 0$ sans $B_\textrm{ext}$
+   \item ferromagnétiques: $\chi_m \gg 0, \mu_r \gg 1$
+
+   \item pot. vect. + ch. d'ind. mag. + milieu aimanté: \\
+         $\vec B = \urot \vec A = \frac{\mu_0 \varepsilon_0}{\rho_0}
+          [\vec M \udiv \vec E_\textrm{aux} - Jac \vec{E_{aux}} \vec{M}]$
+
+   \item champs d'une sphère uniformement aimanté: \\
+         $\vec B_\textrm{int} = \frac{2}{3} \mu_0 \vec M$,
+         $\vec B_\textrm{ext} = \frac{\mu_0 R^3}{3} \frac{3 (\vec M \cdot \univec e_r) \univec e_r - \vec M}{r^3}$ \\
+         $\vec H_\textrm{int} = - \frac{\vec M}{3}$, $\vec H_\textrm{ext} = \frac{B_\textrm{ext}}{\mu_0}$
+
+   \item sphère mag. + champs mag.: \\
+         intérieur: $\vec B_i = \frac{3 (1+\chi_m)\vec B_0}{3 + \chi_m}, \\
+                \vec M = \frac{3 \chi_m}{3 + \chi_m} \frac{\vec B_0}{\mu_0},
+                \vec H_i = \frac{3}{3 + \chi_m} \frac{\vec B_0}{\mu_0}$ \\
+         extérieur: $\vec H_e = \frac{\vec B_e}{\mu_0}$, \\
+                    $\vec B_e = \vec B_0 + \frac{\chi_m}{3+\chi_m}
+                     \frac{R^3}{r^3}
+                     [3 (\vec B_0 \cdot \univec e_r) \univec e_r - \vec B_0]$
+  \squishend
+
+ \graypar{Induction électromagnétique}
+  \squishlist
+   \item loi de Faraday: $\varepsilon = - \der{t}{\phi_B}$
+   \item $\varepsilon = \oint_L (\vec{v_{obj}}\wedge\vec{B})\cdot d\vec{l}$, $u+\varepsilon = Ri$, $d\varepsilon = -Budl$
+   \item \textbf{Loi d'induction}: $\oint_L \scalar{E}{\ud l}
+         = - \der{t}{} \int_\Sigma \scalar{B}{\ud \sigma}$ \\
+         forme locale: $\urot \vec E(\vec x,t) = - \D{t}{\vec B(\vec x,t)}$
+   \item \textbf{self-induction/induction mutuelle}:
+    \squishlist
+     \item coef. de self-ind.: $L_1 = \frac{\phi_{11}}{i_1} \ $ [Henry]
+     \item coef. d'ind. mutuelle: $M = \frac{\phi_{12}}{i_1} \ [H]$
+    \squishend
+   \item Energie méc. d'un self: $E_m = \half L I_0^2$
+   \item transformateur: $\frac{v_2(t)}{v_1(t)} = \frac{M}{L} = \frac{N_2}{N_1}
+         \quad ( = \frac{i_1(t)}{i_2(t)} )$
+  \squishend
+
+% \graypar{Circuits électriques en régime non-stationnaire}
+%  \squishlist
+%   \item \textbf{régime transitoire}:
+%    \squishlist
+%     \item condensateur: $v_C(t) = \varepsilon \left( 1 - \exp(-\frac{t}{RC}) \right)$ \\
+%           $i_C(t) = \frac{\varepsilon}{R} \exp (-\frac{t}{RC})$,
+%           cste de temps: $\tau = RC$
+%     \item self: $i_L(t) = \frac{\varepsilon}{R} (1 - \exp(-\frac{R}{L}t))$, \\
+%           $v_L(t) = \varepsilon \exp(-\frac{R}{L}t)$, $\tau = \frac{L}{R}$
+%    \squishend
+%
+%   \item \textbf{régime sinusoïdal}:
+%    \squishlist
+%     \item $v(t) = V \cos(\omega t), i(t) = I \cos (\omega t - \phi)$
+%     \item $i(t) = \textrm{Re}(I e^{j(\omega t - \phi)}) \rightarrow$
+%           diagramme des phaseurs
+%     \item $V_\textrm{eff} = \frac{V}{\sqrt{2}} =
+%            \sqrt{\frac{1}{T} \int_0^T v^2(t) \ud t}$
+%     \item résistance: $v(t) = R i(t) \Rightarrow i = \frac{V}{R} \cos \omega t$
+%     \item condensateur: $i(t) = C \omega V \cos ( \omega t + \frac{\pi}{2})$
+%     \item self: $i(t) = \frac{V}{\omega L} \cos ( \omega t - \frac{\pi}{2})$
+%     \item RCL série: $i(t) = I \cos (\omega t - \phi)$ \\
+%           $\phi = \arctan \left(\frac{\omega L - \frac{1}{\omega C}}{R} \right)$,
+%           $I = \frac{V}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2)}}$
+%     \item impédance: $Z = |Z| e^{j \delta}$ \\
+%           $Z_R = R$, $Z_C = \frac{1}{j \omega C}$, $Z_I = j \omega L$ \\
+%           $|Z| = \sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2)}$,
+%           $\tan \delta = \frac{\omega L - \frac{1}{\omega C}}{R}$
+%     \item puissance active: $P = \frac{V I}{2} \cos \delta$
+%    \squishend
+%
+%   \item filtres électriques:
+%    \squishlist
+%     \item fréquence de coupure: $\omega_0 \tq P = \frac{1}{2} P_\textrm{max}$
+%     \item low-pass (L-R): $\frac{\tilde v_2}{\tilde v_1} = \frac{1}{1 + j\omega / \omega_0}$,
+%           $\omega_0 = \frac{R}{L}$
+%     \item high-pass (C-R): $\frac{\tilde v_2}{\tilde v_1} = \frac{1}{1 - j\omega_0 / \omega}$,
+%           $\omega_0 = \frac{1}{RC}$
+%    \squishend
+%  \squishend
+
+ \graypar{Equations de Maxwell}
+  \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|}
+   \hline
+   \textbf{Forme locale} & \textbf{Forme intégrale} \\
+   \hline \hline
+   $\udiv \vec D = \rho$ & $\int_{\Sigma_{\textrm{fermé}}} \vec D \cdot
+   \ud \vec \sigma = \int_\Omega \rho(\vec x) \ud \omega$ \\
+   \hline
+   $\urot \vec E = -\D{t}{\vec B}$ & $\oint \vec E \cdot \ud \vec l = -
+   \frac{\ud}{\ud t} \int_\Sigma \vec B \cdot \ud \vec \sigma$ \\
+   \hline
+   $\udiv \vec B = 0$ & $\int_{\Sigma_{\textrm{fermé}}} \vec B \cdot
+   \ud \vec \sigma = 0$ \\
+   \hline
+   $\urot \vec H = \vec J + \D{t}{\vec D}$ & $\oint \vec H \cdot \ud
+   \vec l = \sum i + \frac{\ud}{\ud t} \int_\Sigma \vec D \cdot \ud
+   \vec \sigma$ \\
+   \hline
+  \end{tabular}
+
+  \squishlist
+   \item $\D{t}{\vec D}$: densité de courant de déplacement
+   \item $\vec D = \varepsilon_0 \vec E + \vec P$, 
+         linéaire, isotrope: $\vec D = \varepsilon_r \varepsilon_0 \vec E = \varepsilon \vec E$
+   \item $\vec B = \mu_0 \vec H + \mu_0 \vec M$, 
+         lin+isotr: $\vec B = \mu_0 \mu_r \vec H = \mu \vec H$
+   \item milieu conducteur: $\vec J = \sigma \vec E$, $\sigma = 1/\rho$ 
+   \item $\vec B (\vec x, t) = \urot \vec A(\vec x,t), \vec E = - \ugrad V - \D{t}{\vec A}$
+  \squishend
+
+ \graypar{Énergie électromagnétique}
+  \squishlist
+   \item Travail de la force de Lorentz: $\frac{\delta W}{\ud t \cdot \ud \omega} = \scalar{E}{J}$
+   \item $\D{t}{} \int_\Omega u_\textrm{EM} \ud \omega = - \int_{\Sigma_f} \scalar{S}{\ud \sigma}
+           - \int_\Omega \scalar{E}{J} \ud \omega$, \\
+         $\vec S (\vec x,t)$: courant d'énergie électromagnétique $[\frac{W}{m^2}]$
+   \item $\D{t}{u_\textrm{EM}} = - \udiv \vec S + \sigma_\textrm{EM}$ \\
+         $\sigma_\textrm{EM} > 0$: prod. d'énergie, $\sigma_\textrm{EM} < 0$: perte d'énergie
+   \item \textbf{vecteur de Poynting}: $\vec S = {E}\cross{H}$ \\
+         $\D{t}{u_\textrm{EM}} = \vec H \cdot \D{t}{\vec B} + \vec E \cdot \D{t}{\vec D}$
+   \item milieux linéaires: $u_\textrm{EM} = \half \frac{B^2}{\mu_0 \mu_r} + \half \varepsilon_0 \varepsilon_r E^2$
+  \squishend

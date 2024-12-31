@@ -1,0 +1,40 @@
+\graypar{Analyse vectorielle}
+
+$\frac{d\vec{v}}{dt}=\frac{\partial\vec{v}}{\partial t}+(\vec{v} \cdot \vec{\nabla})\vec{v}$
+\\
+$(\vec{v} \cdot \vec{\nabla})\vec{v}=\vec{\nabla}\left(\frac{v^2}{2}\right)+(\vec \nabla \wedge \vec{v}) \wedge \vec{v}$
+\\
+$\vec{\nabla}\cdot (\vec{\nabla}\wedge\vec{a})=0$
+\\
+$\vec{\nabla} \wedge (\vec{\nabla}f)=\vec{0}$
+\\
+\textit{cylindrique : \:}
+$\vec{\nabla}U=\frac{\partial U}{\partial r}\vec{e}_r+\frac{1}{r}\frac{\partial U}{\partial \phi}\vec{e}_{\phi}+\frac{\partial U}{\partial z}\vec{e}_z$
+\\
+$\vec{\nabla}^2U=\frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial U}{\partial r})+\frac{1}{r^2}\frac{\partial^2U}{\partial\phi^2}+\frac{\partial^2U}{\partial z^2}$
+\\
+$\vec{\nabla} \cdot \vec{A}=\frac{1}{r}\frac{\partial(r A_r)}{\partial r} + \frac{1}{r}\frac{\partial A_{\phi}}{\partial \phi}+\frac{\partial A_z}{\partial z}$
+\\
+\begin{tiny}$\vec{\nabla} \wedge \vec{A}=(\frac{1}{r}\frac{\partial A_z}{\partial\phi}-\frac{\partial A_{\phi}}{\partial z})\vec{e}_r+(\frac{\partial A_r}{\partial z}-\frac{\partial A_z}{\partial r})\vec{e}_{\phi}+(\frac{1}{r}\frac{\partial(r A_{\phi})}{\partial r}-\frac{1}{r}\frac{\partial A_r}{\partial\phi})\vec{e}_z$\end{tiny}
+\\
+\textit{sphérique : \:}
+$\vec{\nabla}U=\frac{\partial U}{\partial r}\vec{e}_r+\frac{1}{r}\frac{\partial U}{\partial\theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial U}{\partial \phi}$
+\\
+$\vec{\nabla} \cdot \vec{A}=\frac{1}{r^2}\frac{\partial (r^2A_r)}{\partial r}+\frac{1}{r\sin\theta}\frac{\partial(\sin\theta A_{\theta})}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial A_{\phi}}{\partial\phi}$
+\\
+\begin{tiny}$\vec{\nabla} \wedge \vec{A} = \frac{1}{r \sin \theta} \left( \frac{\partial (\sin \theta A_{\phi})}{\partial \theta} - \frac{\partial A_{\theta}}{\partial \phi} \right) \hat{e}_r + \left( \frac{1}{r \sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{1}{r} \frac{\partial (r A_{\phi})}{\partial r} \right) \hat{e}_{\theta} + \frac{1}{r} \left( \frac{\partial (r A_{\phi})}{\partial r} - \frac{\partial A_r}{\partial \theta} \right) \hat{e}_{\phi}$\end{tiny}
+\\
+\\
+\textbf{TH de la div.} \quad
+$\oint_{\partial V} \! \vec{f} \cdot \vec{d\sigma} = \int_V (\vec{\nabla} \cdot \vec{f}) \, dV$
+\\
+\\
+\textbf{TH de Stokes} \quad
+$\oint_{\partial S} \! \vec{f} \cdot \vec{dl} = \int_S (\vec{\nabla} \wedge \vec{f}) \, \cdot \vec{d\sigma}$
+
+\graypar{Identités trigo}
+ $2\sin(a)\sin(b) = \cos(a-b) - \cos(a+b)$ \\
+ $2\cos(a)\cos(b) =  \cos(a+b) + \cos(a-b)$ \\
+ $\cos(a) - \cos(b) = -2 \sin\left(\frac{a+b}{2}\right)\sin\left(\frac{a-b}{2}\right)$ \\
+ $\sin(a)-\sin(b) =2\cos\left(\frac{a+b}{2}\right)\sin\left(\frac{a-b}{2}\right)$\\
+

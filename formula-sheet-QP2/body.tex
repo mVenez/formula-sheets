@@ -1,0 +1,73 @@
+Matteo Veneziano -- Quantum Physics II Formula Sheet
+
+\graypar{General single qubit state}
+\begin{squishlist}
+\item $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$, or $\ket{\psi} = \cos(\theta/2)\ket{0} + e^{i\phi} \sin(\theta/2)\ket{1}$, $|\alpha|^2 + |\beta|^2 = 1$
+\item $\ket{\psi}$ is an eigenstate of $\vec{\sigma}\cdot \vec{n}$ with eigenvalue 1
+\end{squishlist}
+
+\graypar{Evolution}
+\begin{squishlist}
+\item $i \D{t}{\ket{\psi(t)}} = H \ket{\psi(t)}$ (Schrödinger)
+\item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$
+\end{squishlist}
+
+\graypar{Pauli matrices}
+\begin{squishlist}
+\item $\sigma_0 = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix},
+    \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, 
+    \sigma_y=\begin{pmatrix} 0 & -i\\ i & 0\end{pmatrix} , 
+    \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$
+
+\item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$
+\item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ 
+\item $\{\sigma_i, \sigma_j \} = \sigma_i \sigma_J + \sigma_j\sigma_i = 2 \delta_{ij} \id$
+\item Paulis form an orthonormal basis with $\Tr[\sigma_i,\sigma_j] = 2\delta_{ij}$
+\item The Pauli $\alpha$ operator, $\alpha \in \{x,y,z\}$, rotates the state by $\pi$ around the $\alpha$-axis.
+
+\item Paulis as generators: any single qubit hamiltonian can be written as $H = \omega \vec{n}\cdot \vec{\sigma}$ \\
+    $U = \exp(-i\omega \vec{\sigma}\cdot \vec{n} t) = \cos(\omega t) \id - i \sin(\omega t) \vec{n}\cdot\vec{\sigma}$ \\
+    Causes a qubit state to rotate around $\vec{n}$ at a rate $2\omega t$.
+\end{squishlist}
+
+\graypar{Observables}
+\begin{squishlist}
+\item $M = \sum_k \lambda_k \ket{\lambda_k} \bra{\lambda_k}$ Hermitian
+\item $\braket{M} = \braket{\psi|M|\psi} = \sum_k \lambda_k P_k$, $P_k = |\braket{\lambda_k | \psi}|^2$
+\item $\Pi_k = \ket{\lambda_k}\bra{\lambda_k}$ Projector $\Rightarrow P_k = \braket{\psi| \Pi_k | \psi}$, $\sum_k \Pi_k = 1$
+\item Measurement $\Rightarrow$ State collapses to $\frac{\Pi_k \ket{\psi_k}}{\sqrt{P_k}}$
+\end{squishlist}
+
+\graypar{Composite systems \quad $\H_{ABC\ldots} = \H_a \otimes \H_b \otimes \H_c \ldots$}
+\begin{squishlist}
+\item The resulting space has dimension $n_A n_B n_C \ldots$
+\item Operators $T_{AB} \ket{\lambda_ij} = (T_a \otimes T_b) (\ket{\mu_i \otimes \nu_j}) = T_A \ket{\mu_i} \otimes \ket{\nu_k}$
+\item $[T_A \otimes \id_B, \id_A \otimes T_B] = 0$, \quad $\{ T_A \otimes \id_B, \id_A \otimes T_B\} = 2 (T_A \otimes T_B)$ \\
+    $e^{A \otimes \id + \id \otimes B} = e^A \otimes e^B$
+
+\item Global measurem.\ $T = T_A \otimes T_B \rightarrow T \ket{T_i} = t_i \ket{T_i}, \quad \ket{\psi} = \sum_i \ket{T_i} \bra{T_i}\ket{\psi}$ 
+\item Partial measurement $T_A$: if $\kpsi = \sum_{ij} \ket{T_{A,i}} \otimes \ket{T_{B,j}} = \sum_i \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
+    then $P_i = \sum_j |c_{ij}|^2$ and system collapses to $\kpsi' \propto \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
+
+\item \emph{Entangled} state: its coefficients cannot be written as the product of two independent coefficients. 
+    \emph{Separable} state: the global wave function can be written as the product of two wavefunctions corresponding to subsystems $A$ and $B$ (measures performed on one part do not affect the other).
+\item Condition of separability for 2 qubits: if $c_{ij} = c^{(A)}_i c^{(B)}_j$, with $i,j\in \{0,1\}$, then
+    $\mathrm{det} \begin{pmatrix} c_{00} & c_{01} \\ c_{10} & c_{11} \end{pmatrix} = 0 \Leftrightarrow $ separable. E.g. in $\left(\alpha \ket{0}_A \otimes \beta \ket{0}_B\right)$, $c_{00} = \alpha \beta$.
+\end{squishlist}
+
+\columnbreak
+\graypar{Tensor product}
+$\vectwo{a}{b} \otimes \vectwo{\alpha}{\beta} = \begin{pmatrix} a \alpha & a \beta & b \alpha & b \beta \end{pmatrix}^T$
+
+$A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatrix}$
+
+\graypar{Bell states}
+\begin{squishlist}
+    \item $\ket{\Phi^+} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{0}_B + \ket{1}_A \otimes \ket{1}_B\right)$ \\
+          $\ket{\Phi^-} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{0}_B - \ket{1}_A \otimes \ket{1}_B\right)$ \\
+          $\ket{\Psi^+} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{1}_B + \ket{1}_A \otimes \ket{0}_B\right)$ \\
+          $\ket{\Psi^-} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{1}_B - \ket{1}_A \otimes \ket{0}_B\right)$
+    \item They form an orthonormal basis of the Hilbert space of the two spins $\H = \H_A \otimes \H_B$
+    \item Non separable
+\end{squishlist}
+\columnbreak

@@ -1,0 +1,997 @@
+\graypar{Vectorial analysis}
+\squishlist
+
+\item $|\vec{\rm{A}} \wedge \vec{\rm{B}}|^2 = |\vec{\rm{A}}|^2|\vec{\rm{B}}|^2 - \left(\vec{\rm{A}}\cdot\vec{\rm{B}}\right)^2 $
+
+\item $\vec{a} \wedge (\vec{b} \wedge \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}$
+
+\item $\vec{a}\cdot(\vec{b}\wedge\vec{c})=\vec{b}\cdot(\vec{c}\wedge\vec{a})=\vec{c}\cdot(\vec{a}\wedge\vec{b})$
+
+\item $(\vec{a} \wedge \vec{b}) \cdot (\vec{c} \wedge \vec{d}) = (\vec{a}\cdot\vec{c})(\vec{b}\cdot\vec{d}) - (\vec{a}\cdot\vec{d})(\vec{b}\cdot\vec{c})$
+
+\item $(\vec{\rm{A}} \cdot \vec \nabla)\vec{\rm{B}} = \sum_{i} \rm{A}_i\frac{\partial \vec{\rm{B}}}{\partial x_i}$
+
+\item $\vec{\nabla}\cdot (\vec{\nabla}\wedge\vec{\rm{A}})=0$
+
+\item $\vec{\nabla} \wedge (\vec{\nabla}\psi)=\vec{0}$
+
+\item $\vec{\nabla} \wedge (\vec{\nabla} \wedge \vec{\rm{A}}) = \vec{\nabla} (\vec{\nabla} \cdot \vec{\rm{A}}) - \vec \Delta \vec{\rm{A}}$
+
+\item $\vec{\nabla} \cdot (\psi\vec{\rm{A}}) = \psi\vec{\nabla}\cdot\vec{\rm{A}} + \vec{\rm{A}}\cdot\vec{\nabla}\psi$
+
+\item $\vec{\nabla} \wedge (\psi\vec{\rm{A}}) = \psi \vec{\nabla} \wedge \vec{\rm{A}} + \vec{\nabla}\psi \wedge \vec{\rm{A}}$
+
+\item $\vec \nabla \big( \frac{\vec{\rm{A}}^2}{2} \big) = (\vec{\rm{A}} \cdot \vec \nabla)\vec{\rm{A}} + \vec{\rm{A}} \wedge (\vec \nabla \wedge \vec{\rm{A}})$
+
+\item $\vec \nabla \cdot (\vec{\rm{A}} \wedge \vec{\rm{B}}) = \vec{\rm{B}} \cdot (\vec \nabla \wedge \vec{\rm{A}}) - \vec{\rm{A}} \cdot (\vec \nabla \wedge \vec{\rm{B}})$
+
+\item $\vec \nabla \wedge (\vec{\rm{A}} \wedge \vec{\rm{B}}) = \vec{\rm{A}} (\vec \nabla \cdot \vec{\rm{B}}) - \vec{\rm{B}} (\vec \nabla \cdot \vec{\rm{A}}) + (\vec{\rm{B}} \cdot \vec \nabla)\vec{\rm{A}} - (\vec{\rm{A}} \cdot \vec \nabla)\vec{\rm{B}}$ 
+
+\item $\vec \nabla (\vec{\rm{A}} \cdot \vec{\rm{B}}) = (\vec{\rm{A}} \cdot \vec \nabla)\vec{\rm{B}} + (\vec{\rm{B}} \cdot \vec \nabla)\vec{\rm{A}} + \vec{\rm{A}} \wedge (\vec \nabla \wedge \vec{\rm{B}}) + \vec{\rm{B}} \wedge (\vec \nabla \wedge \vec{\rm{A}})$
+
+\item $\Delta(\psi\phi) = \psi\Delta\phi + \phi\Delta\psi + 2\vec{\nabla} \psi \cdot \vec{\nabla} \phi$
+
+\item $\Delta(\psi\vec{\rm{A}}) = \psi \vec{\Delta} \vec{\rm{A}} + \vec{\rm{A}}\Delta\psi + 2(\vec{\nabla}\psi \cdot \vec{\nabla})\vec{\rm{A}}$
+
+\item $\vec{\nabla}|\vec{x}| = \frac{\vec{x}}{|\vec{x}|}$, $\vec{\nabla}\cdot\vec{n} = \frac{2}{|\vec{x}|}, \qquad \vec{\nabla} \wedge \vec{n} = 0 \,$ with $\quad \vec{n} = \frac{\vec{x}}{|\vec{x}|}$
+
+\item $\varepsilon^{ijk}\partial_j\rm{A}_k = \left(\vec{\nabla} \wedge \vec{\rm{A}} \right)_i$ : tensor notation of the cross product
+
+\item[] \textbf{cylindrical $(\rho\cos\varphi, \rho\sin\varphi, z)$ : \:}
+$\vec{v} = \dot{\rho}\vec{e}_\rho + \rho\dot{\varphi}\vec{e}_\varphi + \dot{z}\vec{e}_z$
+
+\item $\vec{a} = (\ddot{\rho} - \rho\dot{\varphi}^2)\vec{e}_\rho + (\rho\ddot{\varphi} + 2\dot{\rho}\dot{\varphi})\vec{e}_\varphi + \ddot{z}\vec{e}_z$
+ 
+\item $\vec{\nabla}\psi=\frac{\partial \psi}{\partial \rho}\vec{e}_\rho+\frac{1}{\rho}\frac{\partial \psi}{\partial \varphi}\vec{e}_{\varphi}+\frac{\partial \psi}{\partial z}\vec{e}_z$
+
+\item $\vec{\nabla} \cdot \vec{A}=\frac{1}{\rho}\frac{\partial(\rho A_\rho)}{\partial \rho} + \frac{1}{\rho}\frac{\partial A_{\varphi}}{\partial \varphi}+\frac{\partial A_z}{\partial z}$
+
+\item $\vec{\nabla} \wedge \vec{A}=\left(\frac{1}{\rho}\frac{\partial A_z}{\partial\varphi}-\frac{\partial A_{\varphi}}{\partial z}\right)\vec{e}_\rho+\left(\frac{\partial A_\rho}{\partial z}-\frac{\partial A_z}{\partial \rho}\right)\vec{e}_{\varphi}+\left(\frac{1}{\rho}\frac{\partial(\rho A_{\varphi})}{\partial \rho}-\frac{1}{\rho}\frac{\partial A_\rho}{\partial\varphi}\right)\vec{e}_z$
+
+\item $\vec{\Delta}\psi = \frac{1}{\rho}\frac{\partial}{\partial \rho}\left(\rho\frac{\partial\psi}{\partial \rho}\right) + \frac{1}{\rho^2}\frac{\partial^2\psi}{\partial\varphi^2} + \frac{\partial^2\psi}{\partial z^2}$
+
+\item[] \textbf{spherical ($r\sin\theta\cos\varphi, r\sin\theta\sin\varphi, r \cos \theta$) : \:}
+$\vec{v} = \dot{r}\vec{e}_r + r\dot{\theta}\vec{e}_\theta + r\dot{\varphi}\sin\theta\vec{e}_\varphi$
+
+\item $\vec{a} = (\ddot{r} - r\dot{\theta}^2 - r\dot{\varphi}^2\sin^2\theta)\vec{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta} - r\dot{\varphi}^2\sin\theta\cos\theta)\vec{e}_\theta + (r\ddot{\varphi}\sin\theta + 2\dot{r}\dot{\varphi}\sin\theta + 2r\dot{\theta}\dot{\varphi}\cos\theta)\vec{e}_\varphi$
+
+\item $\vec{\nabla}\psi=\frac{\partial \psi}{\partial r}\vec{e}_r+\frac{1}{r}\frac{\partial \psi}{\partial\theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial \psi}{\partial \varphi}\vec{e}_\varphi$
+
+\item $\vec{\nabla} \cdot \vec{A}=\frac{1}{r^2}\frac{\partial (r^2A_r)}{\partial r}+\frac{1}{r\sin\theta}\frac{\partial(\sin\theta A_{\theta})}{\partial\theta}+\frac{1}{r\sin\theta}\frac{\partial A_{\varphi}}{\partial\varphi}$
+
+\item $\vec{\nabla} \wedge \vec{A} = \frac{1}{r \sin \theta} \left( \frac{\partial (\sin \theta A_{\varphi})}{\partial \theta} - \frac{\partial A_{\theta}}{\partial \varphi} \right) \vec{e}_r + \left( \frac{1}{r \sin \theta} \frac{\partial A_r}{\partial \varphi} - \frac{1}{r} \frac{\partial (r A_{\varphi})}{\partial r} \right) \vec{e}_{\theta} + \frac{1}{r} \left( \frac{\partial (r A_{\theta})}{\partial r} - \frac{\partial A_r}{\partial \theta} \right) \vec{e}_{\varphi}$
+
+\item $\vec{\Delta}\psi = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\psi}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\psi}{\partial\theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2\psi}{\partial\varphi^2}$
+
+\squishend
+\graypar{Theorems}%Could be more explicit
+\squishlist
+\item \textbf{Divergence} \quad$\displaystyle{\oint_{\partial V}} \! \vec{\rm{A}} \cdot \vec{d\sigma} = \displaystyle{\int_V} (\vec{\nabla} \cdot \vec{\rm{A}}) \, dV$
+
+\item \textbf{Stokes} \quad
+$\displaystyle{\oint_{\partial S}} \! \vec{\rm{A}} \cdot \vec{dl} = \displaystyle{\int_S} (\vec{\nabla} \wedge \vec{\rm{A}}) \, \cdot \vec{d\sigma}$
+ 
+\item \textbf{Gradient} \quad
+$\displaystyle{\oint_{\partial V}} \! \psi\vec{\rm{n}} \, d\sigma = \displaystyle{\int_V} \vec{\nabla}\psi \, dV$
+ 
+\item \textbf{Rotational} \quad
+$\displaystyle{\oint_{\partial V}} \! \vec{\rm{n}} \wedge \vec{\rm{A}} \, d\sigma = \displaystyle{\int_V} (\vec{\nabla} \wedge \vec{\rm{A}}) \, dV$
+ 
+\item \textbf{Green} \quad
+$\displaystyle{\oint_{\partial V}} \! (\phi\vec{\nabla}\psi - \psi\vec{\nabla}\phi)\cdot\vec{\rm{n}} \, d\sigma = \displaystyle{\int_V} \phi\vec{\Delta}\psi - \psi\vec{\Delta}\phi \, dV$
+ 
+\item \textbf{Circulation of grad} \quad
+$\displaystyle{\int_{\gamma}} \vec{\nabla}f\cdot\vec{dl} = f(\vec{\rm B}) - f(\vec{\rm A}), \quad \vec{\rm{A}}, \vec{\rm{B}}$ extrem. de $\gamma$ 
+ 
+\item \textbf{Scalar potential} \quad
+$\vec{\nabla} \wedge \vec{\rm{A}} = 0 \Rightarrow \exists \ \psi \quad \mathrm{t.q.} \quad \vec{\rm{A}} = \vec{\nabla}\psi$
+ 
+\item \textbf{Vector potential} \quad
+$\vec{\nabla}\cdot\vec{\rm{d} } = 0 \Rightarrow \exists \ \vec{\rm{C}} \quad \mathrm{t.q.} \quad \vec{\rm{d} } = \vec{\nabla} \wedge \vec{\rm C}$
+\squishend 
+
+\graypar{Trigo, residual theorem}
+\squishlist 
+\item $\cos(a+b) = \cos(a)\cos(b)-\sin(a)\sin(b)$
+\item $\sin(a+b) = \sin(a)\cos(b) + \cos(a)\sin(b)$
+\item $2\sin(a)\sin(b) = \cos(a-b) - \cos(a+b)$ 
+\item $2\cos(a)\cos(b) = \cos(a+b) + \cos(a-b)$ 
+\item $2\cos(a)\sin(b) = \sin(a+b) - \sin(a-b)$ 
+\item $\cos(a) + \cos(b) = 2\cos\left((a+b)/2\right)\cos\left((a-b)/2\right)$ 
+\item $\sin(a) + \sin(b) = 2\sin\left((a+b)/2\right)\cos\left((a-b)/2\right)$ 
+\item $\cos(a) - \cos(b) = -2\sin\left((a+b/2\right)\sin\left((a-b/2\right)$ 
+
+%\graypar{Formules d'Euler + Nombres complexes}
+%$\cos(x) = \frac{e^{ix}+e^{-ix}}{2}$ \,,\, $\sin(x) = \frac{e^{ix}-e^{-ix}}{2i}$ \,,\, $\cosh(x) = \frac{e^{x}+e^{-x}}{2}$   
+%$\sinh(x) = \frac{e^{x}-e^{-x}}{2}$ \,,\, $e^{i(\pi + 2k\pi)} = -1$ \,,\, $e^{i\cdot 2k\pi} = 1$ \,,\, $k \in \mathbb{Z}$  
+%$e^{i(\frac{\pi}{2} + 2k\pi)} = i$ \,,\, $e^{i(-\frac{\pi}{2} + 2k\pi)} = -i$ \,,\, $k \in \mathbb{Z}$ \,,\,
+%$\sqrt{i} = \frac{1+i}{\sqrt{2}}$% \,,\, $\frac{1}{i} = -i$ 
+%$w^n = z = re^{i\varphi}$ => $w_k = r^{\frac{1}{n}}e^{i\frac{\varphi + 2\pi k}{n}},\, k=0,1,...,n-1 $
+
+\item[] \textbf{Near 0 :}
+\item $\sin(x) \simeq x - \frac{x^{3}}{6}$ \, ; \, $\cos(x) \simeq 1 - \frac{x^{2}}{2}$ \, ; \, $\tan(x) \simeq x + \frac{x^{3}}{3}$
+%\item $\cot(x) \simeq \frac{1}{x} - \frac{x}{3} - \frac{x^{3}}{45}$, $\sec(x) \simeq 1 + \frac{x^{2}}{2} + \frac{5x^{4}}{24}$
+\item $\sinh(x) \simeq x + \frac{x^{3}}{6}$  \,;\, $\cosh(x) \simeq 1 + \frac{x^{2}}{2}$   \,;\,$\tanh(x) \simeq x - \frac{x^{3}}{3}$
+%\item $\coth(x) \simeq \frac{1}{x} + \frac{x}{3} - \frac{x^{3}}{45}$ \, ; \, ${\rm sech}(x) \simeq 1 - \frac{x^{2}}{2} + \frac{5x^{4}}{24}$  
+\item $\left(1+x \right)^{\alpha} \simeq 1 + \alpha x + \frac{\alpha(\alpha -1)}{2}x^2$ \, ; \, $\ln(1+x) \simeq x - \frac{x^2}{2} $ 
+\item[] \textbf{Residuals theorem}
+\item $\displaystyle{\oint_{\partial D}} \ud z \, f(z) = 2\pi i \displaystyle{\sum_{k}} \text{Res}(f,z_k)$ \, : \, with $z_k$ singularities inside $\partial D$  %Pas de pts siguliers -> Holomorphe
+
+\item $\text{Res}(f,z_k) = \dfrac{1}{(n-1)!} \displaystyle{\lim_{z \rightarrow z_k}} \dfrac{\ud ^{n-1}}{\ud z^{n-1}} (z-z_k)^{n} f(z)$ \, : \, If $z_k$ poles of order n  
+\squishend
+\graypar{Fourier Transform}
+
+$\tilde{f}(\vec{k}) = \displaystyle{\int_{\mathbb{R}^n}} \ud ^n x \, f(\vec{x}) e^{-i\vec{k}\cdot\vec{x}}$ $ \quad f(\vec{x}) = \displaystyle{\int_{\mathbb{R}^n}} \dfrac{\ud ^n k}{\left(2\pi\right)^n} \tilde{f}(\vec{k})e^{i \vec{k}\cdot\vec{x}}$  
+
+In 4 dimensions : another convention to preserve the invariance under Lorentz transf. : 
+
+$\tilde{f}(\vec{k},\omega) = \displaystyle{\int_{\mathbb{R}^4}} \ud ^3x\, \ud t f(\vec{x},t) e^{i\omega t - i \vec{k}\cdot\vec{x}}$  
+
+$f(\vec{x}, t) = \displaystyle{\int_{\mathbb{R}^4}} \dfrac{\ud ^3k}{\left(2\pi\right)^3} \dfrac{\ud \omega}{2\pi} \tilde{f}(\vec{k},\omega)e^{-i\omega t + i \vec{k}\cdot\vec{x}}$
+
+
+\graypar{Gaussian integrals}
+\squishlist
+\item $\displaystyle{\int_{-\infty}^{+\infty}} \ud x \, e^{-\alpha^2(x+\beta)^2 + Bx} = \dfrac{\sqrt{\pi}}{\alpha} \displaystyle{e^{\frac{B^2}{4\alpha^2}-B\beta}} $ with Re$(\alpha^2) \ge 0, \, B, \beta \in \mathbb{C}$ 
+
+\item $      \displaystyle{\int_{-\infty}^{+\infty}} \ud x \, x^n e^{-\frac{1}{2}Ax^2} = 
+\begin{cases}
+(n-1)!!\sqrt{2\pi}A^{-\frac{n+1}{2}} \quad \text{If n is even} \\
+0 \quad \text{If n is odd}
+\end{cases}
+$
+\squishend
+\graysec{Maxwell equations}
+
+$$\boxed{\begin{split}
+\textsc{Coulomb's law} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_0}\\
+\textsc{Ampere's law} \qquad &\boldsymbol{\nabla} \wedge \boldsymbol{B} = \mu_0 \left(\boldsymbol{J} + \varepsilon_0\frac{\partial \boldsymbol{E}}{\partial t}\right)\\
+\textsc{Faraday's law} \qquad &\boldsymbol{\nabla} \wedge \boldsymbol{E} + \frac{\partial \boldsymbol{B}}{\partial t} = 0\\
+\textsc{Absence of magnetic poles} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{B} = 0
+\end{split}}$$
+%$\epsilon_0=\frac{1}{\mu_0c^2}$ \\%Voir \graypar{Autres relations}
+\vspace{1cm}
+
+\graypar{Equations in integral form}
+\squishlist
+\item $ \boldsymbol{F} = q(\boldsymbol{E}+\boldsymbol{v} \wedge \boldsymbol{B}) $ \, :  \, Force Lorentz
+
+\item $ \vec{F}_{1/2} = \frac{q_1q_2}{4\pi\varepsilon_0} \frac{\vec{r}_2 - \vec{r}_1}{|\vec{r}_2 - \vec{r}_1|^3} $ \, : \, Coulomb force exerced by charge 1 on charge 2
+\item $\vec{B}(\vec{r}) = \frac{\mu_0}{4\pi} \oint_{C} \frac{I \vec{\ud l} \wedge (\vec{r} - \vec{r}')}{|\vec{r}-\vec{r}'|^3} $  :  Biot-Savart : $C$ circuit filiforme,$\vec{\ud l}$ tangent à $C$ en  $\vec{r}'$
+
+\item $ \oint_{\Sigma}\boldsymbol{E} \cdot \boldsymbol{d\sigma} = \frac{Q}{\varepsilon_0}$ : Gauss equation
+
+\item $ \oint_{\Sigma}\boldsymbol{B} \cdot \boldsymbol{d\sigma} = 0$
+
+\item $ \oint_{\Gamma} \boldsymbol{E} \cdot \boldsymbol{dl} = -\frac{\text{d}}{\text{d}t}\int_{\Sigma} \boldsymbol{B} \cdot \boldsymbol{d\sigma}$ with $\Gamma=\partial\Sigma$
+
+\item $ \oint_{\Gamma} \boldsymbol{B} \cdot \boldsymbol{dl} = \mu_0 \left(\int_{\Sigma} \boldsymbol{J} \cdot \boldsymbol{d\sigma} + \varepsilon_0 \frac{\ud }{\ud t}\int_{\Sigma} \boldsymbol{E} \cdot \boldsymbol{d\sigma}\right)$ 
+
+\item Continuity Equation: $\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla}\cdot\boldsymbol{J} = 0$
+\squishend
+
+\graypar{Electromagnetic Potentials} 
+\squishlist
+\item $\boldsymbol{B} = \boldsymbol{\nabla} \times \boldsymbol{A}$
+
+\item $\boldsymbol{E} = -\boldsymbol{\nabla} \Phi - \frac{\partial \boldsymbol{A}}{\partial t}$
+
+\item $\vec{\rm{A}} \rightarrow \vec{\rm{A}}^{'} = \vec{\rm{A}} + \vec{\nabla}\alpha \,\,$  and  $\,\, \Phi \rightarrow \Phi^{'} = \Phi - \frac{\partial\alpha}{\partial t} \,\,$ : Gauge invariance 
+\squishend
+\graypar{Lorenz gauge}
+
+$\boldsymbol{\nabla} \cdot \boldsymbol{A} + \frac{1}{c^2}\frac{\partial \Phi}{\partial t}=0\implies
+\begin{cases}
+\frac{1}{c^2}\frac{\partial^2 \Phi }{\partial t^2} - \boldsymbol{\nabla}^2 \Phi = \square \phi = \frac{\rho}{\varepsilon_0} \\
+\frac{1}{c^2}\frac{\partial^2 \boldsymbol{A}}{\partial t^2} - \boldsymbol{\nabla}^2 \boldsymbol{A} = \square \vec{A} =  \frac{\boldsymbol{J}}{c^2\varepsilon_0}
+\end{cases}$
+
+\graypar{Electrostatics.}
+
+\squishlist
+\item $\boldsymbol{\nabla}^2\Phi = -\frac{\rho}{\varepsilon_0} \quad \text{with} \quad |\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0$
+
+\item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \sum_{i} \frac{q_i}{|\vec{x}-\vec{x}_i|} \qquad (\text{discrete case})$
+
+\item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \int \text{d}^3x' \frac{\rho(\boldsymbol{x}')}{|\boldsymbol{x}-\boldsymbol{x}'|} \qquad (\text{continuous case})$
+\squishend
+
+\graypar{Dirac Functions.}
+\squishlist
+\item $\int \text{d}^nx f(\boldsymbol{x})\delta^n(\boldsymbol{x}-\boldsymbol{x}_0)= f(\boldsymbol{x}_0)$
+
+\item $\int \text{d}^nx f(\boldsymbol{x})\boldsymbol{\nabla}\delta^n(\boldsymbol{x}-\boldsymbol{x}_0)= - \boldsymbol{\nabla}f(\boldsymbol{x}_0)$
+
+\item $\delta^n(\vec{g}(\boldsymbol{x})) = \sum_i \frac{\delta^n(\boldsymbol{x}-\boldsymbol{x}_i)}{\left|\frac{\partial \vec{g}}{\partial \boldsymbol{x}} \right|} : \quad \boldsymbol{x}_i = \text{ zeros of }\vec{g}$
+
+\item $\delta(x) = \frac{1}{2\pi} \int_{-\infty}^{+\infty}\ud k \, e^{ikx}$
+
+\item $\delta(ax) = \frac{1}{|a|} \delta(x), \quad \delta(-x) = \delta(x), \quad \frac{\ud \Theta}{\ud x} = \delta(x)$,\quad with $\Theta(x)=\begin{cases}0 \text{ if } x<0\\1 \text{ if } x>0\end{cases}$
+\squishend
+\graypar{Image charge method for creating spherical 0 potential }
+\squishlist
+\item Consider sphere of radius R and center O; origin of coord. sys. O.\\
+For a charge q placed at $\vec{r}$, place image charge $q''=-q\frac{R}{r}$ at $\vec{r}''$=$\frac{R^2}{r}\vec{e}_r$.
+\item Logic: 
+$\phi(\vec{x})\propto\frac{q}{|x-r|}+\frac{q''}{|x-r''|}$: boundary conditions$\Rightarrow\phi(\vec{x})|_{\partial V}=0\Rightarrow\frac{q}{r}=\frac{q''}{r''}$\\
+$\Rightarrow$ Find conditions such that $\frac{r}{r''}=const$.\\
+\squishend
+\vspace{5cm}
+\graysec{Green functions - static case}
+\squishlist
+\item $-\boldsymbol{\nabla}_{\boldsymbol{x}}^2 G(\boldsymbol{x}, \boldsymbol{x}') = \delta^3(\boldsymbol{x}-\boldsymbol{x}')$
+
+$G(\vec{x},\vec{x}')$ is the potential at $\vec{x}$ associated to a particle of charge $\varepsilon_0$ in $\vec{x}'$
+\item In $\mathbb{R}^3$ vacuum with $|\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0 \Rightarrow G(\vec{x},\vec{x}') = \dfrac{1}{4\pi}\dfrac{1}{|\vec{x} - \vec{x}'|}$\\ 
+
+\item $\Phi(\boldsymbol{x}) = \displaystyle{\int_V} \text{d}^3 x' G(\boldsymbol{x}, \boldsymbol{x}')\dfrac{\rho(\boldsymbol{x}')}{\varepsilon_0}$ 
+
+$+ \displaystyle{\int_{\partial V}} \boldsymbol{\ud \sigma}' \cdot \left[G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi(\boldsymbol{x}')-\Phi(\boldsymbol{x}')\boldsymbol{\nabla}_{\boldsymbol{x}'}G(\boldsymbol{x}, \boldsymbol{x}')\right]$
+
+$G$ can be found by the images method. In order to remove the $\Phi$ or $\frac{\partial \Phi}{\partial n}$ term on $\partial V$ we impose conditions on $G$ : $G|_{\partial V}=0$ or  $\boldsymbol{\nabla}G|_{\partial V}=0$ according to the boundary conditions :
+
+%\begin{enumerate}
+\item Dirichlet : If $\Phi|_{\partial V}$ is known we choose $G|_{\partial V} =0$ and then :
+\\
+$\Phi(\boldsymbol{x}) =\frac{1}{\epsilon_0} \displaystyle{\int} \text{d}^3x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}') - \displaystyle{\int_{\partial V}} \Phi(\vec{x}') \vec{\nabla}_{\vec{x}'} G(\vec{x},\vec{x}') \cdot \vec{\ud \sigma}'$
+\item Neumann : If $\boldsymbol{\nabla}\Phi|_{\partial V}$ is known we put $\boldsymbol{\nabla} G |_{\partial V}=0$ EXCEPTED if $\partial V$ is a closed surface; in this case we choose
+$\frac{\partial G}{\partial n'}(\boldsymbol{x}, \boldsymbol{x}')= -\frac{1}{\text{surface}}$
+\\
+$\Phi(\boldsymbol{x}) = \left\langle \Phi \right\rangle _S + \frac{1}{\epsilon_0}\displaystyle{\int} \text{d}^3x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}')+\displaystyle{\int_{\partial V}} \vec{\text{d}\sigma}' \cdot G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi(\vec{x}')$
+\\
+$\left\langle \Phi \right\rangle _S = \frac{1}{S}\displaystyle{\int_{\partial V}} \text{d}\sigma \text{ } \Phi(\boldsymbol{x})$
+
+%\end{enumerate}
+\squishend
+%\graysec{Static case}
+%\squishlist
+%\item $\nabla^2\phi=-\frac{\rho}{\epsilon_0}$
+
+%\item General solution to the potential:
+%$\phi(\vec{x})=\frac{1}{\epsilon_0}\int_Vd^3x'G(\vec{x},\vec{x'})\rho(\vec{x'})+\int_{\partial V}d\sigma'[G(\vec{x},\vec{x'})\vec{\nabla}\phi(\vec{x'}) - \phi(\vec{x'})\vec{\nabla}_{\vec{x}}G(\vec{x},\vec{x'})]$
+%\item Dirichlet BC on $\phi|_{\partial V} \rightarrow$ Choose $G(\vec{x},\vec{x'})=0 \forall \vec{x}\in\partial V$
+%\item Neuman BC on $\vec{n}\cdot\vec{\nabla}\phi|_{\partial V}\rightarrow$Choose $\vec{n}\cdot\vec{\nabla}G|_{\partial V}=const=-\frac{1}{Area(\partial V)}$
+%\squishend
+
+\graysec{Green functions - Dynamic case}
+
+%\item Lorenz gage: $\vec{\nabla}\cdot\vec{A} + \frac{1}{c^2}\frac{\partial\phi}{\partial t}=0$
+
+%$\Rightarrow \square \phi = \frac{\rho(\vec{x},t)}{\epsilon_0}$ , $\square \vec{A} = \frac{\vec{J}}{\epsilon_0 c}$,  $\square = \frac{1}{c^2} \frac{\partial^2}{\partial t^2} - \vec{\nabla}^2$
+\squishlist
+
+\item $\square_{\left(\vec{x},t\right)} G(\vec{x},\vec{x}',t,t') = \delta^3(\vec{x}-\vec{x}')\delta(t-t')$
+
+\item Retarded Green function : $G_R(\vec{x},t,\vec{x'},t')=\frac{\delta(t-t'-\frac{r}{c})}{4\pi r}, \quad{r=|\vec{x}-\vec{x'}|} $
+
+\item Retarded potentials : $\Phi (\vec{x},t) = \displaystyle{\int} d^3x' \frac{\rho\left(\vec{x}',t'=t-\frac{|\vec{x}-\vec{x'}|}{c}\right)}{4\pi \varepsilon_0 |\vec{x}-\vec{x}'|}$
+\\
+$\vec{\rm{A}}(\vec{x},t) = \displaystyle{\int} d^3 x' \frac{\vec{\rm{J}}\left(\vec{x}',t'=t-\frac{|\vec{x}-\vec{x}'|}{c}\right)}{4\pi c^2 \varepsilon_0 |\vec{x}-\vec{x}'|}$
+\squishend
+\graypar{Electromagnetic energy}
+\squishlist
+\item Electrostatics : $U = \frac{1}{2} \displaystyle{ \sum_{\substack{i,j\\i\neq j}}} \frac{q_iq_j}{4\pi\varepsilon_0|\vec{x}_i-\vec{x}_j|} \quad  \text{or} \quad U = \displaystyle{\int_{V}} \ud ^3x \,\, \frac{\epsilon_0}{2} |\vec{E}|^2$
+
+\item Electrodynamics : $\displaystyle{\int_{V}} \ud ^3x \,\, \vec{\rm{J}}\cdot\vec{E} = - \frac{\ud }{\ud t} \displaystyle{\int_{V}} \ud ^3x \,\, u - \displaystyle{\oint_{\partial V}} \! \vec{S}\cdot\vec{\ud \sigma} \quad : \text{energy conservation}$
+\\
+$\underbrace{\vec{J}\cdot\vec{E}}_{\text{dissipated power}} = -\frac{\partial u}{\partial t} - \vec{\nabla}\cdot\vec{S}, \quad \vec{S} = \frac{1}{\mu_0} \vec{E}\wedge\vec{B} , \quad u=\frac{\varepsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2$
+\squishend
+%\squishlist
+%\item $u=\frac{\epsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2$
+%\item $\left< \mu \right> = 2\epsilon_0 |\tilde{\vec{E}}|^2$
+%\squishend
+
+\graysec{Plane waves}
+$\square \Phi_0 = 0$, $\quad \square A_0 = 0 \quad$ (Lorenz gauge)
+\\
+\\
+$\square f(\vec{x},t) = 0 \, $ => $\, f(\vec{x},t) = \displaystyle{\int} \frac{\ud ^3k}{(2\pi)^3} \left(\widehat{f}(\vec{k})e^{-i\omega_kt + i\vec{k}\cdot\vec{x}} + \widehat{f^*}(\vec{k})e^{i\omega_k t - i \vec{k}\cdot\vec{x}} \right)$
+\\
+\squishlist
+\item $v_{\text{phase}} = \frac{\Delta x}{\Delta t} = \frac{w_k}{|\vec{k}|} = c$
+
+\item $\Phi(\vec{x},t) = \widehat{\Phi}(\vec{k}) e^{-i(\omega_k t- \vec{k}\cdot\vec{x})} + \text{c.c}$ $ \quad \vec{\rm{A}}(\vec{x},t) = \widehat{\vec{\rm{A}}}(\vec{k}) e^{-i(\omega_k t-\vec{k}\cdot\vec{x})} + \text{c.c}$ 
+
+\item Lorenz $ \Rightarrow \widehat{\Phi}(\vec{k}) = c\frac{\vec{k}\cdot\widehat{\vec{\rm{A}}}(\vec{k})}{|\vec{k}|} \,$ $\Rightarrow \, \vec{E} = \widehat{\vec{E}} e^{-i\varphi}+c.c., $ $\vec{B} = \widehat{\vec{B}} e^{-i\varphi}+c.c.\newline \varphi = \omega_k t - \vec{k}\cdot\vec{x}$
+
+\item $\widehat{\vec{E}} = i c |\vec{k}| \widehat{\vec{\rm{A}}}_{\perp} \quad, \quad \widehat{\vec{B}} = i \vec{k} \wedge \widehat{\vec{\rm{A}}}_{\perp} \quad, \quad \widehat{\vec{\rm{A}}}_{\perp} \cdot \vec{k}=0$ , $\widehat{\vec{\rm{A}}}_{\perp}$: polarization vector
+
+\item $0 = \vec{B}\cdot\vec{E} = \vec{E}\cdot\vec{k} = \vec{B}\cdot\vec{k} \rightarrow$ $\perp$ fields , $\quad |\vec{B}| = \frac{1}{c}|\vec{E}|$
+
+\item $\vec{B} = \frac{1}{c} \vec{n} \wedge \vec{E} $ , $\quad \widehat{\vec{B}} = \frac{1}{c} \vec{n} \wedge \widehat{\vec{E}} \, \quad $ with $\vec{n} = \frac{\vec{k}}{|\vec{k}|} $
+
+\item Circular polarisation : If $\vec{k} = |\vec{k}|\vec{e}_z$ ( left "+" and right "-" polarisation 
+):\\
+$\vec{E}(t) = E_0 \cos(\omega t + \theta)\vec{e}_x \pm E_0 \sin(\omega t + \theta)\vec{e}_y$;
+\squishend
+
+
+\graypar{Mean values}
+
+\squishlist 
+\item $\left< f(t) \right> = \lim_{T \rightarrow +\infty} \frac{1}{T} \int_{0}^{T} f(t) \, \ud t \quad $ : time average
+
+\item $\left< \vec{E}^2\right> = 2|\widehat{\vec{E}}(\vec{k})|^2 = 2\widehat{\vec{E}}\cdot\widehat{\vec{E}}^*$
+
+\item $\left< \vec{B}^2\right> = 2|\widehat{\vec{B}}(\vec{k})|^2 = 2 \widehat{\vec{B}} \cdot\widehat{\vec{B}}^* = \frac{1}{c^2}\left< \vec{E}^2\right> $
+
+\item $\left< u \right> = \left< \frac{\varepsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2 \right> = 2\epsilon_0 \widehat{\vec{E}}\cdot\widehat{\vec{E}}^*$
+
+\item $\left< \vec{S} \right> = 2\epsilon_0 c \hat{\vec{n}} | \widehat{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ phase velocity, $u$ electromagnetic energy
+\squishend
+
+\graysec{Lienard-Wiechert potentials (moving charged particle)}
+\squishlist
+\item $x_0(t) \rightarrow$ trajectory of the charge, $t'=t-\frac{R}{c}$, $\vec{R} = \vec{x}-\vec{x}_0(t'), R=|\vec{R}|, \vec{n} = \vec{R}/R$\\
+$\vec{\beta} = \frac{\vec{v}(t^{'})}{c} \, , \, \dot{\vec{\beta}} = \frac{1}{c}\frac{\ud \vec{v}(t^{'})}{\ud t^{'}} \, $ Dependency : $R(t^{'}(\vec{x},t))  \quad  \text{et} \quad \vec{v}(t^{'}(\vec{x},t))$
+
+\item Charge density $\rho(\vec x,t) = q\delta^{3}(\vec x-\vec x_{0}(t))$
+
+\item Charge current density $\vec J(\vec x,t) = q\vec v(t)\delta^{3}(\vec x-\vec x_{0}(t))$
+
+\item $\Phi(\vec{x},t) = \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{|\vec{x} - \vec{x}_0(t')|} \dfrac{1}{|1- \vec{n}\cdot\vec{v}(t')/c|}$ and  $\vec{\rm{A}}(\vec{x},t) = \dfrac{\vec{v}(t')}{c^2} \Phi(\vec{x},t)$
+\\
+\text{Other notations :}$\begin{cases}
+\Phi(\vec{x},t) = \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{|R-\vec{R}\cdot\vec{\beta}|}
+\\
+\vec{\rm{A}}(\vec{x},t) = \dfrac{1}{c}\vec{\beta} \Phi(\vec{x},t)
+\end{cases}$
+
+\item $\dfrac{\partial t'}{\partial t} = \dfrac{1}{1-\vec{n}\cdot\vec{\beta}}, \,\, \vec{\nabla}t' = \dfrac{-\vec{n}}{c(1-\vec{n}\cdot\vec{\beta})}, \,\, \vec{\nabla}R = \dfrac{\vec{n}}{1-\vec{n}\cdot\vec{\beta}}$
+
+\item $\partial_t R = \dfrac{-\vec{n}\cdot\vec{\beta}c}{1-\vec{n}\cdot\vec{\beta}}, \,\, \partial_i R^j = \delta_i^j + \dfrac{n^i\beta^j}{1-\vec{n}\cdot\vec{\beta}}, \,\, \partial_t \vec{R} = \dfrac{-\vec{v}}{1-\vec{n}\cdot\vec{\beta}}$
+
+
+\item $\vec{E} =  \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{ (1-\vec{\beta}\cdot\vec{n})^3} \big[\underbrace{(\vec{n} - \vec{\beta})\frac{1-\vec{\beta}^2}{R^2}}_{\sim \frac{1}{R^2} \, coulomb} + \underbrace{\frac{1}{cR}\vec{n}\wedge \big( (\vec{n}-\vec{\beta})\wedge \vec{\dot{\beta}}\big)}_{\sim \frac{1}{R} \, radiation}\big]$
+\item $\vec{B} = \frac{1}{c} \vec{n} \wedge \vec{E}$
+%\item electric potential $\Phi(\vec x,t) = \frac{q}{4\pi\epsilon_{0}}\frac{1}{|R-\vec R\cdot \vec \beta|}$
+%\item magnetic potential  $\vec A(\vec x,t) = \frac{\vec \beta}{c}\cdot \Phi(\vec x,t)$
+%\item electrical field $\vec E = \frac{q}{4\pi\epsilon_{0}}\frac{1}{1-\vec n\cdot \vec \beta}[(1-\vec n\cdot \vec \beta)\frac{1-\beta^{2}}{R^{2}} + \frac{1}{cR}\vec n\cross((\vec n - \vec \beta)\cross \dot{\vec \beta})]$
+
+The expressions are calculated at a time $t'$ defined by the implicit : $t' = t - \dfrac{|\vec{x} - \vec{x}_0(t')|}{c}$%Which ones ?
+
+\squishend
+
+\graysec{Radiation of a moving particle,  non-relativistic case: $|\vec{v}| \ll c$ }
+%$\hspace{0.0cm}$
+
+\squishlist
+\item $\vec{E} \cong \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{Rc} (-\dot{\vec{\beta}}_\perp), \quad \vec{B} \cong \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{Rc^2} (-\hat{\vec{n}}\wedge \dot{\vec{\beta}}_\perp) , \quad \dot{\vec{\beta}}_{\perp} = \dot{\vec{\beta}} - \vec{n}(\vec{n}\cdot\dot{\vec{\beta}}) $\\
+
+\item $\vec{S} \cong \dfrac{q^2}{16 \pi^2 \varepsilon_0 c^3} |\dot{\vec{v}}_\perp|^2 \dfrac{\vec{n}}{R^2} \,$ : \, \textbf{Larmor formula} for non-relativistic velocities
+
+\item $P_{tot} = \displaystyle{\oint_{\text{sphere}}} \vec{\ud \sigma}\cdot \vec{S} = \dfrac{q^2 \dot{v}^2}{6\pi\varepsilon_0 c^3}=\frac{\ud \E}{\ud t} \, $ : \, Total power emitted by the radiations
+\squishend
+\graypar{Relativistic case}
+%$\hspace{0.2cm}$
+\squishlist
+\item $\vec{E} = \dfrac{q}{4\pi\varepsilon_0}\dfrac{1}{cR}\dfrac{1}{(1-\vec{n}\cdot\vec{\beta})^3} \vec{n} \wedge ((\vec{n} - \vec{\beta}) \wedge \dot{\vec{\beta}}) + \mathcal{O}\left(\frac{1}{R^2}\right)$
+
+\item $\vec{E} \wedge \vec{B} = \frac{1}{c} \vec{E}^2 \vec{n} \, $ => $\vec{S} = \frac{1}{\mu_0 c} \vec{E}^2\vec{n}$
+
+\item Energy loss per unit of time and solid angle: $\dfrac{\ud \E}{\ud \Omega \ud t} = R^2\vec{S}\cdot\vec{n} = \dfrac{q^2}{16\pi^2 \varepsilon_0 c} \dfrac{|\vec{n}\wedge ((\vec{n}-\vec{\beta}) \wedge \dot{\vec{\beta}})|^2}{(1-\vec{n}\cdot\vec{\beta})^6}$
+
+\item $\frac{\ud t'}{\ud t} = \frac{1}{1-\vec{n}\cdot\vec{\beta}}$ : \  Go from $\ud t$ to $\ud t^{'}$ for the energy emitted by the part. (his story)  
+\\
+\item Energy emitted per unit of time and solid angle:
+$\dfrac{\ud \E}{\ud \Omega \ud t^{'}} = \dfrac{q^2}{16\pi^2 \varepsilon_0 c} \dfrac{|\vec{n}\wedge ((\vec{n}-\vec{\beta}) \wedge \dot{\vec{\beta}})|^2}{(1-\vec{n}\cdot\vec{\beta})^5}$
+
+\squishend
+
+\graypar{Particular case : Movement in a straight line \, $ \vec{\beta}  \parallel \dot{\vec{\beta}}$}
+
+\squishlist
+\item $\vec{E} = \dfrac{q}{4\pi\varepsilon_0}\dfrac{1}{cR}\dfrac{1}{(1-\vec{n}\cdot\vec{\beta})^3}(-\dot{\vec{\beta}}_{\perp})$
+
+\item $\dfrac{\ud P}{\ud \Omega} = \dfrac{\ud \E}{\ud t^{'}\ud \Omega} = \dfrac{q^2 \dot{v}^2}{16\pi^2\varepsilon_0c^3}\dfrac{\sin^2\theta}{(1-\beta\cos\theta)^5} \, , \quad |\dot{\vec{\beta}}_{\perp}| = |\dot{\vec{\beta}}|\sin\theta$
+
+\item $P = \dfrac{\ud \E}{\ud t'} = \dfrac{q^2 \dot{v}^2}{6 \pi \varepsilon_0 c^3} \gamma^6$, $\quad \gamma = \dfrac{1}{\sqrt{1-\beta^2}}$
+\squishend
+
+\graysec{Multipole expansion}
+%$\hspace{0.2cm}$
+Goal: Away from charges or a current, approximate the potentials $\vec{\rm{A}}$ and $\Phi$ using series expansion.
+
+%But : Loin d'un ensemble de charges ou d'un courant, approximer les pot. $\vec{\rm{A}}$ and  $\Phi$ par un dév. en série.\\
+
+\graypar{Static case}
+\squishlist
+\item \textbf{Electrostatics :} Condition : $|\vec{x}| \gg |\vec{x}'|$
+\\
+
+$\Phi(\vec{x}) = \displaystyle{\int_V} \text{d}^3 x' \dfrac{\rho(\vec{x}')}{4\pi\varepsilon_0|\vec{x}-\vec{x'}|}$ \\
+The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following Einstein's convention
+
+\item  $\dfrac{1}{|\vec{x} - \vec{x}'|} = \left. \sum_{n=0}^{+\infty} \frac{1}{n!} x_{i_1}'...x_{i_n}' \frac{\partial}{\partial x_{i_1}'}... \frac{\partial}{\partial x_{i_n}'} \frac{1}{|\vec{x} - \vec{x}'|} \right|_{\vec{x}' = 0}$
+
+\item $\left. \partial'_{i_1}...\partial'_{i_n} \frac{1}{|\vec{x} - \vec{x}'|}\right|_{\vec{x}' = 0} = \frac{(2n-1)!! (x_{i_1}...x_{i_n}) - A_{i_1 ... i_n} (\vec{x})}{x^{2n+1}}$, \, with $x=|\vec{x}|$
+
+\item $T_{i_1 ... i_n}(\vec{x}) = (2n-1)!! (x_{i_1} ... x_{i_n}) - A_{i_1 ... i_n} (\vec{x}), \, \,  A_{i_1...i_n} \, \quad $ : \, contains the Kronecker-$\delta$s
+
+\item $T_{i_1...i_n} \delta_{i_k i_l} = 0 \,\, \forall k,l \in \{1,2,...,n\} \, $ => \, $T_{i_1...i_n}$ have null trace
+
+\item $(x'_{i_1}...x'_{i_n}) T_{i_1 ... i_n}(\vec{x}) = \frac{T_{i_1 ... i_n}(\vec{x}')}{(2n-1)!!} T_{i_1 ... i_n}(\vec{x}) = T_{i_1...i_n}(\vec{x}') (x_{i_1}...x_{i_n})$
+
+\item $\frac{1}{|\vec{x} - \vec{x}'|} = \sum_{n=0}^{+\infty} \frac{1}{n!} \frac{x_{i_1}...x_{i_n}}{x^{2n+1}} T_{i_1...i_n}(\vec{x}')$
+
+\item $Q_{i_1...i_n} = \int \ud ^3x' \, \rho(\vec{x}') T_{i_1...i_n}(\vec{x}')$
+
+\item $ \Phi(\vec{x}) = \frac{1}{4\pi\varepsilon_0}\sum_{n\geq0}\left(\frac{1}{n!}\sum_{i_1,...,i_n = 1}^{3}\frac{x_{i_1}...x_{i_n}}{|\vec{x}|^{2n+1}}Q_{i_1...i_n}\right)$
+
+\item $Q_{i_1...i_n} \sim a^n , \quad \Phi^{(n)} \sim \left(\frac{a}{x}\right)^n \frac{1}{x} \quad$ with $a$ characteristic size (size of the area containing charges)
+
+\item \begin{tabular}{c | l l}
+	\textbf{n} & \textbf{nom} & \textbf{expression} \\
+	0 & monopole & $Q = \int d^3x' \rho (\vec{x}')$ \\
+	1 & dipole & $Q_i = \int d^3x' \rho (\vec{x}') x_i'$ \\
+	2 & quadripole & $Q_{ij} = \int d^3x' \rho (\vec{x}') (3x_i'x_j' - |\vec{x}'|^2\delta_{ij})$ \\
+	3 & octopole & $Q_{ijk} = \int d^3x' (15x_i'x_j'x_k' -3(\delta_{ij}x_k' + \delta_{ik}x_j'+\delta_{jk}x_i') |\vec{x}'|^2)\rho$
+\end{tabular}
+
+\item $\vec{E}^{(0)} = \dfrac{Q}{4\pi\varepsilon_0} \dfrac{\vec{x}}{x^3} \sim \dfrac{1}{x^2} ,\quad \vec{E}^{(1)} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{3\vec{x}(\vec{Q}^{(1)}\cdot\vec{x}) - \vec{Q}^{(1)}x^2}{x^5} \sim \dfrac{1}{x^3}$
+
+\item \textbf{Magnetostatics :}
+
+\item $\vec{\rm{A}}(\vec{x}) = \frac{\mu_0}{4\pi} \sum_{n=0}^{+\infty} \frac{1}{n!} \frac{x_{i_1}...x_{i_n}}{x^{2n+1}} \int \ud ^3x' \, \vec{J}(\vec{x}') T_{i_1...i_n}(\vec{x}') = \sum_{n=0}^{+\infty} \vec{\rm{A}}^{(n)}$
+
+\item $\rm{A}^{(n)} \sim \frac{1}{x} \left( \frac{a}{x} \right)^n, \quad \vec{\nabla}\cdot\vec{J} = 0 \, $ => $ \displaystyle{\int} \ud ^3x' \vec{J}(\vec{x}') = 0 \,$ : \, no monopole
+
+\item $0 = \displaystyle{\int} \ud ^3x \, (J_i x_j + J_j x_i) \,$ => $\, \rm{A}^{(1)}_i = \dfrac{\mu_0}{4\pi x^3} x_j \displaystyle{\int} \ud ^3x' \, \frac{1}{2}\left(J_ix'_j - J_j x'_i \right)$
+
+\item  Def. : $\, \vec{M}(\vec{x}) = \frac{1}{2} \vec{x}\wedge\vec{J} \,$ : \, the magnetisation and  $\vec{m} = \displaystyle{\int} \ud ^3x \, \vec{M}(\vec{x}) \, $ : \, the magn. mom.
+
+\item \textbf{Finaly (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\wedge\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$\\ 
+\squishend
+\graypar{Dynamic case}
+
+Condition : $|\textbf{x}| \gg \max(a, \lambda)$ with $a$ characteristic size of the object radiating with a characteristic wavelength $\lambda = cT$ ($T$ charac. time).
+\squishlist
+\item $\dfrac{1}{|\vec{x}-\vec{x}'|} = \dfrac{1}{|\vec{x}|}\dfrac{1}{1- \frac{\vec{n} \cdot \vec{x}'}{|\vec{x}|}} = \dfrac{1}{|\vec{x}|}\left(1+\mathcal{O}(\frac{|\vec{x}'|}{|\vec{x}|})\right), \quad \vec{n} = \dfrac{\vec{x}}{|\vec{x}|}$
+
+\item $|\vec{x}-\vec{x}'| = |\vec{x}| - \vec{n} \cdot \vec{x}' + \mathcal{O}(\frac{|\vec{x}'|^2}{|\vec{x}|})$
+
+\item $\rho(\vec{x}', t - \frac{|\vec{x} - \vec{x}'|}{c}) = \rho (\vec{x}', t-\frac{|\vec{x}|}{c} + \frac{\vec{n}\cdot\vec{x}'}{c} + \mathcal{O}(\frac{x'^2}{x}))$
+\\
+$      \implies
+\begin{cases}
+\Phi(\vec{x},t) = \dfrac{1}{4\pi\varepsilon_0}\dfrac{1}{|\vec{x}|}\displaystyle{\int} d^3x' \, \rho(\vec{x}',t- \dfrac{|\textbf{x}|}{c} + \dfrac{\vec{n} \cdot \vec{x}'}{c}) \\
+\vec{A}(\vec{x},t) = \dfrac{1}{4\pi\varepsilon_0c^2} \dfrac{1}{|\vec{x}|} \displaystyle{\int} d^3x' \, \vec{J}(\vec{x}',t- \dfrac{|\vec{x}|}{c} + \dfrac{\vec{n} \cdot \vec{x}'}{c}) \\
+\end{cases}$
+
+\item $        \begin{cases}
+\vec{B} \approx \frac{1}{c}\dot{\vec{\rm{A}}} \wedge \vec{n} \sim \frac{1}{x} \\
+\vec{E} = \vec{n} \wedge (\vec{n} \wedge \dot{\vec{\rm{A}}}) \sim \frac{1}{x} \\
+\vec{S} = \frac{c}{\mu_0} |\vec{B}|^2\vec{n} \sim \frac{1}{x^2}\\
+\end{cases}$
+
+\item $ \frac{\ud \E}{\ud t} = \displaystyle{\int_{S}} \vec{S}\cdot \vec{\ud \sigma} \sim \frac{1}{x^2}4\pi x^2 = \mathcal{O}(1)\, $ : Radiated energy per unit of time\\
+
+\squishend 
+
+\graypar{Radiation of the dipole (slow source $a \ll \lambda, \frac{a}{c} \ll T$)}
+
+\squishlist
+\item Serie derivation of J : $ \vec{J}(\vec{x}', t - \frac{x}{c} - \frac{\vec{n}\cdot\vec{x}'}{c}) \rightarrow \sum_{n=0}^{+\infty} \vec{J}^{(n)} \left(\frac{\vec{n}\cdot\vec{x}'}{c}\right)^n$
+
+\item $\vec{\rm{A}}^{(0)}(\vec{x},t) = \dfrac{\mu_0}{4\pi x} \int \ud ^3x' \, \vec{J}(\vec{x}', t-\frac{x}{c}) \quad :$ \,  dominant term, \, with $x = |\vec{x}|$
+
+\item $\vec{d}(t) = \vec{Q}^{(1)} = \int \ud ^3x \, \rho(\vec{x},t)\vec{x}  :$ \, def. of the dipole, \, $\dot{d}_i = \int \ud ^3x' \, J_i(\vec{x}',t-x/c)$ \, (use continuity eq. and that $\vec{J}=0$ at the boundaries)
+
+\item$        \begin{cases}
+%\vspace{0.2cm}
+\vec{\rm{A}}^{(0)} = \frac{\mu_0}{4\pi x}\dot{\vec{d}}(t-\frac{x}{c}) \\
+%\vspace{0.2cm}
+\vec{B} =\frac{\mu_0}{4\pi c x} \ddot{\vec{d}} \wedge \vec{n} \\
+%\vspace{0.2cm}
+\vec{E} = c\vec{B} \wedge \vec{n}\\
+%\vspace{0.2cm}
+\vec{S} = \frac{\mu_0}{16\pi^2c}\frac{1}{x^2} |\ddot{\vec{d}} \wedge \vec{n}|^2\vec{n} = \frac{c}{\mu_0} |\vec{B}|^2\vec{n}
+\end{cases} $
+
+\item Larmor : $\dfrac{\ud \E}{\ud t\ud \Omega} = \dfrac{\mu_0}{16\pi^2c}|\ddot{\vec{d}}|^2\sin^2\theta$ \,,$\,\ud \Omega = \sin\theta\ud \theta\ud \varphi \, $ => $\, \displaystyle{\int_{S}} \vec{S}\cdot\vec{\ud \sigma} = \dfrac{\mu_0}{6\pi c} |\ddot{\vec{d}}|^2$  $\theta$ angle between $ \vec{\ddot{d}}$ and $ \vec{n}$
+\squishend
+
+\graysec{Microscopic medium}
+\squishlist
+\item[] $$\boxed{\begin{split}
+	\vec{\nabla}\cdot\vec{e} = \frac{\eta}{\varepsilon_0}  \qquad &\vec{\nabla} \cdot \boldsymbol{b} = 0\\
+	\vec{\nabla}\wedge \vec{e} + \frac{\partial\vec{b}}{\partial t} =0 \qquad & \vec{\nabla} \wedge \vec{b} - \mu_0 \varepsilon_0 \frac{\partial \vec{e}}{\partial t} = \mu_0 \vec{j}
+	\end{split}}$$
+\item[] Microscopic eq : $\eta$ : microscopic charge density, $\vec{j}$ : micro. current density.
+
+\item[] For the macroscopic quantities, we use the mean values with a function $f(\vec{x})$ going to zero when $|\vec{x}| \geq R$, \, with $R$ large with respect to inter-atomic distances but small w.r.t. the size of the observation area, such as for instance:
+
+\item $\vec{E}(\vec{z}) = \int \ud ^3x \, \vec{e}(\vec{x})f(\vec{x}-\vec{z}) =  \mean{\vec{e}(\vec{z})}$
+
+\item $\vec{\nabla}_{\vec{z}} \cdot \mean{\vec{e}(\vec{z})} = \mean{\vec{\nabla} \cdot \vec{e}}(\vec{z}) \, $ and  $\, \frac{\partial \mean{\vec{e}}}{\partial t} = \mean{\frac{\partial \vec{e}}{\partial t}} \,$ : the derivatives commut with the mean
+
+\item $\mean{\eta} = \rho(\vec{x},t) - \vec{\nabla}\cdot\vec{P} \quad$ and  $\quad \mean{j} = \vec{J} + \frac{\partial \vec{P}}{\partial t} + \vec{\nabla} \wedge \vec{M}$
+
+\item $\rho \, :$ \, free charge density (macrosc. charge density), \, $\vec{P}$ \, : \, Macrosc. Polarisation, \, $\vec{J} \,$ : \, macrosc. current density (free current density) and $\vec{M}$ : Macrosc. Magnetisation
+
+\item $\frac{\partial \mean{\eta}}{\partial t} + \vec{\nabla}\cdot\mean{\vec{j}} = 0 \,$ => $\, \frac{\partial \rho}{\partial t} + \vec{\nabla}\cdot\vec{J} = 0$ \, : \, Conservation Eq.
+\squishend
+\graypar{Fields $\vec{H}$ and $\vec{D}$}
+\squishlist
+
+\item[] $$\boxed{\begin{split}
+	\vec{\nabla}\cdot\vec{D} = \rho  \qquad &\vec{\nabla} \cdot \vec{B} = 0\\
+	\vec{\nabla}\wedge \vec{E} + \frac{\partial\vec{B}}{\partial t} = 0 \qquad & \vec{\nabla} \wedge \vec{H} - \frac{\partial \vec{D}}{\partial t} = \vec{J}\\
+	\end{split}}$$
+\item Displacement field $\vec{D}=\varepsilon_0\vec{E}+\vec{P} \quad $
+
+\item Magnetic field $\quad \vec{H}=\frac{1}{\mu_0}\vec{B}-\vec{M}$ ($\vec{B}$ magn induction field)
+%\textbf{Mean charge density}:
+%$\mean{\rho}=-\nabla\cdot \vec{P}$
+
+\item[] \textbf{For linear relations in an isotropic medium :}
+\item $\vec{D}=\varepsilon\vec{E}\Rightarrow\vec{P}=(\varepsilon-\varepsilon_0)\vec{E} \quad$ 
+
+\item $\vec{H} = \frac{1}{\mu}\vec{B} \Rightarrow \vec{M} =  \left(\frac{1}{\mu_0} - \frac{1}{\mu}\right) \vec{B}$
+% $(1-\frac{\mu_0}{\mu})\vec{H}=-\vec{M}\Rightarrow\vec{M}=\frac{\vec{B}}{\mu_0}(1-\frac{\mu_0}{\mu})$
+
+\item[] \textbf{Dielectric medium} (mol. with permanent dipolar mom. $\vec{d} = d\vec{n}$) :
+
+\item $\vec{P} = 0$ si $\vec{E}_{ext} =0$, \, In a field $\vec{E}$ energy of the dipole : $\E = -\vec{E}\cdot\vec{d} = - dE\cos\theta$\\
+
+\item Average Polarisation : $\mean{\vec{d}} = \dfrac{\displaystyle{\int} \ud \varphi \, \ud \theta \sin\theta e^{\dfrac{d E \cos\theta}{k_BT}}\,d \,\vec{n}}{\displaystyle{\int} \ud \varphi \, \ud \theta \sin\theta e^{\dfrac{d E \cos\theta}{k_B T}}} = \dfrac{d^2 \vec{E}}{3k_BT} + \mathcal{O}(E^2) $
+
+\item $\vec{P} = n\mean{\vec{d}} \, \Rightarrow \, \vec{D} = \varepsilon_0 \vec{E} + \dfrac{1}{3} \dfrac{d^2 n}{k_B T}\vec{E}$, $\varepsilon = \varepsilon_0 + \dfrac{nd^2}{3k_B T} > \epsilon_0$ with n : dipole density
+
+
+\item[] \textbf{Paramagnetism} (magn. dipolar moment $\vec{m}$) :
+
+\item $\vec{M} = \dfrac{ n m^2}{3k_B T} \vec{B} \, \Rightarrow \, \mu = \dfrac{\mu_0}{1-\dfrac{nm^2\mu_0}{3k_BT}} > \mu_0$\\
+\squishend
+\graypar{Boundary Conditions at the interface between two materials}
+\squishlist
+\item $\displaystyle{\oint_{\partial V}} \! \vec{D}\cdot\vec{\ud \sigma} = \displaystyle{\int_V} \rho \, \ud ^3x \quad$ and $\quad \displaystyle{\oint_{\partial V}} \! \vec{B}\cdot\vec{\ud \sigma} = 0$
+
+\item $\displaystyle{\int_{\partial S}} \vec{\ud l}\cdot\vec{H} = \displaystyle{\int_S} \vec{J}\cdot\vec{\ud \sigma} + \frac{\ud }{\ud t} \displaystyle{\int_S} \vec{D}\cdot\vec{\ud \sigma} \quad $ and  $\quad \displaystyle{\int_{\partial S }} \vec{E} \cdot \vec{\ud l} = -\frac{\ud }{\ud t} \displaystyle{\int_S} \vec{B} \cdot \vec{\ud \sigma}$
+
+\item $(\vec{D}_2 - \vec{D}_1)_{\perp} = \sigma \vec{n} \quad$ and  $\quad (\vec{B}_2 - \vec{B}_1)_{\perp} = 0 \,$ :\, $\sigma$ free charge dens. (macrosc.)
+
+\item $(\vec{E}_2 - \vec{E}_1)_{\parallel} = 0 \quad $ and  $\quad (\vec{H}_2 - \vec{H}_1)_{\parallel} = \vec{K} \wedge \vec{n} \,$ : \, $\vec{K}$ surface current dens.
+\squishend
+\graypar{Energy density, Poynting vector and Intensity attenuation}
+\squishlist
+
+\item $u = \frac{1}{2}(\vec{E}\cdot\vec{D} + \vec{H}\cdot\vec{B}), \quad \vec{S} = \vec{E} \wedge \vec{H}, \quad \frac{\partial u}{\partial t} + \vec{\nabla}\cdot\vec{S} = - \vec{J}\cdot\vec{E}$
+
+\item Intensity $I$: $I(\vec{x})=I_0e^{-|\vec{x}|\alpha}; $ $\alpha=\frac{2\omega k}{c}$; $ \frac{1}{\alpha}$ is the penetration depth
+\squishend
+\graypar{E.M. waves in continuous isotropic medium}
+\squishlist
+\item $\rho = 0$ and  $\vec{J} = 0  \implies  \frac{\partial^2 \vec{B}}{\partial t^2} - \frac{1}{\varepsilon \mu} \vec{\Delta}\vec{B}=0 \, :$  Wave Eq.
+
+\item $v^2 = \frac{1}{\varepsilon\mu} = c^2 \frac{\varepsilon_0\mu_0}{\varepsilon \mu} \leq c^2 \, , \, v : \,$ propagation velocity. 
+
+\item $\vec{E} = \text{Re}\left(\vec{E}_0 e^{i\vec{k}\cdot\vec{x} - i\omega t}\right) \quad $ and  $\vec{B} = \text{Re}\left(\vec{B}_0 e^{i\vec{k}\cdot\vec{x} - i\omega t}\right) = \frac{1}{\omega} \vec{k}\wedge\vec{E} , \, $  $\lambda = \frac{2\pi}{|\vec{k}|}$
+\squishend
+
+\graypar{Reflection, refraction (case $\sigma = 0$ and $\vec{K} = 0$)}
+\squishlist
+\item Incident wave : $E_0, \vec{k}, \omega, v$,\, transmitted wave : $E'_0, \vec{k}', \omega', v'$\, reflected wave ('')
+
+%\item Continuity through time : $\omega = \omega'=\omega'' \, : \,$
+
+\item $(\vec{k}\cdot\vec{x})_{z=0} = (\vec{k}'\cdot\vec{x})_{z=0} = (\vec{k}''\cdot\vec{x})_{z=0}\, $ => $k\sin\theta = k''\sin\theta'' = k'\sin\theta'$
+
+\item $v = v''$ and $k =k''$ => $\theta = \theta'' \,$ and  $\, \frac{\sin\theta'}{\sin\theta} = \frac{k}{k'} = \frac{n_1}{n_2} = \frac{v_2}{v_1} \, $ : Snell's law\
+
+\item Refraction index $:=n_i=\sqrt{\frac{\varepsilon_i\mu_i}{\varepsilon_0\mu_0}}=\frac{c}{\text{speed of propagation}}$
+
+\item If $n_1 > n_2$ and $\theta > \theta_c = \arcsin\left(\frac{n_2}{n_1}\right) \, \Rightarrow$ \, no $\theta'$ \, :\, total reflexion
+
+\item[] By using the B.C.s we can determine the amplitude of the transmitted and reflected waves. In the case where $\vec{E}$ is parallel to the surface (TE polarisation), we have
+
+\item $\dfrac{E'_0}{E_0} = \dfrac{2n_1\cos\theta}{n_1\cos\theta + \dfrac{\mu_1}{\mu_2}n_2\cos\theta'} \quad $ and $\quad \dfrac{E_0''}{E_0}  = \dfrac{n_1\cos\theta - \dfrac{\mu_1}{\mu_2}n_2\cos\theta'}{n_1\cos\theta + \dfrac{\mu_1}{\mu_2} n_2 \cos\theta'}$
+\squishend
+\graysec{Special relativity $(-+++)$ convention}
+\graypar{Lorentz transformations}
+\squishlist
+\item[] The goal is to find the operation that leaves $\square \psi$ invariant.
+
+\item The change in coord must be linear, with the 4-vectors: $\hat{\vec{x}}' = \Lambda\hat{\vec{x}} + \hat{\vec{a}}$ where $ \hat{\vec{a}}$ const.
+
+\item[] \textbf{In 1 dimension} (with $\hat{\vec{a}} = \vec{0}$) : 
+\item $\begin{pmatrix}
+					ct'\\
+					x'
+					\end{pmatrix} =
+					\begin{pmatrix}
+					\Lambda_{11} \quad \Lambda_{12}\\
+					\Lambda_{21} \quad \Lambda_{22}
+					\end{pmatrix}
+					\begin{pmatrix}
+					ct\\
+					x
+					\end{pmatrix}\, $
+			        $\Rightarrow$ 	$\begin{pmatrix}
+					\frac{1}{c}\frac{\partial}{\partial t}\\
+					\frac{\partial}{\partial x} 
+					\end{pmatrix} =
+					\begin{pmatrix}
+					\Lambda_{11} \quad \Lambda_{21}\\
+					\Lambda_{12} \quad \Lambda_{22}
+					\end{pmatrix}					
+					\begin{pmatrix}
+					\frac{1}{c}\frac{\partial}{\partial t'}\\
+					\frac{\partial}{\partial x'} 
+					\end{pmatrix} =	\Lambda^{t}
+					\begin{pmatrix}
+					\frac{1}{c}\frac{\partial}{\partial t'}\\
+					\frac{\partial}{\partial x'} 
+					\end{pmatrix}$\\
+					
+\item $\square 
+=-\left( \frac{1}{c} \frac{\partial}{\partial t} \quad \frac{\partial}{\partial x}\right) \eta
+    \begin{pmatrix}
+        \frac{1}{c}\frac{\partial}{\partial t}\\
+	    \frac{\partial}{\partial x} 
+	\end{pmatrix}
+= -( \frac{1}{c} \pad{}{t'} \quad \pad{}{x'} )
+ \Lambda \eta \Lambda^t \begin{pmatrix}
+     \frac{1}{c}\pad{}{t'} \\
+     \pad{}{x'}
+ \end{pmatrix}
+ =\square'$
+ \item[] 
+     with $\eta = 
+    \begin{pmatrix}
+	     -1 & 0 \\
+		  0 & 1 \\
+	\end{pmatrix}$ and \ $ \square=-\left( -\dfrac{1}{c^2}\dfrac{\partial^2}{\partial t^2} + \dfrac{\partial^2}{\partial x^2}\right)$ \\
+
+
+\item $\square$ is invariant if $\Lambda$ satisfies : $\Lambda \eta \Lambda^t = \eta$ \\ 
+
+\item[] \textbf{General Solution} : 
+\item $ \Lambda = 
+\begin{pmatrix}
+\cosh \chi & -\sinh \chi \\
+-\sinh \chi & \cosh \chi
+\end{pmatrix}
+= 
+\begin{pmatrix}
+    \gamma & -\beta\gamma \\
+    -\beta\gamma & \gamma
+\end{pmatrix}$ with $\chi$ the rapidity%Check that is is true. https://en.wikipedia.org/wiki/Rapidity
+
+\item $\beta = \dfrac{v}{c} = \tanh \chi, \quad \gamma = \frac{1}{\sqrt{1-\beta^2}} = \cosh\chi \,$ and $\, \beta\gamma = \sinh\chi$, $\, v :$ velocity of $\mathcal{O}'$\\
+
+\item  {The transformation is } : 
+$\begin{cases}
+ct' = \gamma (ct - \beta x) \\
+x' = \gamma (x - \beta c t)
+\end{cases}$
+
+\item The inverse transformation (from $\mathcal{O}'$ to $\mathcal{O}$) can be found by taking $-\beta$
+
+\item In the general case of a velocity $\vec{v}$, using : $\vec{x}_{\parallel} = \left( \vec{x} \cdot \frac{\vec{\beta}}{\beta} \right) \frac{\vec{\beta}}{\beta}$ and  $\vec{x}_{\perp} = \vec{x} - \vec{x}_{\parallel}$
+
+
+\item The Lorentz transformation between $\mathcal{O}$ and $\mathcal{O}'$ is : 
+\item $\begin{cases}
+ct' = \gamma(ct- \vec{\beta} \cdot \vec{x}_\parallel) \\
+\vec{x}'_{\parallel} = \gamma(\vec{x}_\parallel- \vec{\beta} c t)\\
+\vec{x}'_{\perp} = \vec{x}_\perp
+\end{cases}$
+	
+\item Composition of velocities : %$\dfrac{\Delta x}{\Delta t} = v_p \, , \, \dfrac{\Delta x'}{\Delta t'} = v_p' \implies v_p' = \dfrac{v_p - v}{1 - \dfrac{v v_p}{c^2}}$
+$v_x' = \dfrac{v_x - v}{1 - \dfrac{v v_x}{c^2}}$,\quad $v_{y,z}' = \dfrac{v_{y,z}}{\gamma(1 - \dfrac{v v_x}{c^2})}$, $v$: boost along $\vec{x}$
+\squishend
+\graypar{The Lorentz group}
+This generalizes to 3 spacial dimensions with
+\squishlist
+\item $\eta =$ diag$(-1,1,1,1)$, \quad  4-position $ \begin{pmatrix}
+    ct\\
+\vec{x}
+\end{pmatrix}$ (coordinates $x^{\mu}$), $\mu = 0,1,2,3 $
+\item 
+$\tilde\partial = \begin{pmatrix}
+    \frac{1}{c}\pad{}{t} \\
+    \ugrad 
+\end{pmatrix}
+\implies \tilde\partial = \Lambda^t\tilde\partial' \quad $or $ \quad \tilde\partial' = (\Lambda^t)^{-1}\tilde\partial \quad $ and $ \quad  \square =-\tilde\partial^t\eta\tilde\partial$
+
+\item Invariance condition: $\Lambda\eta\Lambda^t= \eta \implies \square =-\tilde\partial^t\eta\tilde\partial =-\tilde\partial'^t\Lambda\eta\Lambda^t\tilde\partial'= \square' $ 
+\item The set of matrices $\Lambda$ satisfying this condition form the Lorentz group $O(3,1)$
+
+\item In coordinates with Einstein's convention, 4-position and derivatives transform as
+
+$$x^\mu \rightarrow x'^{\mu} = \Lambda^{\mu}_{\ \nu} x^{\nu} \quad \text{and} \quad 
+ \pad{}{x^\mu}=: \partial_\mu \rightarrow \partial_\mu' = \Lambda_\mu^{\ \nu}\partial_\nu
+$$
+where $\Lambda_\nu^{\ \mu}= (\Lambda^{-1})^\mu_{\ \nu} $
+
+\item $\eta^{\mu\nu}=
+\begin{pmatrix}
+\begin{array}{cccc}
+-1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & 1
+\end{array} 
+\end{pmatrix}$,\, $
+\Lambda^\mu_{\ \nu}=
+\begin{pmatrix}
+\begin{array}{cccc}
+\gamma & -\beta \gamma & 0 & 0 \\ 
+-\beta \gamma & \gamma & 0 & 0 \\ 
+0 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & 1
+\end{array} 
+\end{pmatrix}$
+with $\Lambda$ a boost along $\vec{x}$
+
+
+\squishend
+\vspace{2cm}
+\graypar{Contravariant and Covariant vectors} % IDEA FOR IMPROVEMENT: USEPACKAGE TENSOR
+\squishlist
+\item[] Goal : Formulation of CED (Classical ElectroDynamics) to explicit the invariance under Lorentz transf. 
+
+\item A \textbf{contravariant vector} (upper index) transforms as : $V^\mu\rightarrow V'^{\mu} = \Lambda^{\mu}_{\ \nu} V^{\nu}$
+
+\item A \textbf{covariant vector} (lower indices): $W_{\mu} \rightarrow W_{\mu}' = \Lambda_{\mu}^{\ \nu}W_\nu $
+
+\item A \textbf{contravariant tensor} as : $T^{\mu \nu} \rightarrow T'^{\mu \nu} = \Lambda^{\mu}_{\ \rho} \Lambda^{\nu}_{\ \sigma} T^{\rho \sigma}$
+
+\item A \textbf{mixed tensor} as : $T^\mu_{\ \nu} \rightarrow T'^\mu_{\quad \nu} = \Lambda^\mu_{\ \alpha}\Lambda_\nu^{\ \beta}T_{\ \beta}^\alpha $ 
+
+\item \textbf{Raising/Lowering}: $V_\mu=\eta_{\mu\nu}V^\nu$, \ $A^{\mu} = \eta^{\mu\nu} A_{\nu}$, \ $T^{\ \mu}_\nu = \eta_{\nu\alpha}T^{\alpha\mu}=\eta_{\nu\alpha}\eta^{\mu\beta} T^\alpha_{\ \beta}$
+
+\item Properties of the metric and Lorentz transf. ($\eta=\eta^{-1}$ and $\eta=\Lambda\eta\Lambda^t$ invariance)
+
+$ \eta_{\nu\alpha}\eta^{\alpha\mu} = \delta_\nu^\mu = \eta_\nu^{\ \mu}$, \quad $\eta^{\mu\nu} = \Lambda^{\mu}_{\ \alpha}\Lambda^{\nu}_{\ \beta}\eta^{\alpha\beta} \implies \Lambda_\alpha^{\ \mu}\Lambda^\alpha_{\ \nu} = \delta^\mu_\nu = \Lambda^\mu_{\ \beta}\Lambda_{\nu}^{\ \beta} $
+
+
+\item Some 4-vect $ x^{\mu} =
+	\begin{pmatrix}
+	ct\\
+	\vec{x}
+	\end{pmatrix}, J^{\mu} = \begin{pmatrix}
+	c\rho\\
+	\vec{J}
+	\end{pmatrix}, A^{\mu} =
+	\begin{pmatrix}
+	\phi\\
+	c\vec{A}
+	\end{pmatrix}, k^\mu=
+    \begin{pmatrix}
+     \omega/c \\
+     \Vec{k}
+    \end{pmatrix}$
+%\item raising-lowering changes the sign of first component 
+\item $J'^{\mu} (x') = \Lambda^{\mu}_{\ \nu} J^{\nu}(\Lambda^{-1}x') = \Lambda^{\mu}_{\ \nu} J^{\nu} (x) $ \,\, : also do the transformation for the argument
+
+
+\item $S = V^{\mu}W_{\mu}$ is a scalar (i.e. invariant). Example: $x^{\mu}x_{\mu} =  |\vec{x}|^2 -(ct)^2$
+
+\item $\varphi = x^\mu k_\mu =  \vec{k}\cdot\vec{x}-\omega t $ : the phase is a Lorentz invariant 
+
+
+\item $\partial_{\mu} = 
+\begin{pmatrix}
+\frac{1}{c} \frac{\partial}{\partial t} &
+\vec{\nabla}
+\end{pmatrix}$ and $\partial'_{\mu} = \Lambda^{\ \nu}_{\mu} \partial_{\nu} \implies \partial_{\mu} :$ covariant vector
+
+\item $\partial_{\mu} V^{\mu}$ is a scalar and $\partial_{\mu} \psi(x) $ is a covariant vector
+\squishend
+\graypar{Electromagnetic tensor}
+\squishlist
+\item Charge conservation : $\partial_{\mu}J^{\mu} = 0 \Leftrightarrow \dfrac{\partial \rho}{\partial t} + \vec{\nabla} \cdot \vec{J} = 0 $
+
+\item Lorenz Gauge : $\partial_{\mu} A^{\mu} = 0 \Leftrightarrow \dfrac{1}{c^2} \dfrac{\partial \phi}{\partial t} + \vec{\nabla} \cdot \vec{\rm{A}} = 0$
+
+\item $\square = -\eta^{\mu\nu} \partial_{\mu}\partial_{\nu}$ : it's a scalar 
+
+\item In the Lorenz gauge :$\begin{cases}
+\square \rm{A}^{\mu} = \dfrac{1}{c \varepsilon_0 }  J^{\mu}  \\
+\partial_{\mu} \rm{A}^{\mu} = 0
+\end{cases}$
+
+
+
+\item $F_{\mu\nu}:=\partial_\mu A_\nu-\partial_\nu A_\mu \Rightarrow F_{\mu\nu}=\begin{pmatrix}
+\begin{array}{cccc}
+0 & -E_x & -E_y & -E_z \\ 
+E_x & 0 & c B_z & -c B_y \\ 
+E_y&-cB_z  & 0 & c B_x \\ 
+E_z&  cB_y& -cB_x & 0
+\end{array} 
+\end{pmatrix}$
+
+\item $F_{\mu\nu} : $ covariant tensor, $\quad F_{\mu\nu} = - F_{\nu\mu}$ \, : \, antisymmetric
+
+\item $F_{\mu\nu}$ is invariant under gauge transf : $A_{\mu} \rightarrow A_{\mu} + \partial_{\mu}\alpha $ \, since the derivatives commute
+
+\item $F^{\mu\nu}=\begin{pmatrix}
+\begin{array}{cccc}
+0 & E_x & E_y & E_z \\ 
+-E_x & 0 & c B_z & -c B_y \\ 
+-E_y & -cB_z  & 0 & c B_x \\ 
+-E_z &  cB_y& -cB_x & 0
+\end{array} 
+\end{pmatrix}$
+
+\item $\varepsilon^{\mu\nu\rho\sigma} = 
+\begin{cases}
++1 \, \, \text{if $\mu\nu\rho\sigma$ even permutation of (0123)}  \\
+-1 \, \, \text{if $\mu\nu\rho\sigma$ odd permutation of (0123)} \\
+0 \, \, \text{otherwise}	
+\end{cases}$
+\item For the fields $\vec{B}$ and $\vec{E}$, following from $F'^{\mu\nu}=\Lambda^\mu_{\ \alpha}\Lambda^\nu_{\ \beta} F^{\alpha\beta}$ : 
+\item $\begin{cases}
+\vec{E}'_{\parallel} = \vec{E}_{\parallel}, \quad \vec{B}'_{\parallel} = \vec{B}_{\parallel} \\
+\vec{E}'_{\perp} = \gamma(\vec{E}_{\perp} + c \vec{\beta}\wedge \vec{B}), \quad \vec{B}'_{\perp} = \gamma(\vec{B}_{\perp} - \dfrac{1}{c}\vec{\beta} \wedge \vec{E} )\\
+\end{cases}$
+\item[] \textbf{Maxwell Equations :}
+
+$$\boxed{\begin{split}
+	\varepsilon^{\mu \nu \rho \sigma}\partial_\mu F_{\rho \sigma}=0  \qquad \quad & \partial_\mu F^{\mu\nu}=-\frac{1}{c\varepsilon_0}J^\nu 
+	\end{split}}$$
+
+\item \textbf{Properties of $F^{\mu\nu} $ :} 
+
+\item $F_{0i} = -E_i, \,  F_{ij} =  c \varepsilon^{ijk}B_k$ and $F^{0i} = E_i, \, F^{ij} = c\varepsilon^{ijk}B_k$
+
+\item $\mathcal{F}^{\mu\nu} \equiv \dfrac{1}{2} \varepsilon^{\mu\nu\alpha\beta}F_{\alpha\beta} \Rightarrow \mathcal{F}^{0i} = cB_i \,\, \text{et} \,\, \mathcal{F}^{ij} = -\varepsilon^{ijk}E_k$
+
+\item $F_{\mu\nu}F^{\mu\nu} = 2(c^2\vec{B}^2 - \vec{E}^2), \quad F_{\mu\nu}\mathcal{F}^{\mu\nu} = -4c\vec{E}\cdot\vec{B}$
+
+\squishend
+\graypar{Space-time Structure}
+\squishlist
+\item Interval between two events in a ref $\mathcal{O}$ : $ \Delta x^{\mu} = x_1^{\mu} - x_2^{\mu} = \begin{pmatrix}
+    c\Delta t \\
+    \Delta \vec{x}
+\end{pmatrix}$ 
+
+\item $s^2 = \Delta x_\mu \Delta x^\mu = \eta_{\mu\nu} \Delta x^{\mu}\Delta x^{\nu} = -(c\Delta t)^2 + (\Delta \Vec{x})^2$ is Lorentz invariant
+
+\item If $s^2>0$, $\Delta x^\mu$ space-like. If $s^2=0$, $\Delta x^\mu$ light-like. If $s^2<0$, $\Delta x^\mu$ time-like and $\Rightarrow \exists$ a ref. $\mathcal{O}'$ such that $\Delta x^{\mu} = \left( \pm \sqrt{-s^2} , \vec{0} \right)$\\
+
+\item
+infinitesimal interval (time-like) : $\ud \tau = \dfrac{1}{c}\sqrt{-\ud x_\mu\ud x^\mu} = \sqrt{\ud t^2 -\ud x^2/c^2} =\dfrac{\ud t}{\gamma} $
+is an invariant and $\Delta\tau = {\displaystyle \int_{t_1}^{t_2}\ud t\sqrt{1-\beta^2} }$ is the proper time. $\left(\dfrac{\ud }{\ud \tau} = \gamma \dfrac{\ud}{\ud t}\right)$
+
+\squishend
+\graypar{From Newton to Einstein}
+\squishlist
+
+\item $u^{\mu} = \dfrac{\ud x^{\mu}}{\ud \tau} = \gamma \dfrac{\ud x^{\mu}}{\ud t} = \gamma
+\begin{pmatrix}
+c \\
+\vec{v}
+\end{pmatrix} : $ 4-velocity and $u^{\mu}u_{\mu} = \dfrac{\ud s^2}{\ud \tau^2} = -c^2$
+
+\item $a^{\mu} = \dfrac{\ud u^{\mu}}{\ud \tau}  = \gamma \dfrac{\ud }{\ud  t}\left(\gamma
+\begin{pmatrix}
+c \\
+\vec{v}
+\end{pmatrix}\right) : $ 4-acceleration and $ 0 = \dfrac{\ud }{\ud \tau}\left(u^{\mu}u_{\mu}\right) = 2u^{\mu}a_{\mu}$
+
+\item For $\beta \ll 1 : u^{\mu} \rightarrow 
+\begin{pmatrix}
+c\\
+\vec{v}
+\end{pmatrix} \quad $ and $ \quad a^{\mu} \rightarrow
+\begin{pmatrix}
+0\\
+\vec{a}
+\end{pmatrix}$
+
+
+\item 4-momentum : $p^{\mu} = m u^{\mu}= 
+\begin{pmatrix}
+    mc\gamma \\
+    m\gamma \Vec{v}
+\end{pmatrix}$=$\begin{pmatrix}
+    \E/c \\
+    \Vec{p}
+\end{pmatrix}, \quad \E = mc^2\gamma $ \ (energy) \ $\vec{p} = m\gamma \Vec{v}$ (relativistic momentum)
+
+
+\item[] \textbf{Generalisation of the Lorentz force :} $\quad ma^{\mu} = \dfrac{\ud p^\mu}{\ud \tau} = \gamma\dfrac{\ud p^\mu}{\ud t} = \dfrac{q}{c} F^{\mu\nu}u_{\nu}$
+
+\item $\mu = 0 \Rightarrow \gamma\dfrac{\ud \E/c}{\ud t} = \dfrac{q}{c} F^{0\nu}u_{\nu}= \dfrac{q}{c} F^{0i}u_{i} = \dfrac{q}{c}\gamma\Vec{E}\cdot\Vec{v} \Leftrightarrow \dfrac{\ud \E}{\ud t}= q\Vec{E}\cdot\Vec{v}$ \quad (Work)  
+
+\item $\mu = i \Rightarrow \gamma\dfrac{\ud p^i}{\ud t} = \dfrac{q}{c} F^{i\nu}u_{\nu} = \dfrac{q}{c} (F^{i0}u_{0} +F^{ij}u_{j})= q\gamma(E_i + \varepsilon^{ijk}v_iB_k)$
+
+$ \implies \dfrac{\ud \Vec{p} }{\ud t}  = q\left(\vec{E} + \vec{v} \wedge \vec{B} \right)$
+
+
+\item $\vec{p} = m\gamma\vec{v} \Leftrightarrow \vec{v} = \dfrac{c\vec{p}}{\sqrt{m^2c^2 + \vec{p}^2}}, \quad p^{\mu}p_{\mu} = -m^2c^2 = -\E^2/c^2 +\Vec{p}$
+
+$ \implies \E = \sqrt{\left(mc^2\right)^2 + \vec{p}^2c^2}$ \quad and \quad $\E = \dfrac{mc^2}{\sqrt{1-v^2/c^2}} \approx mc^2 + \half mv^2$  
+
+\squishend
+\graypar{Relativistic generalisation of the Larmor formula}
+\squishlist
+\item[] Using the relativistic invariance and the fact that one must find the classic Larmor formula for small velocities (see non-relativistic radiation), we find the expression :
+
+\item $\ud P^{\mu } =  \dfrac{q^2}{6\pi \varepsilon_0 c^5}a_{\nu}a^{\nu} \ud x^{\mu} \Rightarrow P = \dfrac{\ud \E}{\ud t} = c^2 \dfrac{\ud P^0}{\ud x^0} = \dfrac{q^2}{6\pi\varepsilon_0c^3} a_{\nu}a^{\nu}$ (scalar)
+
+\item Here $\ud t$ refers to the trajectory of the particle (in the section 'relativistic case' it was $\ud t'$)
+
+\item $a^{\mu} = \gamma \dfrac{\ud}{\ud t} \gamma \left(c, \vec{v}\right) = \gamma^4 c \left(\vec{\beta}\cdot\dot{\vec{\beta}}, \, \left(\vec{\beta}\cdot\dot{\vec{\beta}}\right)\vec{\beta} + \dfrac{\dot{\vec{\beta}}}{\gamma^2}\right)$
+
+\item $a_{\mu}a^{\mu} = c^2\gamma^6 \left[ \dot{\vec{\beta}}^2 + \left(\vec{\beta}\cdot\dot{\vec{\beta}}\right)^2 -\vec{\beta}^2 \dot{\vec{\beta}}^2   \right] \Rightarrow \dfrac{\ud \E}{\ud t} = \dfrac{q^2}{6\pi\varepsilon_0c}\gamma^6 \left[\dot{\vec{\beta}}^2 - |\vec{\beta} \wedge \dot{\vec{\beta}}|^2\right]$
+
+\item[] With the Lorentz force and no exterior force : $a^{\mu} = \dfrac{q}{mc} F^{\mu\nu}u_{\nu} \Rightarrow $
+
+\item $\dfrac{\ud \E}{\ud t} =  \dfrac{q^4}{6\pi\varepsilon_0m^2c^5}F^{\mu\nu}u_{\nu}F_{\mu\rho}u^{\rho}$ \quad (Lorentz invariant)
+\squishend
+\graypar{Accelerators}
+
+\squishlist
+\item Linear accelerator : $ \vec{E} \parallel \vec{v}, \, F^{01} = -F^{10} = E \Rightarrow \dfrac{\ud \E}{\ud t} = \dfrac{q^4E^2}{6\pi\varepsilon_0m^2c^3}$
+
+\item Synchrotron Radiation : $\vec{B} \perp \vec{v}, \, F^{12} = cB \Rightarrow \dfrac{\ud \E}{\ud t} = \dfrac{q^4B^2v^2\gamma^2}{6\pi\varepsilon_0m^2c^3}$
+%\left(1-\dfrac{v^2}{c^2}\right)}$
+\squishend
+
+\graypar{Lorentz transf of EM fields}
+\squishlist
+\item $\vec{E'_{\parallel}}=\vec{E_{\parallel}}$, $\vec{E'_\perp}=\gamma(\vec{E_\perp}+c\beta\wedge\vec{B})$ and $\vec{B'_{\parallel}}=\vec{B_{\parallel}}$, $\vec{B'_\perp}=\gamma(\vec{B_\perp}-\frac{1}{c}\beta\wedge\vec{E})$
+
+\item For $\vec{E}\perp\vec{B}$, boost moving to a ref frame where : 
+\begin{itemize}
+\item $\vec{E}'=0$ : if $E<cB$, $\vec{\beta_E}=\dfrac{1}{c}\dfrac{\vec{E}\wedge\vec{B}}{B^2}$ and $B'=\frac{1}{c}\sqrt{c^2B^2-E^2}$ 
+\item $\vec{B}'=0$ : if $E>cB$, $\vec{\beta_B}=c\dfrac{\vec{E}\wedge\vec{B}}{E^2}$ and $E'=\sqrt{E^2-c^2B^2}$
+\end{itemize}
+
+\squishend
+
+\graypar{Other relations} %This might be cleaned a bit
+
+\squishlist%Xabier Rubiato : "L'intégrale qu'il a corrigé (gaussienne avec terme source complexe dans le poly de quantique) bah il est pas d'accord avec Mila et je pense que c'est lui qui a le bon résultat"
+\item $\gamma(1-\beta) = \dfrac{1}{\gamma(1+\beta)}, \quad  \,\, c^2 = \dfrac{1}{\varepsilon_0\mu_0}, \quad \,\, {O^T}^{\theta}_{\nu} O^{\nu}_{\pi} = \delta^{\theta}_{\pi}$, if $O$ is orthogonal
+\item Rotation: $x'^\alpha=R_{\alpha \beta}x^\beta$, $R$ orthogonal
+
+\item Electrostatic potential energy : single charge : $E_{\text{pot}} = q\Phi$; total Energy $W$ of a group of charges: $W=\frac{1}{2}\int\rho(x)\Phi(x)d^3x$
+
+\item System of n conductors: Charge on $i^{th}$ conductor $Q_i=\sum_{\substack j=1}^nC_{ij}V_j$; $C_{ii}$ are the capacitances, $C_{ij} (i\neq j)$ are coeff. of induction 
+ 
+\item $\vec F = I \displaystyle{\int_L} \vec{\ud l} \wedge \vec{B}$ \, : \, Force on conductor through which passes a current I
+
+\item $U = R I$, $\vec{J} = \sigma\vec{E}$ :\, Ohm's law, $\quad \vec{J} = nq\vec{v}$; $n$ is the density of charge%C'est U=RI pas V=RI
+
+\item $U = U_0 - R_0I$ for a real generator with internal resistance $R_0$, $\quad R = \dfrac{L}{\sigma S}$ 
+
+\item Electrical output power of a generator : $P = UI = U_0I - R_0I^2$ %cas trop spécifique
+
+\item$\vec{\ud M} = \vec{x} \wedge (\rm{I}\vec{\ud l} \wedge \vec{B})$ : Moment force  on an electric wire in a $\vec{B}$ field
+
+\item$\vec{\tau}=\vec{m} \wedge \vec{B}$ : Mechanical moment due to the magn field, $\vec{m}$ magn moment such that $\vec{\ud m}=\frac{1}{2}\vec{r} \wedge \vec{J} \ud V$
+
+\item$\displaystyle{\int_{S}} f \, \ud \sigma = \displaystyle{\int_0^{\pi}} \! \displaystyle{\int_0^{2\pi}} f(\vec{x}(\theta, \varphi)) r^2\sin\theta \, \ud \theta\ud \varphi$ : Integral on a sphere of radius r
+
+\item $\left(\cos^2\theta + \sin^2(\omega_st' - \varphi)\sin^2\theta\right) = \left| \dfrac{\vec{a}}{|\vec{a}|}(t') \wedge \vec{e}_r \right|^2 =  \sin^2\alpha(t)$ \\
+with $\alpha(t)$ angle between $\vec{a}(t')$ and $\vec{r}$, in a circular movement at great distance in a $\vec{B}$ field.% dans un mvt circulaire à longue distance dans champ $\vec{B}$\\
+
+\item Potential created by moving charge $q$ along $\vec{e}_z$ direction:\\
+$\phi(\vec{x},t)=\frac{q\gamma}{4\pi\epsilon_0}\frac{1}{\sqrt{x^2+y^2+\gamma^2(z-vt)^2}}$
+
+%\item The power dissipated per unit of volume : $\vec{J}\cdot\vec{E}$
+
+\item$\tilde{\varepsilon}^{\mu\nu\rho\sigma} = \Lambda^{\mu}_{\alpha}\Lambda^{\nu}_{\beta}\Lambda^{\rho}_{\gamma}\Lambda^{\sigma}_{\delta} \, \varepsilon^{\alpha\beta\gamma\delta} = \text{det}(\Lambda)\varepsilon^{\mu\nu\rho\sigma}$ \, with det$(\Lambda) = \pm 1$
+
+\item$\varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\mu\nu\rho\sigma} = -24, \, \varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\alpha\nu\rho\sigma} = -6\delta^{\mu}_{\alpha}, \, \varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\alpha\beta\rho\sigma} = -2(\delta^{\mu}_{\alpha}\delta^{\nu}_{\beta} - \delta^{\mu}_{\beta}\delta^{\nu}_{\alpha})$
+
+\item Circular movement : $\vec{v} = \vec{\omega} \wedge \vec{r}$ and $\vec{a} = \vec{\alpha} \wedge \vec{r} + \vec{\omega} \wedge \vec{v}$ with $\vec{\alpha} = \dfrac{\ud \vec{\omega}}{\ud t}$
+
+\item $A_{ij} = x^2 \delta_{ij}, \quad A_{ijk} = 3x^2(\delta_{ij}x_k + \delta_{ik}x_j + \delta_{jk}x_i)$
+
+\item $A_{ijkl} = 15x^2(\delta_{ij}x_kx_l + \delta_{ik}x_jx_l + \delta_{il}x_kx_j + \delta_{jk}x_ix_l + \delta_{jl}x_kx_i + \delta_{kl}x_ix_j) -\\
+3x^4(\delta_{ij}\delta_{kl} + \delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk})$
+
+%\item Solve a system of differential equ : 
+%$\left\{\begin{array}{l} \ddot{x}=\alpha_1 \dot{y} \\ \ddot{y} = \alpha_2 \dot{x} + C \end{array}\right. \Rightarrow \; \textbf{ set } u=\dot{x}+i\dot{y}$ and solve the resulting inhomogenous diff equ as usual ($u=u_{hom}+u_{part}$) %N'a pas d'interet.
+\squishend
+\begin{flushright}
+Document compiled on \DTMnow
+\end{flushright}

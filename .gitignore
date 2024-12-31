@@ -1,0 +1,37 @@
+# Compiled PDF
+*.pdf
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.rubbercache
+rubber.cache
+
+# MacOS specific
+.DS_Store
+
+# For a complete .gitignore copy
+# https://github.com/github/gitignore/blob/main/TeX.gitignore

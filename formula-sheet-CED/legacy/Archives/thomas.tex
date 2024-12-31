@@ -1,0 +1,50 @@
+\graysec{Static case}
+\squishlist
+\item $\nabla^2\phi=-\frac{\rho}{\epsilon_0}$
+
+\item General solution to the potential:
+$\phi(\vec{x})=\frac{1}{\epsilon_0}\int_Vd^3x'G(\vec{x},\vec{x'})\rho(\vec{x'})+\int_{\partial V}d\sigma'[G(\vec{x},\vec{x'})\vec{\nabla}\phi(\vec{x'}) - \phi(\vec{x'})\vec{\nabla}_{\vec{x}}G(\vec{x},\vec{x'})]$
+\item Dirichlet BC on $\phi|_{\partial V} \rightarrow$ Choose $G(\vec{x},\vec{x'})=0 \forall \vec{x}\in\partial V$
+\item Neuman BC on $\vec{n}\cdot\vec{\nabla}\phi|_{\partial V}\rightarrow$Choose $\vec{n}\cdot\vec{\nabla}G|_{\partial V}=const=-\frac{1}{Area(\partial V)}$
+\squishend
+
+\graysec{Green functions - Dynamic case}
+\squishlist
+
+    %\item Lorenz gage: $\vec{\nabla}\cdot\vec{A} + \frac{1}{c^2}\frac{\partial\phi}{\partial t}=0$
+
+    %$\Rightarrow \square \phi = \frac{\rho(\vec{x},t)}{\epsilon_0}$ , $\square \vec{A} = \frac{\vec{J}}{\epsilon_0 c}$,  $\square = \frac{1}{c^2} \frac{\partial^2}{\partial t^2} - \vec{\nabla}^2$
+    \item Retarded Green function:$G_R(\vec{x},t,\vec{x'},t')=\frac{\delta(t-t'\frac{r}{c})}{4\pi r} $
+    
+    \item $\square G(\vec{x},\vec{x}',t,t') = \delta^3(\vec{x}-\vec{x}')\delta(t-t')$
+    \item Retarded potentials:
+    \squishlist
+        \item $\Phi (\vec{x},t) = \int d^3x' \frac{\rho\left(\vec{x}',t'=t-\frac{|\vec{x}-\vec{x'}|}{c}\right)}{4\pi \epsilon_0 |\vec{x}-\vec{x}'|}$
+        \item $A(\vec{x},t) = \int d^3 x' \frac{J\left(\vec{x}',t'=t-\frac{|\vec{x}-\vec{x}'|}{c}\right)}{4\pi c^2 \epsilon_0 |\vec{x}-\vec{x}'|}$
+    \squishend  
+\squishend 
+
+\graysec{Ondes planes}
+$\square \Phi_0 = 0$, $\quad \square A_0 = 0$
+\squishlist
+    \item $v_{phase} = \frac{\Delta x}{\Delta t} = \frac{w_k}{|\vec{k}} = c$
+    \item $\Phi(\vec{x},t) = \tilde{\Phi}(\vec{k}) e^{-i(\omega_k t- \vec{k}\vec{x})}$
+    \item $\vec{A}(\vec{x},t) = \tilde{A}(\vec{k}) e^{-i(\omega_k t-\vec{k}\vec{x})}$, $\tilde{A}$ coeff de Fourier, PARENTHÈSE = 0 
+    \item $\tilde{\Phi}(\vec{k}) = \frac{c\vec{k}}{|\vec{k}|}\tilde{A}(\vec{k})$
+    \item $\Rightarrow  \vec{E}_\alpha = \tilde{\vec{E}}_\alpha e^{-i\phi},  \left< E^2\right> = 2|\tilde{\vec{E}}(\vec{k})|^2$
+    \item $\vec{B}_\alpha = \tilde{\vec{B}}_\alpha e^{-i\phi},  \left< B^2\right> = 2|\tilde{\vec{B}}(\vec{k})|^2$
+    \item $\vec{B}\cdot\vec{E} = 0 \rightarrow$ champs $\perp$
+    \item $\vec{B} = \frac{1}{c} \frac{\vec{k} \wedge \vec{E}}{|\vec{k}|} \rightarrow\vec{E},\vec{B},\vec{k} \perp$, $\quad |\vec{B}| = \frac{1}{c}|\vec{E}|$
+\squishend
+
+\graypar{Vecteur de Poynting}
+\squishlist
+    \item $\vec{S} = \epsilon_0 c^2 \vec{E}\wedge\vec{B}$
+    \item $\left< S\right> = 2\epsilon_0 c \hat{\vec{n}} | \tilde{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ vitesse de l'onde, $u$ Energie électromagnetique
+\squishend
+\graypar{Energie électromagnetique}
+
+\squishlist
+    \item $u=\frac{\epsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2$
+    \item $\left< \mu \right> = 2\epsilon_0 |\tilde{\vec{E}}|^2$
+\squishend

@@ -1,0 +1,84 @@
+\graysec{Maxwell equations}
+$$\boxed{\begin{split}
+	\textsc{Coulomb's law} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{D} = \rho\\
+	\textsc{Ampère's law} \qquad &\boldsymbol{\nabla} \wedge \boldsymbol{H} = \boldsymbol{J} + \frac{\partial \boldsymbol{D}}{\partial t}\\
+	\textsc{Faraday's law} \qquad &\boldsymbol{\nabla} \wedge \boldsymbol{E} + \frac{\partial \boldsymbol{B}}{\partial t} = 0\\
+	\textsc{Absence of magnetic poles} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{B} = 0
+	\end{split}}$$
+
+\graypar{Lorentz Force}
+\squishlist
+\item $ \boldsymbol{F} = q(\boldsymbol{E}+\boldsymbol{v} \wedge \boldsymbol{B}) $
+
+\item $ \int_{\Sigma}\boldsymbol{E} \cdot \boldsymbol{d\sigma} = \frac{Q}{\epsilon_0}$
+
+\item $\int_{\Gamma} \boldsymbol{E} \cdot \boldsymbol{dl} = -\frac{\text{d}}{\text{d}t}\int_{\Sigma} \boldsymbol{B} \cdot \boldsymbol{d\sigma}$
+
+\item Continuity Equation: $\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla}\cdot\boldsymbol{j} = 0$
+\squishend
+
+\graypar{Electromagnetic Potentials} 
+\squishlist
+\item $\boldsymbol{B} = \boldsymbol{\nabla} \times \boldsymbol{A}$
+
+\item $\boldsymbol{E} = -\boldsymbol{\nabla} \Phi - \frac{\partial \boldsymbol{A}}{\partial t}$
+\squishend
+\graypar{Lorenz gauge}
+$$
+\boldsymbol{\nabla} \cdot \boldsymbol{A} + \frac{1}{c^2}\frac{\partial \Phi}{\partial t}=0
+$$
+\[      \implies
+        \begin{cases}
+            \frac{1}{c^2}\frac{\partial^2 \Phi }{\partial t^2} - \boldsymbol{\nabla}^2 \Phi = \square \phi = \frac{\rho}{\epsilon_0} \\
+            \frac{1}{c^2}\frac{\partial^2 \boldsymbol{A}}{\partial t^2} - \boldsymbol{\nabla}^2 \boldsymbol{A} = \square \vec{A} =  \frac{\boldsymbol{J}}{c^2\epsilon_0}
+        \end{cases}
+\]
+
+\graypar{Electrostatics.}
+$$
+\boldsymbol{\nabla}^2\Phi = -\frac{\rho}{\epsilon_0} \quad \text{with} \quad |\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0
+$$
+
+$$
+\Phi(\boldsymbol{x}) = \frac{1}{4\pi \epsilon_0} \int \text{d}^3x' \frac{\rho(\boldsymbol{x})}{|\boldsymbol{x}-\boldsymbol{x}'|}
+$$
+
+\graypar{Dirac Functions.}
+$$\int \text{d}^nx f(\boldsymbol{x})\delta^n(\boldsymbol{x}-\boldsymbol{x}_0)= f(\boldsymbol{x}_0)
+$$
+$$
+\int \text{d}^nx f(\boldsymbol{x})\boldsymbol{\nabla}\delta^n(\boldsymbol{x}-\boldsymbol{x}_0)= - \boldsymbol{\nabla}f(\boldsymbol{x}_0)
+$$
+
+$$
+\delta^n(g(\boldsymbol{x})) = \sum_i \frac{\delta(\boldsymbol{x}-\boldsymbol{x}_i)}{\left|\frac{\partial g}{\partial \boldsymbol{x}} \right| } : \quad \boldsymbol{x}_i = \text{ zeros of }g
+$$
+
+\graypar{Green functions - static case}
+$$
+-\boldsymbol{\nabla}_{\boldsymbol{x}}^2 G(\boldsymbol{x}, \boldsymbol{x}') = \delta^3(\boldsymbol{x}-\boldsymbol{x}')
+$$
+
+$$
+\Phi(\boldsymbol{x}) = \int_V \text{d}^3 x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}') + \int_{\partial V} \boldsymbol{dS} \cdot \left[G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi(\boldsymbol{x}')-\Phi(\boldsymbol{x}')\boldsymbol{\nabla}_{\boldsymbol{x}'}G(\boldsymbol{x}, \boldsymbol{x}')\right]
+$$
+Find $G$ by the images method in order to remove the $Phi$ term on the edge $\partial V$ that is not given. $G$ can be treated as a potential if $G|_{\partial V}=0$ or if $\boldsymbol{\nabla}G|_{\partial V}=0$. 
+
+\begin{enumerate}
+\item If $G|_{\partial V}=0$ we choose $G|_V =0$ and then
+$$
+\Phi(\boldsymbol{x}) = \int \text{d}^3x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}')
+$$
+\item If $\boldsymbol{\nabla}G|_{\partial V}$ is known we put $\boldsymbol{\nabla} G |_{\partial V}=0$ EXCEPTED if $\partial V$ is a closed surface; in this case we choose
+$$
+\frac{\partial G}{\partial n'}(\boldsymbol{x}, \boldsymbol{x}')= -\frac{1}{\text{surface}}
+$$
+Then
+$$
+\Phi(\boldsymbol{x}) = \left\langle \Phi \right\rangle _S + \frac{1}{\epsilon_0}\int \text{d}^3x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}')+\int_{\partial V} \text{d}S \text{ } G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi
+$$
+$$
+\left\langle \Phi \right\rangle _S = \frac{1}{S}\int_{\partial V} \text{d}S \text{ } \Phi(\boldsymbol{x})
+$$
+
+\end{enumerate}

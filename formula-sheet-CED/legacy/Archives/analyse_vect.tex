@@ -1,0 +1,49 @@
+\graysec{Vectorial analysis}
+ \graypar{Definitions}
+  \squishlist
+   \item $\vec \nabla = \Big( \frac{\partial}{\partial x_{k}} \Big) = \Big( \partial_{k} \Big)$
+   \item $\ugrad \ f(\vec x) = \vec \nabla f = \Big( \partial_{k} f(\vec x) \Big)$
+   \item $\textrm{div} \ \vec a = \vec \nabla \cdot \vec a = \sum_{k} \partial_{k} a_{k}$
+   \item $\udiv \ugrad f = \vec \nabla^{2} f = \sum_{k} \frac{\partial^{2} f}{\partial x_{k}^{2}}$ \qquad (scalar laplacian)
+   \item $\ugrad (\udiv \vec a) = \left( \sum_{i} \frac{\partial^{2} a_{i}}{\partial x_{i} x_{k}} \right)$
+   \item $\ulap \vec a = \sum_{i} \frac{\partial^{2} \vec a}{\partial x_{i}^{2}}$ \qquad (vectorial laplacian)
+   \item $\vec{grad}(div\vec{u})= \vec{\nabla}\cdot \nabla\vec{u} =\vec{\nabla^2 u} + \vec{\nabla\cross(\nabla\cross u)}$
+  \squishend
+
+ \graypar{Theorems ($V$ = volume limited by the closed surface $\Sigma$)}
+  \squishlist
+   \item $\urot \vec A = 0 \Rightarrow \exists \ \psi \quad \mathrm{t.q.} \quad \vec A = \ugrad \psi$
+   \item $\urot \vec A = 0 \Rightarrow \ugrad (\udiv \vec A) = 0$
+   \item $\udiv \vec D = 0 \Rightarrow \exists \ \vec C \quad \mathrm{t.q.} \quad \vec D = \urot \vec C$
+   \item Champ scalaire: $\psi(2) - \psi(1) = \int_1^2 \ugrad \psi \cdot \ud \vec s$
+   \item \textbf{Gradient thm:} $\int_{\Sigma} f \cdot \ud \sigma = \int_V \ugrad f \ud V$
+   \item \textbf{Gauss thm:} $\int_\Sigma \vec a \cdot \vec n \ \ud \vec \Sigma = \int_V \udiv \vec a \ \ud \omega$
+   \item $\int_{\Sigma} f \ \ud \vec \Sigma = \int_V \ugrad \ f \ \ud \omega$
+   \item $\int_{\Sigma} \ud \vec \Sigma \cross \vec a = \int_{V} \urot \vec a \ \ud \omega$
+   \item \textbf{Stokes thm}: $\int_\Sigma (\urot \vec a) \cdot \vec n \ \ud \vec \Sigma = \oint_{\overrightarrow{C}} \vec a \ \ud \vec s$ \\
+     ($S$ = open surface, $C$ = limiting contour S)
+  \squishend
+
+% \graypar{Coord. polaires ($\frac{\partial}{\partial z} \equiv 0$) / cylindriques}
+%  \squishlist
+%   \item $\udiv \vec A = \frac{1}{r} \frac{\partial (r A_r)}{\partial r}
+%          + \frac{1}{r} \frac{\partial A_\theta}{\partial \theta}
+%          + \frac{\partial A_z}{\partial z}$
+%    \item $\vec{\nabla}^2 U = \frac{1}{r}\frac{\partial}{\partial r}(r \frac{\partial U}{\partial r}) + \frac{1}{r^2}\frac{\partial^2 U}{\partial \phi^2} + \frac{\partial^2 U}{\partial z^2}$
+%   \item $\urot \vec A = \left( \begin{array}{c}
+%                          \frac{1}{r} \frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \\
+%                          \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} \\
+%                          \frac{1}{r} \frac{\partial (r \ A_\theta)}{\partial r} - \frac{1}{r} \frac{\partial A_r}{\partial \theta}
+%                         \end{array} \right)$
+%  \squishend
+
+ \graypar{Spherical coord ($r \cos \phi \sin \theta, r \sin \phi \sin \theta, r \cos \theta$)}
+  \squishlist
+   \item $\udiv \vec A = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r}
+          + \frac{1}{r\sin{\theta}}\left( \frac{\partial(\sin{\theta} A_\theta)}{\partial \theta}
+          + \frac{\partial A_\phi}{\partial \phi} \right)$
+%    \item $\vec{\nabla}^2 U = \frac{1}{r}\frac{\partial}{\partial r}(r \frac{\partial U}{\partial r}) + \frac{1}{r^2}\frac{\partial^2 U}{\partial \phi^2} + \frac{\partial^2 U}{\partial z^2}$
+   \item $\urot \vec A = \frac{1}{r\sin{\theta}}\left[ \frac{\partial(\sin{\theta} A_\phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right]\vec{e_r} + $ $
+      \frac{1}{r}\left[ \frac{1}{\sin{\theta}} \frac{\partial A_r}{\partial \phi} - \frac{\partial (r A_\phi)}{\partial r}\right]\vec{e_\theta} + $ $
+      \frac{1}{r}\left[ \frac{\partial (r \ A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right]\vec{e_\phi}$
+  \squishend

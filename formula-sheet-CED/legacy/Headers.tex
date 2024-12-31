@@ -1,0 +1,111 @@
+\usepackage{amsmath,amsfonts,amssymb,braket}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{mathtools}
+
+\usepackage[useregional]{datetime2}
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{accents}
+\usepackage[T1]{fontenc}
+\usepackage{times} % change la police d'écriture (requière texlive-fonts-recommended)
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage{hyperref}
+
+
+\usepackage[left=0.7cm,right=0.7cm,bottom=0.75cm,top=0.6cm]{geometry}    
+\usepackage{multicol,multirow}
+
+\definecolor{lightgray}{gray}{.9}
+\definecolor{darkgray}{gray}{.8}
+
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+\setlength{\columnseprule}{.4pt}
+\setlength{\columnsep}{1.5pc}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+    \usepackage{ifthen}
+    \newcounter{oldnumber}
+    \newcommand{\putpagenumber}{
+    \ifthenelse{\thepage=\theoldnumber}{}{\addtocounter{oldnumber}{1}
+    p.\theoldnumber}
+    }%These are used to print the page number at the first call of each page. Should be used with \graysec and \graypar
+
+\newcommand{\graysec}[1]{\hspace{-0.305cm}\noindent\colorbox{darkgray}{\makebox[1.045\columnwidth][l]{\textbf{#1 \hfill \hfill \putpagenumber}}}
+
+}
+\newcommand{\graypar}[1]{\hspace{-0.305cm}\noindent\colorbox{lightgray}{\makebox[1.045\columnwidth][l]{\textbf{#1 \hfill \hfill \putpagenumber}}}
+
+}
+
+\newcommand{\E}{\mathcal{E}}
+
+\newcommand{\squishlist}{
+	\begin{list}{$\star$}{
+		\setlength{\itemsep}{5pt}%Ceci change l'espace entre items
+		\setlength{\parsep}{0pt}
+		\setlength{\topsep}{0pt}
+		\setlength{\partopsep}{0pt}
+		\setlength{\leftmargin}{0em}
+		\setlength{\labelwidth}{1em}
+		\setlength{\labelsep}{0.5em}
+	}
+}
+\newcommand{\squishend}{\end{list}}
+
+\newcommand{\ud}{\textrm{d}}
+\newcommand{\ugrad}{\nabla}
+\newcommand{\udiv}{\nabla \cdot}
+\newcommand{\urot}{\nabla \cross}
+
+\newcommand{\ulap}{\ensuremath{\nabla^2}}
+
+\newcommand{\tq}{\ensuremath{\ \textrm{tq.} \ }}
+
+\newcommand{\der}[2]{\ensuremath{\frac{\ud #2}{\ud #1}}}
+\newcommand{\dder}[2]{\ensuremath{\frac{\ud^2 #2}{\ud #1^2}}}
+\newcommand{\D}[2]{\ensuremath{\frac{\partial #2}{\partial #1}}}
+\newcommand{\DD}[2]{\ensuremath{\frac{\partial^2 #2}{\partial #1^2}}}
+
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\univec}[1]{\ensuremath{\hat{\vec #1}}}
+\newcommand{\scalar}[2]{\ensuremath{\vec{#1} \cdot \vec{#2}}}
+%\newcommand{\cross}[2]{\ensuremath{\vec{#1} \wedge \vec{#2}}}
+
+\newcommand{\emc}[1]{\ensuremath{\frac{#1}{4 \pi \varepsilon_0}}}
+
+\newcommand{\N}{\hat{\vec n}}
+\newcommand{\mean}[1]{\langle#1\rangle}
+\newcommand{\half}{\frac{1}{2}}
+
+% redefined sqrt to make it "closed" root
+\usepackage{letltxmacro}
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+\setbox0=\hbox{\ensuremath{\oldr@@t#1{#2\,}}}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+\makeatother
+
+\def\pa{\partial}
+
+\newcommand{\pad}[2]{\frac{\pa #1}{\pa #2}}
+%\newcommand{\padp}[3]{\frac{\pa^{#3} #1}{\pa #2^{#3}}}
+
+%\newcommand{\bigO}[1]{\mathcal{O}\left( #1\right) }
+%\newcommand{\smallo}[1]{\mathcal{o}\left( #1\right) }
+
+%\newcommand{\iif}{\Leftrightarrow}
+\newcommand{\transposeAfter}{^{\mathsf{T}}}
+\newcommand{\transpose}[1]{#1\transposeAfter}
+\newcommand{\complexConjugate}[1]{#1^{\star}}
+\newcommand{\oneover}[1]{\frac{1}{#1}}
+
+\pagenumbering{arabic}

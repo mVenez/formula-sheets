@@ -2,60 +2,70 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 
 \graypar{General single qubit state}
 \begin{squishlist}
-\item $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$, or $\ket{\psi} = \cos(\theta/2)\ket{0} + e^{i\phi} \sin(\theta/2)\ket{1}$, $|\alpha|^2 + |\beta|^2 = 1$
-\item $\ket{\psi}$ is an eigenstate of $\vec{\sigma}\cdot \vec{n}$ with eigenvalue 1
+    \item $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$, or $\ket{\psi} = \cos(\theta/2)\ket{0} + e^{i\phi} \sin(\theta/2)\ket{1}$, $|\alpha|^2 + |\beta|^2 = 1$
+    \item $\ket{\psi}$ is an eigenstate of $\vec{\sigma}\cdot \vec{n}$ with eigenvalue 1
 \end{squishlist}
 
 \graypar{Evolution}
 \begin{squishlist}
-\item $i \D{t}{\ket{\psi(t)}} = H \ket{\psi(t)}$ (Schrödinger)
-\item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$
+    \item $i \D{t}{\ket{\psi(t)}} = H \ket{\psi(t)}$ (Schrödinger)
+    \item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$
 \end{squishlist}
 
 \graypar{Pauli matrices}
 \begin{squishlist}
-\item $\sigma_0 = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix},
-    \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, 
-    \sigma_y=\begin{pmatrix} 0 & -i\\ i & 0\end{pmatrix} , 
-    \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$
+    \item $\sigma_0 = \begin{pmatrix} 1 & 0\\ 0 & 1 \end{pmatrix},
+        \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, 
+        \sigma_y=\begin{pmatrix} 0 & -i\\ i & 0\end{pmatrix} , 
+        \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$
 
-\item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$ \hfill $S_i = \frac{\hbar}{2} \sigma_i$
-\item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ 
-\item $\{\sigma_i, \sigma_j \} = \sigma_i \sigma_J + \sigma_j\sigma_i = 2 \delta_{ij} \id$
-\item Paulis form an orthonormal basis with $\Tr[\sigma_i,\sigma_j] = 2\delta_{ij}$
-\item The Pauli $\alpha$ operator, $\alpha \in \{x,y,z\}$, rotates the state by $\pi$ around the $\alpha$-axis.
+    \item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$ \hfill $S_i = \frac{\hbar}{2} \sigma_i$
+    \item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ \quad $V = \vec{v}\cdot \vec{\sigma} \Rightarrow V^2 = \id$
+    \item $\{\sigma_i, \sigma_j \} = \sigma_i \sigma_J + \sigma_j\sigma_i = 2 \delta_{ij} \id$
+    \item Paulis form an orthonormal basis with $\Tr[\sigma_i,\sigma_j] = 2\delta_{ij}$
+    \item The Pauli $\alpha$ operator, $\alpha \in \{x,y,z\}$, rotates the state by $\pi$ around the $\alpha$-axis.
 
-\item Paulis as generators: any single qubit hamiltonian can be written as $H = \omega \vec{n}\cdot \vec{\sigma}$ \\
-    $U = \exp(-i\omega \vec{\sigma}\cdot \vec{n} t) = \cos(\omega t) \id - i \sin(\omega t) \vec{n}\cdot\vec{\sigma}$ \\
-    Causes a qubit state to rotate around $\vec{n}$ at a rate $2\omega t$.
+    \item Paulis as generators: any single qubit hamiltonian can be written as $H = \omega \vec{n}\cdot \vec{\sigma}$ \\
+        $U = \exp(-i\omega \vec{\sigma}\cdot \vec{n} t) = \cos(\omega t) \id - i \sin(\omega t) \vec{n}\cdot\vec{\sigma}$ \\
+        Causes a qubit state to rotate around $\vec{n}$ at a rate $2\omega t$.
 \end{squishlist}
 
 \graypar{Observables}
 \begin{squishlist}
-\item $M = \sum_k \lambda_k \ket{\lambda_k} \bra{\lambda_k}$ Hermitian
-\item $\braket{M} = \braket{\psi|M|\psi} = \sum_k \lambda_k P_k$, $P_k = |\braket{\lambda_k | \psi}|^2$
-\item $\Pi_k = \ket{\lambda_k}\bra{\lambda_k}$ Projector $\Rightarrow P_k = \braket{\psi| \Pi_k | \psi}$, $\sum_k \Pi_k = 1$
-\item Measurement $\Rightarrow$ State collapses to $\frac{\Pi_k \ket{\psi_k}}{\sqrt{P_k}}$
+    \item $M = \sum_k \lambda_k \ket{\lambda_k} \bra{\lambda_k}$ Hermitian
+    \item $\braket{M} = \braket{\psi|M|\psi} = \sum_k \lambda_k P_k$, $P_k = |\braket{\lambda_k | \psi}|^2$
+    \item $\Pi_k = \ket{\lambda_k}\bra{\lambda_k}$ Projector $\Rightarrow P_k = \braket{\psi| \Pi_k | \psi}$, $\sum_k \Pi_k = 1$
+    \item Measurement $\Rightarrow$ State collapses to $\frac{\Pi_k \ket{\psi_k}}{\sqrt{P_k}}$
 \end{squishlist}
 
 \graypar{Composite systems \quad $\H_{ABC\ldots} = \H_a \otimes \H_b \otimes \H_c \ldots$}
 \begin{squishlist}
-\item The resulting space has dimension $n_A n_B n_C \ldots$
-\item Operators $T_{AB} \ket{\lambda_ij} = (T_a \otimes T_b) (\ket{\mu_i \otimes \nu_j}) = T_A \ket{\mu_i} \otimes \ket{\nu_k}$
-\item $[T_A \otimes \id_B, \id_A \otimes T_B] = 0$, \quad $\{ T_A \otimes \id_B, \id_A \otimes T_B\} = 2 (T_A \otimes T_B)$ \\
-    $e^{A \otimes \id + \id \otimes B} = e^A \otimes e^B$
+    \item The resulting space has dimension $n_A n_B n_C \ldots$
+    \item Operators $T_{AB} \ket{\lambda_ij} = (T_a \otimes T_b) (\ket{\mu_i \otimes \nu_j}) = T_A \ket{\mu_i} \otimes \ket{\nu_k}$
+    \item $[T_A \otimes \id_B, \id_A \otimes T_B] = 0$, \quad $\{ T_A \otimes \id_B, \id_A \otimes T_B\} = 2 (T_A \otimes T_B)$ \\
+        $e^{A \otimes \id + \id \otimes B} = e^A \otimes e^B$
 
-\item Global measurem.\ $T = T_A \otimes T_B \rightarrow T \ket{T_i} = t_i \ket{T_i}, \quad \ket{\psi} = \sum_i \ket{T_i} \bra{T_i}\ket{\psi}$ 
-\item Partial measurement $T_A$: if $\kpsi = \sum_{ij} \ket{T_{A,i}} \otimes \ket{T_{B,j}} = \sum_i \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
-    then $P_i = \sum_j |c_{ij}|^2$ and system collapses to $\kpsi' \propto \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
+    \item Global measurem.\ $T = T_A \otimes T_B \rightarrow T \ket{T_i} = t_i \ket{T_i}, \quad \ket{\psi} = \sum_i \ket{T_i} \bra{T_i}\ket{\psi}$ 
+    \item Partial measurement $T_A$: if $\kpsi = \sum_{ij} \ket{T_{A,i}} \otimes \ket{T_{B,j}} = \sum_i \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
+        then $P_i = \sum_j |c_{ij}|^2$ and system collapses to $\kpsi' \propto \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
 
-\item $P_{\hat{O}}(\lambda | \psi) = \braket{\psi | \Pi^{A}_{\lambda} | \psi }$ is the probability of a measurement of operator $\hat{O}$ yielding its eigenvalue $\lambda$, with $A$ the subspace of the meas., $\Pi_{\lambda}^A = \ket{\lambda}\bra{\lambda}_A \otimes \id_B$ and
+    \item $P_{\hat{O}}(\lambda | \psi) = \braket{\psi | \Pi^{A}_{\lambda} | \psi }$ is the probability of a measurement of operator $\hat{O}$ yielding its eigenvalue $\lambda$, with $A$ the subspace of the meas., $\Pi_{\lambda}^A = \ket{\lambda}\bra{\lambda}_A \otimes \id_B$ and
     $\ket{\lambda}$ the eigenket corresponding to eigenvalue $\lambda$
 
-\item \emph{Entangled} state: its coefficients cannot be written as the product of two independent coefficients. 
-    \emph{Separable} state: the global wave function can be written as the product of two wavefunctions corresponding to subsystems $A$ and $B$ (measures performed on one part do not affect the other).
-\item Condition of separability for 2 qubits: if $c_{ij} = c^{(A)}_i c^{(B)}_j$, with $i,j\in \{0,1\}$, then
-    $\mathrm{det} \begin{pmatrix} c_{00} & c_{01} \\ c_{10} & c_{11} \end{pmatrix} = 0 \Leftrightarrow $ separable. E.g. in $\left(\alpha \ket{0}_A \otimes \beta \ket{0}_B\right)$, $c_{00} = \alpha \beta$.
+    For measurements on both subspaces use $\Pi_{\lambda} = \ket{\lambda}\bra{\lambda}_A \otimes \ket{\kappa}\bra{\kappa}_B$
+
+    \item \emph{Entangled} state: its coefficients cannot be written as the product of two independent coefficients. 
+        \emph{Separable} state: the global wave function can be written as the product of two wavefunctions corresponding to subsystems $A$ and $B$ (measures performed on one part do not affect the other).
+    \item Condition of separability for 2 qubits: if $c_{ij} = c^{(A)}_i c^{(B)}_j$, with $i,j\in \{0,1\}$, then
+        $\mathrm{det} \begin{pmatrix} c_{00} & c_{01} \\ c_{10} & c_{11} \end{pmatrix} = 0 \Leftrightarrow $ separable. E.g. in $\left(\alpha \ket{0}_A \otimes \beta \ket{0}_B\right)$, $c_{00} = \alpha \beta$.
+\end{squishlist}
+
+
+\graypar{Quantum eraser}
+\begin{squishlist}
+    \item $\ket{\nearrow} = \frac{1}{\sqrt{2}}(\ket{H}+\ket{V}),\: \ket{\swarrow} = \frac{1}{\sqrt{2}}(\ket{H} - \ket{V})$
+    \item $\ket{H} = \frac{1}{\sqrt{2}}(\ket{\nearrow} + \ket{\swarrow}),\: \ket{V} = \frac{1}{\sqrt{2}}(\ket{\nearrow} - \ket{\swarrow})$
+    \item $P(x) = \braket{\psi(x,t)|\left(\ket{x}\bra{x} \otimes \id\right)| \psi(x,t)}$ Probability density on screen
 \end{squishlist}
 
 \columnbreak
@@ -74,9 +84,35 @@ $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatr
     \item Non separable
     \item Eigenstates of $\hat{H} = \mu_x \hat{S}_x^{(A)} \otimes \hat{S}_x^{(B)} + \mu_y \hat{S}_y^{(A)} \otimes \hat{S}_y^{(B)}$
     \item $P_{\hat{S}_x^{(A)}}(\pm \frac{\hbar}{2} | \psi) = \frac{1}{2} \quad \forall \ket{\psi} $ a Bell state. 
-    
-
 \end{squishlist}
+
+
+\graypar{Different basis}
+
+
+\graypar{CHSH Inequality}
+\begin{squishlist}
+    \item Bipartite system with LHS measuring device, which can measure either $A$ or $A'$, and RHS device which can measure $B$ or $B'$.
+    The probability of a result combination is written as $P(l,r|L,R)$ with $L,R$ the settings on LHS and RHS device and $l$ and $r$ the results of the measures ($\pm 1$).
+    \item Bell inequalities define a correlation coefficient $C$ and then place an upper bound on possible values this coefficient can take if you assume factorisability
+    \item {Factorisability}: $p(l,r|L,R) = \int P(l|L,\lambda) P(r|R,\lambda) P(\lambda) d\lambda$ where $\lambda$ incorporates all effects from the system's shared history.
+    Two necessary conditions for factorisability to hold: Setting Independence $P(l|L,B,\lambda) = P(l|L,B',\lambda)$ and Outcome Indipendence $P(l,A,R,r,\lambda) = P(l|A,R,r',\lambda)$.
+    \item $C:= |\langle LR \rangle - \langle LR'\rangle  | + |\langle LR\rangle + \langle L'R \rangle |$ with $\langle LR \rangle = \sum_{l,r=\pm 1}lr P(l,r|L,R)$
+    \item $C \leq 2$ in the classical case, violated in quantum case (Tsirelson's bound: $C \leq 2\sqrt{2}$) \\ Quantum Mechanics violates outcome indipendence.
+\end{squishlist}
+
+
+\graypar{Reduced and mixed quantum states}
+\begin{squishlist}
+    \item Density operator: $\rho = \kpsi \bra{\psi} \Longrightarrow \braket{O} = \Tr (\rho O)$ for any observable $O$
+\item General single qubit: $\rho = \begin{pmatrix} cos(\theta/2)^2 & \cos(\theta/2)\sin(\theta/2)e^{-i\phi} \\ \cos(\theta/2)\sin(\theta/2)e^{i\phi} & \sin(\theta/2)^2 \end{pmatrix} = $ \\
+$= \frac{1}{2}\sigma_0 + \frac{1}{2}\sum_{i=1}^3 v_i \sigma_i$ with $\vec{v} = (\sin\theta \cos\phi , \sin\theta\sin\phi, \cos\theta);\; v_i = \Tr[\rho \sigma_i]$
+\item $\rho = \sum_k p_k \ket{\psi_k}\bra{\psi_k}$ System prepared in state $\ket{\psi_k}$ with prob. $p_k$ (\emph{mixed} state)
+\item If $\rho = p \dpsi + (1-p) \ket{\phi}\bra{\phi}$ where
+$\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed state has Bloch vector $\vec{w} = p \vec{v} + (1-p) \vec{u}$; $|\vec{w}|^2 \leq 1$
+\item $\rho_A = \sum_{k=1}^{d_B}(\id_A \otimes \bra{k})\rho_{AB}(\id_A \otimes \ket{k}) = \Tr_B[\rho_{AB}]$ \quad Reduced state
+\end{squishlist}
+
 \columnbreak
 
 \graypar{Hermitian and unitary operators}

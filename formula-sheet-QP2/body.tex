@@ -19,7 +19,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
     \sigma_y=\begin{pmatrix} 0 & -i\\ i & 0\end{pmatrix} , 
     \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$
 
-\item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$
+\item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$ \hfill $S_i = \frac{\hbar}{2} \sigma_i$
 \item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ 
 \item $\{\sigma_i, \sigma_j \} = \sigma_i \sigma_J + \sigma_j\sigma_i = 2 \delta_{ij} \id$
 \item Paulis form an orthonormal basis with $\Tr[\sigma_i,\sigma_j] = 2\delta_{ij}$
@@ -49,6 +49,9 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 \item Partial measurement $T_A$: if $\kpsi = \sum_{ij} \ket{T_{A,i}} \otimes \ket{T_{B,j}} = \sum_i \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
     then $P_i = \sum_j |c_{ij}|^2$ and system collapses to $\kpsi' \propto \ket{T_{A,i}} \otimes \ket{\phi_{B,i}}$
 
+\item $P_{\hat{O}}(\lambda | \psi) = \braket{\psi | \Pi^{A}_{\lambda} | \psi }$ is the probability of a measurement of operator $\hat{O}$ yielding its eigenvalue $\lambda$, with $A$ the subspace of the meas., $\Pi_{\lambda}^A = \ket{\lambda}\bra{\lambda}_A \otimes \id_B$ and
+    $\ket{\lambda}$ the eigenket corresponding to eigenvalue $\lambda$
+
 \item \emph{Entangled} state: its coefficients cannot be written as the product of two independent coefficients. 
     \emph{Separable} state: the global wave function can be written as the product of two wavefunctions corresponding to subsystems $A$ and $B$ (measures performed on one part do not affect the other).
 \item Condition of separability for 2 qubits: if $c_{ij} = c^{(A)}_i c^{(B)}_j$, with $i,j\in \{0,1\}$, then
@@ -69,5 +72,15 @@ $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatr
           $\ket{\Psi^-} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{1}_B - \ket{1}_A \otimes \ket{0}_B\right)$
     \item They form an orthonormal basis of the Hilbert space of the two spins $\H = \H_A \otimes \H_B$
     \item Non separable
+    \item Eigenstates of $\hat{H} = \mu_x \hat{S}_x^{(A)} \otimes \hat{S}_x^{(B)} + \mu_y \hat{S}_y^{(A)} \otimes \hat{S}_y^{(B)}$
+    \item $P_{\hat{S}_x^{(A)}}(\pm \frac{\hbar}{2} | \psi) = \frac{1}{2} \quad \forall \ket{\psi} $ a Bell state. 
+    
+
 \end{squishlist}
 \columnbreak
+
+\graypar{Hermitian and unitary operators}
+\begin{squishlist}
+    \item Hermitian operator: $M = M^{\dagger}$ $\longrightarrow$ diagonalisable with real eigenvalues, linear
+    \item Unitary operators: $U U^{\dagger} = U^{\dagger}U = \id$ $\longrightarrow \braket{\psi | U^{\dagger}U|\psi} = \id $ and linear
+\end{squishlist}

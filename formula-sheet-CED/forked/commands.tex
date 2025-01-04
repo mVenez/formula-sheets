@@ -1,6 +1,8 @@
 \definecolor{lightgray}{gray}{.9}
 \definecolor{darkgray}{gray}{.8}
-
+\newcommand{\squishitem}{$\star$}
+\newcommand{\squishsep}{\hspace{0.5cm} \squishitem \;}
+\newcommand{\smallsquishsep}{\hspace{0.25cm} \squishitem \;}
 
 \newcommand{\graysec}[1]{\hspace{-0.305cm}\noindent\colorbox{darkgray}{\makebox[1.045\columnwidth][l]{\textbf{#1 \hfill \hfill \putpagenumber}}}
 
@@ -12,7 +14,7 @@
 \newcommand{\E}{\mathcal{E}}
 
 \newcommand{\squishlist}{
-	\begin{list}{$\star$}{
+	\begin{list}{\squishitem}{
 		\setlength{\itemsep}{5pt}%Ceci change l'espace entre items
 		\setlength{\parsep}{0pt}
 		\setlength{\topsep}{0pt}

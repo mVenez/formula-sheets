@@ -114,7 +114,7 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 \item Why is signaling impossible? No matter what is performed upon the other partitions, the reduced density matrix is unchanged. Because the statistics of local measurements are informed entirely by expected values of operators upon the reduced density matrix, they are also independent of operations on other partitions.
 \end{squishlist}
 
-\graypar{Identical multi-particle systems}
+\graysec{Identical multi-particle systems}
 \begin{squishlist}
     \item $\P_{1,2} \psi(\vec{r_1}, \vec{r_2}) = \psi(\vec{r_2}, \vec{r_1}) = \pm \psi(\vec{r_1}, \vec{r_2})$ \quad $+1$: bosons \quad $-1$: fermions
     \item $\P_{jk} = \P_{kj}$ \squishsep $\P_{jk}^2 = \id \Leftrightarrow \P_{jk}^{-1}=\P_{jk}$ \squishsep $\P_{jk} = \P_{jk}^{\dagger}$
@@ -140,6 +140,26 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
     \end{aligned}\right.$ \\
     $\{\hat{c}_i, \hat{c}_j\} = \{\hat{c}_i^{\dagger}, \hat{c}_j^{\dagger}\} = 0$; \qquad $\{\hat{c}_i, \hat{c}_j^{\dagger}\} = \delta_{ij}$ 
 \end{squishlist}
+
+
+\graysec{Perturbation Theory}
+\begin{squishlist}
+    \item $H = H_0 + \lambda V$, with $H_0 \ket{\phi_n} = \epsilon_n \ket{\phi_n}$ known,\, $\lambda \in \mathbb{R}^+$. 
+    \item $H \ket{\psi_n} = E_n \ket{\psi_n}$ eigenspectrum unknown. The solution in the limit of small $\lambda$ is 
+    $\ket{\psi_n} = \ket{\phi_n} + \lambda \ket{\psi_n^{(1)}} + \lambda^2 \ket{\psi_n^{(2)}} + \ldots$ \\
+    $E_n = \epsilon_n + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots$
+    \item S.E.: $(H_0 + \lambda V)(\ket{\phi_n} + \lambda \ket{\psi_n^{(1)}} + \lambda^2 \ket{\psi_n^{(2)}} + \ldots) = (\epsilon_n + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \ldots)(\ket{\phi_n} + \lambda \ket{\psi_n^{(1)}} + \lambda^2 \ket{\psi_n^{(2)}} + \ldots)$ must be satisfied at each order in $\lambda$
+\end{squishlist}
+\graypar{Non-degenerate Time-Indipendent Perturbation Theory}
+\begin{squishlist}
+    \item \textbf{Zero-th order} $H_0 \ket{\phi_n} = \epsilon_n \ket{\phi_n}$ unperturbed eigenvalue problem
+    \item \textbf{1st order} $E_n^{(1)} = \braket{\phi_m|V|\phi_n}$; \quad $\ket{\psi_n^{1}} = \sum_{m\neq n}\frac{\braket{\phi_m |V |\phi_n}}{\epsilon_n - \epsilon_m} \ket{\phi_m}$
+    \item \textbf{2nd order} $E_n^{(2)} = \frac{|\braket{\phi_m|V|\phi_n}|^2}{\epsilon_n - \epsilon_m}$; for the approx. to be valid  $|E_n^{(2)}| \ll |E_n^{(1)}|$ 
+    \item satisfied as long as $\frac{1}{\Delta} ( \braket{\phi_n | V^2|\phi_n} - \braket{\phi_n | V| \phi_n}^2) \ll \braket{\phi_n | V | \phi_n}$, \\ 
+    $\Delta = \min_m | \epsilon_n - \epsilon_m|$ or more restrictive: $\left|\frac{\braket{\phi_m | V | \phi_n}}{\epsilon_n - \epsilon_m}\right| \ll 1$
+\end{squishlist}
+
+
 
 \graypar{Hermitian and unitary operators}
 \begin{squishlist}
@@ -187,3 +207,7 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 % \item $\displaystyle{\oint_{\partial D}} \ud z \, f(z) = 2\pi i \displaystyle{\sum_{k}} \text{Res}(f,z_k)$ \, : \, with $z_k$ singularities inside $\partial D$  %Pas de pts siguliers -> Holomorphe
 
 % \item $\text{Res}(f,z_k) = \dfrac{1}{(n-1)!} \displaystyle{\lim_{z \rightarrow z_k}} \dfrac{\ud ^{n-1}}{\ud z^{n-1}} (z-z_k)^{n} f(z)$ \, : \, If $z_k$ poles of order n  
+
+\columnbreak
+
+\graysec{Group Theory}

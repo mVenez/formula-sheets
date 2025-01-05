@@ -9,7 +9,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 \graypar{Evolution}
 \begin{squishlist}
     \item $i \D{t}{\ket{\psi(t)}} = H \ket{\psi(t)}$ (Schrödinger)
-    \item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$
+    \item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$, $U(t) = e^{-iHt}$
 \end{squishlist}
 
 \graypar{Pauli matrices}
@@ -58,8 +58,10 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
         \emph{Separable} state: the global wave function can be written as the product of two wavefunctions corresponding to subsystems $A$ and $B$ (measures performed on one part do not affect the other).
     \item Condition of separability for 2 qubits: if $c_{ij} = c^{(A)}_i c^{(B)}_j$, with $i,j\in \{0,1\}$, then
         $\mathrm{det} \begin{pmatrix} c_{00} & c_{01} \\ c_{10} & c_{11} \end{pmatrix} = 0 \Leftrightarrow $ separable. E.g. in $\left(\alpha \ket{0}_A \otimes \beta \ket{0}_B\right)$, $c_{00} = \alpha \beta$.
+    \item $H_{AB} = H_A \otimes \id_B + \id_A \otimes H_B \Longrightarrow e^{-itH_{AB}} = e^{-itH_A} \otimes e^{-ith_B}$ \\ A separable unitary generates no entanglement when applied to a separable state.
 \end{squishlist}
 
+\columnbreak
 
 \graypar{Quantum eraser}
 \begin{squishlist}
@@ -68,11 +70,6 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
     \item $P(x) = \braket{\psi(x,t)|\left(\ket{x}\bra{x} \otimes \id\right)| \psi(x,t)}$ Probability density on screen
 \end{squishlist}
 
-\columnbreak
-\graypar{Tensor product}
-$\vectwo{a}{b} \otimes \vectwo{\alpha}{\beta} = \begin{pmatrix} a \alpha & a \beta & b \alpha & b \beta \end{pmatrix}^T$
-
-$A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatrix}$
 
 \graypar{Bell states}
 \begin{squishlist}
@@ -85,9 +82,6 @@ $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatr
     \item Eigenstates of $\hat{H} = \mu_x \hat{S}_x^{(A)} \otimes \hat{S}_x^{(B)} + \mu_y \hat{S}_y^{(A)} \otimes \hat{S}_y^{(B)}$
     \item $P_{\hat{S}_x^{(A)}}(\pm \frac{\hbar}{2} | \psi) = \frac{1}{2} \quad \forall \ket{\psi} $ a Bell state. 
 \end{squishlist}
-
-
-\graypar{Different basis}
 
 
 \graypar{CHSH Inequality}
@@ -107,16 +101,89 @@ $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatr
     \item Density operator: $\rho = \kpsi \bra{\psi} \Longrightarrow \braket{O} = \Tr (\rho O)$ for any observable $O$
 \item General single qubit: $\rho = \begin{pmatrix} cos(\theta/2)^2 & \cos(\theta/2)\sin(\theta/2)e^{-i\phi} \\ \cos(\theta/2)\sin(\theta/2)e^{i\phi} & \sin(\theta/2)^2 \end{pmatrix} = $ \\
 $= \frac{1}{2}\sigma_0 + \frac{1}{2}\sum_{i=1}^3 v_i \sigma_i$ with $\vec{v} = (\sin\theta \cos\phi , \sin\theta\sin\phi, \cos\theta);\; v_i = \Tr[\rho \sigma_i]$
-\item $\rho = \sum_k p_k \ket{\psi_k}\bra{\psi_k}$ System prepared in state $\ket{\psi_k}$ with prob. $p_k$ (\emph{mixed} state)
+\item $\rho = \sum_k p_k \ket{\psi_k}\bra{\psi_k}$ System prepared in state $\ket{\psi_k}$ with prob. $p_k$ (\textbf{mixed} state)
 \item If $\rho = p \dpsi + (1-p) \ket{\phi}\bra{\phi}$ where
 $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed state has Bloch vector $\vec{w} = p \vec{v} + (1-p) \vec{u}$; $|\vec{w}|^2 \leq 1$
-\item $\rho_A = \sum_{k=1}^{d_B}(\id_A \otimes \bra{k})\rho_{AB}(\id_A \otimes \ket{k}) = \Tr_B[\rho_{AB}]$ \quad Reduced state
+\item $\rho_A = \sum_{k=1}^{d_B}(\id_A \otimes \bra{k})\rho_{AB}(\id_A \otimes \ket{k}) = \Tr_B[\rho_{AB}]$ \quad \textbf{Reduced} state
+\item $\Tr_B[\ket{ij}\bra{kl}] = \ket{i}\bra{k} \Tr[\ket{j}\bra{l}]$
+\item \textbf{Props}: 
+(i) $\rho_A^{\dagger} = \rho_A$ (self-adj.) \qquad (ii)$\Tr(\rho_A) = \sum_i  \sum_{\mu}\alpha^*_{i,\mu}\alpha_{i,\mu} = |\psi|^2 = 1$ \\ (iii)$\braket{\psi|\rho_A|\psi} \geq 0$ for all $\kpsi \in A$ i.e. positive or null eigenvalues
+\item Conseq., $\rho_A = \sum_j p_j \ket{k}\bra{j}$ where $p_j\geq 0$ and $\sum p_j = 1$.\\ $\braket{O} = \Tr(\rho_A O) = \sum_j p_j \braket{j|O|j} = \sum_{p_j} \braket{O}_{\ket{j}}$
+\item If a density op. describes a pure state, then it is a projector ($\rho^2 = \rho$). If $\rho$ is not pure then $\rho^2 \neq \rho$ and $\Tr[\rho^2] < 1$ (\emph{purity} of a state).
+\item \textbf{Evolution:} $\rho(t=0) = \sum_j \alpha_j \ket{\psi_j(0)}\bra{\psi_j(0)}$ initial state \\ $\Longrightarrow \rho(t) = \sum_j \alpha_j e^{-iHt} \ket{\psi_j(0)}\bra{\psi_j(0)}e^{iHt} \Longrightarrow i \D{t}{\rho} = [\hat{H},\rho]$
+\item Why is signaling impossible? No matter what is performed upon the other partitions, the reduced density matrix is unchanged. Because the statistics of local measurements are informed entirely by expected values of operators upon the reduced density matrix, they are also independent of operations on other partitions.
 \end{squishlist}
 
-\columnbreak
+\graypar{Identical multi-particle systems}
+\begin{squishlist}
+    \item $\P_{1,2} \psi(\vec{r_1}, \vec{r_2}) = \psi(\vec{r_2}, \vec{r_1}) = \pm \psi(\vec{r_1}, \vec{r_2})$ \quad $+1$: bosons \quad $-1$: fermions
+    \item $\P_{jk} = \P_{kj}$ \squishsep $\P_{jk}^2 = \id \Leftrightarrow \P_{jk}^{-1}=\P_{jk}$ \squishsep $\P_{jk} = \P_{jk}^{\dagger}$
+    \item $\braket{\psi_{12}|O|\psi_{12}} = \braket{\psi_{12}|\P_{12}^{\dagger}O\P_{12}|\psi_{12}}$ for all $\psi$ $\Rightarrow [\P_{12},O] = 0, [\P_{12},H] = 0$
+    \item Possible basis states for a system of \\ $n$ bosons: $\ket{\psi_{\vec{x}}} = \mathcal{N} \sum_{\P \in S_n} \P\ket{x_1,x_2, \ldots, x_n}$ with $\mathcal{N} = \frac{1}{\sqrt{n!}\sqrt{\prod_k n_k !}}$ \\
+    $n$ fermions $\ket{\psi_{\vec{x}}} = \frac{1}{\sqrt{n!}} \sum_{\P \in S_n} \text{sign}(\P) \P \ket{x_1, x_2, \ldots, x_n}$
+\end{squishlist}
+
+\graypar{Second Quantization}
+\begin{squishlist}
+    \item Kets indicate the number of times a wave function is involved:\\
+    for Bosons $\frac{1}{\sqrt{2}} ( \ket{\uparrow \downarrow} + \ket{\downarrow \uparrow}) \rightarrow \ket{11};\; \ket{\uparrow \uparrow} \rightarrow \ket{20};\; \ket{\downarrow \downarrow} \rightarrow \ket{02}$\\
+    for Fermions $\frac{1}{\sqrt{2}} ( \ket{\uparrow \downarrow} - \ket{\downarrow \uparrow}) \rightarrow \ket{11}$ (only possible values 0,1)
+    \item Creation and annihilation operators to increase or decrease the number of particles:
+    Bosons:  $\left\{ \begin{aligned}
+    \hat{c}_i^{\dagger} \ket{n_1, \cdots, n_i, \cdots} &= \sqrt{n_i + 1} \ket{n_1, \cdots, n_i +1, \cdots} \\
+    \hat{c}_i \ket{n_1, \cdots, n_i, \cdots} &= \sqrt{n_i} \ket{n_1, \cdots, n_i -1, \cdots}
+    \end{aligned}\right.$ \\
+    $[\hat{c}_i, \hat{c}_j] = [\hat{c}_i^{\dagger}, \hat{c}_j^{\dagger}] = 0$; \qquad $[\hat{c}_i, \hat{c}_j^{\dagger}] = \delta_{ij}$ \\
+    Fermions: $\left\{ \begin{aligned}
+    \hat{c}_i^{\dagger} \ket{n_1, \cdots, n_i, \cdots} &= (-1)^{n_1+\cdots+n_i-1}(1-n_i) \ket{n_1, \cdots, n_i +1, \cdots} \\
+    \hat{c}_i \ket{n_1, \cdots, n_i, \cdots} &= (-1)^{n_1+\cdots+n_i-1} n_i \ket{n_1, \cdots, n_i -1, \cdots}
+    \end{aligned}\right.$ \\
+    $\{\hat{c}_i, \hat{c}_j\} = \{\hat{c}_i^{\dagger}, \hat{c}_j^{\dagger}\} = 0$; \qquad $\{\hat{c}_i, \hat{c}_j^{\dagger}\} = \delta_{ij}$ 
+\end{squishlist}
 
 \graypar{Hermitian and unitary operators}
 \begin{squishlist}
     \item Hermitian operator: $M = M^{\dagger}$ $\longrightarrow$ diagonalisable with real eigenvalues, linear
     \item Unitary operators: $U U^{\dagger} = U^{\dagger}U = \id$ $\longrightarrow \braket{\psi | U^{\dagger}U|\psi} = \id $ and linear
 \end{squishlist}
+
+\graypar{Tensor product}
+\begin{squishlist}
+\item $\vectwo{a}{b} \otimes \vectwo{\alpha}{\beta} = \begin{pmatrix} a \alpha & a \beta & b \alpha & b \beta \end{pmatrix}^T$
+    
+\item $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatrix}$
+\item $f(\hat{A} \otimes \hat{B}) \ket{a}\ket{\phi} = \ket{a} \otimes f(a\hat{B})\ket{\phi}$
+\end{squishlist}
+
+\graypar{Different basis}
+
+\graysec{Trigonometry}
+\begin{squishlist}
+    
+    \item $\cos(a+b) = \cos(a)\cos(b)-\sin(a)\sin(b)$ \squishsep $\sin(2a) = 2\sin a \cos a$
+    \item $\sin(a+b) = \sin(a)\cos(b) + \cos(a)\sin(b)$ \squishsep $\cos(2a) = \cos^2 a - \sin^2 a$
+    \item $2\sin(a)\sin(b) = \cos(a-b) - \cos(a+b)$ \smallsquishsep $\sin(a/2) = \pm \sqrt{(1-\cos(a))/2}$
+    \item $2\cos(a)\cos(b) = \cos(a+b) + \cos(a-b)$ \smallsquishsep $\cos(a/2) = \pm \sqrt{(1+\cos(a))/2}$
+    \item $2\cos(a)\sin(b) = \sin(a+b) - \sin(a-b)$ \smallsquishsep $\sin^2a = (1-\cos 2a)/2$
+    \item $\cos(a) + \cos(b) = 2\cos\left((a+b)/2\right)\cos\left((a-b)/2\right)$ \;\squishitem \; $\cos^2 a = (1+\cos 2a) / 2$
+    \item $\sin(a) + \sin(b) = 2\sin\left((a+b)/2\right)\cos\left((a-b)/2\right)$ 
+    \item $\cos(a) - \cos(b) = -2\sin\left((a+b/2\right)\sin\left((a-b/2\right)$ 
+\end{squishlist} 
+
+% \graypar{Formules d'Euler + Nombres complexes}
+% $\cos(x) = \frac{e^{ix}+e^{-ix}}{2}$ \,,\, $\sin(x) = \frac{e^{ix}-e^{-ix}}{2i}$ \,,\, $\cosh(x) = \frac{e^{x}+e^{-x}}{2}$   
+% $\sinh(x) = \frac{e^{x}-e^{-x}}{2}$ \,,\, $e^{i(\pi + 2k\pi)} = -1$ \,,\, $e^{i\cdot 2k\pi} = 1$ \,,\, $k \in \mathbb{Z}$  
+% $e^{i(\frac{\pi}{2} + 2k\pi)} = i$ \,,\, $e^{i(-\frac{\pi}{2} + 2k\pi)} = -i$ \,,\, $k \in \mathbb{Z}$ \,,\,
+% $\sqrt{i} = \frac{1+i}{\sqrt{2}}$% \,,\, $\frac{1}{i} = -i$ 
+% $w^n = z = re^{i\varphi}$ => $w_k = r^{\frac{1}{n}}e^{i\frac{\varphi + 2\pi k}{n}},\, k=0,1,...,n-1 $
+
+% \item[] \textbf{Near 0 :}
+% \item $\sin(x) \simeq x - \frac{x^{3}}{6}$ \, ; \, $\cos(x) \simeq 1 - \frac{x^{2}}{2}$ \, ; \, $\tan(x) \simeq x + \frac{x^{3}}{3}$
+% %\item $\cot(x) \simeq \frac{1}{x} - \frac{x}{3} - \frac{x^{3}}{45}$, $\sec(x) \simeq 1 + \frac{x^{2}}{2} + \frac{5x^{4}}{24}$
+% \item $\sinh(x) \simeq x + \frac{x^{3}}{6}$  \,;\, $\cosh(x) \simeq 1 + \frac{x^{2}}{2}$   \,;\,$\tanh(x) \simeq x - \frac{x^{3}}{3}$
+% %\item $\coth(x) \simeq \frac{1}{x} + \frac{x}{3} - \frac{x^{3}}{45}$ \, ; \, ${\rm sech}(x) \simeq 1 - \frac{x^{2}}{2} + \frac{5x^{4}}{24}$  
+% \item $\left(1+x \right)^{\alpha} \simeq 1 + \alpha x + \frac{\alpha(\alpha -1)}{2}x^2$ \, ; \, $\ln(1+x) \simeq x - \frac{x^2}{2} $ 
+% \item[] \textbf{Residuals theorem}
+% \item $\displaystyle{\oint_{\partial D}} \ud z \, f(z) = 2\pi i \displaystyle{\sum_{k}} \text{Res}(f,z_k)$ \, : \, with $z_k$ singularities inside $\partial D$  %Pas de pts siguliers -> Holomorphe
+
+% \item $\text{Res}(f,z_k) = \dfrac{1}{(n-1)!} \displaystyle{\lim_{z \rightarrow z_k}} \dfrac{\ud ^{n-1}}{\ud z^{n-1}} (z-z_k)^{n} f(z)$ \, : \, If $z_k$ poles of order n  

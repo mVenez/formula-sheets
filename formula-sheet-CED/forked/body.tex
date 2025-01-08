@@ -82,7 +82,7 @@ $\vec{\nabla} \times \vec{\rm{A}} = 0 \Rightarrow \exists \ \psi \quad \mathrm{t
 $\vec{\nabla}\cdot\vec{\rm{d} } = 0 \Rightarrow \exists \ \vec{\rm{C}} \quad \mathrm{t.q.} \quad \vec{\rm{d} } = \vec{\nabla} \times \vec{\rm C}$
 \squishend 
 
-\graypar{Trigo, residual theorem}
+\graypar{Trigonometry, developments, Residuals theorem}
 \squishlist 
 \item $\cos(a+b) = \cos(a)\cos(b)-\sin(a)\sin(b)$ \squishsep $\sin(2a) = 2\sin a \cos a$
 \item $\sin(a+b) = \sin(a)\cos(b) + \cos(a)\sin(b)$ \squishsep $\cos(2a) = \cos^2 a - \sin^2 a$
@@ -99,14 +99,13 @@ $\vec{\nabla}\cdot\vec{\rm{d} } = 0 \Rightarrow \exists \ \vec{\rm{C}} \quad \ma
 %$e^{i(\frac{\pi}{2} + 2k\pi)} = i$ \,,\, $e^{i(-\frac{\pi}{2} + 2k\pi)} = -i$ \,,\, $k \in \mathbb{Z}$ \,,\,
 %$\sqrt{i} = \frac{1+i}{\sqrt{2}}$% \,,\, $\frac{1}{i} = -i$ 
 %$w^n = z = re^{i\varphi}$ => $w_k = r^{\frac{1}{n}}e^{i\frac{\varphi + 2\pi k}{n}},\, k=0,1,...,n-1 $
-
-\item[] \textbf{Near 0 :}
+\vspace{-0.1cm}\rule{\columnwidth}{0.5pt}\vspace{-0.1cm}
 \item $\sin(x) \simeq x - \frac{x^{3}}{6}$ \, ; \, $\cos(x) \simeq 1 - \frac{x^{2}}{2}$ \, ; \, $\tan(x) \simeq x + \frac{x^{3}}{3}$
 %\item $\cot(x) \simeq \frac{1}{x} - \frac{x}{3} - \frac{x^{3}}{45}$, $\sec(x) \simeq 1 + \frac{x^{2}}{2} + \frac{5x^{4}}{24}$
 \item $\sinh(x) \simeq x + \frac{x^{3}}{6}$  \,;\, $\cosh(x) \simeq 1 + \frac{x^{2}}{2}$   \,;\,$\tanh(x) \simeq x - \frac{x^{3}}{3}$
 %\item $\coth(x) \simeq \frac{1}{x} + \frac{x}{3} - \frac{x^{3}}{45}$ \, ; \, ${\rm sech}(x) \simeq 1 - \frac{x^{2}}{2} + \frac{5x^{4}}{24}$  
 \item $\left(1+x \right)^{\alpha} \simeq 1 + \alpha x + \frac{\alpha(\alpha -1)}{2}x^2$ \, ; \, $\ln(1+x) \simeq x - \frac{x^2}{2} $ 
-\item[] \textbf{Residuals theorem}
+\vspace{-0.1cm}\rule{\columnwidth}{0.5pt}\vspace{-0.1cm}
 \item $\displaystyle{\oint_{\partial D}} \ud z \, f(z) = 2\pi i \displaystyle{\sum_{k}} \text{Res}(f,z_k)$ \, : \, with $z_k$ singularities inside $\partial D$  %Pas de pts siguliers -> Holomorphe
 
 \item $\text{Res}(f,z_k) = \dfrac{1}{(n-1)!} \displaystyle{\lim_{z \rightarrow z_k}} \dfrac{\ud ^{n-1}}{\ud z^{n-1}} (z-z_k)^{n} f(z)$ \, : \, If $z_k$ poles of order n  
@@ -133,18 +132,17 @@ $f(\vec{x}, t) = \displaystyle{\int_{\mathbb{R}^4}} \dfrac{\ud ^3k}{\left(2\pi\r
 \end{cases}
 $
 \squishend
+
+
 \graysec{Maxwell equations}
-
 $$\boxed{\begin{split}
-\textsc{Coulomb's law} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_0}\\
-\textsc{Ampere's law} \qquad &\boldsymbol{\nabla} \times \boldsymbol{B} = \mu_0 \left(\boldsymbol{J} + \varepsilon_0\frac{\partial \boldsymbol{E}}{\partial t}\right)\\
-\textsc{Faraday's law} \qquad &\boldsymbol{\nabla} \times \boldsymbol{E} + \frac{\partial \boldsymbol{B}}{\partial t} = 0\\
-\textsc{Absence of magnetic poles} \qquad &\boldsymbol{\nabla} \cdot \boldsymbol{B} = 0
+\boldsymbol{\nabla} \cdot \boldsymbol{E} = \frac{\rho}{\varepsilon_0}
+\qquad &\boldsymbol{\nabla} \times \boldsymbol{B} = \mu_0 \left(\boldsymbol{J} + \varepsilon_0\frac{\partial \boldsymbol{E}}{\partial t}\right)\\
+\boldsymbol{\nabla} \times \boldsymbol{E} + \frac{\partial \boldsymbol{B}}{\partial t} = 0
+\qquad &\boldsymbol{\nabla} \cdot \boldsymbol{B} = 0
 \end{split}}$$
-%$\epsilon_0=\frac{1}{\mu_0c^2}$ \\%Voir \graypar{Autres relations}
-\vspace{1cm}
-\columnbreak
 
+%$\epsilon_0=\frac{1}{\mu_0c^2}$ \\%Voir \graypar{Autres relations}
 
 \graypar{Equations in integral form}
 \squishlist
@@ -164,6 +162,8 @@ $\Longrightarrow$ \squishsep $\sigma(\vec{x}) = \epsilon_0 \Delta E_{\perp}(\vec
 
 \item Continuity Equation: $\frac{\partial \rho}{\partial t} + \boldsymbol{\nabla}\cdot\boldsymbol{J} = 0$
 \squishend
+\columnbreak
+
 
 \graypar{Electromagnetic Potentials and Lorenz gauge} 
 \squishlist
@@ -211,6 +211,8 @@ $\phi(\vec{x})\propto\frac{q}{|x-r|}+\frac{q''}{|x-r''|}$: boundary conditions$\
 $\Rightarrow$ Find conditions such that $\frac{r}{r''}=const$.\\
 \squishend
 \vspace{5cm}
+
+\columnbreak
 \graysec{Green functions - static case}
 \squishlist
 \item $-\boldsymbol{\nabla}_{\boldsymbol{x}}^2 G(\boldsymbol{x}, \boldsymbol{x}') = \delta^3(\boldsymbol{x}-\boldsymbol{x}')$
@@ -383,10 +385,6 @@ $\dfrac{\ud \E}{\ud \Omega \ud t^{'}} = \dfrac{q^2}{16\pi^2 \varepsilon_0 c} \df
 \squishend
 
 \graysec{Multipole expansion}
-%$\hspace{0.2cm}$
-Goal: Away from charges or a current, approximate the potentials $\vec{\rm{A}}$ and $\Phi$ using series expansion.
-
-%But : Loin d'un ensemble de charges ou d'un courant, approximer les pot. $\vec{\rm{A}}$ and  $\Phi$ par un dév. en série.\\
 
 \graypar{Static case}
 \squishlist
@@ -412,7 +410,7 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 
 \item $ \Phi(\vec{x}) = \frac{1}{4\pi\varepsilon_0}\sum_{n\geq0}\left(\frac{1}{n!}\sum_{i_1,...,i_n = 1}^{3}\frac{x_{i_1}...x_{i_n}}{|\vec{x}|^{2n+1}}Q_{i_1...i_n}\right)$
 
-\item $Q_{i_1...i_n} \sim a^n , \quad \Phi^{(n)} \sim \left(\frac{a}{x}\right)^n \frac{1}{x} \quad$ with $a$ characteristic size (size of the area containing charges)
+\item $Q_{i_1...i_n} \sim a^n , \quad \Phi^{(n)} \sim \left(\frac{a}{x}\right)^n \frac{1}{x} \quad$ with $a$ charact. size (size of the area cont. char.)
 
 \item \begin{tabular}{c | l l}
 	\textbf{n} & \textbf{nom} & \textbf{expression} \\
@@ -423,6 +421,7 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 \end{tabular}
 
 \item $\vec{E}^{(0)} = \dfrac{Q}{4\pi\varepsilon_0} \dfrac{\vec{x}}{x^3} \sim \dfrac{1}{x^2} ,\quad \vec{E}^{(1)} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{3\vec{x}(\vec{Q}^{(1)}\cdot\vec{x}) - \vec{Q}^{(1)}x^2}{x^5} \sim \dfrac{1}{x^3}$
+\item $\Phi^{(1)} = \frac{1}{4\pi \epsilon_0}\frac{\vec{Q}^{(1)}\cdot \vec{x}}{2 |\vec{x}|^3}$ AND OTHER STUFF COMPLETA
 
 \item \textbf{Magnetostatics :}
 
@@ -434,8 +433,11 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 
 \item  Def. : $\, \vec{M}(\vec{x}) = \frac{1}{2} \vec{x}\times\vec{J} \,$ : \, the magnetisation and  $\vec{m} = \displaystyle{\int} \ud ^3x \, \vec{M}(\vec{x}) \, $ : \, the magn. mom.
 
-\item \textbf{Finaly (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\times\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$\\ 
+\item \textbf{Finally (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\times\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$\\ 
 \squishend
+
+\columnbreak
+
 \graypar{Dynamic case}
 
 Condition : $|\textbf{x}| \gg \max(a, \lambda)$ with $a$ characteristic size of the object radiating with a characteristic wavelength $\lambda = cT$ ($T$ charac. time).
@@ -453,8 +455,8 @@ $      \implies
 \end{cases}$
 
 \item $        \begin{cases}
-\vec{B} \approx \frac{1}{c}\dot{\vec{\rm{A}}} \times \vec{n} \sim \frac{1}{x} \\
-\vec{E} = \vec{n} \times (\vec{n} \times \dot{\vec{\rm{A}}}) \sim \frac{1}{x} \\
+\vec{B} \approx \frac{1}{c}\dot{\vec{\rm{A}}} \times \vec{n} \sim \frac{1}{x} \qquad \text{as} \quad\nabla \cross \vec{J}(x',t-\frac{|\vec{x}|}{c}) = \frac{\vec{n}}{c} \cross (-{\vec{\dot{{J}}}}(x',t-\frac{|\vec{x}|}{c}))\\
+\vec{E} = \vec{n} \times (\vec{n} \times \dot{\vec{\rm{A}}}) \sim \frac{1}{x} \hfill |\vec{e_z} \cross \vec{n}|=\sin\theta \\
 \vec{S} = \frac{c}{\mu_0} |\vec{B}|^2\vec{n} \sim \frac{1}{x^2}\\
 \end{cases}$
 
@@ -473,9 +475,9 @@ $      \implies
 
 \item$        \begin{cases}
 %\vspace{0.2cm}
-\vec{\rm{A}}^{(0)} = \frac{\mu_0}{4\pi x}\dot{\vec{d}}(t-\frac{x}{c}) \\
+\vec{\rm{A}}^{(0)} = \frac{\mu_0}{4\pi x}{\vec{\dot{{d}}}}(t-\frac{x}{c}) \\
 %\vspace{0.2cm}
-\vec{B} =\frac{\mu_0}{4\pi c x} \ddot{\vec{d}} \times \vec{n} \\
+\vec{B} =\frac{\mu_0}{4\pi c x} \vec{\ddot{{d}}} \times \vec{n} \\
 %\vspace{0.2cm}
 \vec{E} = c\vec{B} \times \vec{n}\\
 %\vspace{0.2cm}
@@ -724,7 +726,6 @@ with $\Lambda$ a boost along $\vec{x}$
 \vspace{2cm}
 \graypar{Contravariant and Covariant vectors} % IDEA FOR IMPROVEMENT: USEPACKAGE TENSOR
 \squishlist
-\item[] Goal : Formulation of CED (Classical ElectroDynamics) to explicit the invariance under Lorentz transf. 
 
 \item A \textbf{contravariant vector} (upper index) transforms as : $V^\mu\rightarrow V'^{\mu} = \Lambda^{\mu}_{\ \nu} V^{\nu}$
 
@@ -985,7 +986,8 @@ $\phi(\vec{x},t)=\frac{q\gamma}{4\pi\epsilon_0}\frac{1}{\sqrt{x^2+y^2+\gamma^2(z
 
 %\item Solve a system of differential equ : 
 %$\left\{\begin{array}{l} \ddot{x}=\alpha_1 \dot{y} \\ \ddot{y} = \alpha_2 \dot{x} + C \end{array}\right. \Rightarrow \; \textbf{ set } u=\dot{x}+i\dot{y}$ and solve the resulting inhomogenous diff equ as usual ($u=u_{hom}+u_{part}$) %N'a pas d'interet.
+\item $\gamma$ the angle between two vectors $(\theta, \phi), (\theta', \phi')$, then \\ $\cos(\gamma) = \cos\theta \cos\theta' + \sin\theta \sin\theta' \cos(\phi - \phi')$
 \squishend
-\begin{flushright}
-Document compiled on \DTMnow
-\end{flushright}
+
+\vfill 
+Matteo Veneziano, EPFL Section of Physics, \today

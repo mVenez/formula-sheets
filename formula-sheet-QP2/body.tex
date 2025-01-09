@@ -153,12 +153,90 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 \graypar{Non-degenerate Time-Indipendent Perturbation Theory}
 \begin{squishlist}
     \item \textbf{Zero-th order} $H_0 \ket{\phi_n} = \epsilon_n \ket{\phi_n}$ unperturbed eigenvalue problem
-    \item \textbf{1st order} $E_n^{(1)} = \braket{\phi_m|V|\phi_n}$; \quad $\ket{\psi_n^{1}} = \sum_{m\neq n}\frac{\braket{\phi_m |V |\phi_n}}{\epsilon_n - \epsilon_m} \ket{\phi_m}$
-    \item \textbf{2nd order} $E_n^{(2)} = \frac{|\braket{\phi_m|V|\phi_n}|^2}{\epsilon_n - \epsilon_m}$; for the approx. to be valid  $|E_n^{(2)}| \ll |E_n^{(1)}|$ 
+    \item \textbf{1st order} $E_n^{(1)} = \braket{\phi_n|V|\phi_n}$; \quad $\ket{\psi_n^{1}} = \sum_{m\neq n}\frac{\braket{\phi_m |V |\phi_n}}{\epsilon_n - \epsilon_m} \ket{\phi_m}$
+    \item \textbf{2nd order} $E_n^{(2)} = \sum_{m\neq n}\frac{|\braket{\phi_m|V|\phi_n}|^2}{\epsilon_n - \epsilon_m}$; for approx. to be val.  $|E_n^{(2)}| \ll |E_n^{(1)}|$ 
     \item satisfied as long as $\frac{1}{\Delta} ( \braket{\phi_n | V^2|\phi_n} - \braket{\phi_n | V| \phi_n}^2) \ll \braket{\phi_n | V | \phi_n}$, \\ 
     $\Delta = \min_m | \epsilon_n - \epsilon_m|$ or more restrictive: $\left|\frac{\braket{\phi_m | V | \phi_n}}{\epsilon_n - \epsilon_m}\right| \ll 1$
 \end{squishlist}
 
+\graypar{Degenerate Time-Indipendent Perturbation Theory}
+\begin{squishlist}
+    \item $n$th energy state has $N$-fold degeneracy $\Rightarrow$ $H_0$ has energy $\epsilon_n$ with $\phi_{n_i}, i=1 \ldots N$
+    \item $\sum_j V_{ij}c_j = E_n^{(1)}c_i \Longleftrightarrow \hat{V} \vec{c} = E_n^{(1)} \vec{c} \qquad V_{ij} = \braket{\phi_{n_i} | V | \phi_{n_j}}$ \\ 
+    eigenvalue problem, must diagonalise $V$ matrix (in the degenerate subspace only!)
+    \item The eigenvectors are the corrected eigenstates (to 0th order), the eigenvalues are the 1st order correction to energy. If eigenvalues are the same, degeneracy is not lifted.
+    \item E.g. $V = \begin{pmatrix}
+        0 & \alpha & 0 & 0 \\
+        \alpha  & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+    \end{pmatrix}$ $\overset{\text{diag}}{\longrightarrow}$ 
+    $\alpha,  \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0 \\ 0 \end{pmatrix};
+    - \alpha,  \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \\ 0 \\ 0 \end{pmatrix};
+    0,  \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix};
+    0,  \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix} $\\
+    Thus $\ket{0} \rightarrow \frac{1}{\sqrt{2}}\left( \ket{0} + \ket{1}\right);\quad \ket{1} \rightarrow \frac{1}{\sqrt{2}}\left( \ket{0} - \ket{1}\right); \quad \ket{2},\ket{3}$ unchanged\\
+    The corrected eigenstates have an energy correction $E^{(1)}$of $\alpha$, $-\alpha$, 0,0.
+\end{squishlist}
+\columnbreak
+
+
+\graypar{Time-Dependent Hamiltonians}
+\begin{squishlist}
+    \item $U(t,t_0) = \id + \sum_{n=1}^\infty \frac{(-1)^n}{n!} \int_{t_0}^t \ud t_1 \int_{t_0}^t \ud t_2 \ldots \int_{t_0}^t \ud t_n T(H(t_1)\ldots H(t_n))$\\
+    where $T[H(t_1)H(t_2)\ldots H(t_n)] = H(t_{i_1})H(t_{i_2})\ldots H(t_{i_n}),\, t_{i_1} \geq t_{i_2} \geq \ldots$
+    \item Alternatively: $U(t,t_0) \approx \sum_j \exp(i H(t_j) \delta t)$ with an error of \\
+    $|\int_{t_0}^t \ud s H(s) - \delta t \sum_{r=1}^{n_t} H(t_0 + r \delta t)|^2$ (discretisation)
+\end{squishlist}
+
+\graypar{Interaction picture}
+\begin{squishlist}
+    \item Schrödinger picture: $i \D{t}{}\ket{\phi_S(t)} = H(t) \ket{\phi_S(t)}$, \quad $O_S(t) = O_S$
+    \item Heisenberg picture: $O_H(t) = U_S(t,t_0)^{\dagger} O_S U_S(t,t_0)$, \quad $\ket{\phi_H(t)} = \ket{\phi_S(t_0)}$
+    \item Interaction picture: $H(t) = H_H + V_S(t)$, 
+    \item $O_I(t) = e^{iH_0(t-t_0)}O_S(t)e^{-iH_0(t-t_0)}$
+    \item $\ket{\phi_I(t)} = U_I(t,t_0) \ket{\phi_I(t_0)}$, \quad $U_I = e^{iH_0(t-t_0)} U_S(t,t_o)$
+    \item $\D{t}{U_I} = -i V_I(t) U_I(t,t_0)$
+\end{squishlist}
+
+\graypar{Time-Dependent Perturbation Theory}
+\begin{squishlist}
+    \item $U_I(t,t_0) \approx \id -i \int_{t_0}^t \ud t_1 V_I(t_1) + \ldots$
+    \item $P_{i\rightarrow n}(t) = |\braket{n|\phi_S(t)}|^2 = \left| -i \int_{t_0}^t \ud t_1 e^{i(E_n-E_i)(t-t_0)} \braket{n|V(t_1,t_0)|i}\right|^2$ general expression of transition probabilities between eigenstates $\ket{i}$ and $\ket{n}$. Note: if $V=0$ then a system in an eigenstate stays in an aigenstate.
+    \item For a constant potential $P_{i\rightarrow n}(t) \overset{t\rightarrow \infty}{=} 2 \omega t \left|\braket{n|V|i}\right|^2 \delta(E_n - E_i)$ \\
+    \D{t}{}$P_{i\rightarrow n}(t) =2 \pi \left|\braket{n|V|i}\right|^2 \delta(E_n - E_i)$
+\end{squishlist}
+
+
+\columnbreak
+
+\graypar{Particle in a box}
+\begin{squishlist}
+    
+    \item $V(x) = \begin{cases}
+        0 & \text{if} |x| \leq L/2 \\ \infty & \text{else}
+    \end{cases}$
+    \qquad
+    $\phi_n(x) = \begin{cases}
+        \sqrt{\frac{2}{L}} \cos(\frac{n\pi }{L} x) & n \text{ odd} \\
+        \sqrt{\frac{2}{L}} \sin(\frac{n\pi }{L} x) & n \text{ even} \\
+    \end{cases}$
+    
+    \item $E_n = n^2 \frac{\pi^2 \hbar^2}{2 m L^2}$
+\end{squishlist}
+
+\graypar{Harmonic oscillator}
+\begin{squishlist}
+    \item$H = \frac{1}{2m}\hat{p}^2 + \frac{1}{2}m \omega^2 \hat{x}^2 = \hbar \omega (\hat{N} + \frac{1}{2}), \quad \hat{N} = \hat{a}^{\dagger} \hat{a}$
+    \item $\hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i \hat{p}}{m \omega}\right)$ \quad 
+     $\hat{a}^{\dagger} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i \hat{p}}{m \omega}\right)$ \quad 
+    \item $\hat{x} = \sqrt{\frac{\hbar }{2 m \omega}}(\hat{a} + \hat{a}^{\dagger})$ \quad $\hat{p} = i \sqrt{\frac{m \omega \hbar}{2}} ( \hat{a}^{\dagger} - \hat{a})$
+    \item $[\hat{x}, \hat{p}] = i \hbar, \quad [\hat{a}, \hat{a}^{\dagger}] = 1, \quad [\hat{N}, \hat{a}] = - \hat{a}, \quad [\hat{N},\hat{a}^\dagger] = \hat{a}^{\dagger}$
+    \item $\phi_0(x) = \left( \frac{m \omega}{\phi \hbar}   \right)^{1/4} \exp \left( - \frac{m \omega }{2 \hbar} x^2\right)$
+    \item $ \phi_n = \frac{1}{\sqrt{n!}}(a^{\dagger})^n \phi_0 = \frac{1}{\sqrt{2^n n!}} \left(\frac{m\omega}{\pi \hbar}\right)^{1/4} e^{-\frac{m \omega x^2}{2 \hbar}} H_n \left(\sqrt{\frac{m \omega }{\hbar}}x \right) \\ $ with $H_n(z) = (-1)^n e^{z^2} \frac{d^n}{dz^n} (e^{-z^2})$
+    \item $\hat{H} \phi_n = E_n \phi_n = \hbar \omega (n + \frac{1}{2})\phi_n$
+    \item $\hat{a}^{\dagger} \phi_n = \sqrt{n+1} \phi_{n+1} \quad \hat{a}\phi_n = \sqrt{n} \phi_{n-1}$
+\end{squishlist}
 
 
 \graypar{Hermitian and unitary operators}

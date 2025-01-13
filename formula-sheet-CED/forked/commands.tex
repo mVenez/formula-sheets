@@ -13,18 +13,15 @@
 
 \newcommand{\E}{\mathcal{E}}
 
-\newcommand{\squishlist}{
-	\begin{list}{\squishitem}{
-		\setlength{\itemsep}{5pt}%Ceci change l'espace entre items
-		\setlength{\parsep}{0pt}
-		\setlength{\topsep}{0pt}
-		\setlength{\partopsep}{0pt}
-		\setlength{\leftmargin}{0em}
-		\setlength{\labelwidth}{1em}
-		\setlength{\labelsep}{0.5em}
-	}
-}
-\newcommand{\squishend}{\end{list}}
+\newenvironment{squishlist}{\begin{list}{\squishitem}{
+	\setlength{\itemsep}{5pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\leftmargin}{0em}
+	\setlength{\labelwidth}{1em}
+	\setlength{\labelsep}{0.5em}}
+}{\end{list}}
 
 \newcommand{\ud}{\textrm{d}}
 \newcommand{\ugrad}{\nabla}

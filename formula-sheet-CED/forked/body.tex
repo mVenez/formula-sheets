@@ -314,7 +314,7 @@ $\vec{E}(t) = E_0 \cos(\omega t + \theta)\vec{e}_x \pm E_0 \sin(\omega t + \thet
 
 \item $\left< u \right> = \left< \frac{\varepsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2 \right> = 2\epsilon_0 \widehat{\vec{E}}\cdot\widehat{\vec{E}}^*$
 
-\item $\left< \vec{S} \right> = 2\epsilon_0 c \hat{\vec{n}} | \widehat{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ phase velocity, $u$ electromagnetic energy
+\item $\left< \vec{S} \right> = \frac{1}{2}\epsilon_0 c \hat{\vec{n}} | \widehat{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ phase velocity, $u$ electromagnetic energy
 \end{squishlist}
 \columnbreak
 
@@ -702,7 +702,7 @@ $\tilde\partial = \begin{pmatrix}
 $$x^\mu \rightarrow x'^{\mu} = \Lambda^{\mu}_{\ \nu} x^{\nu} \quad \text{and} \quad 
  \pad{}{x^\mu}=: \partial_\mu \rightarrow \partial_\mu' = \Lambda_\mu^{\ \nu}\partial_\nu
 $$
-where $\Lambda_\nu^{\ \mu}= (\Lambda^{-1})^\mu_{\ \nu} $
+where $\Lambda_\nu^{\ \mu}= (\Lambda^{-1})^\mu_{\ \nu} \implies \Lambda^{\nu}_{\ \gamma}\Lambda_{\nu}^{\ \alpha} = (\Lambda^{-1})_{\gamma}^{\ \nu} \lambda_{\nu}^{\ \alpha} = \delta_{\gamma}^{\alpha}$
 
 \item $\eta^{\mu\nu}=
 \begin{pmatrix}
@@ -821,23 +821,33 @@ E_z&  cB_y& -cB_x & 0
 -1 \, \, \text{if $\mu\nu\rho\sigma$ odd permutation of (0123)} \\
 0 \, \, \text{otherwise}	
 \end{cases}$
-\item For the fields $\vec{B}$ and $\vec{E}$, following from $F'^{\mu\nu}=\Lambda^\mu_{\ \alpha}\Lambda^\nu_{\ \beta} F^{\alpha\beta}$ : 
-\item $\begin{cases}
-\vec{E}'_{\parallel} = \vec{E}_{\parallel}, \quad \vec{B}'_{\parallel} = \vec{B}_{\parallel} \\
-\vec{E}'_{\perp} = \gamma(\vec{E}_{\perp} + c \vec{\beta}\times \vec{B}), \quad \vec{B}'_{\perp} = \gamma(\vec{B}_{\perp} - \dfrac{1}{c}\vec{\beta} \times \vec{E} )\\
-\end{cases}$
-\item \textbf{Maxwell Equations :}\quad
-\boxed{\varepsilon^{\mu \nu \rho \sigma}\partial_\mu F_{\rho \sigma}=0  \qquad \quad  \partial_\mu F^{\mu\nu}=-\frac{1}{c\varepsilon_0}J^\nu }
+% \item For the fields $\vec{B}$ and $\vec{E}$, following from $F'^{\mu\nu}=\Lambda^\mu_{\ \alpha}\Lambda^\nu_{\ \beta} F^{\alpha\beta}$ : 
+% \item $\begin{cases}
+% \vec{E}'_{\parallel} = \vec{E}_{\parallel}, \quad \vec{B}'_{\parallel} = \vec{B}_{\parallel} \\
+% \vec{E}'_{\perp} = \gamma(\vec{E}_{\perp} + c \vec{\beta}\times \vec{B}), \quad \vec{B}'_{\perp} = \gamma(\vec{B}_{\perp} - \dfrac{1}{c}\vec{\beta} \times \vec{E} )\\
+% \end{cases}$
+\item \textbf{\underline{Maxwell Equations :}}\quad
+% \boxed{
+	$\varepsilon^{\mu \nu \rho \sigma}\partial_\mu F_{\rho \sigma}=0  \qquad \quad  \partial_\mu F^{\mu\nu}=-\frac{1}{c\varepsilon_0}J^\nu $
+	% }
 
-\item \textbf{Properties of $F^{\mu\nu} $ :} 
+% \item \textbf{Properties of $F^{\mu\nu} $ :} 
 
 \item $F_{0i} = -E_i, \,  F_{ij} =  c \varepsilon^{ijk}B_k$ and $F^{0i} = E_i, \, F^{ij} = c\varepsilon^{ijk}B_k$
+\item $F^{\mu}_{\ \nu}$: all $+ \vec{E}$ components \squishsep $F_{\mu}^{\ \nu}$: all  $- \vec{E}$ components
 
 \item $\mathcal{F}^{\mu\nu} \equiv \dfrac{1}{2} \varepsilon^{\mu\nu\alpha\beta}F_{\alpha\beta} \Rightarrow \mathcal{F}^{0i} = cB_i \,\, \text{et} \,\, \mathcal{F}^{ij} = -\varepsilon^{ijk}E_k$
 
 \item $F_{\mu\nu}F^{\mu\nu} = 2(c^2\vec{B}^2 - \vec{E}^2), \quad F_{\mu\nu}\mathcal{F}^{\mu\nu} = -4c\vec{E}\cdot\vec{B}$
+\item Stress energy tens. $T^{\mu \nu} = \frac{1}{\mu_0 c^2} \left( F^{\mu \alpha}F^{\nu}_{\; \alpha} - \frac{1}{4} \eta^{\mu \nu} F_{\alpha \beta}F^{\alpha \beta}\right) = 
+\begin{pmatrix} \varepsilon & \vec{S}/c \\ \vec{S}/c & -\tau_{ij} \end{pmatrix}$\\
+with $\varepsilon$ the EM energy density and $\tau_{ij} = \epsilon_0 ( E_i E_j - \frac{1}{2}\delta_{ij}E^2) + \frac{1}{\mu_0}(B_i B_j - \frac{1}{2}\delta_{ij} B^2)$
+
+\item 
 
 \end{squishlist}
+
+\columnbreak
 \graypar{Space-time Structure}
 \begin{squishlist}
 \item Interval between two events in a ref $\mathcal{O}$ : $ \Delta x^{\mu} = x_1^{\mu} - x_2^{\mu} = \begin{pmatrix}
@@ -982,7 +992,14 @@ $\phi(\vec{x},t)=\frac{q\gamma}{4\pi\epsilon_0}\frac{1}{\sqrt{x^2+y^2+\gamma^2(z
 \item$\varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\mu\nu\rho\sigma} = -24, \, \varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\alpha\nu\rho\sigma} = -6\delta^{\mu}_{\alpha}, \, \varepsilon^{\mu\nu\rho\sigma}\varepsilon_{\alpha\beta\rho\sigma} = -2(\delta^{\mu}_{\alpha}\delta^{\nu}_{\beta} - \delta^{\mu}_{\beta}\delta^{\nu}_{\alpha})$
 
 \item Circular movement : $\vec{v} = \vec{\omega} \times \vec{r}$ and $\vec{a} = \vec{\alpha} \times \vec{r} + \vec{\omega} \times \vec{v}$ with $\vec{\alpha} = \dfrac{\ud \vec{\omega}}{\ud t}$
-\item $\vec{B} = B_0 \hat{z} \Rightarrow $ electron has circ. trajectory $\vec{r_0}(t) = r_0 \begin{pmatrix} \cos(\omega_s t) \\ \sin(\omega_s t) \\ 0 \end{pmatrix}$ with $\omega_s = \frac{e B_0}{\gamma m_e}$
+\item $\vec{B} = B_0 \hat{z} \Rightarrow $ electron has circ. trajectory $\vec{r_0}(t) = r_0 \begin{pmatrix} \cos(\omega_s t) \\ \sin(\omega_s t) \\ 0 \end{pmatrix}
+\left|\,
+\begin{aligned}
+	\omega_s &= \frac{e B_0}{\gamma m_e} \\ r_0 &= \frac{\gamma m_e v_{\perp}}{e B}
+\end{aligned}\right.$
+	
+	% \\ 
+	% with $\omega_s = \frac{e B_0}{\gamma m_e}$ and $r_0 = \frac{\gamma m v_{\perp}}{e B}$
 
 \item $A_{ij} = x^2 \delta_{ij}, \quad A_{ijk} = 3x^2(\delta_{ij}x_k + \delta_{ik}x_j + \delta_{jk}x_i)$
 

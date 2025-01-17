@@ -181,11 +181,16 @@ $\Longrightarrow$ \squishsep $\sigma(\vec{x}) = \epsilon_0 \Delta E_{\perp}(\vec
 \graypar{Electrostatics.}
 
 \begin{squishlist}
-\item $\boldsymbol{\nabla}^2\Phi = -\frac{\rho}{\varepsilon_0} \quad \text{with} \quad |\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0$
+\item $\boldsymbol{\nabla}^2\Phi = -\frac{\rho}{\varepsilon_0} \quad \text{with} \quad |\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0$ \hfill \squishsep Magnetostatics: $\nabla^2 \vec{A} = - \mu_0 \vec{J}$
 
 \item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \sum_{i} \frac{q_i}{|\vec{x}-\vec{x}_i|} \qquad (\text{discrete case})$
 
 \item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \int \text{d}^3x' \frac{\rho(\boldsymbol{x}')}{|\boldsymbol{x}-\boldsymbol{x}'|} \qquad (\text{continuous case})$
+
+\item A stable equilibrium point for a test particle of charge $q>0$ ($q<0$) is a local minimum (maximum) of $\Phi$.
+But if $\Phi$ is a solution of the Laplace equation
+in the region $V$, it cannot have any local minimum (or
+maximum) inside the region $V$.
 \end{squishlist}
 
 \graypar{Dirac Functions.}
@@ -436,7 +441,9 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 
 \item  Def. : $\, \vec{M}(\vec{x}) = \frac{1}{2} \vec{x}\times\vec{J} \,$ : \, the magnetisation and  $\vec{m} = \displaystyle{\int} \ud ^3x \, \vec{M}(\vec{x}) \, $ : \, the magn. mom.
 
-\item \textbf{Finally (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\times\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$\\ 
+\item \textbf{Finally (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\times\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$
+
+\item $\vec{B}(\vec{x}) = \frac{\mu_0}{4 \pi} \left( \frac{3 \vec{m}\cdot \vec{x}}{|\vec{x}|^5} \vec{x} - \frac{\vec{m}}{|\vec{x}|^3}\right)$ $\Longrightarrow$ same field lines as $\vec{E}$ of electric dipole
 \end{squishlist}
 
 \columnbreak
@@ -482,7 +489,7 @@ $      \implies
 %\vspace{0.2cm}
 \vec{B} =\frac{\mu_0}{4\pi c x} \vec{\ddot{{d}}} \times \vec{n} \\
 %\vspace{0.2cm}
-\vec{E} = c\vec{B} \times \vec{n}\\
+\vec{E} = c\vec{B} \times \vec{n} = \frac{\mu_0}{4 \pi x} ((\vec{n}\cdot \ddot{\vec{d}})\vec{n} - \ddot{\vec{d}})\\
 %\vspace{0.2cm}
 \vec{S} = \frac{\mu_0}{16\pi^2c}\frac{1}{x^2} |\ddot{\vec{d}} \times \vec{n}|^2\vec{n} = \frac{c}{\mu_0} |\vec{B}|^2\vec{n}
 \end{cases} $
@@ -702,7 +709,7 @@ $\tilde\partial = \begin{pmatrix}
 $$x^\mu \rightarrow x'^{\mu} = \Lambda^{\mu}_{\ \nu} x^{\nu} \quad \text{and} \quad 
  \pad{}{x^\mu}=: \partial_\mu \rightarrow \partial_\mu' = \Lambda_\mu^{\ \nu}\partial_\nu
 $$
-where $\Lambda_\nu^{\ \mu}= (\Lambda^{-1})^\mu_{\ \nu} \implies \Lambda^{\nu}_{\ \gamma}\Lambda_{\nu}^{\ \alpha} = (\Lambda^{-1})_{\gamma}^{\ \nu} \lambda_{\nu}^{\ \alpha} = \delta_{\gamma}^{\alpha}$
+where $\Lambda_\nu^{\ \mu}= (\Lambda^{-1})^\mu_{\ \nu} \implies \Lambda^{\nu}_{\ \gamma}\Lambda_{\nu}^{\ \alpha} = (\Lambda^{-1})_{\gamma}^{\ \nu} \Lambda_{\nu}^{\ \alpha} = \delta_{\gamma}^{\alpha}$
 
 \item $\eta^{\mu\nu}=
 \begin{pmatrix}

@@ -178,12 +178,13 @@ $\Longrightarrow$ \squishsep $\sigma(\vec{x}) = \epsilon_0 \Delta E_{\perp}(\vec
 \end{cases}$ Lorentz gauge
 \end{squishlist}
 
-\graypar{Electrostatics.}
+\graypar{Electrostatics \& Magnetostatics}
 
 \begin{squishlist}
 \item $\boldsymbol{\nabla}^2\Phi = -\frac{\rho}{\varepsilon_0} \quad \text{with} \quad |\boldsymbol{E}| \overset{|\boldsymbol{x}|\to \infty}{\longrightarrow} 0$ \hfill \squishsep Magnetostatics: $\nabla^2 \vec{A} = - \mu_0 \vec{J}$
 
 \item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \sum_{i} \frac{q_i}{|\vec{x}-\vec{x}_i|} \qquad (\text{discrete case})$
+\hfill \squishsep $\vec{A}(\vec{x}) = \frac{\mu_0}{4 \pi} \int_{V}\ud v' \frac{\vec{J(\vec{r'})}}{|\vec{r} - \vec{r'}|}$
 
 \item $\Phi(\boldsymbol{x}) = \frac{1}{4\pi \varepsilon_0} \int \text{d}^3x' \frac{\rho(\boldsymbol{x}')}{|\boldsymbol{x}-\boldsymbol{x}'|} \qquad (\text{continuous case})$
 
@@ -228,7 +229,7 @@ $G(\vec{x},\vec{x}')$ is the potential at $\vec{x}$ associated to a particle of 
 
 $+ \displaystyle{\int_{\partial V}} \boldsymbol{\ud \sigma}' \cdot \left[G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi(\boldsymbol{x}')-\Phi(\boldsymbol{x}')\boldsymbol{\nabla}_{\boldsymbol{x}'}G(\boldsymbol{x}, \boldsymbol{x}')\right]$
 
-$G$ can be found by the images method. In order to remove the $\Phi$ or $\frac{\partial \Phi}{\partial n}$ term on $\partial V$ we impose conditions on $G$ : $G|_{\partial V}=0$ or  $\boldsymbol{\nabla}G|_{\partial V}=0$ according to the boundary conditions :
+$G$ can be found by the images method. In order to remove the $\Phi$ or $\frac{\partial \Phi}{\partial n}$ term on $\partial V$ we impose conditions on $G$ : $G|_{\partial V}=0$ or  $\boldsymbol{\nabla}G|_{\partial V}=0$ according to the boundary conditions
 
 %\begin{enumerate}
 \item Dirichlet : If $\Phi|_{\partial V}$ is known we choose $G|_{\partial V} =0$ and then :
@@ -239,7 +240,9 @@ $\frac{\partial G}{\partial n'}(\boldsymbol{x}, \boldsymbol{x}')= -\frac{1}{\tex
 \\
 $\Phi(\boldsymbol{x}) = \left\langle \Phi \right\rangle _S + \frac{1}{\epsilon_0}\displaystyle{\int} \text{d}^3x' G(\boldsymbol{x}, \boldsymbol{x}')\rho(\boldsymbol{x}')+\displaystyle{\int_{\partial V}} \vec{\text{d}\sigma}' \cdot G(\boldsymbol{x}, \boldsymbol{x}')\boldsymbol{\nabla}\Phi(\vec{x}')$
 \\
-$\left\langle \Phi \right\rangle _S = \frac{1}{S}\displaystyle{\int_{\partial V}} \text{d}\sigma \text{ } \Phi(\boldsymbol{x})$
+$\left\langle \Phi \right\rangle _S = \frac{1}{S}\displaystyle{\int_{\partial V}} \text{d}\sigma \text{ } \Phi(\boldsymbol{x})$ \hfill For $\vec{A}$ replace $\rho$ with $\vec{J}$ and $\frac{1}{\rho}$ with $\mu_0$
+
+\item Image charge method: $G_{D/N} = \dfrac{1}{4\pi} \dfrac{1}{|\vec{x} - \vec{x'}|} \pm \dfrac{1}{|\vec{x} - {\vec{\tilde{x'}}}|}$ (D: $-$; N: $+$)
 
 %\end{enumerate}
 \end{squishlist}
@@ -276,6 +279,8 @@ $\vec{\rm{A}}(\vec{x},t) = \displaystyle{\int} d^3 x' \frac{\vec{\rm{J}}\left(\v
 \item Electrodynamics : $\displaystyle{\int_{V}} \ud ^3x \,\, \vec{\rm{J}}\cdot\vec{E} = - \frac{\ud }{\ud t} \displaystyle{\int_{V}} \ud ^3x \,\, u - \displaystyle{\oint_{\partial V}} \! \vec{S}\cdot\vec{\ud \sigma} \quad : \text{energy conservation}$
 \\
 $\underbrace{\vec{J}\cdot\vec{E}}_{\text{dissipated power}} = -\frac{\partial u}{\partial t} - \vec{\nabla}\cdot\vec{S}, \quad \vec{S} = \frac{1}{\mu_0} \vec{E}\times\vec{B} , \quad u=\frac{\varepsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2$
+
+\item Poynting vector is energy per unit area per unit time
 \end{squishlist}
 %\begin{squishlist}
 %\item $u=\frac{\epsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2$
@@ -319,7 +324,18 @@ $\vec{E}(t) = E_0 \cos(\omega t + \theta)\vec{e}_x \pm E_0 \sin(\omega t + \thet
 
 \item $\left< u \right> = \left< \frac{\varepsilon_0}{2} \vec{E}^2 + \frac{1}{2\mu_0} \vec{B}^2 \right> = 2\epsilon_0 \widehat{\vec{E}}\cdot\widehat{\vec{E}}^*$
 
-\item $\left< \vec{S} \right> = \frac{1}{2}\epsilon_0 c \hat{\vec{n}} | \widehat{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ phase velocity, $u$ electromagnetic energy
+\item $\left< \vec{S} \right> = 2\epsilon_0 c \hat{\vec{n}} | \widehat{\vec{E}}(\vec{k})|^2 = \left< u\right> \vec{v}$, $\quad \vec{v}$ phase velocity, $u$ electromagnetic energy
+\end{squishlist}
+
+\graypar{Kramers-Kronig relations}
+\begin{squishlist}
+	\item For $\varepsilon'$ and $\varepsilon''$ real and imaginary parts of the permittivity:
+	$\begin{cases}\frac{\varepsilon'(\omega)}{\varepsilon_0} = 1 + \frac{2}{\pi} P\int_0^{\infty} \frac{x \varepsilon''(x)}{\varepsilon_0 (x^2 - \omega^2)} \ud x \\
+	\frac{\varepsilon''(w)}{\varepsilon_0} = - \frac{2 \omega}{\pi} P\int_0^{\infty} \frac{(\varepsilon'(x)/\varepsilon_0 )- 1}{(x^2 - w^2)} \ud x
+	\end{cases}$
+
+	\item $n(\omega) = \sqrt{\varepsilon \mu} = n'(\omega) + i n'' (\omega)$
+	\item $\varepsilon(\omega) = \varepsilon_0 \left( 1 + \int_0^{\infty} e^{i \omega \tau} f(\tau)\ud \tau \right)$ \quad with $f$ the response function
 \end{squishlist}
 \columnbreak
 
@@ -347,6 +363,7 @@ $\vec{\beta} = \frac{\vec{v}(t^{'})}{c} \, , \, \dot{\vec{\beta}} = \frac{1}{c}\
 
 \item $\vec{E} =  \dfrac{q}{4\pi\varepsilon_0} \dfrac{1}{ (1-\vec{\beta}\cdot\vec{n})^3} \big[\underbrace{(\vec{n} - \vec{\beta})\frac{1-\vec{\beta}^2}{R^2}}_{\sim \frac{1}{R^2} \, coulomb} + \underbrace{\frac{1}{cR}\vec{n}\times \big( (\vec{n}-\vec{\beta})\times \vec{\dot{\beta}}\big)}_{\sim \frac{1}{R} \, radiation}\big]$
 \item $\vec{B} = \frac{1}{c} \vec{n} \times \vec{E}$
+\squishsep $\vec{E} = -c (\vec{n}\times \vec{B})$
 %\item electric potential $\Phi(\vec x,t) = \frac{q}{4\pi\epsilon_{0}}\frac{1}{|R-\vec R\cdot \vec \beta|}$
 %\item magnetic potential  $\vec A(\vec x,t) = \frac{\vec \beta}{c}\cdot \Phi(\vec x,t)$
 %\item electrical field $\vec E = \frac{q}{4\pi\epsilon_{0}}\frac{1}{1-\vec n\cdot \vec \beta}[(1-\vec n\cdot \vec \beta)\frac{1-\beta^{2}}{R^{2}} + \frac{1}{cR}\vec n\cross((\vec n - \vec \beta)\cross \dot{\vec \beta})]$
@@ -429,7 +446,9 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 
 \item $\vec{E}^{(0)} = \dfrac{Q}{4\pi\varepsilon_0} \dfrac{\vec{x}}{x^3} \sim \dfrac{1}{x^2} ,\quad \vec{E}^{(1)} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{3\vec{x}(\vec{Q}^{(1)}\cdot\vec{x}) - \vec{Q}^{(1)}x^2}{x^5} \sim \dfrac{1}{x^3}$
 
-\item $\Phi^{(0)} = \frac{Q}{4 \pi \epsilon_0 x} $ , \qquad $\Phi^{(1)} = \frac{1}{4\pi \epsilon_0}\frac{\vec{Q}^{(1)}\cdot \vec{x}}{2 |\vec{x}|^3}$ 
+\item $\Phi^{(0)} = \dfrac{Q}{4 \pi \epsilon_0 x} $ , \qquad $\Phi^{(1)} = \dfrac{1}{4\pi \epsilon_0}\dfrac{\vec{Q}^{(1)}\cdot \vec{x}}{2 |\vec{x}|^3}$ 
+
+\item To expand further apply $x \partial_{x} + y \partial_{y} + z \partial_{z}$
 
 \item \textbf{Magnetostatics :}
 
@@ -443,7 +462,14 @@ The following indices $i_1,i_2...$ go from $1$ to $3$ and are summed following E
 
 \item \textbf{Finally (at the order of the dipole) :} $\quad  \vec{\rm{A}}^{(1)}(\vec{x}) =  \dfrac{\mu_0}{4\pi}\left(\dfrac{\vec{m}\times\vec{x}}{|\vec{x}|^3} + \overbrace{\mathcal{O}(|\vec{x}|^{-3})}^\text{quadrupole}\right)$
 
-\item $\vec{B}(\vec{x}) = \frac{\mu_0}{4 \pi} \left( \frac{3 \vec{m}\cdot \vec{x}}{|\vec{x}|^5} \vec{x} - \frac{\vec{m}}{|\vec{x}|^3}\right)$ $\Longrightarrow$ same field lines as $\vec{E}$ of electric dipole
+\item $\vec{B}(\vec{x}) = \dfrac{\mu_0}{4 \pi} \left( \dfrac{3 \vec{m}\cdot \vec{x}}{|\vec{x}|^5} \vec{x} - \dfrac{\vec{m}}{|\vec{x}|^3}\right)$ $\Longrightarrow$ same field lines as $\vec{E}$ of electric dipole
+
+\item Force acting on dipole: $\vec{F} = \vec{p} \cdot \vec{E}$ \squishsep Torque: $\vec{\tau} = \vec{p} \times \vec{E}$
+
+\vspace{-0.1cm}\rule{\columnwidth}{0.5pt}\vspace{-0.1cm}
+\item Per calc. momentum acquis. da test particle in $\vec{r}$ (to lead. order), puoi fare appross. che la part. quasi non si muove e resta in $\vec{r}$ (correzioni sono subleading per large $\vec{r}$).
+\item Momentum acquired: $\vec{P}(t) = \int_0^T \ud t \vec{F}(t)$
+
 \end{squishlist}
 
 \columnbreak
@@ -850,7 +876,6 @@ E_z&  cB_y& -cB_x & 0
 \begin{pmatrix} \varepsilon & \vec{S}/c \\ \vec{S}/c & -\tau_{ij} \end{pmatrix}$\\
 with $\varepsilon$ the EM energy density and $\tau_{ij} = \epsilon_0 ( E_i E_j - \frac{1}{2}\delta_{ij}E^2) + \frac{1}{\mu_0}(B_i B_j - \frac{1}{2}\delta_{ij} B^2)$
 
-\item 
 
 \end{squishlist}
 
@@ -1016,6 +1041,7 @@ $\phi(\vec{x},t)=\frac{q\gamma}{4\pi\epsilon_0}\frac{1}{\sqrt{x^2+y^2+\gamma^2(z
 %\item Solve a system of differential equ : 
 %$\left\{\begin{array}{l} \ddot{x}=\alpha_1 \dot{y} \\ \ddot{y} = \alpha_2 \dot{x} + C \end{array}\right. \Rightarrow \; \textbf{ set } u=\dot{x}+i\dot{y}$ and solve the resulting inhomogenous diff equ as usual ($u=u_{hom}+u_{part}$) %N'a pas d'interet.
 \item $\gamma$ angle betw.  $(\theta, \phi)$ , $(\theta', \phi')$, then  $\cos(\gamma) = \cos\theta \cos\theta' + \sin\theta \sin\theta' \cos(\phi - \phi')$
+\item $v/\omega$ distance travelled in one period
 \end{squishlist}
 
 \vfill 

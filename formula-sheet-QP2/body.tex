@@ -9,7 +9,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 \graypar{Evolution}
 \begin{squishlist}
     \item $i \D{t}{\ket{\psi(t)}} = H \ket{\psi(t)}$ (Schrödinger)
-    \item if $H$ time-independant then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$, $U(t) = e^{-iHt}$
+    \item if $H$ time-independent then $\ket{\psi(t)} = U(t) \ket{\psi(0)}$, $U(t) = e^{-iHt}$
 \end{squishlist}
 
 \graypar{Pauli matrices}
@@ -20,7 +20,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
         \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$
 
     \item $\Tr[\sigma_0] = 2, \Tr[\sigma_i] = 0$ for $i=1,2,3$ \hfill $S_i = \frac{\hbar}{2} \sigma_i$
-    \item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ \quad $V = \vec{v}\cdot \vec{\sigma} \Rightarrow V^2 = \id$
+    \item $\sigma_i \sigma_j = \delta_{ij} \id + i \epsilon_{ijk} \sigma_k$ \quad $[\sigma_i, \sigma_j] = 2i \epsilon_{ijk} \sigma_k$ \squishsep $V = \vec{v}\cdot \vec{\sigma} \Rightarrow V^2 = \id$
     \item $\{\sigma_i, \sigma_j \} = \sigma_i \sigma_J + \sigma_j\sigma_i = 2 \delta_{ij} \id$
     \item Paulis form an orthonormal basis with $\Tr[\sigma_i,\sigma_j] = 2\delta_{ij}$
     \item The Pauli $\alpha$ operator, $\alpha \in \{x,y,z\}$, rotates the state by $\pi$ around the $\alpha$-axis.
@@ -202,9 +202,21 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 \graypar{Time-Dependent Perturbation Theory}
 \begin{squishlist}
     \item $U_I(t,t_0) \approx \id -i \int_{t_0}^t \ud t_1 V_I(t_1) + \ldots$
-    \item $P_{i\rightarrow n}(t) = |\braket{n|\phi_S(t)}|^2 = \left| -i \int_{t_0}^t \ud t_1 e^{i(E_n-E_i)(t-t_0)} \braket{n|V(t_1,t_0)|i}\right|^2$ general expression of transition probabilities between eigenstates $\ket{i}$ and $\ket{n}$. Note: if $V=0$ then a system in an eigenstate stays in an aigenstate.
+    \item The exact transition probability between two states is $\left| \braket{\psi|\phi} \right| ^2$
+
+    \item $P_{i\rightarrow n}(t) = |\braket{n|\phi_S(t)}|^2 = |\braket{n|U_I(t,t_0)|i}|^2 = \\ 
+    = \left| -i \int_{t_0}^t \ud t_1 e^{i(E_n-E_i)(t-t_0)} \braket{n|V(t_1,t_0)|i}\right|^2$ general expression of transition probabilities between eigenstates $\ket{i}$ and $\ket{n}$ of $H_0$. Note: if $V=0$ then a system in an eigenstate stays in an aigenstate.
+    
     \item For a constant potential $P_{i\rightarrow n}(t) \overset{t\rightarrow \infty}{=} 2 \omega t \left|\braket{n|V|i}\right|^2 \delta(E_n - E_i)$ \\
     \D{t}{}$P_{i\rightarrow n}(t) =2 \pi \left|\braket{n|V|i}\right|^2 \delta(E_n - E_i)$
+\end{squishlist}
+
+\graypar{Variational method}
+\begin{squishlist}
+    \item $\dfrac{\braket{\psi | H | \psi}}{\braket{\psi|\psi}} \geq E_0$ Variational principle 
+    \item The idea is to come up with a parameterised guess for the state $\kpsi$, and then we use the variational principle to find the parameter values that minimize $\psi$.\\
+    It generalises to excited states ($\braket{\phi_0|\psi} = 0$) by replacing $E_0$ with $E_1$.
+    \item Steps: compute $\frac{\braket{\psi | H | \psi}}{\braket{\psi|\psi}} = E(a)$ then minimise $E$ with respect to the parameter.
 \end{squishlist}
 
 
@@ -228,6 +240,7 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 \graypar{Harmonic oscillator}
 \begin{squishlist}
     \item$H = \frac{1}{2m}\hat{p}^2 + \frac{1}{2}m \omega^2 \hat{x}^2 = \hbar \omega (\hat{N} + \frac{1}{2}), \quad \hat{N} = \hat{a}^{\dagger} \hat{a}$
+    \squishsep $\hat{p}^2 = - \frac{\hbar^2}{2m} \dder{x}{}$
     \item $\hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i \hat{p}}{m \omega}\right)$ \quad 
      $\hat{a}^{\dagger} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i \hat{p}}{m \omega}\right)$ \quad 
     \item $\hat{x} = \sqrt{\frac{\hbar }{2 m \omega}}(\hat{a} + \hat{a}^{\dagger})$ \quad $\hat{p} = i \sqrt{\frac{m \omega \hbar}{2}} ( \hat{a}^{\dagger} - \hat{a})$
@@ -250,6 +263,10 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 \item $\vectwo{a}{b} \otimes \vectwo{\alpha}{\beta} = \begin{pmatrix} a \alpha & a \beta & b \alpha & b \beta \end{pmatrix}^T$
     
 \item $A \otimes B = \begin{pmatrix} A_{11}B & A_{12}B \\ A_{21}B & A_{22}B \end{pmatrix}$
+\squishsep $A \oplus B = \begin{pmatrix} A & 0 \\ 0 & B \end{pmatrix}$
+
+\item $R(g)^{\otimes k} = R(g) \otimes \ldots \otimes R(g)$ \squishsep $\bigoplus_k R(g) = (R \bigoplus \ldots \bigoplus R)(g)$
+
 \item $f(\hat{A} \otimes \hat{B}) \ket{a}\ket{\phi} = \ket{a} \otimes f(a\hat{B})\ket{\phi}$
 \end{squishlist}
 
@@ -288,4 +305,133 @@ $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed sta
 
 \columnbreak
 
+ciao
+
+\columnbreak
+
+
 \graysec{Group Theory}
+
+\begin{squishlist}
+    \item \textbf{Group}: Set $G$ equipped with operation $*$ such that
+    \begin{squishitemize}
+        \setlength\itemsep{2pt}
+        \item $G$ closed under $*$, i.e. if $a,b \in G$ then $a*b \in G$
+        \item Associative: $\forall a,b,c \in G$ one has $(a * b) * c = a * (b*c)$
+        \item Has identity, i.e an element $e$ such that $e * a = a \forall a \in G$
+        \item Has inverse, i.e. $\forall a \in G$ it exists $b \in G$ such that $b*a = a*b = e$. ($b = a^{-1}$)
+    \end{squishitemize}
+    \item Any unitary that leaves a property invariant forms a grop with * matrix multiplic.
+    \item \textbf{Finite group}: A group that contains a finite number of elements (the group \emph{order}).
+    
+    \begin{minipage}{0.75\columnwidth}
+    \item Order 1 group (the only one, trivial group): 
+    \end{minipage}
+    \begin{minipage}{0.25\columnwidth}
+    $\begin{array}{c | c }
+        * & e \\
+        \hline
+        e & e 
+    \end{array}$
+    \end{minipage}
+
+    \begin{minipage}{0.75\columnwidth}
+    \item Order 2: parity group
+    \end{minipage}
+    \begin{minipage}{0.25\columnwidth}
+    $\begin{array}{c | c c }
+        * & e & a \\
+        \hline
+        e & e & a \\
+        a & a & e
+    \end{array}$
+    \end{minipage}
+    
+    \begin{minipage}{0.75\columnwidth}
+    \item The unique order 3 group is the cyclic $\mathbb{Z}_3$ group
+    \end{minipage}
+    \begin{minipage}{0.25\columnwidth}
+        $\begin{array}{c| c c c}
+            * & e & a & b \\
+            \hline
+            e & e & a & b \\
+            a & a & b & e \\
+            b & b & e & a \\
+        \end{array}$
+    \end{minipage}
+        
+    \item Order 4 has cyclic and symmetry of a rectangle
+    
+    \begin{minipage}{0.5\columnwidth}
+        \item Order 6 has cyclic group $\mathbb{Z}_6$ and the C3v group (on the right)
+    \end{minipage}
+    \begin{minipage}{0.5\columnwidth}
+        $\begin{array}{c | c c c c c c }
+            * & e & a & a^2 & b & c & d \\
+            \hline
+            e & e & a & a^2 & b & c & d \\
+            a & a & a^2 & e & c & d & b \\
+            a^2 & a^2 & e & a & d    & b    & c     \\
+            b   & b  & d & c & e   & a^2 & a  \\
+            c   & c  & b & d & a   & e   & a^2 \\
+            d   & d  & c & b & a^2 & a   & e                        
+        \end{array}$
+    \end{minipage}
+
+    \begin{minipage}{0.4\columnwidth}
+    \item The general cyclic group $\mathbb{Z}_n$ ($a^n = 1$) is
+    \end{minipage}
+    $\begin{array}{c| c c c c c}
+        * & e & a^1 & a^2 & \ldots & a^{n-1} \\
+        \hline
+        * & e & a^1 & a^2 & \ldots & a^{n-1} \\
+        a^1 & a^1 & a^2 & a^3 & \ldots & e \\
+        a^2 & a^2 & a^3 & a^4 & \ldots & a^1 \\
+        {\vdots} \\
+        a^{n-1} & a^{n-1} & e & a^1 & \ldots & a^{n-2}
+    \end{array}$
+
+    \item Symmetric permutation group $S_n$ (all possible permutations of $n$ objects)\\
+    e.g. $S_3 = \{ I,$SWAP$_{12},$SWAP$_{13}$,SWAP$_{23}$,CYCLE$_{123},$CYCLE$_{321}$\}
+
+    \item \textbf{Lie group}: a continous group that depends analytically on some continous parameters $\lambda$. Examples: Real $d$-dimensional rotations $SO(d)$, the orthogonal group $O(d)$, the unitary group $U(d)$, the special unitary group $SU(d)$
+    
+    \item \textbf{Abelian group}: $a * b = b * a \; \forall a,b \in G$
+    \item \textbf{Subgroup}: a subset $H$ of the group $G$ is a subgroup of $G$ if and only if it
+    is nonempty and itself forms a group. If it is neither the identity or $G$ itself then it is a \emph{proper} subgroup. \underline{Lagrange Theorem:} the order of $H$ divides the order og $G$. Thus if the order of a group is prime there is only one possible group
+
+    \item \textbf{Group homomorphism}: an application from $(G, *)$ to $(G, **)$ such that $\forall x,y \in G \quad f(x * y) = f(x) ** f(y)$. An isomorphism sets a one-to-one correspondance.
+    
+\end{squishlist}
+
+\graypar{Representations}
+\begin{squishlist}
+    \item A representation $R$ of a group $G$ on a vector space
+    $V$ is a group homomorphism from $G$ to a set of matrices that act on a vector space $V$.
+    The dimension of a representation $R$ is defined to be the dimension of the vector state $V$, i.e.,
+    $\text{dim}(R)=\text{dim}(V)$.
+    \item All groups allow trivial representation $\forall g \in G, \, R(g) = \id$
+    \item The \emph{regular} representation is obtained by reordering the Caylei table so that only $e$ fills the diagonal, then to every element assign the matrix obtained by replacing 1 in the positions where the element is in the table and 0 everywhere else.
+    \item \textbf{Equivalent} reps are related by a similarity transformation $R'(g) = S R(g) S^{-1}$
+    \item If $R_1$ and $R_2$ are two representations for $G$, then $R_1(g) \otimes R_2(g)$ is also a rep
+    \item The direct sum $R_1 \oplus R_2$ is a rep of $G$ acting on $V_1 \oplus V_2$ \\
+    $(R_1 \oplus R_2)(g) = \begin{pmatrix} R_1(g) & 0 \\ 0 & R_2(g) \end{pmatrix}$
+
+    \item Let $U_g$ be a rep of $G$ and $H$ an Hermitian operator such that $[U_g,H] = 0 \; \forall g$. Then $H$ and $U_g$ are simultaneously block diagonalised (in the same basis).
+    \item \textbf{Reducible representation}: a rep $R(g)$ of $G$ over a vector space $V$ is reducible if there exists an invariant subspace, i.e. if there exists a non-trivial subspace $W$ of $V$ such that for all $\ket{w} \in W$ we have $R(g) \ket{w} \in W$ for any $g$.
+    \item \textbf{Completely reducible rep}: if it splits into a direct sum of irreducible reps
+    
+    \item \textbf{Schur's 1st lemma}: Let $R_1(g)$ and $R_(g)$ be two non-equivalent irreducible reps of $G$, acting on vector spaces $V_1, V_2$. If there is a matrix $A$ such that \\ $A R_1(g) = R_2(g) A \; \forall g$ \quad then $A=0$.\\
+    Equivalently, if you can find $A$ different than 0 that satisfies the eq., then the reps are reducible.
+
+    \item \textbf{Schur's 2nd lemma}: Let $R$ be an irreducible rep of $G$. If $A R(g) = R(g) A \; \forall g \in G$ then $A = \lambda \id $ for some $\lambda \in \mathbb{C}$
+    
+    \item All irreducible reps of Abelian groups are scalar
+    
+    \item \textbf{Burnside's lemma}: for a finite group of order $h$ there are only a finite number $n$ of irreducible representations $a = 1 \ldots n$ of dimension $l_a$ and $\sum_{a=1}^n l_a^2 = h$
+\end{squishlist}
+
+
+
+\vfill
+\today

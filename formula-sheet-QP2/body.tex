@@ -73,7 +73,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 
 \graypar{Bell states}
 \begin{squishlist}
-    \item $\ket{\Phi^+} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{0}_B + \ket{1}_A \otimes \ket{1}_B\right)$ \\
+    \item $\ket{\Phi^+} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{0}_B + \ket{1}_A \otimes \ket{1}_B\right)$ \hfill maximally entangled\\
           $\ket{\Phi^-} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{0}_B - \ket{1}_A \otimes \ket{1}_B\right)$ \\
           $\ket{\Psi^+} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{1}_B + \ket{1}_A \otimes \ket{0}_B\right)$ \\
           $\ket{\Psi^-} = \frac{1}{\sqrt{2}} \left( \ket{0}_A \otimes \ket{1}_B - \ket{1}_A \otimes \ket{0}_B\right)$
@@ -102,6 +102,7 @@ Matteo Veneziano -- Quantum Physics II Formula Sheet
 \item General single qubit: $\rho = \begin{pmatrix} cos(\theta/2)^2 & \cos(\theta/2)\sin(\theta/2)e^{-i\phi} \\ \cos(\theta/2)\sin(\theta/2)e^{i\phi} & \sin(\theta/2)^2 \end{pmatrix} = $ \\
 $= \frac{1}{2}\sigma_0 + \frac{1}{2}\sum_{i=1}^3 v_i \sigma_i$ with $\vec{v} = (\sin\theta \cos\phi , \sin\theta\sin\phi, \cos\theta);\; v_i = \Tr[\rho \sigma_i]$
 \item $\rho = \sum_k p_k \ket{\psi_k}\bra{\psi_k}$ System prepared in state $\ket{\psi_k}$ with prob. $p_k$ (\textbf{mixed} state)
+\item Maximally mixed: $\frac{\id}{2} = \frac{1}{2} (\ket{0}\bra{0} + \ket{1}\bra{1})$
 \item If $\rho = p \dpsi + (1-p) \ket{\phi}\bra{\phi}$ where
 $\psi, \phi$ have Bloch vectors $\vec{v}, \vec{u}$ of pure states, the mixed state has Bloch vector $\vec{w} = p \vec{v} + (1-p) \vec{u}$; $|\vec{w}|^2 \leq 1$
 \item $\rho_A = \sum_{k=1}^{d_B}(\id_A \otimes \bra{k})\rho_{AB}(\id_A \otimes \ket{k}) = \Tr_B[\rho_{AB}]$ \quad \textbf{Reduced} state
@@ -392,7 +393,7 @@ ciao
     \end{array}$
 
     \item Symmetric permutation group $S_n$ (all possible permutations of $n$ objects)\\
-    e.g. $S_3 = \{ I,$SWAP$_{12},$SWAP$_{13}$,SWAP$_{23}$,CYCLE$_{123},$CYCLE$_{321}$\}
+    e.g. $S_3 = \{ I,$SWAP$_{12},$SWAP$_{13}$,SWAP$_{23}$,CYCLE$_{123},$CYCLE$_{321}$\} isomorphic to C3v
 
     \item \textbf{Lie group}: a continous group that depends analytically on some continous parameters $\lambda$. Examples: Real $d$-dimensional rotations $SO(d)$, the orthogonal group $O(d)$, the unitary group $U(d)$, the special unitary group $SU(d)$
     
@@ -417,7 +418,8 @@ ciao
     \item The direct sum $R_1 \oplus R_2$ is a rep of $G$ acting on $V_1 \oplus V_2$ \\
     $(R_1 \oplus R_2)(g) = \begin{pmatrix} R_1(g) & 0 \\ 0 & R_2(g) \end{pmatrix}$
 
-    \item Let $U_g$ be a rep of $G$ and $H$ an Hermitian operator such that $[U_g,H] = 0 \; \forall g$. Then $H$ and $U_g$ are simultaneously block diagonalised (in the same basis).
+    \item Let $U_g$ be a rep of $G$ and $H$ an Hermitian operator such that $[U_g,H] = 0 \; \forall g$. Then $H$ and $U_g$ are simultaneously block diagonalised (in the same basis). \\
+    E.g. $U_g \otimes U_g$, the tensor product representation of $SU(2)$, commutes with SWAP and has therefore a symmetric ($d=3$) and an asymmetric ($d=1$) invariant subspace.
     \item \textbf{Reducible representation}: a rep $R(g)$ of $G$ over a vector space $V$ is reducible if there exists an invariant subspace, i.e. if there exists a non-trivial subspace $W$ of $V$ such that for all $\ket{w} \in W$ we have $R(g) \ket{w} \in W$ for any $g$.
     \item \textbf{Completely reducible rep}: if it splits into a direct sum of irreducible reps
     
@@ -426,12 +428,66 @@ ciao
 
     \item \textbf{Schur's 2nd lemma}: Let $R$ be an irreducible rep of $G$. If $A R(g) = R(g) A \; \forall g \in G$ then $A = \lambda \id $ for some $\lambda \in \mathbb{C}$
     
-    \item All irreducible reps of Abelian groups are scalar
-    
     \item \textbf{Burnside's lemma}: for a finite group of order $h$ there are only a finite number $n$ of irreducible representations $a = 1 \ldots n$ of dimension $l_a$ and $\sum_{a=1}^n l_a^2 = h$
+    \item In a group $G$, two elements $g$ and $g'$ are \textbf{equivalent} if there exists another element $f$ such that $g' = f^{-1} g f$. This divides $G$ in conjugacy classes.
+    \item For a finite group, the number of (non-equiv.) irreps is equal to the number of conjugacy classes
+    \item All irreducible reps of Abelian groups are scalar ($d=1$). An Abelian group of order $n$ has $n$ conjugacy classes and thus $n$ irreducible reps.
+    
+    \item \textbf{Grand Orthogonality Theorem}: Let $R_a$ and $R_b$ be two non-equiv. unitary irreducible reps of a finite group $G$ of order $N$.
+    Let $n_a$ and $n_b$ be the dimensions of the vector space for $R_a$ and $R_b$. Then \\
+    $\sum_{g\in G} \dfrac{n_a}{N} \left[R_a(g)^{\dagger}\right]_{jk} \left[R_b(g)\right]_{lm} = \delta_{ab} \delta_{jm} \delta_{lk}$
+    \begin{squishitemize}
+        \item if $a \neq b$ then $\sum_{g\in G} \left[R_a(g)^{\dagger}\right]_{jk} \left[R_b(g)\right]_{lm} = 0$ for all $i,j,k,l$
+        \item if $a = b$ then $\sum_{g\in G} \left[R_a(g)^{\dagger}\right]_{jk} \left[R_a(g)\right]_{lm} = 0$ if $j \neq m$ and/or $l \neq k$
+        \item if $a=b$ and $j=m$ and $l=k$ then $\sum_{g\in G} \left[R_a(g)^{\dagger}\right]_{jk} \left[R_a(g)\right]_{jk} = \dfrac{N}{n_a}$
+    \end{squishitemize}
+
+    \item A finite group can only have a finite number of inequivalent irreducible
+    representations. Specifically, the \textbf{maximum number of possible irreps} is given by the order of the group.
+    Proof: irreps give us 'vectors of matrices' in a vector space of dimension $|G|$ and the theorem says they must be orthogonal. But there are at most $|G|$ orthogonal vectors in a vector space of dimension $|G|$
+
+    \item \textbf{Group averaging}: if $d$ is the dim. of vector space of rep and $U_g$ is an irreducible representation then $\braket{X}_G = \frac{1}{N} \sum_g U_g X U_g^{\dagger} = \frac{1}{d} \Tr[X] \id$  
+    \item Proof: $\frac{1}{N} \sum_g U_g X U_g^{\dagger} = \frac{1}{N} \sum_g \left( \sum_{l,m}[U_g]_{lm} \ket{l}\bra{m}\right) X \left( \sum_{k,j} [U_g^{\dagger}]_{kj}\ket{k}\bra{j}\right) \\ 
+    = \frac{1}{N} \sum_g \sum_{lmkj} [U_g]_{lm} X_{mk} [U^{\dagger}]_{kj} \ket{l}\bra{j}$ then apply orthogonality \\
+    $= \frac{1}{n_a} \sum_{lmkj} \delta_{lj} \delta_{mk} X_{mk} \ket{l}\bra{j} $
+
+    \item $\braket{X}_G = \int_G \ud \mu(g) U_x(g) X U_x(g)^{\dagger} = \frac{1}{d} \Tr[X] \id$ for continous groups
+    \item For reducible representations $U_g$ we have \\
+    $\braket{X}_G = \frac{1}{N} \sum_g U_g X U_g^{\dagger} = \sum_x \dfrac{\Tr[\Pi_x X]}{d_x} \Pi_x = \bigoplus_x \dfrac{\Tr[\Pi_x X]}{d_x} \id_x$
+
+    \item In a representation $R$, all elements which are in the same conjugacy class have the same trace. Proof: $\Tr(R(u^{-1}y u)) = \Tr(R(u)R(u^{-1})R(y)) = \Tr R(y)$
+    \item \textbf{Petit Orthogonality Theorem}: Let $R_a$ and $R_b$ be two non-equiv. unitary irreducible reps of a finite group of order $N$, then $\sum_{g \in G} \chi^*_a(g) \chi_b(g) = N \delta_{a,b}$ \\ 
+    where $\chi_R(g) = \Tr[R(g)]$, or equiv. $\sum_{\mu =1}^{N_c} \eta_{\mu}\chi^*_a(g) \chi_b(g) = N \delta_{a,b}$ with $\eta_{\mu}$ the nb of elements in class $\mu$ and $N_c$ total nb of conjugacy classes
+
+    \item The set of all traces $\{\chi_R(g)\}$ is the \textbf{character} of representation $R$. Two irreps are equivalent iff they have the same character.
+    Proof by contradiction with Petit.
+
+    \item Trace of all reps within a conj. class are the same $\rightarrow$ $\chi_R(C_{\mu}) = \sum_a b_a \chi_a ( C_{\mu})$
+    \item Assuming a decomposition in irreps $R(g) = \bigoplus_{a,x}R_{a,x}(g)$ for $x = 1 \ldots b_a$, the degeneracy of conjugacy class $a$ is $b_a = \frac{1}{N} \sum_{\mu} \eta_{\mu} \chi^*_a(C_{\mu})\chi_R(C_{\mu})$ NOT CLEAR
+    
+    \item A necessary and sufficient condition for a representation $R$ to be an irrep is that \\
+    $\sum_{\mu = 1}^{N_c} \eta_{\mu} |\chi(C_{\mu})|^2 = N$. Proof: decompose trace and use Petit.
 \end{squishlist}
 
 
+\graypar{Lie Algebras}
+\begin{squishlist}
+    \item Rotation through infinitesimal angle $R(\theta) = \id + A$ and as $R^T R = \id$ we must have $A^T = -A$
+\end{squishlist}
 
-\vfill
+\columnbreak
+\graypar{Irreducible representations of C3v}
+\begin{squishlist}
+    \item
+    Trivial \squishsep  2D irrep \\
+    $R(e) = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+    R(c_+) = \begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}
+    R(c_+) = \begin{pmatrix} -\frac{1}{2} & \frac{\sqrt{3}}{2} \\-\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix} \\
+    R(\sigma) = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}
+    R(\sigma') = \begin{pmatrix} \frac{1}{2} & \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}
+    R(\sigma'') = \begin{pmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ -\frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}$
+
+    \item $R(e)=1,R(c_+)=1,R(c_-)=1,R(\sigma)=-1,R(\sigma')=-1,R(\sigma'')=-1$
+\end{squishlist}
+    \vfill
 \today

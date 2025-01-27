@@ -256,6 +256,12 @@
     \item Steps: compute $\frac{\braket{\psi | H | \psi}}{\braket{\psi|\psi}} = E(a)$ then minimise $E$ with respect to the parameter.
 \end{squishlist}
 
+\graypar{Decoherence}
+If $\kpsi  = \sum_j c_j \ket{E_j}_A \otimes \ket{\phi}_B$ and $H_{AB} = \sum_j \ket{E_j}\bra{E_j}_A \otimes H_B^{(J)}$ then \\
+$\rho_{AB} = \ket{\psi} \bra{\psi} = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i}_A \otimes \ket{\phi}\bra{\phi}_B \\
+\rho_a(t) = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i} \braket{\phi | e^{it H_B^{(i)}} e^{-it H_B^{(j)}} | \phi} \\
+\rho_B(t) = \sum_j |c_j|^2 e^{-itH_B^{(j)}} \ket{\phi} \bra{\phi} e^{it H_B^{(j)}}$
+
 
 \columnbreak
 
@@ -277,7 +283,7 @@
 \graypar{Harmonic oscillator}
 \begin{squishlist}
     \item$H = \frac{1}{2m}\hat{p}^2 + \frac{1}{2}m \omega^2 \hat{x}^2 = \hbar \omega (\hat{N} + \frac{1}{2}), \quad \hat{N} = \hat{a}^{\dagger} \hat{a}$
-    \squishsep $\hat{p}^2 = - \frac{\hbar^2}{2m} \dder{x}{}$
+    \squishsep $\frac{1}{2m}\hat{p}^2 = - \frac{\hbar^2}{2m} \dder{x}{}$
     \item $\hat{a} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i \hat{p}}{m \omega}\right)$ \quad 
      $\hat{a}^{\dagger} = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i \hat{p}}{m \omega}\right)$ \quad 
     \item $\hat{x} = \sqrt{\frac{\hbar }{2 m \omega}}(\hat{a} + \hat{a}^{\dagger})$ \quad $\hat{p} = i \sqrt{\frac{m \omega \hbar}{2}} ( \hat{a}^{\dagger} - \hat{a})$
@@ -500,7 +506,7 @@
     Proof by contradiction with Petit.
 
     \item Trace of all reps within a conj. class are the same $\rightarrow$ $\chi_R(C_{\mu}) = \sum_a b_a \chi_a ( C_{\mu})$
-    \item Assuming a decomposition in irreps $R(g) = \bigoplus_{a,x}R_{a,x}(g)$ for $x = 1 \ldots b_a$, the degeneracy of conjugacy class $a$ is $b_a = \frac{1}{N} \sum_{\mu} \eta_{\mu} \chi^*_a(C_{\mu})\chi_R(C_{\mu})$ NOT CLEAR
+    \item Assuming a decomposition in irreps $R(g) = \bigoplus_{a,x}R_{a,x}(g)$ for $x = 1 \ldots b_a$, the number of irreps composing $R_a$ is $b_a = \frac{1}{N} \sum_{\mu} \eta_{\mu} \chi^*_a(C_{\mu})\chi_R(C_{\mu})$
     
     \item A necessary and sufficient condition for a representation $R$ to be an irrep is that \\
     $\sum_{\mu = 1}^{N_c} \eta_{\mu} |\chi(C_{\mu})|^2 = N$. Proof: decompose trace and use Petit.
@@ -535,7 +541,8 @@ $r(X) = \left.\der{\theta}{}(R(e^{\theta X}))\right|_{\theta=0}$ for all $X \in 
     \item $S_{\pm} = S_x \pm i S_y$ \squishsep $S_x = \frac{1}{2} (S_+ + S_-)$ \squishsep $S_y = \frac{1}{2i} (S_+ - S_-)$
     \item $S_+ \ket{s,m} = \sqrt{s(s+1) - m(m+1)} \ket{s, m + 1}$
     \item $S_- \ket{s,m} = \sqrt{s(s+1) - m(m-1)} \ket{s, m-1}$
-    \item Clebsch-Gordan stuff
+    \item For a composite system the ladder operators are $S_{\pm} = j_{\pm} \otimes \id + \id \otimes j_{\pm}$
+    \item Obtaining \textbf{Clebsch-Gordan} coefficients: Start by the highest spin state (e.g. for two spin-1 states $\ket{s=1,m=1} \otimes \ket{s=1,m=1} = \ket{S=2,m=2}$), then apply lowering operator on both sides until you get 0. To find the other sectors, we must first find the set of states which are orthogonal to the previous ones, and find the highest weight among those.
 \end{squishlist}
 
 \columnbreak
@@ -618,5 +625,12 @@ $
 \begin{squishlist}
     \item To diagonalise off-diagonal matrix $A$ take the square. $A^2$ will be diagonal and then from $\lambda^2$ you have candidates for $\lambda$
 \end{squishlist}
+
+
+
 \vfill
-\today
+    \begin{verbatim}
+                                                  |\__/,|   (`\
+                                                _.|o o  |_   ) )
+                                                -(((---(((--------
+    \end{verbatim}

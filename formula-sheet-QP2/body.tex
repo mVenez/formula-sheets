@@ -262,7 +262,25 @@ $\rho_{AB} = \ket{\psi} \bra{\psi} = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i}_
 \rho_a(t) = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i} \braket{\phi | e^{it H_B^{(i)}} e^{-it H_B^{(j)}} | \phi} \\
 \rho_B(t) = \sum_j |c_j|^2 e^{-itH_B^{(j)}} \ket{\phi} \bra{\phi} e^{it H_B^{(j)}}$
 
+\graypar{Measurement problem}
+\begin{squishlist}
+    \item We start with following postulates: (i) Formalism, every physical quantity is represented by an operator $Q$ and every state of
+    a physical system by a state vector $\kpsi$ (ii) Measurement Kinematic Postulate: If a quantity Q is measured, the post measure-
+    ment state of the system will be the eigenstate corresponding to the eigenvalue measured. (iii) Dynamical Postulate: Time evolution is a linear map from state to state.
 
+    \item The linearity of quantum mechanics dynamics combined with quantum mechanical
+    treatment of a basic conception of a measuring device leads to the conclusion that a system
+    in a superposition remains in a superposition. According to dynamical postulate there is no
+    way to get the system into an eigenstate of an observable if it is not already in one. However,
+    this contradicts the Measurement Kinematic Postulate, which states that post measurement the
+    system will be in an eigenstate of the observable being measured.
+
+    \item The collapse postulate does not solve the measurement problem because the word measurement does not have precise enough meaning.
+    \item There are two key ambiguities with the term measurement: (i) what processes count as measurements? (ii) measurement requires a divide between the system being measured and the part doing
+    the measuring and there is no definite prescription for how this division is to be made
+
+    \item A more modern way of solving in part the measurement problem is decoherence: the environment acts a good measurement device.
+\end{squishlist}
 \columnbreak
 
 \graypar{Particle in a box}
@@ -397,7 +415,7 @@ $\rho_{AB} = \ket{\psi} \bra{\psi} = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i}_
         \end{array}$
     \end{minipage}
         
-    \item Order 4 has cyclic and symmetry of a rectangle
+    \item Order 4 has cyclic and symmetry of a rectangle (check Miscellanea)
     
     \begin{minipage}{0.5\columnwidth}
         \item Order 6 has cyclic group $\mathbb{Z}_6$ and the C3v group (on the right)
@@ -507,7 +525,7 @@ $\rho_{AB} = \ket{\psi} \bra{\psi} = \sum_j \sum_i c_j c_i^* \ket{E_j}\bra{E_i}_
 
     \item Trace of all reps within a conj. class are the same $\rightarrow$ $\chi_R(C_{\mu}) = \sum_a b_a \chi_a ( C_{\mu})$
     \item Assuming a decomposition in irreps $R(g) = \bigoplus_{a,x}R_{a,x}(g)$ for $x = 1 \ldots b_a$, the number of irreps composing $R_a$ is $b_a = \frac{1}{N} \sum_{\mu} \eta_{\mu} \chi^*_a(C_{\mu})\chi_R(C_{\mu})$
-    
+
     \item A necessary and sufficient condition for a representation $R$ to be an irrep is that \\
     $\sum_{\mu = 1}^{N_c} \eta_{\mu} |\chi(C_{\mu})|^2 = N$. Proof: decompose trace and use Petit.
 \end{squishlist}
@@ -618,12 +636,39 @@ $
 \psi_{z-} =                  \begin{pmatrix} 0 \\  1 \end{pmatrix}.
 $
 
+\graypar{Working with the symmetric and antisymmetric subspaces}
+\begin{squishlist}
+    \item The projectors onto the symmetric and antisymmetric subspaces are given by \\
+    $\Pi_+ = \sum_{i=0}^2 \ket{\phi_i} \bra{\phi_i} = \dfrac{\id \otimes \id + \text{SWAP}}{2} \\
+    \Pi_- = \ket{\phi_3} \bra{\phi_3} = \dfrac{\id \otimes \id - \text{SWAP}}{2}$
+
+    \item $\braket{\rho} = \frac{1}{3} \Tr[\Pi_+ \rho] + \Tr[\Pi_- \rho] \Pi_- = \\
+    \dfrac{\id \otimes \id}{6}(2 - \Tr[\text{SWAP} \rho]) + \dfrac{\text{SWAP}}{6} (2 \Tr[\text{SWAP} \rho] - 1)$
+
+    \item If $\rho$ is in the symmetric subspace $\Tr[ \rho \text{SWAP}] = 1$. $-1$ if in antisymmetric.
+    \item $\Tr[(A \otimes B)\text{SWAP}] = \Tr [AB]$
+    \item If we define Bloch vectors $\vec{r}_1$ and $\vec{r}_2$ corresponding to $\rho$ and $\sigma$, then \\
+    $\Tr[\sigma \rho] = \dfrac{1 + \vec{r}_1 \cdot \vec{r}_2}{2}$
+
+    \item $\text{SWAP} = \frac{1}{2} \sum_{\sigma \in \{ \id, \sigma_x, \sigma_y, \sigma_z\}} \sigma \otimes \sigma$
+\end{squishlist}
 
 \columnbreak
 
 \graypar{Miscellanea}
 \begin{squishlist}
     \item To diagonalise off-diagonal matrix $A$ take the square. $A^2$ will be diagonal and then from $\lambda^2$ you have candidates for $\lambda$
+    \item Symmetry group of a rectangle 
+    $\begin{array}{c | c c c c}
+        * & e & a & b & c \\
+        \hline
+        e & e & a & b & c \\
+        a & a & e & c & b \\
+        b & b & c & e & a \\
+        c & c & b & a & e
+    \end{array}$
+
+    \item $\Tr[R(e)] = \text{dim}(R)$
 \end{squishlist}
 
 

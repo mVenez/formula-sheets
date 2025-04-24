@@ -1,1 +1,25 @@
 % Matteo Veneziano -- Solid State Physics Formula Sheet
+\begin{squishlist}
+    \item $\vec{R} = \sum_{j=1}^{3} n_j \vec{a}_j$ un vecteur du réseau de Bravais
+    \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif.
+\end{squishlist}
+
+\graysec{Les électrons dans un potentiel périodique. Structure de bande}
+\graypar{Théorème de Bloch}
+\begin{squishlist}
+    \item $\psi(\vec{r} + \vec{R}) = \exp(i\vec{k} \cdot \vec{R}) \psi(\vec{r})$
+    \item Un vecteur $\vec{k}$ ne se trouvant pas dans la 1ZDB peut être réduit à la 1ZDB: $\tilde{\vec{k}} = \vec{k} + \vec{G}$ \\
+    car $\vec{k}$ est défini à un vecteur du réseau réciproque près, i.e. $\exp(i \vec{G}\cdot \vec{R}) = 1$.
+    \item Alternative: $\psi_{n \vec{k}}(\vr) = \exp(i \vk \cdot \vr ) u_{n \vk}(\vr)$ où $u_{n \vk}(\vr) =  u_{n \vk}(\vr+ \vR)$
+\end{squishlist}
+
+\graypar{Équation centrale}
+\begin{squishlist}
+    \item On peut décomposer une fonction d'onde $\psi(\vr)$ qui satisfait Born-von-Karman comme $\psi(\vr) = \sum_{\vk} a_{\vk} \exp(i \vk \cdot \vr)$
+    \item Le potentiel a la périodicité du réseau: $U(\vr) = \sum_{\vG} U_{\vG} \exp(i \vG \cdot \vr)$
+    \item $\left(\frac{\hbar^2 k^2}{2m} - E\right)a_{\vk} + \sum_{\vG}U_{\vG}a_{\vk - \vG}  = 0$
+    \item $(E_{\vk}^0 - E)a_{\mathbf{{\tilde{k}}} - \vG} + \sum_{\vG'}U_{\vG' - \vG}a_{\mathbf{\tilde{k}} - \vG'}  = 0$
+    \item Periodicité de l'énergie $ E_{n,\mathbf{\tilde{k}} + \vG} = E_{n,\mathbf{\tilde{k}}}$
+    \item Électrons libres: $U(\vr) = 0$
+    \item Électron faiblement couplés au réseau:
+\end{squishlist}

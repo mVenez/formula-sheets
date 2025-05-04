@@ -1,0 +1,105 @@
+\definecolor{lightgray}{gray}{.9}
+\definecolor{darkgray}{gray}{.8}
+\newcommand{\squishitem}{$\star$}
+\newcommand{\squishsep}{\hspace{0.5cm} \squishitem \;}
+\newcommand{\smallsquishsep}{\hspace{0.25cm} \squishitem \;}
+
+
+\newcommand{\graysec}[1]{\hspace{-0.305cm}\noindent\colorbox{darkgray}{\makebox[1.045\columnwidth][l]{\textbf{#1 \hfill \hfill \putpagenumber}}}
+
+}
+\newcommand{\graypar}[1]{\hspace{-0.305cm}\noindent\colorbox{lightgray}{\makebox[1.045\columnwidth][l]{\textbf{#1 \hfill \hfill \putpagenumber}}}
+
+}
+
+\newcommand{\E}{\mathcal{E}}
+\renewcommand{\H}{\mathcal{H}}
+\renewcommand{\P}{\mathbb{P}}
+
+
+\newenvironment{squishlist}{\begin{list}{\squishitem}{
+		\setlength{\itemsep}{5pt}
+		\setlength{\parsep}{0pt}
+		\setlength{\topsep}{0pt}
+		\setlength{\partopsep}{0pt}
+		\setlength{\leftmargin}{0em}
+		\setlength{\labelwidth}{1em}
+		\setlength{\labelsep}{0.5em}}
+	}{\end{list}}
+
+\newenvironment{squishitemize}{\begin{list}{$\bullet$}{
+	\setlength{\itemsep}{5pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\leftmargin}{1em}
+	\setlength{\labelwidth}{1em}
+	\setlength{\labelsep}{0.5em}}
+}{\end{list}}
+
+\newcommand{\ud}{\textrm{d}}
+\newcommand{\ugrad}{\nabla}
+\newcommand{\udiv}{\nabla \cdot}
+\newcommand{\urot}{\nabla \cross}
+
+\newcommand{\ulap}{\ensuremath{\nabla^2}}
+
+\newcommand{\tq}{\ensuremath{\ \textrm{tq.} \ }}
+
+\newcommand{\der}[2]{\ensuremath{\frac{\ud #2}{\ud #1}}}
+\newcommand{\dder}[2]{\ensuremath{\frac{\ud^2 #2}{\ud #1^2}}}
+\newcommand{\D}[2]{\ensuremath{\frac{\partial #2}{\partial #1}}}
+\newcommand{\DD}[2]{\ensuremath{\frac{\partial^2 #2}{\partial #1^2}}}
+
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\univec}[1]{\ensuremath{\hat{\vec #1}}}
+\newcommand{\scalar}[2]{\ensuremath{\vec{#1} \cdot \vec{#2}}}
+%\newcommand{\cross}[2]{\ensuremath{\vec{#1} \wedge \vec{#2}}}
+\newcommand{\vr}{\vec{r}}
+\newcommand{\vR}{\vec{R}}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\vG}{\vec{G}}
+
+\newcommand{\emc}[1]{\ensuremath{\frac{#1}{4 \pi \varepsilon_0}}}
+
+\newcommand{\N}{\hat{\vec n}}
+\newcommand{\mean}[1]{\langle#1\rangle}
+\newcommand{\half}{\frac{1}{2}}
+
+% redefined sqrt to make it "closed" root
+\usepackage{letltxmacro}
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+\setbox0=\hbox{\ensuremath{\oldr@@t#1{#2\,}}}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+\makeatother
+
+\def\pa{\partial}
+
+\newcommand{\pad}[2]{\frac{\pa #1}{\pa #2}}
+%\newcommand{\padp}[3]{\frac{\pa^{#3} #1}{\pa #2^{#3}}}
+
+%\newcommand{\bigO}[1]{\mathcal{O}\left( #1\right) }
+%\newcommand{\smallo}[1]{\mathcal{o}\left( #1\right) }
+
+%\newcommand{\iif}{\Leftrightarrow}
+\newcommand{\transposeAfter}{^{\mathsf{T}}}
+\newcommand{\transpose}[1]{#1\transposeAfter}
+\newcommand{\complexConjugate}[1]{#1^{\star}}
+\newcommand{\oneover}[1]{\frac{1}{#1}}
+
+\newcommand{\id}{\mathbb{I}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+
+\newcommand{\vectwo}[2]{\begin{pmatrix} #1 \\ #2  \end{pmatrix}}
+
+\newcommand{\kpsi}{\ket{\psi}}
+\newcommand{\dpsi}{\ket{\psi}\bra{\psi}}
+\newcommand{\densop}[1]{\ket{#1}\bra{#1}}

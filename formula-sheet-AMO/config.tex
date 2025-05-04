@@ -1,0 +1,16 @@
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+\setlength{\columnseprule}{.4pt}
+\setlength{\columnsep}{1.5pc}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\usepackage{ifthen}
+\newcounter{oldnumber}
+\newcommand{\putpagenumber}{
+\ifthenelse{\thepage=\theoldnumber}{}{\addtocounter{oldnumber}{1}
+p.\theoldnumber}
+}%These are used to print the page number at the first call of each page. Should be used with \graysec and \graypar
+
+
+\pagenumbering{arabic}

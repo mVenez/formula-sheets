@@ -1,0 +1,35 @@
+% Matteo Veneziano -- Atomic and Molecular Physics and Optics Formula Sheet
+\graysec{Light propagation, Optics}
+\begin{squishlist}
+    \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$
+    \item Monochromatic waves: $\vec{E}({\vec{r}, t}) = \Re[\vec{E}(\vec{r}e^{-i \omega t})]$
+    \item \textbf{Angular spectrum representation} (2D Fourier transform in plane at position $z$): $\tilde{\vec{E}}(k_x, k_y, z) = \tilde{\vec{E}}(k_x, k_y, 0) e^{\pm i k_z z}$ \squishsep if $\Im(k_z) \geq 0$ evanescent waves for $z \rightarrow \infty$
+\end{squishlist}
+\graypar{Paraxial approximation}
+\begin{squishlist}
+    \item Smooth, slow spatial variations $k_x, k_y \ll k$
+    \item $k_z \approx k - \tfrac{k_x^2 + k_y^2}{2k} \quad \Rightarrow \quad e^{ik_z z} = e^{ikz}e^{-i \tfrac{k_x^2 + k_y^2}{2k}z}$ \textbf{Gaussian beams}
+    \item $\vec{E}(x,y,0) = \vec{E_0} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}}\right) \quad \tilde{\vec{E}}(k_x,k_y,0) = \vec{E_0} \frac{w_0^2}{4\pi} \exp \left(- \frac{(k_x^2 + k_y^2)w_0^2}{4}\right)$
+    \item $\vec{E}(x,y,z) = \vec{E_0} \frac{e^ikz}{1 + \tfrac{2iz}{kw_0^2}} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}\left(\tfrac{1}{1 + \tfrac{2iz}{kw_0^2}}\right)}\right)$
+    \item $\vec{E}(x,y,z) = \vec{E_0} \frac{w_0}{w(z)}\exp\left(-\frac{x^2 + y^2}{w(z)^2}\right) \exp \left(i \left(kz - \eta(z) + \frac{k(x^2 + y^2)}{2 R(z)}\right)\right)$
+    \item $w_0$ (waist) is a measure of the width of the beam at its narrowest point.
+    \item $\eta(z) = \arctan (z/z_R)$ Gouy phase
+    \item $w(z) = w_0 \sqrt{1 + \left(\frac{z}{z_R}\right)^2}$ (hyperbolic relation), where $z_R = \frac{\pi n w_0^2}{\lambda}$ is the Rayleigh range.
+    \item At a distance $z_R$ from the waist, the width $w$ of the beam is $\sqrt{2}$ larger than at the focus where $w=w_0$.
+    \item The wavefronts have zero curvature (radius $R = \infty$) at the waist. Curvature increases away from the waist upt to $z_R$ then decreases approaching zero as $z \rightarrow \infty$
+    $\frac{1}{R(z)} = \frac{z}{z^2 + z^2_R}$
+    \item Complex beam parameter $q(z) = z + i z_R$ (when propagating in free space) \\ $\frac{1}{q(z)} = \frac{1}{R(z)} - i \frac{\lambda}{n \pi w^2(z)}$
+\end{squishlist}
+
+\graypar{Fresnel}
+\begin{squishlist}
+    \item \textbf{Fresnel diffraction} $\vec{E}(x,y,z) = \int \vec{E}(x',y',0) h(x-x', y-y', z)$ \\
+    $h = \frac{2\pi k}{iz} e^{ikz} \exp \left(i \frac{k(u^2 + v^2)}{2z}\right)$
+\end{squishlist}
+\graypar{Paraxial optics}
+\begin{squishlist}
+    \item Thin lens: no diffraction inside $ \Rightarrow \vec{E}_{\text{out}}(x,y) = t(x,y) \vec{E}_{\text{in}}(x,y)$
+    \item Thickness function $\Delta(x,y) = \Delta_0 - \frac{x^2 + y^2}{2} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$
+    \item Define $\frac{1}{f} = (n-1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$ then $t(x,y) = \exp(-i \frac{k}{2f}(x^2 + y^2)) P(x,y)$
+    \item In $f$ we find Fourier transform of what we had as input in position $d$
+\end{squishlist}

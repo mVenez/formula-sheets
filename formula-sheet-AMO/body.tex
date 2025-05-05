@@ -32,4 +32,26 @@
     \item Thickness function $\Delta(x,y) = \Delta_0 - \frac{x^2 + y^2}{2} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$
     \item Define $\frac{1}{f} = (n-1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$ then $t(x,y) = \exp(-i \frac{k}{2f}(x^2 + y^2)) P(x,y)$
     \item In $f$ we find Fourier transform of what we had as input in position $d$
+    \item For a finite aperture (ex. $P(x,y)=1 \text{ for } x,y \in [-1,1]$) best resolution $w \sim \frac{\lambda f}{L}$
+\end{squishlist}
+
+\graysec{Light-matter interaction}
+\graypar{Out-of-equilibrium atom}
+\begin{squishlist}
+    \item $\kpsi = \frac{1}{N}(\ket{1s} + \epsilon \ket{2p}) \; \Rightarrow \; \ket{\psi(t)} = \ket{1s} + \epsilon e^{-i\omega_{2p}t}\ket{2p} \; \Rightarrow \; \rho(t) = -e |\psi|^2 = \rho_0(\vec{r}) + \epsilon \delta \rho(\vec{r}, t)$
+    \item $\delta(\vec{r},t) = -e R_{1s}(\vr) R_{2p} \left\{
+    \begin{aligned}
+        &\frac{2z}{r}\cos(\omega t) \quad m=0 \\
+        &\frac{2}{r} (x \cos(\omega t) \pm y\sin(\omega t)) \quad m=\pm 1
+    \end{aligned}
+    \right.$
+    \item Radiation emitted (frequency $\omega$), energy leaving atom. $E_{\text{initial}} \sim \braket{\psi|H|\psi} = \epsilon^2 \hbar \omega_{2p}$
+    \item Decay of atom in $\ket{2p}$ at rate $\Gamma$: \textbf{spontaneous emission}
+\end{squishlist}
+
+\graypar{Semi-classical theory}
+\begin{squishlist}
+    \item $\hat{H} = \frac{(\hat{p} + e\vec{A})^2}{2m} - e\phi \quad \overset{\text{long wavelength}}{\Longrightarrow} \quad \hat{H} = \hat{H}_{\text{atom}} - {\hat{\vec{d}}\cdot \vec{E}(\vr=0,t)} = \hat{H}_{\text{atom}} - \hat{H}_{\text{lm}}(t)$
+    \item Perturb. th. $\Rightarrow P_{g\rightarrow e} = P_{e \rightarrow g} = \frac{T^2}{4 \pi \hbar^2}\left| \braket{g|\hat{H}_{lm}|e}\right|^2 \left(\frac{\sin (\delta T / 2)}{\delta T / 2}\right)^2 \quad \delta = \omega - \frac{|E_g - E_e}{\hbar}$  \\
+    respectively absorption and stimulated emission.
 \end{squishlist}

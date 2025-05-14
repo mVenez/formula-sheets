@@ -60,6 +60,28 @@
     The correction to energy is linear in the case of a degeneracy between the two wavefunctions that the perturbation mixes, e.g.\ $2s_{1/2}, 2p_{1/2}$. Otherwise 2$^{\text{nd}}$ order perturbation.
 \end{squishlist}
 
+
+\graypar{Helium atom}
+\begin{squishlist}
+    \item $\hat{H} = - \frac{\hbar^2}{2m_e}(\nabla^2_1 + \nabla^2_2) - \frac{2e^2}{4\pi \varepsilon_0 r_1} - \frac{2e^2}{4\pi \varepsilon_0 r_2} + \frac{e^2}{4\pi \varepsilon_0 r_{12}} = \hat{H}_{01} + \hat{H}_{02} + \hat{H}_c$
+    \item \textbf{Non-interacting spectrum} ($H_c = 0$): $\ham$ is sum of two indep.\ terms, thus wavefunc.\ of the two $e^-$ is the product of the two hydrogenic wavefunctions \\
+    $ \ham = \hat{H}_{01} + \hat{H}_{02} \Longrightarrow \psi(r_1,r_2) = \phi_{n_1 l_1 m_1}(r_1) \; \phi_{n_2 l_2 m_2}(r_2)$ \qquad $E = -z^2 R_y \left( \frac{1}{n_1^2}+ \frac{1}{n_2^2} \right)$ \\
+    Ground state $E_0 = -8 R_y = -108.8$ eV. First ionisation treshold $4$ eV. \\
+    Degeneracy for different $l$.
+
+    \item \textbf{Electron-electron interactions} (repulsion term): \\
+    First order correction to energy $\Rightarrow$ Coulomb integral \\
+    $ \displaystyle J = j_0 \int \left|\psi_{n_1 l_1 m_1}(\vec{r_1})\right|^2 \left(\frac{1}{r_{12}}\right) |\psi_{n_2 l_2 m_2}(\vec{r_2})|^2  \ud \tau_1 \ud \tau_2$ [RESULTS?] \\
+    We can also use \textbf{variational method}to find an effective charge $z_e$ which minimises the energy. Guess function $\psi(\vr_1 \vr_2) = \frac{z_e^3}{\pi}\exp\left(-\frac{z_e}{a_0}(\vr_1 + \vr_2) \right) = \phi_{1s,Z_e}(\vr_1)\phi_{1s,Z_e}(\vr_2)$
+    We find $E_{\min} = -2 R_y (z - 5/16)^2$
+    \vspace{0.1cm}
+
+    \textbf{Excited states:} when two $e^-$ occupy different orbitals the wavefuncs.\ are either
+    $\psi_{n_1l_1m_1}(\vec{r}_1) \psi_{n_2l_2m_2}(\vec{r}_2)$ or $\psi_{n_1l_1m_1}(\vec{r}_2) \psi_{n_2l_2m_2}(\vec{r}_1)$. We use degenerate pert.\ theory $\braket{\phi_{a,s}|h_c|\phi_{a,s}}$ with
+    $\ket{\phi_{a,s}} = \frac{1}{\sqrt{2}} \left( \ket{n_1l_1m_1}\ket{n_2l_2m_2} \mp \ket{n_2 l_2 m_2}\ket{n_1l_1m_1}\right)$ \\
+    $\Rightarrow \delta E_a = J - K \qquad \delta E_s = J + K$ \qquad $J$: direct term, $K$: exchange term (both $> 0$)
+\end{squishlist}
+
 \graysec{Light propagation, Optics}
 \begin{squishlist}
     \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$

@@ -1,4 +1,65 @@
 % Matteo Veneziano -- Atomic and Molecular Physics and Optics Formula Sheet
+
+\graysec{Atomic physics}
+\graypar{Hydrogen atom spectrum}
+\begin{squishlist}
+    \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $R_{\infty} = $\\
+     $\frac{1}{\lambda_n} = - R_{\infty} \frac{m_r}{m_e} \left[ \frac{1}{n^2} - \frac{1}{n_0^2}\right]$ when trans.between states
+    
+    \item \textbf{Selection rules} (electric dipole transitions)
+        \begin{enumerate}
+            \item The only allowed transitions involv a change in parity
+            \item $\Delta l = 0, \pm1 \overset{(1)}{\Longrightarrow} \Delta l = \pm 1$ \quad 3. $\Delta m = 0, \pm 1$
+        \end{enumerate}
+    
+        \item \textbf{Orbital magnetic moment:} the orb. ang. moment. of $e^-$ causes \\
+        $m_z = \frac{-e}{2m_e}l_z \Rightarrow \vec{m} = \gamma_e \vec{l}$ with $\gamma_e = -\frac{e}{2m_e}$\\
+        $m_z = \gamma_e m_l \hbar = -\mu_B m_l$ with $m_l = l, l-1, \ldots, -l \quad \mu_B = \frac{e\hbar}{2m_e}$
+
+        \item \textbf{Spin magnetic moment:} \\ $\vec{m} = g_e \gamma_e \vec{s} \Longrightarrow mz = -g_e \mu_B m_s$ with $m_s=\pm1/2$ and $g_e = 2.0023$ the $g$-factor
+    \end{squishlist} 
+    
+    \squishline
+
+\textbf{Relativistic effects}
+\begin{squishlist}
+    \item \textbf{Spin-orbit coupling:} a particle of mass $m_e$ and charge $-e$ moving at $\vec{v}$ in $\vec{E}$ experiences magnetic field $\vec{B} = \frac{1}{c^2}\vec{E}\times \vec{v}$. There is energy of interaction between $\vec{B}$ and the magnetic moment of particle: $H_{so} = \xi(r) \vec{l}\cdot \vec{s}$ \\
+    Causes \textbf{Fine structure}: $\left\{\begin{aligned}
+        \text{parall.\ spin and orb.\ ang.\ mom.\ } &\Rightarrow \text{High-energy arrangem.\ } \\
+        \text{antiparall.\ spin and orb.\ ang.\ mom.\ } &\Rightarrow \text{Low-energy arrangem.\ }
+    \end{aligned} \right.$
+    The energy of level $j = l+1/2$ lies above $j = l-1/2$
+
+    \item Other relativistic effects (e.g.\ Darwin term for $s$ wavefunctions)
+\end{squishlist}
+
+\squishline
+
+\textbf{Nuclear effects}
+\begin{squishlist}
+    \item Finite size (charge radius is not exactly 0)
+    \item Finite mass (different isotopes have diff.\ spectra)
+    \item \textbf{Hyperfine structure}: the nucleus has finite angular momentum $\vec{I}$ thus magnetic moment $\vec{\mu_N} = g_I \mu_N \frac{\vec{I}}{\hbar}$ with $\mu_N$ the nucleon magneton.
+    Interaction between magnetic moments of nucleus and of $e^-$:
+    $H_{HFS} \sim \vec{\mu_N}\cdot \vec{\mu_{e^-}}$
+    \item Quadruple moment of nucleus
+\end{squishlist}
+
+\graypar{Atoms in external fields}
+\begin{squishlist}
+    \item \textbf{Zeeman effect:} the magnetic moments of the electrons interact with externally applied magnetic fields
+    \begin{itemize}
+        \item \textbf{Normal} (zero spin angular momentum) \\
+        $H^{(1)} = - m_z B = -\gamma_e l_z B$ (there is diamagnetic term too, but small for small $m$)
+        \item \textbf{Anomalous} (non-zero spin angular momentum, more common) \\
+        $H^{(1)} = -\gamma_e (\vec{L} + 2\vec{S}) \cdot \vec{B}$
+    \end{itemize}
+
+    \item \textbf{Stark effect:} interaction with electric field of strength $E$ in $z$-direction \\
+    $H^{(1)} = - \mu_z E = e z E$ where $\mu_z = -e z$ is $z$-compon./ of electric dipole moment operator.
+    The correction to energy is linear in the case of a degeneracy between the two wavefunctions that the perturbation mixes, e.g.\ $2s_{1/2}, 2p_{1/2}$. Otherwise 2$^{\text{nd}}$ order perturbation.
+\end{squishlist}
+
 \graysec{Light propagation, Optics}
 \begin{squishlist}
     \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$
@@ -81,13 +142,18 @@
 
 \graypar{Rovibrational spectroscopy}
 \begin{squishlist}
-    \item $E_{\nu, J} = (\nu + \frac{1}{2}) \hbar \omega + B_{\nu} J(J+1)$. Higher contrib. from $\nu$
+    \item $E_{\nu, J} = (\nu + \frac{1}{2}) \hbar \omega + B_{\nu} J(J+1)$. Higher contrib. from $\nu$ \squishsep if rigid rotor $B_{\nu} = B$
     \item $\Delta \nu = \pm 1, \Delta J = \pm 1$.
     \item R-Branch: $\nu \rightarrow \nu + 1,\, J \rightarrow J+1$ \quad P-Branch:  $\nu \rightarrow \nu + 1, \,  J \rightarrow J-1$
-    \item Absorption \quad R: $\Delta E = \hbar \omega + 2B(J+1)$, P: $\Delta E = \hbar \omega - 2BJ$
+    \item Absorption \quad R: $\Delta E = \hbar \omega + 2B(J+1)$, P: $\Delta E = \hbar \omega - 2BJ$ (rigid rotor)
     \item \textbf{Anharmonic Morse potential} $V(R) = D_e (1 - e^{-ax}), \, a = \sqrt{\frac{k}{2D_e}}$ \\
     $E_{\nu} = (\nu+\frac{1}{2}) \hbar \omega - (\nu - \frac{1}{2})^2 \hbar \omega \chi_e$, with $\chi_e$ anharmonicity constant \\
     Compresses R-branch and stretches P-branch. Allows for $\Delta \nu = \pm 2, \pm 3$
 \end{squishlist}
 
 \graypar{Raman spectroscopy}
+\begin{squishlist}
+    \item $\Delta E = \hbar \omega_i - \hbar \omega_s$ (incident/scattering)
+    \item Selection rules are based on the polarisability tensor $\vec{d} = \bar{\bar{\alpha}} \vec{E}$
+    \item Rotational: $\Delta J = \pm 1, \pm 2$ (only $\pm 2$ for lin.molec.); Vibrational $\Delta \nu  =\pm 1$; \\ Rovibrational $\Delta J = 0, \pm 2$
+\end{squishlist}

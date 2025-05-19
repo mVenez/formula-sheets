@@ -64,3 +64,32 @@ trop important.
     \item L'intégrale de champ cristallin $\beta$ décrit l'effet du potentiel généré par les autres atomes.
     \item L'intégrale de transfert $\gamma(R)$ décrit le passage d'un électron du site initial $R = 0$ au site $R$, induit par la présence du potentiel $\Delta U$.
 \end{squishlist}
+
+\graysec{Dynamique des électrons}
+\begin{squishlist}
+    \item Équations du mouvement entre collisions, $n$ constante du mouvem.
+    $ \left\{ \begin{aligned} 
+        & \dot{\vec{r}} = \vec{v_n}(\vk) = \frac{1}{\hbar} \vec{\nabla_\vec{k}E_n}(\vk) \\
+        & \hbar \dot{\vec{k}} =  -e (\vec{E} + \vec{v_n}(\vk) \times \vec{B}) =  -e (\vec{E} + \frac{1}{\hbar} \vec{\nabla_\vec{k}E_n}(\vk) \times \vec{B})
+    \end{aligned} \right. $
+    
+    \item Pour un $e^-$ de Bloch (potentiel non-nul) $\hbar \vk \neq \vec{p}$
+    \item Une bande pleine de conduit pas: \\
+    $\vec{j} = -e \int_{\text{zone Brillouin}} \frac{\ud^3 k}{4 \pi^3}\vec{v} = -e \frac{1}{\hbar} \int_{\text{zone Brillouin}} \frac{\ud^3 k}{4 \pi^3} \D{\vec{k}}{E} = 0$ \\
+    car pour toute fonction périodique $f(\vk) = f(\vk + \vG)$ on a $\int_{\text{cell.\ prim.}}\ud^3 k \D{\vk}{f(\vk)} = 0$
+    \item Sous l’eﬀet du champ $E$ le remplissage
+    des états par les électrons n’est pas modifié, car deux états électroniques de la même bande qui diffèrent d’un vecteur du réseau réciproque doivent être considérés comme le même état.
+    \item Concept de \textbf{trou}: $\vec{j} = -e \int_{\text{états occupés}} \frac{\ud^3 k}{4 \pi^3}\vec{v} = +e \int_{\text{états vides}} \frac{\ud^3 k}{4 \pi^3}\vec{v}$
+    \item Niveau électron.\ \textbf{proche du sommet d'une bande}: $E(\vk) = E(\vk_0) - A(\vk - \vk_0)^2$ \\
+    On définit la masse effective $m^*$ par $A = \frac{\hbar^2}{2m^*}$.
+    Un trou se comporte au voisinage du sommet d’une bande
+    comme une particule de charge $+e$ et de masse $m^*$
+
+    \item Dans l’espace réciproque les trajectoires électroniques sont situées à l’intersection d’une surface d’énergie constante et d’un plan perpendiculaire à $B$.
+    \begin{itemize}
+        \item $\nabla E(\vk)$ pointe vers l'éxter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire électronique
+        \item $\nabla E(\vk)$ pointe vers l'inter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire de type trou
+    \end{itemize}
+\end{squishlist}
+
+\graysec{Les semiconducteurs}

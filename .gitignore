@@ -1,6 +1,5 @@
 # Compiled PDF
 *.pdf
-!formula-sheet-QP2/main.pdf
 
 # LaTeX auxiliary files
 *.aux

@@ -20,7 +20,7 @@
     \item Chaleur specifique $c_V = \frac{\pi^2}{3}K_B^2 T \, g(E_F) $
     \item $\chi_{\text{Pauli}}$ FILL
     \item $\tau$ FILL
-    \item Conductivité électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$
+    \item Conductivité électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
     \item Conductivité thermique $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$
     \item Loi de Wiedemann-Franz: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)$
 \end{squishlist}
@@ -108,7 +108,7 @@ est à moitié remplie par les électrons.
     \item Niveau électron.\ \textbf{proche du sommet d'une bande}: $E(\vk) = E(\vk_0) - A(\vk - \vk_0)^2$ \\
     On définit la masse effective $m^*$ par $A = \frac{\hbar^2}{2m^*}$.
     Un trou se comporte au voisinage du sommet d’une bande
-    comme une particule de charge $+e$ et de masse $m^*$
+    comme une particule de charge $+e$ et de masse $m^*$. Trous lourds ont paraboles larges, trous légers ont paraboles étroites.
 
     \item Dans l’espace réciproque les trajectoires électroniques sont situées à l’intersection d’une surface d’énergie constante et d’un plan perpendiculaire à $B$.
     \begin{itemize}
@@ -118,13 +118,31 @@ est à moitié remplie par les électrons.
 \end{squishlist}
 
 \graysec{Les semiconducteurs}
+Un semiconducteur est intrinsèque si ses proprietés électroniques sont dominées par les $e^-$ excités thermiquement de la bande de valence à la bande de conduction et extrinsèque si elles sont dominées par les $e^-$ contribués à la bande de conduction ou capturé par la bande de valence par des impuretés.
 \begin{squishlist}
     \item Densité d'$e^-$ dans bande de conduction $n(T) = \int_{E_c}^{\infty} g_c(E) \frac{1}{e^{(E-\mu)/k_B T} + 1} \ud E$
     \item Densité de trous dans bande de valence $p(T) =\int_{E_c}^{\infty} g_v(E)\left( 1- \frac{1}{e^{(E-\mu)/k_B T} + 1} \right)\ud E$
     \item Pour un sc non dégénéré ($E_c - \mu \gg k_B T, \mu -E_v \gg k_B T)$ on a \\ $n(T) = N(T) e^{-(E_c - \mu) / k_B T}$ \quad $p(T) = P(T) e^{-(\mu - E_v) / k_B T}$
     \item Bande quadratique: $g_{c,v}(E) = \frac{1}{2 \pi^2}\left( \frac{2m^*_{c,v}}{\hbar^2}\right) \sqrt{E - E_{c,v}}$
-    d'où $N(T) = \frac{1}{4} \left( \frac{2 m_c^* k_B T}{\pi \hbar^2}\right)^{3/2}$
-    \item sc \textbf{intrinsèque} $n(T) = p(T) = n_i(T)$ \quad $n_i(T) = \sqrt{n(T) p(T)} = e^{-E_g / 2 k_B T} \sqrt{N(T) P(T)}$ \\
-    $\mu(T) = E_v + \frac{1}{2}E_g + \frac{1}{2}k_B T \ln \left( \frac{P(T)}{N(T)}\right) = E_v + \frac{1}{2}E_g + \frac{3}{2}\frac{1}{2}k_B T \ln \left( \frac{m_v^*}{m_c^*}\right)$
+    d'où \\
+    $N(T) = \frac{1}{4} \left( \frac{2 m_c^* k_B T}{\pi \hbar^2}\right)^{3/2};\quad P(T) = \frac{1}{4} \left( \frac{2 m_v^* k_B T}{\pi \hbar^2}\right)^{3/2}$
+    \item \textbf{Loi d'action de masse:} $n(T)p(T) = N(T)P(T) e^{-\beta E_g}$
+    \item sc \textbf{intrinsèque} $n(T) = p(T) = n_i(T)$ \quad densité d'$e^-$ excités thermiquement \\
+    $\Longrightarrow n_i(T) = \sqrt{n(T) p(T)} = e^{-E_g / 2 k_B T} \sqrt{N(T) P(T)}$ \\
+    $\Longrightarrow \mu_i(T) = E_v + \frac{1}{2}E_g + \frac{1}{2}k_B T \ln \left( \frac{P(T)}{N(T)}\right) = E_v + \frac{1}{2}E_g + \frac{3}{2}\frac{1}{2}k_B T \ln \left( \frac{m_v^*}{m_c^*}\right)$
 \end{squishlist}
-% \graypar{Semiconducteur intrinsèque}
+
+\graypar{Semiconducteur dopé}
+Ajout d’impuretés à un SC.
+L’impureté doit avoir un nombre d’électrons de valence diﬀérent de celui du SC pur. Si la valence de l’impureté est supérieure à celle du SC, nous sommes en présence d’un \textbf{donneur} (l’impureté “donne” un électron au semi-conducteur), tandis que si la valence est inférieure, nous sommes en présence d’un \textbf{accepteur} (l’impureté "prend" un électron au SC, autrement dit, lui "donne" un trou)
+\begin{squishlist}
+    \item Impuretés modèlisées avec atome d'H avec corrections: masse effective $m^*$ et constante diélectrique $\varepsilon_r$ du SC 
+    $\Longrightarrow r_0 = \frac{\varepsilon_r}{m^*/m} a_0; \quad E=\frac{m^*/m}{\varepsilon_r^2}E_H$
+    \item $n = \frac{1}{2}\sqrt{\Delta n^2 + 4 n_i^2} + \frac{1}{2}\Delta n;\quad \Delta n = n - p$
+    \item $\frac{\Delta n }{n_i} = \frac{n-p}{\sqrt{np}} = 2 \sinh (\beta(\mu - \mu_i))$
+    \item $\sigma = n e \nu_e + p e \nu_h$
+\end{squishlist}    
+
+\graypar{Jonction pn}
+En polaris.\ directe le courant est dû aux porteurs majoritaires (\elec qui provienn,\ de la region $n$ et trous de la region $p$) par diffusion et recombinaison.
+En polaris.\ inverse le courant est dû aux porteurs minoritaires générés thermiquement, favoris par champ électrique.

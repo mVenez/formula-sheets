@@ -31,6 +31,7 @@
     The energy of level $j = l+1/2$ lies above $j = l-1/2$
 
     \item Other relativistic effects (e.g.\ Darwin term for $s$ wavefunctions)
+    \item Notation for $e^-$ orbital/level: $n^{2S+1}L_J$ (e.g. $2^2 p_{1/2}$)
 \end{squishlist}
 
 \squishline
@@ -72,14 +73,72 @@
     \item \textbf{Electron-electron interactions} (repulsion term): \\
     First order correction to energy $\Rightarrow$ Coulomb integral \\
     $ \displaystyle J = j_0 \int \left|\psi_{n_1 l_1 m_1}(\vec{r_1})\right|^2 \left(\frac{1}{r_{12}}\right) |\psi_{n_2 l_2 m_2}(\vec{r_2})|^2  \ud \tau_1 \ud \tau_2$ [RESULTS?] \\
-    We can also use \textbf{variational method}to find an effective charge $z_e$ which minimises the energy. Guess function $\psi(\vr_1 \vr_2) = \frac{z_e^3}{\pi}\exp\left(-\frac{z_e}{a_0}(\vr_1 + \vr_2) \right) = \phi_{1s,Z_e}(\vr_1)\phi_{1s,Z_e}(\vr_2)$
+    We can also use \textbf{variational method} to find an effective charge $z_e$ which minimises the energy. Guess function $\psi(\vr_1 \vr_2) = \frac{z_e^3}{\pi}\exp\left(-\frac{z_e}{a_0}(\vr_1 + \vr_2) \right) = \phi_{1s,Z_e}(\vr_1)\phi_{1s,Z_e}(\vr_2)$
     We find $E_{\min} = -2 R_y (z - 5/16)^2$
     \vspace{0.1cm}
 
-    \textbf{Excited states:} when two $e^-$ occupy different orbitals the wavefuncs.\ are either
+    \item \textbf{Excited states:} when two $e^-$ occupy different orbitals the wavefuncs.\ are either
     $\psi_{n_1l_1m_1}(\vec{r}_1) \psi_{n_2l_2m_2}(\vec{r}_2)$ or $\psi_{n_1l_1m_1}(\vec{r}_2) \psi_{n_2l_2m_2}(\vec{r}_1)$. We use degenerate pert.\ theory $\braket{\phi_{a,s}|h_c|\phi_{a,s}}$ with
     $\ket{\phi_{a,s}} = \frac{1}{\sqrt{2}} \left( \ket{n_1l_1m_1}\ket{n_2l_2m_2} \mp \ket{n_2 l_2 m_2}\ket{n_1l_1m_1}\right)$ \\
     $\Rightarrow \delta E_a = J - K \qquad \delta E_s = J + K$ \qquad $J$: direct term, $K$: exchange term (both $> 0$)
+
+    \item Notation: $n^{2S_{\text{tot}}+1} L_{\text{tot}\; J_{\text{tot}}}$
+\end{squishlist}
+
+\graypar{Many-electron atoms}
+\begin{squishlist}
+    \item $\ham = \sum_{i=1}^{Z}\left( - \frac{\hbar^2}{2m}\Delta_i - \frac{Ze^2}{4\pi \varepsilon_0 r_i}\right) + \sum_{i < j} \frac{e^2}{4\pi \varepsilon_0 |\vr_i - \vr_j}$ \\
+    acts on $\mathcal{H} = \otimes_i \mathcal{H}_i,\, \mathcal{H}_i =  \mathcal{H}_{i, orb} \otimes \mathcal{H}_{i, spin}$
+    \item \textbf{Central field approximation}: the inter-electronic contribution is replaced by a screening of the nucleus $\Rightarrow Z_{\mathrm{eff}}$ \quad $V(r) \sim \frac{Z(r)}{r}$
+    \item Symetrisation $\rightarrow$ Slater determinants: write wavefuncs of many \elec as product of wavefuncs of \elec, all antisymetr.
+    \item The best atomic orbitals are found by numerical solution of the \textbf{Hartree-Fock} eqs.\ : Schrödinger = Coulomb repulsion + purely quantum contribution.
+    The wavefuncs.\ are expressed as Slater determinants.
+
+    \item \textbf{Aufbau principle:} fill the orbitals with increasing values of $n+l$
+    \item \textbf{Hund's rules:} (1) Maximise total spin (2) Maximise total $L$ (3) Minimise/Maximise total $J$ if shell is less/more than half filled
+\end{squishlist}
+
+\graysec{Molecular physics}
+\textbf{Born-Oppenheimer approximation}: nuclei are heavier, thus slower and electrons can respond almost instant.\ to displacement of the nuclei. We treat nuclei as fixed in position ("parametrically").
+
+\squishline
+
+\begin{squishlist}
+    \item \textbf{H$_2^+$ molecule}: $\ham_e = - \frac{\hbar^2}{2m_e} \nabla^2 - \frac{j_o}{|\vr - \vR_A|} - \frac{j_o}{|\vr - \vR_B|} + \frac{j_0}{R}$ \quad $R$ the dist.\ betw.\ nuclei \\
+    Solved by variat.\ method with \textbf{trial wavefunction} $\psi_i(\vr) = a_i \phi_A(\vR) + b_i \phi_B(\vR)$, with $\phi_A(\vr)=\phi_{1s}(\vr - \vR_A), \phi_B(\vr)=\phi_{1s}(\vr - \vR_B)$ \\
+    We find \textbf{eigenfuncs} $\psi_+(\vr) = N_+ (\phi_A(\vr)+\phi_B(\vr))$ (even) and $\psi_-(\vr) = N_- (\phi_A(\vr)-\phi_B(\vr))$ \\
+    $\psi_+$ is bonding, $\psi_-$ is antibonding. An antibonding orbital is more antibonding than a bonding orb.\ is bonding.
+\end{squishlist}
+
+\squishline
+
+\begin{squishlist}
+    \item \textbf{H$_2$ molecule:} Heitler-London (Valence bond) approach \\
+    $\psi_S(1,2) = \frac{1}{\sqrt{2(1+s^2)}} \left[\phi_A(1)\phi_B(2) + \phi_B(1)\phi_A(2)\right] \chi_S$ \\
+    $\psi_T(1,2) = \frac{1}{\sqrt{2(1-s^2)}} \left[\phi_A(1)\phi_B(2) - \phi_B(1)\phi_A(2)\right] \chi_T$
+\end{squishlist}
+
+\squishline
+
+\begin{squishlist}
+    \item \textbf{Other diatomic molecules:} Rayleigh-Ritz method (need to solve secular equations)\\
+    $\det \begin{pmatrix}
+        \alpha_A - E & \beta - ES \\
+        \beta - ES   & \alpha_B - E
+    \end{pmatrix} = 0; \quad \alpha_A = \braket{A|H|A};\; \alpha_B = \braket{B|H|B};\; \beta = \braket{A|B};\; S = \braket{A|B}$ \\
+    $E_- = \alpha_A - \frac{\beta^2}{|\alpha_B - \alpha_A};\; E_+ = \alpha_B + \frac{\beta^2}{|\alpha_B - \alpha_A|}$ Atomic orbitals closest in energy dominate the bonding. Shift is lower as $\alpha_B - \alpha_A$ is higher.
+
+    \item \textbf{Bond order} $b = \frac{1}{2} (N_{\text{bonding}} - N_{\text{antibonding}})$ ($N$ nb of electrons)
+    
+    \item $m=0 : \Sigma (s, p_z) \; |m|=1 : \Pi (p_x, p_y) \Longrightarrow \sigma$-bonding $(s-s, s-p_z, p_z-p_z), \pi$-bonding $(p_x-p_x, p_y-p_y)$
+\end{squishlist}
+
+\squishline
+
+\begin{squishlist}
+    \item \textbf{$\mathbf{N>2}$ molecules:} Hybridisation
+    \item LOMO, HOMO, RULES OF HYBRIDISATION
+    \item \textbf{Hinckel model}: (1) Only $\pi$-conjugated molecules (2) Consider only $p_z$ orbitals (3) $S_{ij} = \delta_{ij}$ (4) $H_{ij} = \alpha$
 \end{squishlist}
 
 \graysec{Light propagation, Optics}

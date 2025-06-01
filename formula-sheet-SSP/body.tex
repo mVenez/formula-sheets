@@ -16,8 +16,126 @@
         E.g.: réseau nid d'abeille du graphène dérive d'un RB hexagonal avec base de deux atomes
     \end{minipage}
     \item Le \textbf{réseau réciproque} est formée des $\vG$ t.q.\ $\exp(i \vG \cdot \vR) = 1$ \\
-    $\vG = \sum_{i=1}^{3}h_i \vec{b}_i $\squishsep $\vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{ij}$ \squishsep $\vec{b}_1 = 2 \pi \frac{\vec{a}_2 \times \vec{a}_3}{\vec{a}_1 \cdot (\vec{a_2 \times \vec{a}_3})}$ et perm.\ cycl.\
+    $\vG = \sum_{i=1}^{3}h_i \vec{b}_i $\squishsep $\vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{ij}$ \squishsep $\vec{b}_1 = 2 \pi \frac{\vec{a}_2 \times \vec{a}_3}{\vec{a}_1 \cdot (\vec{a_2 \times \vec{a}_3})}$ et perm.\ cycl.\ 
+    \item Le volume d'une cell.\ prim.\ du réseau réciproque est $\vec{b}_1 \cdot (\vec{b}_2 \times \vec{b}_3) = \frac{(2\pi)^3}{v} = \frac{(2\pi)^3}{V/N}$
 \end{squishlist}    
+
+\graypar{Zones de Brillouin}
+\begin{squishlist}
+    \item La \textbf{1ère zone de Brillouin (1ZDB)} est la cellule de Wigner-Seitz du réseau réciproque. La \textbf{nième zone de Brillouin (nZDB)} est l'ensemble des points atteints à partir de l'origine en traversant $(n-1)$ plans de Bragg
+    \item Le volume de la nZDB est égal à celui de la 1ZDB. On peut par translations de vecteur $G$ réduire une ZDB à la 1ZDB (passage d'une description en schéma de zone étendue à une de zone réduite).
+\end{squishlist}
+
+\graypar{Détermination de la structure cristalline}
+La technique expérimentale la plus importante pour déterminer la structure cristalline est la diﬀraction de rayons X.
+\begin{squishlist}
+    \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$.
+    \item \textbf{Indices de Miller:} tous les plans du réseau peuvent être caractérisés par trois nombres entiers. On trouve les intersections avec les axes cristallographiques, exprimées en unités de vecteurs primitifs. Ensuite on prend les valeurs réciproques de ces nombres.
+    \item \textbf{Condition de Laue:} $\vec{K} = \vk'-\vk = \vG$ GUARDA SERIE DI ESERCIZI E COMPLETA
+\end{squishlist}
+
+\graysec{Dynamique du réseau. Notion de phonon}
+\begin{squishlist}
+    \item \textbf{Approximation harmonique}
+    \item \textbf{Approximation adiabatique:} les vitesses \elec sont de l'ordre de la vit.\ de Fermi ($\sim 10^8$ cm/sec) et la vitesse thermique des ions est plus faible $\Rightarrow$ les \elec suivent instantanément le mouvement des ions. Les \elec se trouvent tousjouts dans l'état fondamental correspondant à la configuration ionique.
+    \item $u$ amplitude de déplacement
+\end{squishlist}
+
+\graypar{Modes normaux d'un RB monoatomique 1D}
+\begin{squishlist}
+    \item Chaine linéaire d'ions de masse $M$ séparés à l'ex.\ par $a$ ($R = na$)\\
+    $U_{\text{harm}} = \frac{1}{4} \sum_{n,n'} C_{n,n'}(u_n - u_n')^2 \quad C_{n,n'} = C_{n',n} = \phi_{xx}(na - n'a)$
+    \item Interactions entre plus proches voisins: les seuls coefs non nuls sont t.q.\ $n-n'= \pm 1$
+    \item \textbf{Conditions de Born von Karman:} $u_{N+1} = u_1 \Longrightarrow U_{\text{harm}} = \frac{1}{2}\sum_{n=1}^{N}C(u_{n+1}-u_n)^2$
+    \item $H(p,u) = \sum_{n=1}^{N}\frac{p^2_n}{2m} + \frac{C}{2}\sum_{n=1}^{N}(u_{n+1} - u_n)^2 \Longrightarrow \ddot{u}_n = -\frac{C}{m}(-u_{n-1}+2u_n - u_{n+1})$
+    \item $u_n(t) = \frac{1}{\sqrt{N}} \sum_{\nu=0}^{N-1}a_{\nu} \exp[ i (k_{\nu}na - \omega_{\nu}t)] + c.c.$ \quad $k_{\nu} = \frac{2\pi \nu}{aN} \quad \nu = 0,1,\ldots, N-1$
+    \item $\omega_{\nu} = 2 \sqrt{\frac{C}{m}} \left| \sin \frac{k_{\nu}a}{2}\right|$ \textbf{Courbe de dispersion} (linéaire pour $k$ faible par rapport à $\pi/a$)
+
+    \squishline
+
+    3D
+    \item $u_{\alpha}(\vR) = \frac{1}{\sqrt{3N}}\sum_{\nu}\sum_{s=1}^{3} a_{\nu,s} \varepsilon_{\alpha,s}(\vk_{\nu}) \exp [i \vk_{\nu} \cdot \vR - i \omega_s(\vk_{\nu}t)] + c.c.$ \\ 
+    Pour chacune des $N$ valeurs $\vk_{\nu}$ dans une cellule primitive, 3 directions $\vec{\varepsilon}_s$ de polarisation, donc $3N$ modes propres
+\end{squishlist}
+
+\graypar{Modes normaux d'un RB 1D avec une base}
+\begin{squishlist}
+    \item $U_{\text{harm}} = \frac{K}{2}\sum_{n=1}^{N}(u_n - v_n)^2 + \frac{G}{2} \sum_{n=1}^{N} (u_n - v_{n-1})^2$
+    \item $\left\{ \begin{aligned}
+        & m\ddot{u}_n = -K (u_n - v_n) - G(u_n - v_{n-1}) \\
+        & m\ddot{v}_n = K (u_n - v_n) + G(u_{n+1} - v_{n})
+    \end{aligned}\right.
+    \Rightarrow 
+    \left\{ \begin{aligned}
+        & u_n = \sum_{\nu = 0}^{N-1} a_{\nu} \exp (i k_{\nu}na - i\omega_{\nu}t) + c.c \\
+        & v_n = \sum_{\nu = 0}^{N-1} b_{\nu} \exp (i k_{\nu}na - i\omega_{\nu}t) + c.c
+    \end{aligned}\right.$
+
+    \item $\omega_{\nu}^2 = \frac{K+G}{m} \pm \frac{1}{m}\sqrt{(K+G)^2 - 4KG \sin^2 \frac{k_{\nu}a}{2}} \qquad \frac{a_{\nu}}{b_{\nu}} = \mp \frac{K + G\exp(ik_{\nu}a)}{|K + G\exp(ik_{\nu}a)|}$
+    \item Pour chacune des $N$ valeurs de $k$ il y a 2 solutions $\Rightarrow 2N$ modes normaux de vibrations. Branche inférieure (\textbf{acoustique}, déplacement en phase, dynamique dominée par interactions entre cellules) et supérieure (\textbf{optique}, les ions d’une même cellule vibrent l’un par rapport à l’autre,).
+    \item DIFFÉRENTS CAS??
+    \item Dans le cas \textbf{à 3 dimensions:} pour une cellule primitive avec une base de $p$ atomes, $3N$ modes acoustiques et $(3p - 3)N$ modes optiques de vibrations.
+\end{squishlist}
+
+\graypar{La notion de phonons}
+\begin{squishlist}
+    \item La contribution à l'énergie totale d'un mode normal de fréquence $\omega_s(\vk_{\nu})$ est $\left( n_{\vk_{\nu,s}} + \frac{1}{2}\right) \hbar \omega_s(\vk_{\nu})$ \qquad $n_{\vk_{\nu,s}} = 0,1,2,\ldots$ \textbf{nb d'occupation} du mode normal $\nu,sd$
+    \item On passe à une déscriptions corpusculaire: nombre $n_{\vk_{\nu,s}}$ de \textbf{phonons} de vecteur d'onde $\vk_{\nu}$ et polar.\ $s$ dans le crystal.
+    \item Les phonons d'un réseau ne portent pas de quantité de mouvement
+    \item Lors de l’interaction entre une particule incidente dans le cristal et les phonons, tout se passe comme si une pseudo quantité de mouvement, $\hbar \vk$ (crystal momentum), était conservée à un vecteur $\hbar \vG$ du réseau réciproque près. \\
+    $\vec{p} + \sum_{\nu,s}\hbar \vk_{\nu}n_{\vk_{\nu,s}} = \vec{p}' + \sum_{\nu,s}\hbar \vk_{\nu}n'_{\vk_{\nu,s}} + \hbar \vG$ \quad plus cons.\ de l'énergie
+
+    \item \textbf{Diffusion à un phonon:} $\frac{p'^2}{2m} = \frac{p^2}{2m} + \hbar \omega_s \left( \frac{\vec{p'}-\vec{p}}{\hbar}\right)$
+    
+\end{squishlist}
+
+\graysec{Propriétés thermiques en relation avec les phonons}
+\begin{squishlist}
+    \item $c_v = \left.\D{T}{u}\right|_V$ chaleur spécifique du réseau
+    \item \textbf{Loi de Dulong et Petit:} $c_v = 3n k_B$ ($n$ densité d'atomes). En accord avec les mesures pour une bonne partie des solides et proches de la température ambiante.
+    \item $u = \frac{1}{V} \sum_{\vk,s} \hbar \omega_s(\vk) \left( \braket{n_{\vk,s}}+\frac{1}{2}\right)$ \quad $\braket{n_{\vk,s}} = \frac{1}{\exp[\beta \hbar \omega_s(\vk)]-1}$ nb d'occupation moyen (Bose-Einstein)
+    \item \textbf{Expression génerale:} $c_v = \D{T}{} \sum_s {\displaystyle\int_{\text{1ZDB}}} \frac{\ud^3 k}{(2\pi)^3} \frac{\hbar \omega_s(\vk)}{\exp[\hbar \omega_s(\vk)/k_B T]-1}$
+    
+    \squishline
+
+    \textbf{Limites }
+    \item \textbf{Haute temperature:} Pour $\hbar \omega_s(\vk)/k_BT \ll 1$ on retrouve D\&P
+    \item \textbf{Basse temperature:} À basse $T$ les modes tels que $\hbar \omega_s(\vk) \gg k_BT$ donnent une contribution négligeable (e.g. les modes optiques). Par contre modes acoustiques non-négligeables car $\omega_s(\vk) \rightarrow 0$ lorsque $k \rightarrow 0$ $\Longrightarrow$ $c_v = \frac{2\pi^2}{5}k_B \left(\frac{k_B T}{\hbar c}\right)^3 \propto T^3$
+    
+    \squishline
+
+    \textbf{Entre les domaines de hautes et basses température}
+
+    \item \textbf{Modèle d'Einstein:} on fait l'hypothèse que la rélation de dispersion $\omega_s(\vk)$ est const \\
+    $u = 3 \frac{N}{V} \braket{n_E}\hbar \omega_E = 3n \frac{\hbar \omega_E}{\exp[\hbar \omega_E/k_BT]-1} \Longrightarrow c_v = 3nk_B \left(\frac{\hbar \omega_E}{k_BT}\right)^2 \frac{\exp[\hbar \omega_E /k_BT]}{(\exp[\hbar \omega_E /k_BT] - 1)^2}$
+
+    \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = ck$
+    (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne $N$ (nb d'ions) vecteurs d'onde: 
+    $\left( \frac{4}{3}\pi k_D^3 \right) \frac{V}{(2\pi)^3} = N \Longleftrightarrow n = \frac{k_D^3}{6 \pi^2}$
+    \item En définissant $\omega_D = ck_D$ et $k_B \theta_D = \hbar \omega_D$ ($T > \theta_D$: tous les modes commencent à être excités) on a
+    $c_v = 9 n k_B \left(\frac{T}{\theta_D}\right)^3 {\displaystyle \int_0^{\theta_D/T}} \frac{x^4 e^x}{(e^x - 1)^2} \ud x$ où $x = \beta \hbar c k$
+    \item \textbf{Basse temperature}($T/\theta_D \ll 1$): $c_v = \frac{12\pi^4}{5} n k_B \left( \frac{T}{\theta_D}\right)^3 \propto T^3$
+    \item \textbf{Haute temperature:}($T/\theta_D \gg 1$) on retrouve D\&P
+\end{squishlist}
+
+\graypar{Densité de modes}
+\begin{squishlist}
+    \item $g(\omega) = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$
+\end{squishlist}
+
+\graypar{Conductibilité thermique du réseau}
+\begin{squishlist}
+    \item \textbf{Cristal parfaitement harmonique:} les modes normaux sont états stationnaires de l'hamiltonien du cristal. Si une distribution de phonons se crée, elle ne sera pas modifiée au cours de temps. Conductibilité thermique infinie.
+    \item La conductibilité thermique du réseau n'est pas infinie pour les raisons
+    (1) impuretés brisent la symetrie de translation (2) la surface de l'échantillon est non-negligeable si sa dimension est de l'ordre du libre parcours moyen des phonons (3) les états stationnaires de l’hamiltonien harmonique ne sont pas états stationnaires de l’hamiltonien réel du cristal qui contient des termes anharmoniques.
+    \item \textbf{Théorie cinétique:} si $\omega = ck$, $\lambda = c \tau$ libre parcours moyens ($\tau \sim \frac{1}{T}$) \\ $j_Q = \frac{1}{2}c (u[T(x-\lambda)] - u[T(x+\lambda)]) = - c^2 \tau \D{T}{u}\D{x}{T}$ \\
+    En 3D $\vec{j}_Q = - \frac{1}{3}c^2 c_v(T) \tau \vec{\nabla T} \Longleftrightarrow \kappa = \frac{1}{3} c^2 \tau c_v(T)$
+    \item \textbf{Processus normal} : $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk$ (conservation des moments) \\
+    \textbf{Processus Umklapp}:  $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk + \vG$ (conserv.\ à un vec.\ du rés.\ recip.\ près) \\
+    Umklapp peu probable à basse $T$. Seul le faible nombre des phonons participant à des processus de type Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$
+\end{squishlist}
+
+
 \graypar{boh}
 \begin{squishlist}
     \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif.

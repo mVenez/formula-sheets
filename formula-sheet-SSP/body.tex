@@ -135,32 +135,28 @@ La technique expérimentale la plus importante pour déterminer la structure cri
     Umklapp peu probable à basse $T$. Seul le faible nombre des phonons participant à des processus de type Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$
 \end{squishlist}
 
-
-\graypar{boh}
+\graysec{Gaz d'électrons libres de Fermi}
+On fait l’hypothèse que les électrons se déplacent dans un \textbf{potentiel eﬀectif constant}. Bonne approximation pour beaucoup de métaux, mais ne peut pas expliquer pourquoi un solide est un métal, un sémiconducteur, ou un isolant.
 \begin{squishlist}
     \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif.
-    \item $N$ valeurs $\vec{k}$ admises dans chaque zone de Brillouin $\rightarrow$ $2N$ états électroniques (spin)
-    \item Densité électronique $n = \frac{N}{V} = \int_0^{E_F} g(E) \ud E$
-\end{squishlist}
-
-\graypar{Surface de Fermi}
-\begin{squishlist}
+    \item $\psi_{\vk}(\vr) = \frac{1}{\sqrt{V}}\exp(i \vk \cdot \vr) \quad E(\vk) = \frac{\hbar^2 k^2}{2m} \quad k = \left(\frac{2m}{\hbar^2}\right)^{1/2} \sqrt{E} \quad \vec{p}=\hbar \vec{k}$
+    \item $N$ valeurs $\vec{k}$ admises dans chaque zone de Brillouin $\rightarrow$ $2N$ états électroniques (spin). Toutes les valeurs $\vk$ t.q.\ $k\leq k_F$ sont occupées, celles t.q.\ $k > k_F$ sont vides.
     \item Trouver $k_F$: vol. sphère de Fermi $\Omega_F$ $\times$ densité de $k$ $\times \; 2$ (spin) = \# $e^-$ dans système 
-    \item $E_F = \frac{\hbar^2 k_F^2}{2m}$
-\end{squishlist}
+    \item \textbf{Densité électronique} $n = \frac{N}{V} = \int_0^{E_F} g(E) \ud E$
+    \item E.g.\ 3D: $2 \left( \frac{4}{3}\pi k^3_F\right) \left( \frac{V}{8\pi^3}\right) = N \quad \frac{N}{V} = n = \frac{k_F^3}{3\pi^2}$
 
-\graysec{Électrons libres}
-\begin{squishlist}
-    \item Densité d'états $g(E)$ HOW IS IT FOUND
-    \item Distribution de Fermi-Dirac $f(E,T) = \frac{1}{\exp\left(\frac{(E- \mu)}{k_B T}\right) + 1}$
-    \item Potentiel chimique $\mu(T) = E_F - \frac{\pi^2}{6}(k_B T)^2 \frac{1}{g(E_F)} \left.\dder{g}{E}\right|_{E_F}$
-    \item Chaleur specifique $c_V = \frac{\pi^2}{3}K_B^2 T \, g(E_F) $
-    \item $\chi_{\text{Pauli}}$ FILL
-    \item $\tau$ FILL
-    \item Conductivité électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
-    \item Conductivité thermique $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$
-    \item Loi de Wiedemann-Franz: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)$
+    % \item $E_F = \frac{\hbar^2 k_F^2}{2m}$
+    \item Trouv.\ \textbf{densité d'états} $g(E)$: $g(e) \ud E = \frac{\ud \Omega}{\text{\# val.\ $k$ à disp.}} \; 2 \; \frac{1}{V}$ 
+    % \squishsep $u(0 $K$) = \int_{0}^{E_F}E \; g(E)\; \ud E$ 
+    \item \textbf{Fermi-Dirac}: $f(E,T) = \frac{1}{\exp\left(\frac{(E- \mu)}{k_B T}\right) + 1}$ \squishsep $u = \int_{0}^{\infty}E \; g(E)\; f(E) \; \ud E$
+    \item \textbf{Developp.\ de Sommerfeld:} $\int_{0}^{\infty}h)E) f(E) \ud E = \int_{0}^{\mu} h(E) \ud E + \frac{\pi^2}{6}(k_BT)^2 \left.\D{E}{h}\right|_{E=\mu} + \ldots$
+    \item $\mu(T) = E_F - \frac{\pi^2}{6}(k_B T)^2 \frac{1}{g(E_F)} \left.\D{E}{g}\right|_{E_F}$ \squishsep $c_V = \frac{\pi^2}{3}K_B^2 T \, g(E_F) $ (contrib.\ \elec)
+    \item Champ magn.\ $\Rightarrow g_{\pm}(E) = \frac{1}{2}g(E\mp \mu_B B)$\quad $\chi_{\text{Pauli}} = \mu_0 \mu_B^2 g(E_F)$ ($\mu$ inchangé)
+    \item $\vec{j} = -ne \braket{\vec{v}} = \sigma \vec{E}$ \quad En présence de $\vec{E}$ la sphère de Fermi est déplacé de $\braket{\vk}=-e\vec{E}\tau / \hbar$ \\
+    $\Longrightarrow$ Conduct.\ électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
+    \item Conductivité thermique $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$ $\Rightarrow$ \textbf{Wiedemann-Franz}: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)$
 \end{squishlist}
+\columnbreak
 
 \graysec{Les électrons dans un potentiel périodique. Structure de bande}
 \graypar{Théorème de Bloch}
@@ -283,3 +279,12 @@ L’impureté doit avoir un nombre d’électrons de valence diﬀérent de celu
 \graypar{Jonction pn}
 En polaris.\ directe le courant est dû aux porteurs majoritaires (\elec qui provienn,\ de la region $n$ et trous de la region $p$) par diffusion et recombinaison.
 En polaris.\ inverse le courant est dû aux porteurs minoritaires générés thermiquement, favoris par champ électrique.
+
+\graysec{Les supraconducteurs}
+\begin{squishlist}
+    \item \textbf{Effet Meissner}: si $T<T_c$ le flux magnétique est éjécté
+    \item Au dessus d'un champ critique $H_c$ l'état supra est détruit
+    \item Type II, pour $H_{c1}<H<H_{c2}$ la densité de flux à l'intérieur est non nulle (effet Meissner incomplet)
+    \item \textbf{Eq.\ de London}: $\vec{j} = - \frac{1}{\mu_0 \lambda_L^2} \vec{A} \Longrightarrow \vec{\nabla}^2 \vec{B} = \frac{1}{\lambda_L^2}\vec{B}$ qui a seule solut.\ $B=0$
+    \item Prédictions de la théorie BCS
+\end{squishlist}

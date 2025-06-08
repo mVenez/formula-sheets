@@ -1,7 +1,8 @@
 % Matteo Veneziano -- Solid State Physics Formula Sheet
 \graysec{Réseaux cristallins dans l'éspace réel et réciproque}
 \begin{squishlist}
-    \item DIFFERENTES LIAISONS
+    \item Énergie électrost.\ $E = - M_d \frac{e^2}{4\pi \varepsilon_0 a}$ \textbf{Cst de Madelung} specif.\ pour une struct.\ donnée
+    \item Taux de remplissage $t$: rapp.\ entre le volume occupé par les atomes (assimilés à des sphères dures de rayon $r$) et le volume de la maille considérée
 \end{squishlist}
 \graypar{Réseaux cristallins}
 \begin{squishlist}
@@ -9,13 +10,10 @@
     \item Une \textbf{cellulle (ou maille) primitve} est un volume d'espace qui, translaté par les vecteurs $\vR$ du RB, remplit exactement l'espace sans recouvrement. Ne contient qu'un point du RB, donc a volume $v = 1/n$ avec $n$ la densité de points du RB.
     \item La \textbf{cellule de Wigner-Seitz} est la région de l'espace qui est plus proche à un point du RB que de n'importe quel autre point. On l'obtient en tracant les plans bissecteurs des ligne qui connectent les points.
     \item Une \textbf{structure cristalline} est un RB avec une base formée de un ou plus atomes
-    \begin{minipage}{.25\columnwidth}
-        \includegraphics[width=2cm]{figures/abeille.png}
-    \end{minipage}
-    \begin{minipage}{.75\columnwidth}
-        E.g.: réseau nid d'abeille du graphène dérive d'un RB hexagonal avec base de deux atomes
-    \end{minipage}
-    \item Le \textbf{réseau réciproque} est formée des $\vG$ t.q.\ $\exp(i \vG \cdot \vR) = 1$ \\
+    % \begin{minipage}{.25\columnwidth}
+        \includegraphics[width=0.6\columnwidth]{figures/structure-exemple.png}
+    % \end{minipage}
+    \item Le \textbf{réseau réciproque} (RR) est formée des $\vG$ t.q.\ $\exp(i \vG \cdot \vR) = 1$ \\
     $\vG = \sum_{i=1}^{3}h_i \vec{b}_i $\squishsep $\vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{ij}$ \squishsep $\vec{b}_1 = 2 \pi \frac{\vec{a}_2 \times \vec{a}_3}{\vec{a}_1 \cdot (\vec{a_2 \times \vec{a}_3})}$ et perm.\ cycl.\ 
     \item Le volume d'une cell.\ prim.\ du réseau réciproque est $\vec{b}_1 \cdot (\vec{b}_2 \times \vec{b}_3) = \frac{(2\pi)^3}{v} = \frac{(2\pi)^3}{V/N}$
 \end{squishlist}    
@@ -27,11 +25,13 @@
 \end{squishlist}
 
 \graypar{Détermination de la structure cristalline}
-La technique expérimentale la plus importante pour déterminer la structure cristalline est la diﬀraction de rayons X.
+Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayons X.
 \begin{squishlist}
-    \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$.
-    \item \textbf{Indices de Miller:} tous les plans du réseau peuvent être caractérisés par trois nombres entiers. On trouve les intersections avec les axes cristallographiques, exprimées en unités de vecteurs primitifs. Ensuite on prend les valeurs réciproques de ces nombres.
-    \item \textbf{Condition de Laue:} $\vec{K} = \vk'-\vk = \vG$ GUARDA SERIE DI ESERCIZI E COMPLETA
+    \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$. \\
+    \textbf{Condition de Laue:} $\vec{K} = \vk'-\vk = \vG$
+
+    \item \textbf{Indices de Miller:} $(h,k,l)$ les plans du réseau sont caractérisés par trois nombres entiers. On trouve les intersections avec les axes cristallographiques (en unités de vecteurs primitifs), ensuite on prend les valeurs réciproques de ces nombres.\\
+    $\vG = h \vec{b}_1 + k \vec{b}_2 + l \vec{b}_3$ vec du RR perp.\ à la famille de plans, avec plus petite norme $G_{\min} = 2\pi / d \quad G = n G_{\min}$
 \end{squishlist}
 
 \graysec{Dynamique du réseau. Notion de phonon}
@@ -48,19 +48,25 @@ La technique expérimentale la plus importante pour déterminer la structure cri
     \item Interactions entre plus proches voisins: les seuls coefs non nuls sont t.q.\ $n-n'= \pm 1$
     \item \textbf{Conditions de Born von Karman:} $u_{N+1} = u_1 \Longrightarrow U_{\text{harm}} = \frac{1}{2}\sum_{n=1}^{N}C(u_{n+1}-u_n)^2$
     \item $H(p,u) = \sum_{n=1}^{N}\frac{p^2_n}{2m} + \frac{C}{2}\sum_{n=1}^{N}(u_{n+1} - u_n)^2 \Longrightarrow \ddot{u}_n = -\frac{C}{m}(-u_{n-1}+2u_n - u_{n+1})$
-    \item $u_n(t) = \frac{1}{\sqrt{N}} \sum_{\nu=0}^{N-1}a_{\nu} \exp[ i (k_{\nu}na - \omega_{\nu}t)] + c.c.$ \quad $k_{\nu} = \frac{2\pi \nu}{aN} \quad \nu = 0,1,\ldots, N-1$
+    \item $u_n(t) = \frac{1}{\sqrt{N}} \sum_{\nu=0}^{N-1}a_{\nu} \exp[ i (k_{\nu}na - \omega_{\nu}t)] + c.c.$ \quad $k_{\nu} = \frac{2\pi \nu}{aN} \quad \nu = 0,1,\ldots, N-1$ 
     \item $\omega_{\nu} = 2 \sqrt{\frac{C}{m}} \left| \sin \frac{k_{\nu}a}{2}\right|$ \textbf{Courbe de dispersion} (linéaire pour $k$ faible par rapport à $\pi/a$)
 
     \squishline
 
-    3D
+    \textbf{3D}
     \item $u_{\alpha}(\vR) = \frac{1}{\sqrt{3N}}\sum_{\nu}\sum_{s=1}^{3} a_{\nu,s} \varepsilon_{\alpha,s}(\vk_{\nu}) \exp [i \vk_{\nu} \cdot \vR - i \omega_s(\vk_{\nu}t)] + c.c.$ \\ 
     Pour chacune des $N$ valeurs $\vk_{\nu}$ dans une cellule primitive, 3 directions $\vec{\varepsilon}_s$ de polarisation, donc $3N$ modes propres
+
+    \squishline
+
+    \textbf{non-monoatomique}
+    \item Nb de valeurs $k$ dans 1ZDB $= pN$ où $p$ nb d'atomes dans la base
+
 \end{squishlist}
 
 \graypar{Modes normaux d'un RB 1D avec une base}
 \begin{squishlist}
-    \item $U_{\text{harm}} = \frac{K}{2}\sum_{n=1}^{N}(u_n - v_n)^2 + \frac{G}{2} \sum_{n=1}^{N} (u_n - v_{n-1})^2$
+    \item $U_{\text{harm}} = \frac{K}{2}\sum_{n=1}^{N}(u_n - v_n)^2 + \frac{G}{2} \sum_{n=1}^{N} (u_n - v_{n-1})^2$ \quad \textbf{2 ress.\ différents, même masse}
     \item $\left\{ \begin{aligned}
         & m\ddot{u}_n = -K (u_n - v_n) - G(u_n - v_{n-1}) \\
         & m\ddot{v}_n = K (u_n - v_n) + G(u_{n+1} - v_{n})
@@ -72,9 +78,16 @@ La technique expérimentale la plus importante pour déterminer la structure cri
     \end{aligned}\right.$
 
     \item $\omega_{\nu}^2 = \frac{K+G}{m} \pm \frac{1}{m}\sqrt{(K+G)^2 - 4KG \sin^2 \frac{k_{\nu}a}{2}} \qquad \frac{a_{\nu}}{b_{\nu}} = \mp \frac{K + G\exp(ik_{\nu}a)}{|K + G\exp(ik_{\nu}a)|}$
+    \item Au bord de 1ZDB, si $K > G \quad \Longrightarrow \quad \omega_{\text{opt}}= \sqrt{\frac{2K}{M}} \quad \omega_{\text{acous}} = \sqrt{\frac{2G}{M}}$ \\
     \item Pour chacune des $N$ valeurs de $k$ il y a 2 solutions $\Rightarrow 2N$ modes normaux de vibrations. Branche inférieure (\textbf{acoustique}, déplacement en phase, dynamique dominée par interactions entre cellules) et supérieure (\textbf{optique}, les ions d’une même cellule vibrent l’un par rapport à l’autre,).
-    \item DIFFÉRENTS CAS??
     \item Dans le cas \textbf{à 3 dimensions:} pour une cellule primitive avec une base de $p$ atomes, $3N$ modes acoustiques et $(3p - 3)N$ modes optiques de vibrations.
+    
+    \squishline
+
+    \textbf{2 masses, même ressort}
+    \item $\omega^2(k) = K \left(\frac{1}{M_1}+\frac{1}{M_2}\right) \pm K \sqrt{\left(\frac{1}{M_1}+\frac{1}{M_2}\right) - \frac{4}{M_1 M_2} \sin^2(ka/2)}$
+    \item Au bord de 1ZDB, si $M_1 > M_2 \quad \Longrightarrow \quad \omega_{\text{opt}}= \sqrt{\frac{2K}{M_2}} \quad \omega_{\text{acous}} = \sqrt{\frac{2K}{M_1}}$ \\
+    La largeur de la bande interdite (gap) entre branches acoustiques et optiques se réduit lorsque les deux masses d’un système sont similaires.
 \end{squishlist}
 
 \graypar{La notion de phonons}
@@ -93,7 +106,9 @@ La technique expérimentale la plus importante pour déterminer la structure cri
 \begin{squishlist}
     \item $c_v = \left.\D{T}{u}\right|_V$ chaleur spécifique du réseau
     \item \textbf{Loi de Dulong et Petit:} $c_v = 3n k_B$ ($n$ densité d'atomes). En accord avec les mesures pour une bonne partie des solides et proches de la température ambiante.
-    \item $u = \frac{1}{V} \sum_{\vk,s} \hbar \omega_s(\vk) \left( \braket{n_{\vk,s}}+\frac{1}{2}\right)$ \quad $\braket{n_{\vk,s}} = \frac{1}{\exp[\beta \hbar \omega_s(\vk)]-1}$ nb d'occupation moyen (Bose-Einstein)
+    \item $u = \frac{1}{V} \sum_{\vk,s} \hbar \omega_s(\vk) \left( \braket{n_{\vk,s}}+\frac{1}{2}\right)$ \quad $\braket{n_{\vk,s}} = \frac{1}{\exp[\beta \hbar \omega_s(\vk)]-1}$ (Bose-Einstein) \\
+    À haute $T$, si $x = \frac{\hbar \omega_s}{k_B T}$, $\braket{n_{\vk,s}} \approx \frac{1}{x} - \frac{1}{2} + \frac{x}{12} \approx \frac{k_BT}{\hbar \omega_s} - \frac{1}{2}$
+    
     \item \textbf{Expression génerale:} $c_v = \D{T}{} \sum_s {\displaystyle\int_{\text{1ZDB}}} \frac{\ud^3 k}{(2\pi)^3} \frac{\hbar \omega_s(\vk)}{\exp[\hbar \omega_s(\vk)/k_B T]-1}$
     
     \squishline
@@ -110,8 +125,9 @@ La technique expérimentale la plus importante pour déterminer la structure cri
     $u = 3 \frac{N}{V} \braket{n_E}\hbar \omega_E = 3n \frac{\hbar \omega_E}{\exp[\hbar \omega_E/k_BT]-1} \Longrightarrow c_v = 3nk_B \left(\frac{\hbar \omega_E}{k_BT}\right)^2 \frac{\exp[\hbar \omega_E /k_BT]}{(\exp[\hbar \omega_E /k_BT] - 1)^2}$
 
     \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = ck$
-    (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne $N$ (nb d'ions) vecteurs d'onde: 
-    $\left( \frac{4}{3}\pi k_D^3 \right) \frac{V}{(2\pi)^3} = N \Longleftrightarrow n = \frac{k_D^3}{6 \pi^2}$
+    (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne le même nombre de vecteurs d'onde: \\
+    $\left( \Omega_{\text{Debye}} \right) \cdot \text{densité de }k = \# \text{de } k \text{ dans 1ZDB}\quad \text{densité}=\frac{\text{vol.\ du cristal}}{\text{volume d'un }k}$ e.g.\ $\frac{N a^2}{(2\pi)^2}$ en 2D \\
+    $\Longrightarrow$ en 3D $n = \frac{N}{V} = \frac{k_D^3}{6\pi^2}$
     \item En définissant $\omega_D = ck_D$ et $k_B \theta_D = \hbar \omega_D$ ($T > \theta_D$: tous les modes commencent à être excités) on a
     $c_v = 9 n k_B \left(\frac{T}{\theta_D}\right)^3 {\displaystyle \int_0^{\theta_D/T}} \frac{x^4 e^x}{(e^x - 1)^2} \ud x$ où $x = \beta \hbar c k$
     \item \textbf{Basse temperature}($T/\theta_D \ll 1$): $c_v = \frac{12\pi^4}{5} n k_B \left( \frac{T}{\theta_D}\right)^3 \propto T^3$
@@ -156,7 +172,7 @@ On fait l’hypothèse que les électrons se déplacent dans un \textbf{potentie
     $\Longrightarrow$ Conduct.\ électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
     \item Conductivité thermique $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$ $\Rightarrow$ \textbf{Wiedemann-Franz}: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)$
 \end{squishlist}
-\columnbreak
+
 
 \graysec{Les électrons dans un potentiel périodique. Structure de bande}
 \graypar{Théorème de Bloch}

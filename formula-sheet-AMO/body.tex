@@ -1,11 +1,14 @@
 % Matteo Veneziano -- Atomic and Molecular Physics and Optics Formula Sheet
 
 \graysec{Atomic physics}
-\graypar{Hydrogen atom spectrum}
+\graypar{Hydrogenic atom spectrum}
 \begin{squishlist}
-    \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $R_{\infty} = $\\
+    \item $H = - \frac{\hbar^2}{2m}\nabla^2_r - \frac{Z e^2}{4 \pi \varepsilon r} \qquad  \frac{1}{Z^2}H_{\text{Hydrogenic}}\left(\rho:=\frac{r}{Z}\right) = H_{\text{Hydrogen}} \Longrightarrow$ lengths scale as $Z^{-1}$
+    \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $R_{\infty} = \frac{m_e e^4}{8 \varepsilon_0^2 h^3 c}$\\
      $\frac{1}{\lambda_n} = - R_{\infty} \frac{m_r}{m_e} \left[ \frac{1}{n^2} - \frac{1}{n_0^2}\right]$ when trans.between states
     
+    \item $ a = \frac{a_0}{Z} = \frac{1}{Z} \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$
+
     \item \textbf{Selection rules} (electric dipole transitions)
         \begin{enumerate}
             \item The only allowed transitions involv a change in parity
@@ -13,17 +16,18 @@
         \end{enumerate}
     
         \item \textbf{Orbital magnetic moment:} the orb. ang. moment. of $e^-$ causes \\
-        $m_z = \frac{-e}{2m_e}l_z \Rightarrow \vec{m} = \gamma_e \vec{l}$ with $\gamma_e = -\frac{e}{2m_e}$\\
-        $m_z = \gamma_e m_l \hbar = -\mu_B m_l$ with $m_l = l, l-1, \ldots, -l \quad \mu_B = \frac{e\hbar}{2m_e}$
+        $m_z = \frac{-e}{2m_e}l_z \Longrightarrow \vec{m} = \gamma_e \vec{l}$ \quad with $\gamma_e = -\frac{e}{2m_e}$\\
+        $m_z = \gamma_e m_l \hbar = -\mu_B m_l$ \quad with $m_l = l, l-1, \ldots, -l \quad \mu_B = \frac{e\hbar}{2m_e}$
 
-        \item \textbf{Spin magnetic moment:} \\ $\vec{m} = g_e \gamma_e \vec{s} \Longrightarrow mz = -g_e \mu_B m_s$ with $m_s=\pm1/2$ and $g_e = 2.0023$ the $g$-factor
+        \item \textbf{Spin magnetic moment:} \\ $\vec{m} = g_e \gamma_e \vec{s} \Longrightarrow m_z = -g_e \mu_B m_s$ \quad with $m_s=\pm1/2$ and $g_e = 2.0023$ the $g$-factor \\
+        In general $\hat{m}_J = - g_J \frac{\mu_B}{\hbar} \hat{J}$
     \end{squishlist} 
     
     \squishline
 
 \textbf{Relativistic effects}
 \begin{squishlist}
-    \item \textbf{Spin-orbit coupling:} a particle of mass $m_e$ and charge $-e$ moving at $\vec{v}$ in $\vec{E}$ experiences magnetic field $\vec{B} = \frac{1}{c^2}\vec{E}\times \vec{v}$. There is energy of interaction between $\vec{B}$ and the magnetic moment of particle: $H_{so} = \xi(r) \vec{l}\cdot \vec{s}$ \\
+    \item \textbf{Spin-orbit coupling:} a particle of mass $m_e$ and charge $-e$ moving at $\vec{v}$ in $\vec{E}$ experiences magnetic field $\vec{B} = \frac{1}{c^2}\vec{E}\times \vec{v}$. There is energy of interaction between $\vec{B}$ and the magnetic moment of particle: $H_{so} = \xi(r) \vec{l}\cdot \vec{s}$ \qquad $\Delta_E = \mu_0 B \propto Z^4$\\
     Causes \textbf{Fine structure}: $\left\{\begin{aligned}
         \text{parall.\ spin and orb.\ ang.\ mom.\ } &\Rightarrow \text{High-energy arrangem.\ } \\
         \text{antiparall.\ spin and orb.\ ang.\ mom.\ } &\Rightarrow \text{Low-energy arrangem.\ }
@@ -38,12 +42,13 @@
 
 \textbf{Nuclear effects}
 \begin{squishlist}
-    \item Finite size (charge radius is not exactly 0)
-    \item Finite mass (different isotopes have diff.\ spectra)
+    \item Finite size and mass (charge rad.\ is not 0) $\Rightarrow$
+    Isotope shift $\Delta E = \frac{Ze^2}{4 \pi \varepsilon_0 10}R^2 |R_{nl}(0)|^2$ \\ $R_{nl}(0) \neq 0$ only for $l=0$ \quad $|R_{nl}(0)|^2 = 4\pi |\psi_{nlm}(0)|^2$ \quad Does not lift $m$ degen.\
     \item \textbf{Hyperfine structure}: the nucleus has finite angular momentum $\vec{I}$ thus magnetic moment $\vec{\mu_N} = g_I \mu_N \frac{\vec{I}}{\hbar}$ with $\mu_N$ the nucleon magneton.
     Interaction between magnetic moments of nucleus and of $e^-$:
-    $H_{HFS} \sim \vec{\mu_N}\cdot \vec{\mu_{e^-}}$
-    \item Quadruple moment of nucleus
+    $H_{HFS} \sim \vec{\mu_N}\cdot \vec{\mu_{e^-}} \propto Z^3$ \\
+    $H_{HFS} = a_{HFS} \frac{h}{\hbar^2} \; \hat{J}_{\text{elec}}\cdot \hat{I}_{\text{nucl}}$
+    \item \textbf{Quadruple moment of nucleus} (only states $l \neq 0$, $I \geq 1$). Depends on $m$ thus lifts fine structure degeneracy.
 \end{squishlist}
 
 \graypar{Atoms in external fields}
@@ -237,4 +242,16 @@
     \item $\Delta E = \hbar \omega_i - \hbar \omega_s$ (incident/scattering)
     \item Selection rules are based on the polarisability tensor $\vec{d} = \bar{\bar{\alpha}} \vec{E}$
     \item Rotational: $\Delta J = \pm 1, \pm 2$ (only $\pm 2$ for lin.molec.); Vibrational $\Delta \nu  =\pm 1$; \\ Rovibrational $\Delta J = 0, \pm 2$
+\end{squishlist}
+
+\graysec{Mixed}
+\begin{squishlist}
+    \item \textbf{Viriel theorem:} if $V = \alpha x^s \Longrightarrow \braket{T} = \frac{1}{2}s \braket{V}$
+    \item $\frac{1}{2m}\hat{p}^2 = - \frac{\hbar^2}{2m} \dder{x}{}$
+    \item $[\hat{x}, \hat{p}] = i \hbar$
+    \item $Y_{lm}(-\vr) = (-1)^l Y_{lm}(\vr)$
+    \item \textbf{Wigner-Eckart theorem:} if $T_{kq}$ is $q$ component of a spherical tensor of rank $k$ \\
+    $\braket{n j m_j | T_{kq} | n' j' m_j'} = \frac{1}{\sqrt{2j'+1}} \underbrace{\braket{n j | T_k | n'j'}}_{\text{Red.\ matr.\ elem.}} \underbrace{\braket{j m_j ; k q | j' m_j'}}_{\text{Clebsch-Gordan}}$
+
+    \item $J_{\pm} \ket{J,m_J} = \hbar \sqrt{(J \mp m_J)(J \pm m_J + 1)} \ket{J,m_J \pm 1 }$
 \end{squishlist}

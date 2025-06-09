@@ -2,6 +2,7 @@
 \graysec{Réseaux cristallins dans l'éspace réel et réciproque}
 \begin{squishlist}
     \item Énergie électrost.\ $E = - M_d \frac{e^2}{4\pi \varepsilon_0 a}$ \textbf{Cst de Madelung} specif.\ pour une struct.\ donnée
+    \item \textbf{Liaison covalente}: partage d'\elec entre les atomes, favorable en présence d'orbitales de valence partiell.\ remplies. E.g.\ diamant, hybridisation $sp^3$ $\Rightarrow$ nb de coordin.\ 4
     \item Taux de remplissage $t$: rapp.\ entre le volume occupé par les atomes (assimilés à des sphères dures de rayon $r$) et le volume de la maille considérée
 \end{squishlist}
 \graypar{Réseaux cristallins}
@@ -60,11 +61,11 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     \squishline
 
     \textbf{non-monoatomique}
-    \item Nb de valeurs $k$ dans 1ZDB $= pN$ où $p$ nb d'atomes dans la base
+    \item Nb de valeurs $k$ dans 1ZDB $= pN$ où $p$ nb d'atomes dans la base, $N$ nb de mailles
 
 \end{squishlist}
 
-\graypar{Modes normaux d'un RB 1D avec une base}
+\graypar{Modes normaux d'un RB 1D avec une base, $N$ mailles}
 \begin{squishlist}
     \item $U_{\text{harm}} = \frac{K}{2}\sum_{n=1}^{N}(u_n - v_n)^2 + \frac{G}{2} \sum_{n=1}^{N} (u_n - v_{n-1})^2$ \quad \textbf{2 ress.\ différents, même masse}
     \item $\left\{ \begin{aligned}
@@ -122,9 +123,10 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     \textbf{Entre les domaines de hautes et basses température}
 
     \item \textbf{Modèle d'Einstein:} on fait l'hypothèse que la rélation de dispersion $\omega_s(\vk)$ est const \\
-    $u = 3 \frac{N}{V} \braket{n_E}\hbar \omega_E = 3n \frac{\hbar \omega_E}{\exp[\hbar \omega_E/k_BT]-1} \Longrightarrow c_v = 3nk_B \left(\frac{\hbar \omega_E}{k_BT}\right)^2 \frac{\exp[\hbar \omega_E /k_BT]}{(\exp[\hbar \omega_E /k_BT] - 1)^2}$
+    $u = 3 \frac{N}{V} \braket{n_E}\hbar \omega_E = 3n \frac{\hbar \omega_E}{\exp[\hbar \omega_E/k_BT]-1} \Longrightarrow c_v = 3nk_B \left(\frac{\hbar \omega_E}{k_BT}\right)^2 \frac{\exp[\hbar \omega_E /k_BT]}{(\exp[\hbar \omega_E /k_BT] - 1)^2}$ \\
+    Pas de modes qui peuv.\ être excités à basse $T$ $\rightarrow$ $c_V$ décroit trop vite en descend.\ $T$
 
-    \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = ck$
+    \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = c|k|$ ($\omega \propto \sqrt{C/m}|k|$) \\
     (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne le même nombre de vecteurs d'onde: \\
     $\left( \Omega_{\text{Debye}} \right) \cdot \text{densité de }k = \# \text{de } k \text{ dans 1ZDB}\quad \text{densité}=\frac{\text{vol.\ du cristal}}{\text{volume d'un }k}$ e.g.\ $\frac{N a^2}{(2\pi)^2}$ en 2D \\
     $\Longrightarrow$ en 3D $n = \frac{N}{V} = \frac{k_D^3}{6\pi^2}$
@@ -134,9 +136,13 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     \item \textbf{Haute temperature:}($T/\theta_D \gg 1$) on retrouve D\&P
 \end{squishlist}
 
-\graypar{Densité de modes}
+\graypar{Densité de modes en $\omega$}
+Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup de $k$: haute densité
 \begin{squishlist}
-    \item $g(\omega) = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$
+    \item $g(\omega) = \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud^3 k}{(2\pi)^3}\delta[\omega - \omega_s(\vk)] = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$ en 3D
+    \item $u = \sum_s \int_{\text{1ZDB}} \frac{\ud^3 \vk}{(2\pi)^3} \hbar \omega_s(\vk) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right)$
+    \item Chaine 1D, Haute $T$: $c_{V, \text{Debye}} = c_{V,\text{exac}} = n K_B = K_B / a$ \\
+    Basse $T$: $c_{V, \text{Debye}} = \frac{\pi^2}{3}nK_B \frac{T}{\theta_D} \quad c_{V,\text{exac}} = \frac{2\pi}{3} n k_B \frac{k_B}{\hbar \omega_{\max}} T + \frac{4 \pi^3}{15} nk_B \left(\frac{k_B}{\hbar \omega_{\max}}\right)^3 T^3$
 \end{squishlist}
 
 \graypar{Conductibilité thermique du réseau}
@@ -148,21 +154,28 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     En 3D $\vec{j}_Q = - \frac{1}{3}c^2 c_v(T) \tau \vec{\nabla T} \Longleftrightarrow \kappa = \frac{1}{3} c^2 \tau c_v(T)$
     \item \textbf{Processus normal} : $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk$ (conservation des moments) \\
     \textbf{Processus Umklapp}:  $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk + \vG$ (conserv.\ à un vec.\ du rés.\ recip.\ près) \\
-    Umklapp peu probable à basse $T$. Seul le faible nombre des phonons participant à des processus de type Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$
+    Umklapp peu probable à basse $T$. Seul le faible nb des phon.\ participant à  processus Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$ donc réduit la conductibilité thermique (la quantité de mouvement est alterée, direction de propagation changée).
 \end{squishlist}
 
+\columnbreak
+
 \graysec{Gaz d'électrons libres de Fermi}
-On fait l’hypothèse que les électrons se déplacent dans un \textbf{potentiel eﬀectif constant}. Bonne approximation pour beaucoup de métaux, mais ne peut pas expliquer pourquoi un solide est un métal, un sémiconducteur, ou un isolant.
+Hypoth.\: les \elec se déplacent dans un \textbf{potentiel eﬀectif constant}. Bonne approx.\ pour beauc.\ de métaux, mais ne peut pas expliquer pourquoi un solide est un métal, un sémiconducteur, ou un isolant.
 \begin{squishlist}
-    \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif.
+    \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif. \\
+    $\Rightarrow$Les comp.\ de $\vk$ sont multipl.\ de $\frac{2\pi}{L} \Longrightarrow$ dans éspace dim.\ $N$, volume de $k$ $=\left(\frac{2\pi}{L}\right)^N$
     \item $\psi_{\vk}(\vr) = \frac{1}{\sqrt{V}}\exp(i \vk \cdot \vr) \quad E(\vk) = \frac{\hbar^2 k^2}{2m} \quad k = \left(\frac{2m}{\hbar^2}\right)^{1/2} \sqrt{E} \quad \vec{p}=\hbar \vec{k}$
     \item $N$ valeurs $\vec{k}$ admises dans chaque zone de Brillouin $\rightarrow$ $2N$ états électroniques (spin). Toutes les valeurs $\vk$ t.q.\ $k\leq k_F$ sont occupées, celles t.q.\ $k > k_F$ sont vides.
     \item Trouver $k_F$: vol. sphère de Fermi $\Omega_F$ $\times$ densité de $k$ $\times \; 2$ (spin) = \# $e^-$ dans système 
-    \item \textbf{Densité électronique} $n = \frac{N}{V} = \int_0^{E_F} g(E) \ud E$
-    \item E.g.\ 3D: $2 \left( \frac{4}{3}\pi k^3_F\right) \left( \frac{V}{8\pi^3}\right) = N \quad \frac{N}{V} = n = \frac{k_F^3}{3\pi^2}$
+    \item \textbf{Densité électronique} $n = \frac{N}{V} = \int_0^{E_F} g(E) \ud E$ \\
+    E.g.\ 3D: $2 \left( \frac{4}{3}\pi k^3_F\right) \left( \frac{V}{8\pi^3}\right) = N \quad \frac{N}{V} = n = \frac{k_F^3}{3\pi^2} \qquad E_F = \frac{\hbar^2}{2m}(3\pi^2 n)^{2/3}$
 
     % \item $E_F = \frac{\hbar^2 k_F^2}{2m}$
-    \item Trouv.\ \textbf{densité d'états} $g(E)$: $g(e) \ud E = \frac{\ud \Omega}{\text{\# val.\ $k$ à disp.}} \; 2 \; \frac{1}{V}$ 
+    \item\textbf{Densité d'états} $g(E)$: \# d'états par unité de $V$ avec énergie entre $E$ et $E+\ud E$\\
+    $g(E) \ud E = 2\; \frac{\ud \Omega}{\text{volume $k$}} \; \frac{1}{V}$ \\ 
+    $g(E)_{\text{1D}} =\frac{\sqrt{2m}}{\pi \hbar}\frac{1}{\sqrt{E}}$ \quad
+    $g(E)_{\text{2D}} = \frac{m}{\pi \hbar^2}$ \quad
+    $g(E)_{\text{3D}} = \frac{1}{2\pi} \left(\frac{2m}{\hbar^2}\right)^{3/2}\sqrt{E}$
     % \squishsep $u(0 $K$) = \int_{0}^{E_F}E \; g(E)\; \ud E$ 
     \item \textbf{Fermi-Dirac}: $f(E,T) = \frac{1}{\exp\left(\frac{(E- \mu)}{k_B T}\right) + 1}$ \squishsep $u = \int_{0}^{\infty}E \; g(E)\; f(E) \; \ud E$
     \item \textbf{Developp.\ de Sommerfeld:} $\int_{0}^{\infty}h)E) f(E) \ud E = \int_{0}^{\mu} h(E) \ud E + \frac{\pi^2}{6}(k_BT)^2 \left.\D{E}{h}\right|_{E=\mu} + \ldots$
@@ -303,4 +316,9 @@ En polaris.\ inverse le courant est dû aux porteurs minoritaires générés the
     \item Type II, pour $H_{c1}<H<H_{c2}$ la densité de flux à l'intérieur est non nulle (effet Meissner incomplet)
     \item \textbf{Eq.\ de London}: $\vec{j} = - \frac{1}{\mu_0 \lambda_L^2} \vec{A} \Longrightarrow \vec{\nabla}^2 \vec{B} = \frac{1}{\lambda_L^2}\vec{B}$ qui a seule solut.\ $B=0$
     \item Prédictions de la théorie BCS
+\end{squishlist}
+
+\graysec{Mixed}
+\begin{squishlist}
+    \item $k_B T (300$K$) \approx 26$ meV
 \end{squishlist}

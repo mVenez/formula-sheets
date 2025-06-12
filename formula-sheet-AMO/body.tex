@@ -4,15 +4,18 @@
 \graypar{Hydrogenic atom spectrum}
 \begin{squishlist}
     \item $H = - \frac{\hbar^2}{2m}\nabla^2_r - \frac{Z e^2}{4 \pi \varepsilon r} \qquad  \frac{1}{Z^2}H_{\text{Hydrogenic}}\left(\rho:=\frac{r}{Z}\right) = H_{\text{Hydrogen}} \Longrightarrow$ lengths scale as $Z^{-1}$
+    \item Ground state $\phi_{1s} = \left(\frac{1}{\pi a_0^3}\right)^{1/2} e^{-|\vr|/a_0} $
+    \squishsep $s$-orbitals have $\left|\psi_{nl}(0)\right|^2 \neq 0$
     \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $R_{\infty} = \frac{m_e e^4}{8 \varepsilon_0^2 h^3 c}$\\
      $\frac{1}{\lambda_n} = - R_{\infty} \frac{m_r}{m_e} \left[ \frac{1}{n^2} - \frac{1}{n_0^2}\right]$ when trans.between states
     
-    \item $ a = \frac{a_0}{Z} = \frac{1}{Z} \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$
+    \item $ a = \frac{a_0}{Z} = \frac{1}{Z} \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$ 
+    \squishsep $\braket{\rho}_{nl} = \frac{1}{2Z} [3n^2 - l(l+1)]$
 
     \item \textbf{Selection rules} (electric dipole transitions)
         \begin{enumerate}
             \item The only allowed transitions involv a change in parity
-            \item $\Delta l = 0, \pm1 \overset{(1)}{\Longrightarrow} \Delta l = \pm 1$ \quad 3. $\Delta m = 0, \pm 1$
+            \item $\Delta l = 0, \pm1 \overset{(1)}{\Longrightarrow} \Delta l = \pm 1$ \quad 3. $\Delta m = 0, \pm 1$ \quad 4. $\Delta j = 0,\pm 1$ (excl.\ $j=j'=0$)
         \end{enumerate}
     
         \item \textbf{Orbital magnetic moment:} the orb. ang. moment. of $e^-$ causes \\
@@ -108,11 +111,15 @@
 
 \squishline
 
+\textbf{H$_2^+$ molecule}: $\ham_e = - \frac{\hbar^2}{2m_e} \nabla^2 - \frac{j_o}{|\vr - \vR_A|} - \frac{j_o}{|\vr - \vR_B|} + \frac{j_0}{R}$ \quad $R$ the dist.\ betw.\ nuclei 
 \begin{squishlist}
-    \item \textbf{H$_2^+$ molecule}: $\ham_e = - \frac{\hbar^2}{2m_e} \nabla^2 - \frac{j_o}{|\vr - \vR_A|} - \frac{j_o}{|\vr - \vR_B|} + \frac{j_0}{R}$ \quad $R$ the dist.\ betw.\ nuclei \\
-    Solved by variat.\ method with \textbf{trial wavefunction} $\psi_i(\vr) = a_i \phi_A(\vR) + b_i \phi_B(\vR)$, with $\phi_A(\vr)=\phi_{1s}(\vr - \vR_A), \phi_B(\vr)=\phi_{1s}(\vr - \vR_B)$ \\
-    We find \textbf{eigenfuncs} $\psi_+(\vr) = N_+ (\phi_A(\vr)+\phi_B(\vr))$ (even) and $\psi_-(\vr) = N_- (\phi_A(\vr)-\phi_B(\vr))$ \\
+    \item \textbf{Variat.\ method} with \textbf{trial wavefunction} $\psi_i(\vr) = a_i \phi_A(\vR) + b_i \phi_B(\vR)$ \\ with $\phi_A(\vr)=\phi_{1s}(\vr - \vR_A) \quad \phi_B(\vr)=\phi_{1s}(\vr - \vR_B)$ 
+    \item \textbf{Eigenfuncs:} $\psi_{\pm}(\vr) = N_{\pm} (\phi_A(\vr)\pm \phi_B(\vr))$ \quad $N_{\pm} = 1/\sqrt{2(1+S(R))} $
+     \\
     $\psi_+$ is bonding, $\psi_-$ is antibonding. An antibonding orbital is more antibonding than a bonding orb.\ is bonding.
+    \item \textbf{Eigenenergs:} $\epsilon_{\pm} = \frac{\epsilon_{AA} \pm \epsilon_{AB}}{1\pm S}$ \quad  $S(R) = \int \ud r^3 \phi_A(\vr) \phi_B(\vr) = \left(1 + \frac{R}{a_0} + \frac{R^2}{3a_0^2}\right) e^{-R/a_0}$\\
+    $\epsilon_{AA} = \epsilon_{BB} = \int \ud r^3 \phi_{A}(\vr) H \phi_{A}(\vr) = \epsilon_H + \frac{e^2}{4\pi\varepsilon_0 R}\left(1 + \frac{R}{a_0}e^{-2R/a_0}\right)$ \\
+    $\epsilon_{AB} = \int dr^3 \phi_A(\vec{r}) H \phi_B(\vec{r}) = \left(\epsilon_H +  \frac{e^2}{4 \pi \epsilon_0R}\right) S - \frac{e^2}{4 \pi \epsilon_0a_0} \left( 1 + \frac{R}{a_0} \right) e^{-R/a_0}$
 \end{squishlist}
 
 \squishline
@@ -121,6 +128,9 @@
     \item \textbf{H$_2$ molecule:} Heitler-London (Valence bond) approach \\
     $\psi_S(1,2) = \frac{1}{\sqrt{2(1+s^2)}} \left[\phi_A(1)\phi_B(2) + \phi_B(1)\phi_A(2)\right] \chi_S$ \\
     $\psi_T(1,2) = \frac{1}{\sqrt{2(1-s^2)}} \left[\phi_A(1)\phi_B(2) - \phi_B(1)\phi_A(2)\right] \chi_T$
+    \item $\epsilon_{s/t} = \frac{\epsilon_{ABAB} \pm \epsilon_{ABBA}}{1 \pm S^2} \quad \epsilon_{ABAB} = 2 \epsilon_H + \epsilon_C \quad \epsilon_{ABBA} = S^2 2 \epsilon_H + \epsilon_{X}$
+    \item $\epsilon_C(R) = \int d^3r \int d^3r' \, \phi_A^2 (\vec{r}) \phi_B^2 (\vec{r}') \left[ \frac{j}{|\vec{r} - \vec{r}'|}  - \frac{j}{\epsilon_0|\vec{r}' - \vec{R}_A|} - \frac{j}{|\vec{r} - \vec{R}_B|} \right]  + \frac{j}{|\vec{R}_A - \vec{R}_B|}\\
+    \epsilon_{X}(R) = \int d^3r \int d^3r' \, \phi_A (\vec{r}) \phi_B (\vec{r}) \phi_A (\vec{r}') \phi_B (\vec{r}')  \left[ \frac{j}{|\vec{r} - \vec{r}'|}  - \frac{j}{|\vec{r}' - \vec{R}_A|}  - \frac{j}{|\vec{r} - \vec{R}_B|} \right]$
 \end{squishlist}
 
 \squishline
@@ -244,6 +254,23 @@
     \item Rotational: $\Delta J = \pm 1, \pm 2$ (only $\pm 2$ for lin.molec.); Vibrational $\Delta \nu  =\pm 1$; \\ Rovibrational $\Delta J = 0, \pm 2$
 \end{squishlist}
 
+\graysec{Stuff from exercises}
+\graypar{Rydberg atoms}
+Hydrogen-like atom excited to a very high $n$
+\begin{squishlist}
+    \item $\psi_{n,l,j,m_j}(r,\theta, \phi) = R_{n,l}(r) A_{l,j,m_j}(\theta,\phi)$ \quad $E_{n,l,j} = - \frac{E_I}{(n - \delta_{nlj})^2}$
+    \item $\braket{n,l,j,m_j|\vec{r}|n',l',j',m_j'} = \vec{A}(ljm_j, l'j'm_j')R(nl,n'l')$ \quad $\braket{||\vec{r}||} = R(nl,nl)$
+    \item $R(nl,n'l') \propto nn'$
+\end{squishlist}
+
+\graypar{Thomas-Fermi atoms}
+Many-electron atom with screening function $F(r)$ $\Rightarrow$ RISULTATI??
+\begin{squishlist}
+    \item $V(r) = -\frac{1}{4 \pi \varepsilon_0} \frac{Z e^2}{r} F(r)$ locally constant
+    \item $r \propto Z^{-1/3}$
+\end{squishlist}
+
+
 \graysec{Mixed}
 \begin{squishlist}
     \item \textbf{Viriel theorem:} if $V = \alpha x^s \Longrightarrow \braket{T} = \frac{1}{2}s \braket{V}$
@@ -254,4 +281,10 @@
     $\braket{n j m_j | T_{kq} | n' j' m_j'} = \frac{1}{\sqrt{2j'+1}} \underbrace{\braket{n j | T_k | n'j'}}_{\text{Red.\ matr.\ elem.}} \underbrace{\braket{j m_j ; k q | j' m_j'}}_{\text{Clebsch-Gordan}}$
 
     \item $J_{\pm} \ket{J,m_J} = \hbar \sqrt{(J \mp m_J)(J \pm m_J + 1)} \ket{J,m_J \pm 1 }$
+    \item \textbf{Perturbation theory:} $E_n^{(1)}=\braket{\phi_n|V|\phi_n} \quad \ket{\psi^1_n} = \sum_{m\neq n}\frac{\braket{\phi_m|V|\phi_n}}{\varepsilon_n - \varepsilon_m} \ket{\phi_m}$ \\
+    $E_n^{(2)} = \sum_{m\neq n}\frac{|\braket{\phi_m|V|\phi_n}|^2}{\varepsilon_n - \varepsilon_m}$
+    \item TRIGO
+    \item \textbf{Elliptical coordinates:} $\mu = \frac{1}{R} \left(|\vec{r}-\vec{R}_A| + | \vec{r} - \vec{R}_B| \right) \quad 
+    \nu = \frac{1}{R} \left(|\vec{r}-\vec{R}_A| - | \vec{r} - \vec{R}_B| \right) \\
+    \int d^3r = \int_1^\infty d\mu \int_{-1}^1 d \nu \int_0^{2\pi} d \phi \frac{R^3}{8} ( \mu^2 - \nu^2).$
 \end{squishlist}

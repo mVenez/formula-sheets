@@ -28,17 +28,17 @@
 \graypar{Détermination de la structure cristalline}
 Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayons X.
 \begin{squishlist}
-    \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$. \\
+    \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$. \quad
     \textbf{Condition de Laue:} $\vec{K} = \vk'-\vk = \vG$
 
-    \item \textbf{Indices de Miller:} $(h,k,l)$ les plans du réseau sont caractérisés par trois nombres entiers. On trouve les intersections avec les axes cristallographiques (en unités de vecteurs primitifs), ensuite on prend les valeurs réciproques de ces nombres.\\
+    \item \textbf{Indices de Miller:} les plans du réseau sont caractérisés par $(h,k,l)$. On trouve les intersections avec les axes cristallographiques (en unités de vecteurs primitifs), ensuite on prend les valeurs réciproques de ces nombres.\\
     $\vG = h \vec{b}_1 + k \vec{b}_2 + l \vec{b}_3$ vec du RR perp.\ à la famille de plans, avec plus petite norme $G_{\min} = 2\pi / d \quad G = n G_{\min}$
 \end{squishlist}
 
 \graysec{Dynamique du réseau. Notion de phonon}
 \begin{squishlist}
-    \item \textbf{Approximation harmonique}
-    \item \textbf{Approximation adiabatique:} les vitesses \elec sont de l'ordre de la vit.\ de Fermi ($\sim 10^8$ cm/sec) et la vitesse thermique des ions est plus faible $\Rightarrow$ les \elec suivent instantanément le mouvement des ions. Les \elec se trouvent tousjouts dans l'état fondamental correspondant à la configuration ionique.
+    \item \textbf{Approximation harmonique}: on néglige termes super.\ à 2
+    \\ \textbf{Approximation adiabatique:} les vitesses \elec sont de l'ordre de la vit.\ de Fermi ($\sim 10^8$ cm/sec) et la vitesse thermique des ions est plus faible $\Rightarrow$ les \elec suivent instantanément le mouvement des ions. Les \elec se trouvent tousjouts dans l'état fondamental correspondant à la configuration ionique.
     \item $u$ amplitude de déplacement
 \end{squishlist}
 
@@ -175,7 +175,7 @@ Hypoth.\: les \elec se déplacent dans un \textbf{potentiel eﬀectif constant}.
     $g(E) \ud E = 2\; \frac{\ud \Omega}{\text{volume $k$}} \; \frac{1}{V}$ \\ 
     $g(E)_{\text{1D}} =\frac{\sqrt{2m}}{\pi \hbar}\frac{1}{\sqrt{E}}$ \quad
     $g(E)_{\text{2D}} = \frac{m}{\pi \hbar^2}$ \quad
-    $g(E)_{\text{3D}} = \frac{1}{2\pi} \left(\frac{2m}{\hbar^2}\right)^{3/2}\sqrt{E}$
+    $g(E)_{\text{3D}} = \frac{1}{2\pi} \left(\frac{2m}{\hbar^2}\right)^{3/2}\sqrt{E}$ \quad $g(E_F) = \frac{3}{2} \frac{n}{E_F}$
     % \squishsep $u(0 $K$) = \int_{0}^{E_F}E \; g(E)\; \ud E$ 
     \item \textbf{Fermi-Dirac}: $f(E,T) = \frac{1}{\exp\left(\frac{(E- \mu)}{k_B T}\right) + 1}$ \squishsep $u = \int_{0}^{\infty}E \; g(E)\; f(E) \; \ud E$
     \item \textbf{Developp.\ de Sommerfeld:} $\int_{0}^{\infty}h)E) f(E) \ud E = \int_{0}^{\mu} h(E) \ud E + \frac{\pi^2}{6}(k_BT)^2 \left.\D{E}{h}\right|_{E=\mu} + \ldots$
@@ -201,18 +201,18 @@ Hypoth.\: les \elec se déplacent dans un \textbf{potentiel eﬀectif constant}.
     \item On peut décomposer une fonction d'onde $\psi(\vr)$ qui satisfait Born-von-Karman comme $\psi(\vr) = \sum_{\vk} a_{\vk} \exp(i \vk \cdot \vr)$
     \squishsep $\psi_{n,\tilde{\vk}} = \sum_{\vG} a_{n, \tilde{\vk}-\vG} \exp(i (\tilde{\vk} - \vG) \cdot \vr) \quad n=1\rightarrow\infty$
     \item Le potentiel a la périodicité du réseau: $U(\vr) = \sum_{\vG} U_{\vG} \exp(i \vG \cdot \vr)$
-    \item $\left(\frac{\hbar^2 k^2}{2m} - E\right)a_{\vk} + \sum_{\vG}U_{\vG}a_{\vk - \vG}  = 0$
-    \item $(E_{\vk}^0 - E)a_{\mathbf{{\tilde{k}}} - \vG} + \sum_{\vG'}U_{\vG' - \vG}a_{\mathbf{\tilde{k}} - \vG'}  = 0$
-    \item Periodicité de l'énergie $ E_{n,\mathbf{\tilde{k}} + \vG} = E_{n,\mathbf{\tilde{k}}}$
+    \item $\left(\frac{\hbar^2 k^2}{2m} - E\right)a_{\vk} + \sum_{\vG}U_{\vG}a_{\vk - \vG}  = 0$ \qquad $(E_{\vk}^0 - E)a_{\mathbf{{\tilde{k}}} - \vG} + \sum_{\vG'}U_{\vG' - \vG}a_{\mathbf{\tilde{k}} - \vG'}  = 0$
+    \item Periodicité de l'énergie $ E_{n,\mathbf{\tilde{k}} + \vG} = E_{n,\mathbf{\tilde{k}}}$ \squishsep $\hbar k \neq p$
     \item Électrons libres: $U(\vr) = 0 \Longrightarrow E_{k - G_i}^0 = \frac{\hbar^2(k - G_i)^2}{2m}$
 \end{squishlist}
 
 \graypar{Modèle des électrons faiblement couplés au réseau (quasi-libres)}
-Part de l'approximation du gaz d'électrons libres et suppose une corrugation faible du potentiel, due au fait que: 
-1) les interactions sont fortes surtout à courtes distances et le principe d'exclusion de Pauli empêche les électrons de conduction de pénétrer dans le coeur et 
-2) les électrons de coeur écrantent le noyau positif. Ce modèle s'applique en général bien aux électrons de valence de type s - p, donc pour les alcalins (groupe I), alcalins terreux (groupe II), métaux nobles.
+Part des \elec libres et suppose une corrug.\ faible du potentiel, due à: 
+1) les interact.\ sont fortes surtout à courtes distances et le principe de Pauli empêche les électrons de conduction de pénétrer dans le coeur et 
+2) les \elec de coeur écrantent le noyau positif. Ce modèle s'applique en général bien aux \elec de valence de type s - p, donc pour les alcalins (groupe I), alcalins terreux (groupe II), métaux nobles.
 \begin{squishlist}
-    \item États presque dégénérés: $(E_{k-G_i}^0 - E) c_{k-G_i} + \sum_{j=1}^m U_{G_j - G_i} c_{k-G_j} = 0$ \\
+    \item \textbf{États non dégénérés:} faible correction (2nd ordre)
+    \item \textbf{États presque dégénérés}: $(E_{k-G_i}^0 - E) c_{k-G_i} + \sum_{j=1}^m U_{G_j - G_i} c_{k-G_j} = 0$ \\
     $i,j = 1 \ldots m$ tels que $|E_{k-G_i}^0 - E_{k-G_j}^0| \lesssim U$, \quad $U_G$ coefficients de Fourier de $U$. \\
     Peut être mis sous forme matricielle, trouver energies propres et vecteurs propres \\
     Levée de la dégénérescence $\rightarrow$ bandes d'énergies interdites.
@@ -222,8 +222,8 @@ Part de l'approximation du gaz d'électrons libres et suppose une corrugation fa
 
 \graypar{Modèle des liaisons fortes}
 Part d'atomes neutres que l'on approche de plus en plus.
-Les orbitales les plus étendues spatialement vont alors se recouvrir. Dans l'approximation
-des liaisons fortes, on suppose que la fonction d'onde est bien décrite par les orbitales
+Les orbitales les plus étendues spatialement vont alors se recouvrir. 
+On suppose que la fonction d'onde est bien décrite par les orbitales
 atomiques, et on pose $H = H_{\text{at}} + \Delta U$. 
 Cette approximation s'applique particulièrement
 bien aux métaux de transition et aux isolants, qui ont un recouvrement d'orbitales pas
@@ -235,9 +235,10 @@ trop important.
         & \beta = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr) \ud^3 r \\
         & \gamma(\vR) = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr - \vR) \ud^3 r
     \end{aligned} \right.$
-    \item $\alpha(\vr)$ est positive pour fonction d'onde de type $s$, typiquement entre 0.1 et 0.4
-    \item L'intégrale de champ cristallin $\beta < 0$ décrit l'effet du potentiel généré par les autres atomes.
-    \item L'intégrale de transfert $\gamma(R)$ décrit le passage d'un électron du site initial $R = 0$ au site $R$, induit par la présence du potentiel $\Delta U$.
+    \item Recouvrem.\ $\alpha(\vr)$ positive pour fonction d'onde de type $s$, typiquem.\ entre 0.1 et 0.4
+    \item Champ cristallin $\beta < 0$ décrit l'effet du potentiel généré par les autres atomes.
+    \item L'intégrale de transfert $\gamma(R)$ ($<0$ pour orbit.\ type $s$) décrit le passage d'un électron du site initial $R = 0$ au site $R$, induit par la présence du potentiel $\Delta U$.
+    La largeur de la bande est propto à $\gamma$
 \end{squishlist}
 
 \graypar{Métaux, isolants, semiconducteurs}
@@ -254,7 +255,7 @@ est à moitié remplie par les électrons.
 
 \graysec{Dynamique des électrons}
 \begin{squishlist}
-    \item Équations du mouvement entre collisions, $n$ constante du mouvem.
+    \item Équations du mouvement entre collisions, $n$ constante du mouvem. (valables à condit.\ que les champs varient lentem.\ par rapport aux dim.\ du paquet d'onde)
     $ \left\{ \begin{aligned} 
         & \dot{\vec{r}} = \vec{v_n}(\vk) = \frac{1}{\hbar} \vec{\nabla_\vec{k}E_n}(\vk) \\
         & \hbar \dot{\vec{k}} =  -e (\vec{E} + \vec{v_n}(\vk) \times \vec{B}) =  -e (\vec{E} + \frac{1}{\hbar} \vec{\nabla_\vec{k}E_n}(\vk) \times \vec{B})
@@ -277,46 +278,66 @@ est à moitié remplie par les électrons.
         \item $\nabla E(\vk)$ pointe vers l'éxter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire électronique
         \item $\nabla E(\vk)$ pointe vers l'inter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire de type trou
     \end{itemize}
+    \item DANS L'ÉSPACE RÉEL
 \end{squishlist}
 
 \graysec{Les semiconducteurs}
 Un semiconducteur est intrinsèque si ses proprietés électroniques sont dominées par les $e^-$ excités thermiquement de la bande de valence à la bande de conduction et extrinsèque si elles sont dominées par les $e^-$ contribués à la bande de conduction ou capturé par la bande de valence par des impuretés.
 \begin{squishlist}
     \item Densité d'$e^-$ dans bande de conduction $n(T) = \int_{E_c}^{\infty} g_c(E) \frac{1}{e^{(E-\mu)/k_B T} + 1} \ud E$
-    \item Densité de trous dans bande de valence $p(T) =\int_{E_c}^{\infty} g_v(E)\left( 1- \frac{1}{e^{(E-\mu)/k_B T} + 1} \right)\ud E$
+    \item Densité de trous dans bande de valence $p(T) =\int_{-\infty}^{E_v} g_v(E)\left( 1- \frac{1}{e^{(E-\mu)/k_B T} + 1} \right)\ud E$
     \item Pour un sc non dégénéré ($E_c - \mu \gg k_B T, \mu -E_v \gg k_B T)$ on a \\ $n(T) = N(T) e^{-(E_c - \mu) / k_B T}$ \quad $p(T) = P(T) e^{-(\mu - E_v) / k_B T}$
     \item Bande quadratique: $g_{c,v}(E) = \frac{1}{2 \pi^2}\left( \frac{2m^*_{c,v}}{\hbar^2}\right) \sqrt{E - E_{c,v}}$
     d'où \\
     $N(T) = \frac{1}{4} \left( \frac{2 m_c^* k_B T}{\pi \hbar^2}\right)^{3/2}=2.5 \left(\frac{m_c^*}{m}\right)^{3/2} \left(\frac{T}{300 \mathrm{K}}\right)^{3/2} 10^{19}/\mathrm{cm}^3; \quad P(T) = \frac{1}{4} \left( \frac{2 m_v^* k_B T}{\pi \hbar^2}\right)^{3/2}$
     \item \textbf{Loi d'action de masse:} $n(T)p(T) = N(T)P(T) e^{-\beta E_g}$
-    \item sc \textbf{intrinsèque} $n(T) = p(T) = n_i(T)$ \quad densité d'$e^-$ excités thermiquement \\
+    \item sc \textbf{intrinsèque} (ou impuret.) $n(T) = p(T) = n_i(T)$ \quad densité d'$e^-$ excités thermiquement \\
     $\Longrightarrow n_i(T) = \sqrt{n(T) p(T)} = e^{-E_g / 2 k_B T} \sqrt{N(T) P(T)}$ \\
     $\Longrightarrow \mu_i(T) = E_v + \frac{1}{2}E_g + \frac{1}{2}k_B T \ln \left( \frac{P(T)}{N(T)}\right) = E_v + \frac{1}{2}E_g + \frac{3}{2}\frac{1}{2}k_B T \ln \left( \frac{m_v^*}{m_c^*}\right)$
 \end{squishlist}
 
 \graypar{Semiconducteur dopé}
 Ajout d’impuretés à un SC.
-L’impureté doit avoir un nombre d’électrons de valence diﬀérent de celui du SC pur. Si la valence de l’impureté est supérieure à celle du SC, nous sommes en présence d’un \textbf{donneur} (l’impureté “donne” un électron au semi-conducteur), tandis que si la valence est inférieure, nous sommes en présence d’un \textbf{accepteur} (l’impureté "prend" un électron au SC, autrement dit, lui "donne" un trou)
+L’impureté doit avoir un nb d'\elec de valence diff.\ de celui du SC pur. Si la valence de l’impureté est supérieure à celle du SC, c'est un \textbf{donneur} (l’impureté “donne” un \elec au SC), si la valence est inférieure, c'est un \textbf{accepteur} (l’impureté "prend" un \elec au SC, autrement dit, lui "donne" un trou)
 \begin{squishlist}
     \item Impuretés modèlisées avec atome d'H avec corrections: masse effective $m^*$ et constante diélectrique $\varepsilon_r$ du SC 
     $\Longrightarrow r_0 = \frac{\varepsilon_r}{m^*/m} a_0; \quad E=\frac{m^*/m}{\varepsilon_r^2}E_H$
+    \item Si la densité d'impuretés $>$ $n_i \Longrightarrow$ SC extrinseque
     \item $n = \frac{1}{2}\sqrt{\Delta n^2 + 4 n_i^2} + \frac{1}{2}\Delta n;\quad \Delta n = n - p$
-    \item $\frac{\Delta n }{n_i} = \frac{n-p}{\sqrt{np}} = 2 \sinh (\beta(\mu - \mu_i))$
-    \item $\sigma = n e \nu_e + p e \nu_h$
+    \squishsep $\frac{\Delta n }{n_i} = \frac{n-p}{\sqrt{np}} = 2 \sinh (\beta(\mu - \mu_i))$
+    \item $\sigma = n e \nu_e + p e \nu_h$ \qquad $\nu = \frac{\braket{|\vr|}}{E} \Longrightarrow \nu_{e/h} = \frac{e \tau_{e/h}}{m_{e/h}}$ mobilité
 \end{squishlist}    
 
 \graypar{Jonction pn}
-En polaris.\ directe le courant est dû aux porteurs majoritaires (\elec qui provienn,\ de la region $n$ et trous de la region $p$) par diffusion et recombinaison.
-En polaris.\ inverse le courant est dû aux porteurs minoritaires générés thermiquement, favoris par champ électrique.
+Cristal SC dans lequel la concentr.\ en impuretés varie le long d’une direct.\ dans une région de faible dimension. D' un côté exces de donneur, de l'autre de accept.\
 
+\begin{squishlist}
+    \item $\Delta \phi = \phi(\infty) - \phi(-\infty)$ \qquad $\Delta^2 \phi = - \frac{\rho(x)}{\varepsilon_0 \varepsilon_r}$
+    \item $x>0 : \rho(x) = e (N_d - n_d - n(x) + p(x))$ \quad $N_d-n_d$ le nb de donn.\ ionisés
+    \item $n(x=+\infty) \approxeq N_d$ \qquad Dans la zone de trans.\ $n(x)$ presque $0$
+    \item À l'équilib.\ therm.\ le courant de diff.\ compense le courant des port.\ de charge sour effet de $\vec{E}$ $\Longrightarrow D_e = \frac{k_B T}{e} \nu_e$ \textbf{Relation d'Einstein}
+    \item \textbf{Mod. de Shottky}: $\rho(x) = 0$ si $x>d_n$ ou $x < -d_p$, $eN_d$ si $0<x<d_n$, $-eN_a$ si $-d_p<x<0$
+\end{squishlist}
 \graysec{Les supraconducteurs}
 \begin{squishlist}
-    \item \textbf{Effet Meissner}: si $T<T_c$ le flux magnétique est éjécté
-    \item Au dessus d'un champ critique $H_c$ l'état supra est détruit
-    \item Type II, pour $H_{c1}<H<H_{c2}$ la densité de flux à l'intérieur est non nulle (effet Meissner incomplet)
+    \item État supra: $\rho=0$ si (i) $T<T_c$ (ii) $H < H_c$ (iii) $I < I_c$
+    \item \textbf{Effet Meissner}: expuls.\ du champ magn.\ lorsque supra est refroidi à $T<T_c$. \\
+    Dans type I, $B$ décroit exp.\ de la surface vers l'int.\ su supra ($\lambda_L$ prof.\ de pénétr.)
+    \item \textbf{Type II}: si $H_{c1}<H<H_{c2}$ la dens.\ de flux à l'intér.\ est non nulle (Meissner incompl.)
     \item \textbf{Eq.\ de London}: $\vec{j} = - \frac{1}{\mu_0 \lambda_L^2} \vec{A} \Longrightarrow \vec{\nabla}^2 \vec{B} = \frac{1}{\lambda_L^2}\vec{B}$ qui a seule solut.\ $B=0$
-    \item Prédictions de la théorie BCS
+    \item \textbf{Théorie BCS}: intér.\ attractive mediée par phonons entre \elec avec $E\approx E_F$. Forme paires d'\elec avec $\vec{k}_{\uparrow}$ et $-\vec{k}_{\downarrow}$ (\textbf{paires de Cooper}). Fait appar.\ gap supra.
+    \item Effet isotopique: la masse isotopique varie la $T_c$ $\Rightarrow$ sugère médiat.\ par phonons
 \end{squishlist}
+
+\graysec{Proprietés magnétiques des solides}
+\begin{squishlist}
+    \item $H = H_0 + H_m = \frac{1}{2m}\sum_i p_i^2 + \mu_B \vec{B} \cdot (\vec{L}+ 2 \vec{S}) + \frac{e^2 B^2}{8m} \sum_i (x_i^2 + y_i^2)$
+    \item Pour élements couches pleines ($L=S=J=0$) $\chi_{\text{Larmor}} = -\mu_0 \frac{N}{V} \frac{e^2}{6m} \braket{0|\sum_i r_i^2|0}$ \\
+    Pour $J\neq0$ $H_m = \mu_B g \vec{J} \cdot \vec{B}$ 
+    \item \textbf{Hamilton.\ de Heisenberg:} $H^{\text{spin}} = - \sum J_{ij} \vec{S}_i \cdot \vec{S}_j$  L’interaction à l’origine du ferromagnétisme est l’interaction d’échange de Heisenberg.
+    \item \textbf{Modèle de bande}: le princ.\ de Pauli cause un gain d'$E$ pour les \elec de spin parall.\
+\end{squishlist}
+
 
 \graysec{Mixed}
 \begin{squishlist}

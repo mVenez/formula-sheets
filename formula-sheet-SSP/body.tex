@@ -56,12 +56,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 
     \textbf{3D}
     \item $u_{\alpha}(\vR) = \frac{1}{\sqrt{3N}}\sum_{\nu}\sum_{s=1}^{3} a_{\nu,s} \varepsilon_{\alpha,s}(\vk_{\nu}) \exp [i \vk_{\nu} \cdot \vR - i \omega_s(\vk_{\nu}t)] + c.c.$ \\ 
-    Pour chacune des $N$ valeurs $\vk_{\nu}$ dans une cellule primitive, 3 directions $\vec{\varepsilon}_s$ de polarisation, donc $3N$ modes propres
-
-    \squishline
-
-    \textbf{non-monoatomique}
-    \item Nb de valeurs $k$ dans 1ZDB $= pN$ où $p$ nb d'atomes dans la base, $N$ nb de mailles
+    Pour chacune des $N$ (nb de mailles) valeurs $\vk_{\nu}$ dans la 1ZDB, 3 directions $\vec{\varepsilon}_s$ de polarisation, donc $3N$ modes propres
 
 \end{squishlist}
 
@@ -128,7 +123,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 
     \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = c|k|$ ($\omega \propto \sqrt{C/m}|k|$) \\
     (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne le même nombre de vecteurs d'onde: \\
-    $\left( \Omega_{\text{Debye}} \right) \cdot \text{densité de }k = \# \text{de } k \text{ dans 1ZDB}\quad \text{densité}=\frac{\text{vol.\ du cristal}}{\text{volume d'un }k}$ e.g.\ $\frac{N a^2}{(2\pi)^2}$ en 2D \\
+    $\left( \Omega_{\text{Debye}} \right) \cdot \text{densité de }k = \# \text{nb atomes}\quad \text{densité}=\frac{\text{vol.\ du cristal}}{\text{volume d'un }k}$ e.g.\ $\frac{N a^2}{(2\pi)^2}$ en 2D \\
     $\Longrightarrow$ en 3D $n = \frac{N}{V} = \frac{k_D^3}{6\pi^2}$
     \item En définissant $\omega_D = ck_D$ et $k_B \theta_D = \hbar \omega_D$ ($T > \theta_D$: tous les modes commencent à être excités) on a
     $c_v = 9 n k_B \left(\frac{T}{\theta_D}\right)^3 {\displaystyle \int_0^{\theta_D/T}} \frac{x^4 e^x}{(e^x - 1)^2} \ud x$ où $x = \beta \hbar c k$
@@ -140,7 +135,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup de $k$: haute densité
 \begin{squishlist}
     \item $g(\omega) = \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud^3 k}{(2\pi)^3}\delta[\omega - \omega_s(\vk)] = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$ en 3D
-    \item $u = \sum_s \int_{\text{1ZDB}} \frac{\ud^3 \vk}{(2\pi)^3} \hbar \omega_s(\vk) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right)$
+    \item $u = \sum_s \int_{\text{1ZDB}} \frac{\ud^3 \vk}{(2\pi)^3} \hbar \omega_s(\vk) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right) = \int_{0}^{\omega_{\text{max}}} \hbar \omega g(\omega) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right)  \ud \omega$
     \item Chaine 1D, Haute $T$: $c_{V, \text{Debye}} = c_{V,\text{exac}} = n K_B = K_B / a$ \\
     Basse $T$: $c_{V, \text{Debye}} = \frac{\pi^2}{3}nK_B \frac{T}{\theta_D} \quad c_{V,\text{exac}} = \frac{2\pi}{3} n k_B \frac{k_B}{\hbar \omega_{\max}} T + \frac{4 \pi^3}{15} nk_B \left(\frac{k_B}{\hbar \omega_{\max}}\right)^3 T^3$
 \end{squishlist}
@@ -155,6 +150,11 @@ Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup 
     \item \textbf{Processus normal} : $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk$ (conservation des moments) \\
     \textbf{Processus Umklapp}:  $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk + \vG$ (conserv.\ à un vec.\ du rés.\ recip.\ près) \\
     Umklapp peu probable à basse $T$. Seul le faible nb des phon.\ participant à  processus Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$ donc réduit la conductibilité thermique (la quantité de mouvement est alterée, direction de propagation changée).
+\end{squishlist}
+
+\graysec{Mixed}
+\begin{squishlist}
+    \item $k_B T (300$K$) \approx 26$ meV
 \end{squishlist}
 
 \columnbreak
@@ -230,11 +230,13 @@ bien aux métaux de transition et aux isolants, qui ont un recouvrement d'orbita
 trop important.
 \begin{squishlist}
     \item $E(\vk) = E + \frac{\beta + \sum_{\vR \neq 0}\exp(i\vk \cdot \vR) \; \gamma(\vR)}{1 + \sum_{\vR \neq 0}\exp(i\vk \cdot \vR)\; \alpha(\vR)}$
-    $\left\{ \begin{aligned}
-        & \alpha(\vR) = \int \phi^*(\vr)\phi(\vr - \vR) \ud^3 r \\
-        & \beta = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr) \ud^3 r \\
-        & \gamma(\vR) = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr - \vR) \ud^3 r
-    \end{aligned} \right.$
+    \qquad $\alpha(\vR) = \int \phi^*(\vr)\phi(\vr - \vR) \ud^3 r$ \\
+    $\beta = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr) \ud^3 r$ \qquad $\gamma(\vR) = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr - \vR) \ud^3 r$
+    % $\left\{ \begin{aligned}
+    %     & \alpha(\vR) = \int \phi^*(\vr)\phi(\vr - \vR) \ud^3 r \\
+    %     & \beta = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr) \ud^3 r \\
+    %     & \gamma(\vR) = \int \phi^*(\vr)\Delta U (\vr) \phi(\vr - \vR) \ud^3 r
+    % \end{aligned} \right.$
     \item Recouvrem.\ $\alpha(\vr)$ positive pour fonction d'onde de type $s$, typiquem.\ entre 0.1 et 0.4
     \item Champ cristallin $\beta < 0$ décrit l'effet du potentiel généré par les autres atomes.
     \item L'intégrale de transfert $\gamma(R)$ ($<0$ pour orbit.\ type $s$) décrit le passage d'un électron du site initial $R = 0$ au site $R$, induit par la présence du potentiel $\Delta U$.
@@ -278,7 +280,7 @@ est à moitié remplie par les électrons.
         \item $\nabla E(\vk)$ pointe vers l'éxter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire électronique
         \item $\nabla E(\vk)$ pointe vers l'inter.\ de la surf.\ $E(\vk) = $ cte $\Rightarrow$ trajectoire de type trou
     \end{itemize}
-    \item DANS L'ÉSPACE RÉEL
+    \item Dans l'éspace réel $r_{\perp}(t) - r_{\perp}(0)$ est tourné de $90^{\circ}$ par rapport à $k(t) - k(0)$
 \end{squishlist}
 
 \graysec{Les semiconducteurs}
@@ -338,8 +340,3 @@ Cristal SC dans lequel la concentr.\ en impuretés varie le long d’une direct.
     \item \textbf{Modèle de bande}: le princ.\ de Pauli cause un gain d'$E$ pour les \elec de spin parall.\
 \end{squishlist}
 
-
-\graysec{Mixed}
-\begin{squishlist}
-    \item $k_B T (300$K$) \approx 26$ meV
-\end{squishlist}

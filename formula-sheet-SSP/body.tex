@@ -2,7 +2,8 @@
 \graysec{Réseaux cristallins dans l'éspace réel et réciproque}
 \begin{squishlist}
     \item Énergie électrost.\ $E = - M_d \frac{e^2}{4\pi \varepsilon_0 a}$ \textbf{Cst de Madelung} specif.\ pour une struct.\ donnée
-    \item \textbf{Liaison covalente}: partage d'\elec entre les atomes, favorable en présence d'orbitales de valence partiell.\ remplies. E.g.\ diamant, hybridisation $sp^3$ $\Rightarrow$ nb de coordin.\ 4
+    \item \textbf{Liaison covalente}: partage d'\elec entre les atomes, favorable en présence d'orbitales de valence partiell.\ remplies. E.g.\ diamant, hybridisation $sp^3$ $\Rightarrow$ nb de coordin.\ 4 \\
+    \textbf{Liaison ionique}: entre atome avec un seul \elec de valence et un qui manque d'un \elec de valence. Resulte en deux ions avec couches completes.
     \item Taux de remplissage $t$: rapp.\ entre le volume occupé par les atomes (assimilés à des sphères dures de rayon $r$) et le volume de la maille considérée
 \end{squishlist}
 \graypar{Réseaux cristallins}
@@ -31,7 +32,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     \item \textbf{Théorie de Bragg:} les rayons X sont réfléchis par les plans atomiques du cristal. \textbf{Condition de Bragg:} $n \lambda = 2d \sin \Theta$, $n \in \mathbb{N}$ (interférence constructive d'ondes émerg.\ de plans successifs). $\lambda < 2d$. \quad
     \textbf{Condition de Laue:} $\vec{K} = \vk'-\vk = \vG$
 
-    \item \textbf{Indices de Miller:} les plans du réseau sont caractérisés par $(h,k,l)$. On trouve les intersections avec les axes cristallographiques (en unités de vecteurs primitifs), ensuite on prend les valeurs réciproques de ces nombres.\\
+    \item \textbf{Indices de Miller:} les plans du réseau sont caractérisés par $(h,k,l)$. $(h,k,l)$ intersectent les axes $x,y,z$ en $1/h,1/k,1/l$.\\
     $\vG = h \vec{b}_1 + k \vec{b}_2 + l \vec{b}_3$ vec du RR perp.\ à la famille de plans, avec plus petite norme $G_{\min} = 2\pi / d \quad G = n G_{\min}$
 \end{squishlist}
 
@@ -46,7 +47,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 \begin{squishlist}
     \item Chaine linéaire d'ions de masse $M$ séparés à l'ex.\ par $a$ ($R = na$)\\
     $U_{\text{harm}} = \frac{1}{4} \sum_{n,n'} C_{n,n'}(u_n - u_n')^2 \quad C_{n,n'} = C_{n',n} = \phi_{xx}(na - n'a)$
-    \item Interactions entre plus proches voisins: les seuls coefs non nuls sont t.q.\ $n-n'= \pm 1$
+    % \item Interactions entre plus proches voisins: les seuls coefs non nuls sont t.q.\ $n-n'= \pm 1$
     \item \textbf{Conditions de Born von Karman:} $u_{N+1} = u_1 \Longrightarrow U_{\text{harm}} = \frac{1}{2}\sum_{n=1}^{N}C(u_{n+1}-u_n)^2$
     \item $H(p,u) = \sum_{n=1}^{N}\frac{p^2_n}{2m} + \frac{C}{2}\sum_{n=1}^{N}(u_{n+1} - u_n)^2 \Longrightarrow \ddot{u}_n = -\frac{C}{m}(-u_{n-1}+2u_n - u_{n+1})$
     \item $u_n(t) = \frac{1}{\sqrt{N}} \sum_{\nu=0}^{N-1}a_{\nu} \exp[ i (k_{\nu}na - \omega_{\nu}t)] + c.c.$ \quad $k_{\nu} = \frac{2\pi \nu}{aN} \quad \nu = 0,1,\ldots, N-1$ 
@@ -89,10 +90,13 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 \graypar{La notion de phonons}
 \begin{squishlist}
     \item La contribution à l'énergie totale d'un mode normal de fréquence $\omega_s(\vk_{\nu})$ est $\left( n_{\vk_{\nu,s}} + \frac{1}{2}\right) \hbar \omega_s(\vk_{\nu})$ \qquad $n_{\vk_{\nu,s}} = 0,1,2,\ldots$ \textbf{nb d'occupation} du mode normal $\nu,sd$
-    \item On passe à une déscriptions corpusculaire: nombre $n_{\vk_{\nu,s}}$ de \textbf{phonons} de vecteur d'onde $\vk_{\nu}$ et polar.\ $s$ dans le crystal.
-    \item Les phonons d'un réseau ne portent pas de quantité de mouvement
-    \item Lors de l’interaction entre une particule incidente dans le cristal et les phonons, tout se passe comme si une pseudo quantité de mouvement, $\hbar \vk$ (crystal momentum), était conservée à un vecteur $\hbar \vG$ du réseau réciproque près. \\
-    $\vec{p} + \sum_{\nu,s}\hbar \vk_{\nu}n_{\vk_{\nu,s}} = \vec{p}' + \sum_{\nu,s}\hbar \vk_{\nu}n'_{\vk_{\nu,s}} + \hbar \vG$ \quad plus cons.\ de l'énergie
+    \item On passe à une déscript.\ corpusculaire: nb $n_{\vk_{\nu,s}}$ de \textbf{phonons} de vecteur d'onde $\vk_{\nu}$ et polar.\ $s$ dans le crystal.
+    Les phon.\ d'un rés.\ ne port.\ pas de quant.\ de mouv.\
+
+    \item Lors de l’inter.\ entre une particule incid.\ dans le cristal et les phon.\, tout se passe comme si une pseudo quant.\ de mouvem.\, $\hbar \vk$ (crystal momentum), était conservée à un vecteur $\hbar \vG$ du réseau réciproque près. \\
+    $\vec{p} + \sum_{\nu,s}\hbar \vk_{\nu}n_{\vk_{\nu,s}} = \vec{p}' + \sum_{\nu,s}\hbar \vk_{\nu}n'_{\vk_{\nu,s}} + \hbar \vG$ \qquad \\
+    $E + \sum_{k_{\nu},s} \hbar \omega_s (\vk_{\nu}) n_{\vk_{\nu},s} = E' + \sum_{k_{\nu},s} \hbar \omega_s (\vk_{\nu}) n'_{\vk_{\nu},s}$
+    % \end{minipage}
 
     \item \textbf{Diffusion à un phonon:} $\frac{p'^2}{2m} = \frac{p^2}{2m} + \hbar \omega_s \left( \frac{\vec{p'}-\vec{p}}{\hbar}\right)$
     
@@ -103,7 +107,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     \item $c_v = \left.\D{T}{u}\right|_V$ chaleur spécifique du réseau
     \item \textbf{Loi de Dulong et Petit:} $c_v = 3n k_B$ ($n$ densité d'atomes). En accord avec les mesures pour une bonne partie des solides et proches de la température ambiante.
     \item $u = \frac{1}{V} \sum_{\vk,s} \hbar \omega_s(\vk) \left( \braket{n_{\vk,s}}+\frac{1}{2}\right)$ \quad $\braket{n_{\vk,s}} = \frac{1}{\exp[\beta \hbar \omega_s(\vk)]-1}$ (Bose-Einstein) \\
-    À haute $T$, si $x = \frac{\hbar \omega_s}{k_B T}$, $\braket{n_{\vk,s}} \approx \frac{1}{x} - \frac{1}{2} + \frac{x}{12} \approx \frac{k_BT}{\hbar \omega_s} - \frac{1}{2}$
+    À haute $T$, si $x = \frac{\hbar \omega_s}{k_B T}$, \quad $\braket{n_{\vk,s}} \approx \frac{1}{x} - \frac{1}{2} + \frac{x}{12} \approx \frac{k_BT}{\hbar \omega_s} - \frac{1}{2}$
     
     \item \textbf{Expression génerale:} $c_v = \D{T}{} \sum_s {\displaystyle\int_{\text{1ZDB}}} \frac{\ud^3 k}{(2\pi)^3} \frac{\hbar \omega_s(\vk)}{\exp[\hbar \omega_s(\vk)/k_B T]-1}$
     
@@ -122,7 +126,7 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
     Pas de modes qui peuv.\ être excités à basse $T$ $\rightarrow$ $c_V$ décroit trop vite en descend.\ $T$
 
     \item \textbf{Modèle de Debye:} (1) on remplace toutes les branches du spectre de vibration par 3 branches ayant la même relation de dispersion $\omega = c|k|$ ($\omega \propto \sqrt{C/m}|k|$) \\
-    (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne le même nombre de vecteurs d'onde: \\
+    (2) on remplace l'intégrale sur 1ZDB par une int.\ sur une sphère de rayon $k_D$, de telle sorte que la sphère contienne $N_{\text{atomes}}$ vecteurs d'onde: \\
     $\left( \Omega_{\text{Debye}} \right) \cdot \text{densité de }k = \# \text{nb atomes}\quad \text{densité}=\frac{\text{vol.\ du cristal}}{\text{volume d'un }k}$ e.g.\ $\frac{N a^2}{(2\pi)^2}$ en 2D \\
     $\Longrightarrow$ en 3D $n = \frac{N}{V} = \frac{k_D^3}{6\pi^2}$
     \item En définissant $\omega_D = ck_D$ et $k_B \theta_D = \hbar \omega_D$ ($T > \theta_D$: tous les modes commencent à être excités) on a
@@ -132,12 +136,13 @@ Techn.\ expérim.\ pour déterminer la struct.\ cristalline: diffraction de rayo
 \end{squishlist}
 
 \graypar{Densité de modes en $\omega$}
-Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup de $k$: haute densité
 \begin{squishlist}
-    \item $g(\omega) = \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud^3 k}{(2\pi)^3}\delta[\omega - \omega_s(\vk)] = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$ en 3D
+    \item $g(\omega) \ud \omega = \frac{\ud^n k}{(2\pi)^n}$
+    \quad Combien de $k$ ($\Delta k$) pour $\omega$ ($\Delta \omega$) donné? Beauc.\ de $k$: haute dens. \\
+    \item $g(\omega) = \sum_s {\displaystyle \int} \frac{\ud^3 k}{(2\pi)^3}\delta[\omega - \omega_s(\vk)] = \frac{1}{(2\pi)^3} \sum_s {\displaystyle \int_{\omega_s(\vk) = \omega}} \frac{\ud S_{\omega}}{|\nabla \omega_s(\vk)|}$ en 3D \quad $g(\omega)_{\text{Deb}}= \frac{3}{2\pi^2}\frac{\omega^2}{c^3}$
     \item $u = \sum_s \int_{\text{1ZDB}} \frac{\ud^3 \vk}{(2\pi)^3} \hbar \omega_s(\vk) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right) = \int_{0}^{\omega_{\text{max}}} \hbar \omega g(\omega) \left(\braket{n_{\vk, s}} + \frac{1}{2}\right)  \ud \omega$
-    \item Chaine 1D, Haute $T$: $c_{V, \text{Debye}} = c_{V,\text{exac}} = n K_B = K_B / a$ \\
-    Basse $T$: $c_{V, \text{Debye}} = \frac{\pi^2}{3}nK_B \frac{T}{\theta_D} \quad c_{V,\text{exac}} = \frac{2\pi}{3} n k_B \frac{k_B}{\hbar \omega_{\max}} T + \frac{4 \pi^3}{15} nk_B \left(\frac{k_B}{\hbar \omega_{\max}}\right)^3 T^3$
+    \item 1D, Haute $T$: $c_{V, \text{Debye}} = c_{V,\text{exac}} = n K_B = K_B / a$ \quad
+    Basse $T$: $c_{V, \text{Debye}} = \frac{\pi^2}{3}nK_B \frac{T}{\theta_D} \\ c_{V,\text{exac}} = \frac{2\pi}{3} n k_B \frac{k_B}{\hbar \omega_{\max}} T + \frac{4 \pi^3}{15} nk_B \left(\frac{k_B}{\hbar \omega_{\max}}\right)^3 T^3$ \quad ($T$: \elec, $T^3$: vibr.\ réseau)
 \end{squishlist}
 
 \graypar{Conductibilité thermique du réseau}
@@ -145,6 +150,7 @@ Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup 
     \item \textbf{Cristal parfaitement harmonique:} les modes normaux sont états stationnaires de l'hamiltonien du cristal. Si une distribution de phonons se crée, elle ne sera pas modifiée au cours de temps. Conductibilité thermique infinie.
     \item La conductibilité thermique du réseau n'est pas infinie pour les raisons
     (1) impuretés brisent la symetrie de translation (2) la surface de l'échantillon est non-negligeable si sa dimension est de l'ordre du libre parcours moyen des phonons (3) les états stationnaires de l’hamiltonien harmonique ne sont pas états stationnaires de l’hamiltonien réel du cristal qui contient des termes anharmoniques.
+    \item Isolants: \elec ne contrib.\ pas à la conductib.\ therm.\ qui est uniq.\ due aux vibr.\ du réseau.
     \item \textbf{Théorie cinétique:} si $\omega = ck$, $\lambda = c \tau$ libre parcours moyens ($\tau \sim \frac{1}{T}$) \\ $j_Q = \frac{1}{2}c (u[T(x-\lambda)] - u[T(x+\lambda)]) = - c^2 \tau \D{T}{u}\D{x}{T}$ \\
     En 3D $\vec{j}_Q = - \frac{1}{3}c^2 c_v(T) \tau \vec{\nabla T} \Longleftrightarrow \kappa = \frac{1}{3} c^2 \tau c_v(T)$
     \item \textbf{Processus normal} : $\sum n_{\vk,s}\vk = \sum n'_{\vk, s}\vk$ (conservation des moments) \\
@@ -152,38 +158,36 @@ Combien de $k$ ($\Delta k$) pour un $\omega$ ($\Delta \omega$) donné? Beaucoup 
     Umklapp peu probable à basse $T$. Seul le faible nb des phon.\ participant à  processus Umklapp contribuent à la relaxation $\tau_{\text{Umk}} \sim \exp(T_0/T)$ donc réduit la conductibilité thermique (la quantité de mouvement est alterée, direction de propagation changée).
 \end{squishlist}
 
-\graysec{Mixed}
-\begin{squishlist}
-    \item $k_B T (300$K$) \approx 26$ meV
-\end{squishlist}
-
-\columnbreak
 
 \graysec{Gaz d'électrons libres de Fermi}
-Hypoth.\: les \elec se déplacent dans un \textbf{potentiel eﬀectif constant}. Bonne approx.\ pour beauc.\ de métaux, mais ne peut pas expliquer pourquoi un solide est un métal, un sémiconducteur, ou un isolant.
+\textbf{Potentiel eﬀectif constant}. Bonne approx.\ pour beauc.\ de métaux, mais ne peut pas expliquer pourquoi un solide est un métal, un sémiconducteur, ou un isolant.
 \begin{squishlist}
-    \item Conditions de Born-von-Karman: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif. \\
+    \item \textbf{Conditions de Born-von-Karman}: $\psi(\vec{r} + N_j \vec{a}_j) = \psi(\vec{r}), \, \forall j=1,2,3$ où $\vec{a}_j$ est un vecteur primitif du réseau de Bravais, $N_j$ un entier positif. \\
     $\Rightarrow$Les comp.\ de $\vk$ sont multipl.\ de $\frac{2\pi}{L} \Longrightarrow$ dans éspace dim.\ $N$, volume de $k$ $=\left(\frac{2\pi}{L}\right)^N$
     \item $\psi_{\vk}(\vr) = \frac{1}{\sqrt{V}}\exp(i \vk \cdot \vr) \quad E(\vk) = \frac{\hbar^2 k^2}{2m} \quad k = \left(\frac{2m}{\hbar^2}\right)^{1/2} \sqrt{E} \quad \vec{p}=\hbar \vec{k}$
     \item $N$ valeurs $\vec{k}$ admises dans chaque zone de Brillouin $\rightarrow$ $2N$ états électroniques (spin). Toutes les valeurs $\vk$ t.q.\ $k\leq k_F$ sont occupées, celles t.q.\ $k > k_F$ sont vides.
     \item Trouver $k_F$: vol. sphère de Fermi $\Omega_F$ $\times$ densité de $k$ $\times \; 2$ (spin) = \# $e^-$ dans système 
+    
     \item \textbf{Densité électronique} $n = \frac{N}{V} = \int_0^{E_F} g(E) \ud E$ \\
     E.g.\ 3D: $2 \left( \frac{4}{3}\pi k^3_F\right) \left( \frac{V}{8\pi^3}\right) = N \quad \frac{N}{V} = n = \frac{k_F^3}{3\pi^2} \qquad E_F = \frac{\hbar^2}{2m}(3\pi^2 n)^{2/3}$
 
     % \item $E_F = \frac{\hbar^2 k_F^2}{2m}$
     \item\textbf{Densité d'états} $g(E)$: \# d'états par unité de $V$ avec énergie entre $E$ et $E+\ud E$\\
-    $g(E) \ud E = 2\; \frac{\ud \Omega}{\text{volume $k$}} \; \frac{1}{V}$ \\ 
+    $g(E) \ud E = 2 \frac{\ud \Omega}{\text{volume de $k$}} \frac{1}{V} = 2  \left(\frac{L}{2\pi}\right)^N \left(\frac{1}{L}\right)^N \ud \Omega $ \\ 
     $g(E)_{\text{1D}} =\frac{\sqrt{2m}}{\pi \hbar}\frac{1}{\sqrt{E}}$ \quad
     $g(E)_{\text{2D}} = \frac{m}{\pi \hbar^2}$ \quad
-    $g(E)_{\text{3D}} = \frac{1}{2\pi} \left(\frac{2m}{\hbar^2}\right)^{3/2}\sqrt{E}$ \quad $g(E_F) = \frac{3}{2} \frac{n}{E_F}$
+    $g(E)_{\text{3D}} = \frac{1}{2\pi^2} \left(\frac{2m}{\hbar^2}\right)^{3/2}\sqrt{E}$ \quad $g(E_F)_{\text{3D}} = \frac{3}{2} \frac{n}{E_F}$
     % \squishsep $u(0 $K$) = \int_{0}^{E_F}E \; g(E)\; \ud E$ 
     \item \textbf{Fermi-Dirac}: $f(E,T) = \frac{1}{\exp\left(\frac{(E- \mu)}{k_B T}\right) + 1}$ \squishsep $u = \int_{0}^{\infty}E \; g(E)\; f(E) \; \ud E$
     \item \textbf{Developp.\ de Sommerfeld:} $\int_{0}^{\infty}h)E) f(E) \ud E = \int_{0}^{\mu} h(E) \ud E + \frac{\pi^2}{6}(k_BT)^2 \left.\D{E}{h}\right|_{E=\mu} + \ldots$
     \item $\mu(T) = E_F - \frac{\pi^2}{6}(k_B T)^2 \frac{1}{g(E_F)} \left.\D{E}{g}\right|_{E_F}$ \squishsep $c_V = \frac{\pi^2}{3}K_B^2 T \, g(E_F) $ (contrib.\ \elec)
-    \item Champ magn.\ $\Rightarrow g_{\pm}(E) = \frac{1}{2}g(E\mp \mu_B B)$\quad $\chi_{\text{Pauli}} = \mu_0 \mu_B^2 g(E_F)$ ($\mu$ inchangé)
+    \item \textbf{Champ magn.} $\Rightarrow g_{\pm}(E) = \frac{1}{2}g(E\mp \mu_B B)$\qquad $n_{\pm} \approx \frac{1}{2}(n \mp \mu_B B g(E_F))$\\
+    $M_Z = -\mu_B n_+ + \mu_B n_-$ \qquad$\chi_{\text{Pauli}} = \frac{\mu_0 M_z}{B} = \mu_0 \mu_B^2 g(E_F)$ \quad ($\mu$ inchangé) \\
+    
     \item $\vec{j} = -ne \braket{\vec{v}} = \sigma \vec{E}$ \quad En présence de $\vec{E}$ la sphère de Fermi est déplacé de $\braket{\vk}=-e\vec{E}\tau / \hbar$ \\
-    $\Longrightarrow$ Conduct.\ électrique $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
-    \item Conductivité thermique $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$ $\Rightarrow$ \textbf{Wiedemann-Franz}: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)$
+    $\Longrightarrow$ \textbf{Conduct.\ électrique} $\sigma = \frac{n e^2 \tau(E_F)}{m}$ diminue avec $T$ (parce que $\tau$ diminue avec $T$)
+    \item $\rho$ const à basse $T$ (collis.\ \elec - impur.) et $\propto T$ après (\elec - phonons)
+    \item \textbf{Conductivité thermique} $\kappa = \frac{1}{3}V_F^2 \tau(E_F) c_V$ $\Rightarrow$ \textbf{Wiedemann-Franz}: $\frac{\kappa}{\sigma T} = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)^2$
 \end{squishlist}
 
 
@@ -208,15 +212,15 @@ Hypoth.\: les \elec se déplacent dans un \textbf{potentiel eﬀectif constant}.
 
 \graypar{Modèle des électrons faiblement couplés au réseau (quasi-libres)}
 Part des \elec libres et suppose une corrug.\ faible du potentiel, due à: 
-1) les interact.\ sont fortes surtout à courtes distances et le principe de Pauli empêche les électrons de conduction de pénétrer dans le coeur et 
-2) les \elec de coeur écrantent le noyau positif. Ce modèle s'applique en général bien aux \elec de valence de type s - p, donc pour les alcalins (groupe I), alcalins terreux (groupe II), métaux nobles.
+1) les interact.\ sont fortes surtout à courtes distances et Pauli empêche les \elec de conduction de pénétrer dans le coeur et 
+2) les \elec de coeur écrantent le noyau positif. S'applique bien aux \elec de valence de type s - p, donc pour les alcalins (groupe I), alcalins terreux (groupe II), métaux nobles.
 \begin{squishlist}
     \item \textbf{États non dégénérés:} faible correction (2nd ordre)
     \item \textbf{États presque dégénérés}: $(E_{k-G_i}^0 - E) c_{k-G_i} + \sum_{j=1}^m U_{G_j - G_i} c_{k-G_j} = 0$ \\
     $i,j = 1 \ldots m$ tels que $|E_{k-G_i}^0 - E_{k-G_j}^0| \lesssim U$, \quad $U_G$ coefficients de Fourier de $U$. \\
     Peut être mis sous forme matricielle, trouver energies propres et vecteurs propres \\
     Levée de la dégénérescence $\rightarrow$ bandes d'énergies interdites.
-    L’apparition d’un ”gap” d’énergie est donc reliée à la réflexion des fonctions d’onde électroniques (ondes planes) en bord de zone, qui crée des ondes
+    L’apparition d’un ”gap” d’énergie est reliée à la réflex.\ des foncs.\ d’onde électroniques (ondes planes) en bord de zone, qui crée des ondes
     stationnaires de densité de probabilité en $\cos^2$ ou $\sin^2$.
 \end{squishlist}
 
@@ -244,10 +248,10 @@ trop important.
 \end{squishlist}
 
 \graypar{Métaux, isolants, semiconducteurs}
-$2N$ fonctions de Bloch indépendantes dans chaque zone de Brillouin.
-À chaque zone de Brillouin on peut associer une bande d'énergie qui peut donc "contenir" $2N$ électrons.
-S’il y a un seul électron de valence par cellule primitive, la bande d’énergie
-est à moitié remplie par les électrons.
+% $2N$ fonctions de Bloch indépendantes dans chaque zone de Brillouin.
+À chaque ZDB on peut assoc.\ une bande d'énergie qui peut "contenir" $2N$ \elec.
+S’il y a un seul \elec de val.\ par cell.\ prim.\, la bande d’énerg.\
+est à moitié rempl.\ par les \elec.
 \begin{squishlist}
     \item  nb $e^-$ par maille \textbf{impair}: forcement \textbf{métal}
     \item  nb $e^-$ par maille \textbf{pair}: \textbf{métal} si les bandes d'énergie se recouvrent (deux bandes partiellement remplies); \textbf{isolants} si elles ne se recouvrent pas (électrons remplissent enti`erement une bande d’énergie, les autres bandes étant vides) ou \textbf{semiconducteurs} si la largeur de la bande interdite est faible ($\sim 1 $ eV) (il est possible de faire passer par excitation thermique des électrons de la bande pleine à la vide, conductibilité électrique qui croît lorsque la température augmente).
@@ -270,8 +274,8 @@ est à moitié remplie par les électrons.
     \item Sous l’eﬀet du champ $E$ le remplissage
     des états par les électrons n’est pas modifié, car deux états électroniques de la même bande qui diffèrent d’un vecteur du réseau réciproque doivent être considérés comme le même état.
     \item Concept de \textbf{trou}: $\vec{j} = -e \int_{\text{états occupés}} \frac{\ud^3 k}{4 \pi^3}\vec{v} = +e \int_{\text{états vides}} \frac{\ud^3 k}{4 \pi^3}\vec{v}$
-    \item Niveau électron.\ \textbf{proche du sommet d'une bande}: $E(\vk) = E(\vk_0) - A(\vk - \vk_0)^2$ \\
-    On définit la masse effective $m^*$ par $A = \frac{\hbar^2}{2m^*}$.
+    \item \textbf{Proche du sommet d'une bande}: $E(\vk) = E(\vk_0) - A(\vk - \vk_0)^2$ \quad $A = \frac{\hbar^2}{2m^*}$\\
+    \item \textbf{Masse effective} $\frac{1}{m^*}= \frac{1}{\hbar^2}\DD{k}{E(k)}$ tient compte de l'effet du pot.\ périod.\ .
     Un trou se comporte au voisinage du sommet d’une bande
     comme une particule de charge $+e$ et de masse $m^*$. Trous lourds ont paraboles larges, trous légers ont paraboles étroites.
 
@@ -284,11 +288,12 @@ est à moitié remplie par les électrons.
 \end{squishlist}
 
 \graysec{Les semiconducteurs}
-Un semiconducteur est intrinsèque si ses proprietés électroniques sont dominées par les $e^-$ excités thermiquement de la bande de valence à la bande de conduction et extrinsèque si elles sont dominées par les $e^-$ contribués à la bande de conduction ou capturé par la bande de valence par des impuretés.
+Un SC est intrins.\ si ses propr.\ électron.\ sont dominées par les $e^-$ excités thermiq.\ de la bande de valence à la bande de conduct.\ et extrins.\ si elles sont dominées par les $e^-$ contribués à la bande de conduct.\ ou capturé par la bande de valence par des impuretés.
 \begin{squishlist}
     \item Densité d'$e^-$ dans bande de conduction $n(T) = \int_{E_c}^{\infty} g_c(E) \frac{1}{e^{(E-\mu)/k_B T} + 1} \ud E$
     \item Densité de trous dans bande de valence $p(T) =\int_{-\infty}^{E_v} g_v(E)\left( 1- \frac{1}{e^{(E-\mu)/k_B T} + 1} \right)\ud E$
-    \item Pour un sc non dégénéré ($E_c - \mu \gg k_B T, \mu -E_v \gg k_B T)$ on a \\ $n(T) = N(T) e^{-(E_c - \mu) / k_B T}$ \quad $p(T) = P(T) e^{-(\mu - E_v) / k_B T}$
+    \item Pour un sc non dégénéré ($E_c - \mu \gg k_B T, \mu -E_v \gg k_B T)$ on a \\ $n(T) = N(T) e^{-(E_c - \mu) / k_B T}$ \qquad $p(T) = P(T) e^{-(\mu - E_v) / k_B T}$ \vspace{0.05cm} \\
+    $N(T) = \int_{E_c}^{\infty} g_V(E) e^{-(E-E_c)/k_B T} \qquad P(T) = \int_{-\infty}^{E_v}g_v(E) e^{-(E_v - E)/ k_B T}$
     \item Bande quadratique: $g_{c,v}(E) = \frac{1}{2 \pi^2}\left( \frac{2m^*_{c,v}}{\hbar^2}\right) \sqrt{E - E_{c,v}}$
     d'où \\
     $N(T) = \frac{1}{4} \left( \frac{2 m_c^* k_B T}{\pi \hbar^2}\right)^{3/2}=2.5 \left(\frac{m_c^*}{m}\right)^{3/2} \left(\frac{T}{300 \mathrm{K}}\right)^{3/2} 10^{19}/\mathrm{cm}^3; \quad P(T) = \frac{1}{4} \left( \frac{2 m_v^* k_B T}{\pi \hbar^2}\right)^{3/2}$
@@ -318,7 +323,8 @@ Cristal SC dans lequel la concentr.\ en impuretés varie le long d’une direct.
     \item $x>0 : \rho(x) = e (N_d - n_d - n(x) + p(x))$ \quad $N_d-n_d$ le nb de donn.\ ionisés
     \item $n(x=+\infty) \approxeq N_d$ \qquad Dans la zone de trans.\ $n(x)$ presque $0$
     \item À l'équilib.\ therm.\ le courant de diff.\ compense le courant des port.\ de charge sour effet de $\vec{E}$ $\Longrightarrow D_e = \frac{k_B T}{e} \nu_e$ \textbf{Relation d'Einstein}
-    \item \textbf{Mod. de Shottky}: $\rho(x) = 0$ si $x>d_n$ ou $x < -d_p$, $eN_d$ si $0<x<d_n$, $-eN_a$ si $-d_p<x<0$
+    \item \textbf{Mod. de Shottky}: $\rho(x) = 0$ si $x>d_n$ ou $x < -d_p$, $eN_d$ si $0<x<d_n$, $-eN_a$ si $-d_p<x<0$ \\
+    $\Delta \phi = \frac{e}{2 \varepsilon_0 \varepsilon_r} (N_a d_p^2 + N_d d_n^2)$
 \end{squishlist}
 \graysec{Les supraconducteurs}
 \begin{squishlist}
@@ -327,7 +333,7 @@ Cristal SC dans lequel la concentr.\ en impuretés varie le long d’une direct.
     Dans type I, $B$ décroit exp.\ de la surface vers l'int.\ su supra ($\lambda_L$ prof.\ de pénétr.)
     \item \textbf{Type II}: si $H_{c1}<H<H_{c2}$ la dens.\ de flux à l'intér.\ est non nulle (Meissner incompl.)
     \item \textbf{Eq.\ de London}: $\vec{j} = - \frac{1}{\mu_0 \lambda_L^2} \vec{A} \Longrightarrow \vec{\nabla}^2 \vec{B} = \frac{1}{\lambda_L^2}\vec{B}$ qui a seule solut.\ $B=0$
-    \item \textbf{Théorie BCS}: intér.\ attractive mediée par phonons entre \elec avec $E\approx E_F$. Forme paires d'\elec avec $\vec{k}_{\uparrow}$ et $-\vec{k}_{\downarrow}$ (\textbf{paires de Cooper}). Fait appar.\ gap supra.
+    \item \textbf{Théorie BCS}: intér.\ attractive mediée par phonons entre \elec avec $E\approx E_F$. Forme paires d'\elec avec $\vec{k}_{\uparrow}$ et $-\vec{k}_{\downarrow}$ (\textbf{paires de Cooper}). Fait appar.\ gap supra (effet Josephson)
     \item Effet isotopique: la masse isotopique varie la $T_c$ $\Rightarrow$ sugère médiat.\ par phonons
 \end{squishlist}
 
@@ -340,3 +346,7 @@ Cristal SC dans lequel la concentr.\ en impuretés varie le long d’une direct.
     \item \textbf{Modèle de bande}: le princ.\ de Pauli cause un gain d'$E$ pour les \elec de spin parall.\
 \end{squishlist}
 
+\graysec{Mixed}
+\begin{squishlist}
+    \item $k_B T (300$K$) \approx 26$ meV
+\end{squishlist}

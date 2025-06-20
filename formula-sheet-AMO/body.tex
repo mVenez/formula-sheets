@@ -153,6 +153,7 @@
     \item \textbf{Eigenenergs:} $\epsilon_{\pm} = \frac{\epsilon_{AA} \pm \epsilon_{AB}}{1\pm S}$ \quad  $S(R) = \int \ud r^3 \phi_A(\vr) \phi_B(\vr) = \left(1 + \frac{R}{a_0} + \frac{R^2}{3a_0^2}\right) e^{-R/a_0}$\\
     $\epsilon_{AA} = \epsilon_{BB} = \int \ud r^3 \phi_{A}(\vr) H \phi_{A}(\vr) = \epsilon_H + \frac{e^2}{4\pi\varepsilon_0 R}\left(1 + \frac{R}{a_0}e^{-2R/a_0}\right)$ \\
     $\epsilon_{AB} = \int dr^3 \phi_A(\vec{r}) H \phi_B(\vec{r}) = \left(\epsilon_H +  \frac{e^2}{4 \pi \epsilon_0R}\right) S - \frac{e^2}{4 \pi \epsilon_0a_0} \left( 1 + \frac{R}{a_0} \right) e^{-R/a_0}$
+    \item Then use variational parameter $a$ instead of $a_0$
 \end{squishlist}
 
 \squishline
@@ -165,9 +166,10 @@
     \item Heitler-London (Valence bond) theory: neglect terms $\phi_{A/B}(\vr_1)\phi_{A/B}(\vr_2)$ in $\psi(\vr_1, \vr_2)$ \\
     $\psi_S(1,2) = \frac{1}{\sqrt{2(1+s^2)}} \left[\phi_A(1)\phi_B(2) + \phi_B(1)\phi_A(2)\right] \chi_S$ \\
     $\psi_T(1,2) = \frac{1}{\sqrt{2(1-s^2)}} \left[\phi_A(1)\phi_B(2) - \phi_B(1)\phi_A(2)\right] \chi_T$
-    \item $\epsilon_{S/T} = \frac{\epsilon_{ABAB} \pm \epsilon_{ABBA}}{1 \pm S^2} \quad \epsilon_{ABAB} = 2 \epsilon_H + \epsilon_C \quad \epsilon_{ABBA} = S^2 2 \epsilon_H + \epsilon_{X}$ \qquad $\epsilon_S < \epsilon_T$
+    \item $\epsilon_{S/T} = \frac{\epsilon_{ABAB} \pm \epsilon_{ABBA}}{1 \pm S^2} \quad \epsilon_{ABAB} = 2 \epsilon_H + \epsilon_C \quad \epsilon_{ABBA} = S^2 2 \epsilon_H + \epsilon_{X}$ \squishsep $\epsilon_S < \epsilon_T$
     \item $\epsilon_C(R) = \int d^3r \int d^3r' \, \phi_A^2 (\vec{r}) \phi_B^2 (\vec{r}') \left[ \frac{j}{|\vec{r} - \vec{r}'|}  - \frac{j}{\epsilon_0|\vec{r}' - \vec{R}_A|} - \frac{j}{|\vec{r} - \vec{R}_B|} \right]  + \frac{j}{|\vec{R}_A - \vec{R}_B|}\\
     \epsilon_{X}(R) = \int d^3r \int d^3r' \, \phi_A (\vec{r}) \phi_B (\vec{r}) \phi_A (\vec{r}') \phi_B (\vec{r}')  \left[ \frac{j}{|\vec{r} - \vec{r}'|}  - \frac{j}{|\vec{r}' - \vec{R}_A|}  - \frac{j}{|\vec{r} - \vec{R}_B|} \right]$
+    \item Possible improvements by introducing more degrees of freedom e.g. $a$ variat.\ param., MO-LCAO: $\psi = \sum_{R,n,l,m}c_{R,n,l,m} \phi_{n,l,m}(\vr - \vR_i)$, configuration interaction
 \end{squishlist}
 
 \squishline
@@ -182,32 +184,48 @@
         \beta - ES   & \alpha_B - E
     \end{pmatrix} = 0; \quad \alpha_A = \braket{A|H|A};\; \alpha_B = \braket{B|H|B};\; \beta = \braket{A|B};\; S = \braket{A|B}$ \\
     \textbf{A$_2$ molec.:} $E_{\pm} = \frac{\alpha \pm \beta}{1\pm S}$ \qquad
-    \textbf{AB molec.\ ($S=0$):} $E_- = \alpha_A - \frac{\beta^2}{|\alpha_B - \alpha_A};\; E_+ = \alpha_B + \frac{\beta^2}{|\alpha_B - \alpha_A|}$  \\Atomic orbitals closest in energy dominate the bonding. Shift is lower as $\alpha_B - \alpha_A$ is higher.
+    \textbf{AB molec.\ ($S=0$):} $E_- = \alpha_A - \frac{\beta^2}{|\alpha_B - \alpha_A|};\; E_+ = \alpha_B + \frac{\beta^2}{|\alpha_B - \alpha_A|}$  \\Atomic orbitals closest in energy dominate the bonding. Shift is lower as $\alpha_B - \alpha_A$ is higher.
+
+    \squishline
 
     \item \textbf{Bond order} $b = \frac{1}{2} (N_{\text{bonding}} - N_{\text{antibonding}})$ ($N$ nb of electrons)
+    \item A non-bonding(core) orbital is a molec.\ orbit.\ whose occupation by \elec does not increase or decrease the bond order (equiv.\ of lone pairs)
     
-    \item $m=0 : \Sigma (s, p_z) \; |m|=1 : \Pi (p_x, p_y) \Longrightarrow \sigma$-bonding $(s-s, s-p_z, p_z-p_z), \pi$-bonding $(p_x-p_x, p_y-p_y)$
-    \item A $\sigma$ is a bond formed by the overlap of orbitals in an end-to-end fashion, with the electron density concentrated between the nuclei of the bonding atoms. A $\pi$  bond is a bond formed by the overlap of orbitals in a side-by-side fashion with the electron density concentrated above and below the plane of the nuclei of the bonding atoms.
+    \item
+    \begin{minipage}{0.7\columnwidth}
+        $m=0 : $ symmetry $ \Sigma (s, p_z) \;  \Longrightarrow \sigma$-bonding $(s-s, s-p_z, p_z-p_z) \\
+        |m|=1 : $ symmetry $ \Pi (p_x, p_y) \; \Longrightarrow \pi$-bonding $(p_x-p_x, p_y-p_y)$
+    \end{minipage}
+    \vline
+    \hspace{0.05cm}
+    \begin{minipage}{0.3\columnwidth}
+        Other combinations give null matrix elements
+    \end{minipage}
+    \item A $\sigma$ bond is formed by the overlap of orbitals in an end-to-end fashion, with the \elec density concentrated between the nuclei of the bonding atoms. A $\pi$  bond is formed by the overlap of orbitals in a side-by-side fashion with the \elec density concentrated above and below the plane of the nuclei of the bonding atoms.
+    \item $|\beta(\sigma)| > |\beta(\pi)|$ \qquad $\alpha(2p) - \alpha(2s) > |\beta| > 0$
 \end{squishlist}
 
 \squishline
 
 \begin{squishlist}
     \item \textbf{$\mathbf{N>2}$ molecules:} Hybridisation
-    \item LOMO, HOMO, RULES OF HYBRIDISATION
-    \item \textbf{Hinckel model}: (1) Only $\pi$-conjugated molecules (2) Consider only $p_z$ orbitals (3) $S_{ij} = \delta_{ij}$ (4) $H_{ij} = \alpha$
+    \item LUMO: lowest unoccupied MO, HOMO: highest occupied MO, RULES OF HYBRIDISATION
+    \item \textbf{Hinckel model}: (1) Only $\pi$-conjugated molecules (2) Consider only $p_z$ orbitals (3) $S_{ij} = \delta_{ij}$ (4) $H_{ij} = \alpha$. \quad Then set $\det =0$ to find eigenenergies
 \end{squishlist}
 
 \graysec{Light propagation, Optics}
 \begin{squishlist}
     \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$
     \item Monochromatic waves: $\vec{E}({\vec{r}, t}) = \Re[\vec{E}(\vec{r}e^{-i \omega t})]$
-    \item \textbf{Angular spectrum representation} (2D Fourier transform in plane at position $z$): $\tilde{\vec{E}}(k_x, k_y, z) = \tilde{\vec{E}}(k_x, k_y, 0) e^{\pm i k_z z}$ \squishsep if $\Im(k_z) \geq 0$ evanescent waves for $z \rightarrow \infty$
+    \item \textbf{Angular spectrum representation} (2D Fourier transform in plane at position $z$): $\tilde{\vec{E}}(k_x, k_y, z) = \frac{1}{4\pi} \int \ud x \ud y \vec{E}(x,y,z) e^{-i(k_xx+k_yy)} \overset{\text{Helmh.}}{=} \tilde{\vec{E}}(k_x, k_y, 0) e^{\pm i k_z z}$ \\
+    $\vec{E}(x,y,z) = \int \ud k_x \ud k_y \tilde{\vec{E}}(k_x,k_y,0)e^{\pm ik_z z} e^{i(k_x x + k_y y)}$
+    \item $e^{\pm i k_z z}$ is the propag.\ in recipr.\ space. \squishsep if $\Im(k_z) \geq 0$ evanescent waves for $z \rightarrow \infty$ \\
+    If large $k_x,k_y \rightarrow$ evanescent waves
 \end{squishlist}
 \graypar{Paraxial approximation}
 \begin{squishlist}
-    \item Smooth, slow spatial variations $k_x, k_y \ll k$
-    \item $k_z \approx k - \tfrac{k_x^2 + k_y^2}{2k} \quad \Rightarrow \quad e^{ik_z z} = e^{ikz}e^{-i \tfrac{k_x^2 + k_y^2}{2k}z}$ \textbf{Gaussian beams}
+    \item Consider fields in $z=0$ plane with smooth, slow spatial variations $k_x, k_y \ll k$
+    \item $k_z = \pm k \sqrt{1 - \left(\frac{k_x}{k}\right)^2 - \left(\frac{k_y}{k}\right)^2}\approx k - \tfrac{k_x^2 + k_y^2}{2k} \Rightarrow \quad e^{ik_z z} = e^{ikz}e^{-i \tfrac{k_x^2 + k_y^2}{2k}z}$ \textbf{Gaussian beams}
     \item $\vec{E}(x,y,0) = \vec{E_0} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}}\right) \quad \tilde{\vec{E}}(k_x,k_y,0) = \vec{E_0} \frac{w_0^2}{4\pi} \exp \left(- \frac{(k_x^2 + k_y^2)w_0^2}{4}\right)$
     \item $\vec{E}(x,y,z) = \vec{E_0} \frac{e^ikz}{1 + \tfrac{2iz}{kw_0^2}} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}\left(\tfrac{1}{1 + \tfrac{2iz}{kw_0^2}}\right)}\right)$
     \item $\vec{E}(x,y,z) = \vec{E_0} \frac{w_0}{w(z)}\exp\left(-\frac{x^2 + y^2}{w(z)^2}\right) \exp \left(i \left(kz - \eta(z) + \frac{k(x^2 + y^2)}{2 R(z)}\right)\right)$
@@ -215,44 +233,84 @@
     \item $\eta(z) = \arctan (z/z_R)$ Gouy phase
     \item $w(z) = w_0 \sqrt{1 + \left(\frac{z}{z_R}\right)^2}$ (hyperbolic relation), where $z_R = \frac{\pi n w_0^2}{\lambda}$ is the Rayleigh range.
     \item At a distance $z_R$ from the waist, the width $w$ of the beam is $\sqrt{2}$ larger than at the focus where $w=w_0$.
-    \item The wavefronts have zero curvature (radius $R = \infty$) at the waist. Curvature increases away from the waist upt to $z_R$ then decreases approaching zero as $z \rightarrow \infty$
-    $\frac{1}{R(z)} = \frac{z}{z^2 + z^2_R}$
+    \item The wavefronts have zero \textbf{curvature} (radius $R = \infty$) at the waist. Curvature increases away from the waist upt to $z_R$ then decreases approaching zero as $z \rightarrow \infty$ \\
+    $R(z) = z \left(1 + \frac{z_R^2}{z^2}\right)$ \qquad$\frac{1}{R(z)} = \frac{z}{z^2 + z^2_R}$
+
+    \item \textbf{Region I} (focal region $z \ll z_R$): $w(z) \approx w_0 \quad \eta=0 \quad R(z) \gg z_R$ \quad The phase does not depend on $x,y$. Looks like plane wave ($w_0 \rightarrow \infty$) propag.\ along $z$
+    \item \textbf{Region II} (far-field $z \ll z_R$): $w(z) = w_0 \frac{z}{z_R} \quad R(z) \sim z$ \quad Waist diverges, phase (initially const) forms parabolas.
+    \item \textbf{Spheric.\ wave} in parax.\ approx.: $\frac{1}{r}e^{ikr} = \frac{1}{\sqrt{\rho^2 + z^2}}e^{ik \sqrt{\rho^2 + z^2}} \approx \frac{1}{z \left(1 + \frac{p^2}{2z^2}\right)}e^{ikz+ik\frac{\rho^2}{2z}}$
     \item Complex beam parameter $q(z) = z + i z_R$ (when propagating in free space) \\ $\frac{1}{q(z)} = \frac{1}{R(z)} - i \frac{\lambda}{n \pi w^2(z)}$
 \end{squishlist}
 
-\graypar{Fresnel}
+\graypar{Diffraction}
 \begin{squishlist}
-    \item \textbf{Fresnel diffraction} $\vec{E}(x,y,z) = \int \vec{E}(x',y',0) h(x-x', y-y', z)$ \\
-    $h = \frac{2\pi k}{iz} e^{ikz} \exp \left(i \frac{k(u^2 + v^2)}{2z}\right)$
+    \item \textbf{Fresnel diffraction} $\tilde{\vec{E}}(k_x,k_y,z) = \tilde{\vec{E}}(k_x,k_y,0)e^{ikz} \exp\left({-i\frac{(k_x^2 + k_y^2)z}{2k}}\right)$\\
+    $\vec{E}(x,y,z) = \int \ud x' \ud y' \vec{E}(x',y',0) h(x-x', y-y', z)$ \\
+    $h (u,v,z)= \frac{2\pi k}{iz} e^{ikz} \exp \left(i \frac{k(u^2 + v^2)}{2z}\right)$
+    \item \textbf{Fraunhofer condition} (far-field) $z \gg \frac{k(x'^2 + y'^2)}{2}$ \\
+    $\vec{E}(x,y,z\rightarrow \infty) = \frac{2\pi k}{iz} e^{ikz}e^{ik\frac{(x^2+y^2)}{2z}} \tilde{\vec{E}}(\frac{kx}{z}, \frac{ky}{z},0)$ \\ 
+    with $\tilde{\vec{E}}(\frac{kx}{z}, \frac{ky}{z},0) = \int \ud x' \ud y'\vec{E}(x', y', 0) e^{-i \left(\frac{kxx'}{z} + \frac{kyy'}{z}\right)} \cancel{e^{ik\frac{x'^2+y'^2}{}}}$\\
+    Interpretation: each point of the $z=0$ plane emits a plane wave in the $k_x,k_y$ direction
 \end{squishlist}
 \graypar{Paraxial optics}
 \begin{squishlist}
     \item Thin lens: no diffraction inside $ \Rightarrow \vec{E}_{\text{out}}(x,y) = t(x,y) \vec{E}_{\text{in}}(x,y)$
     \item Thickness function $\Delta(x,y) = \Delta_0 - \frac{x^2 + y^2}{2} \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$
     \item Define $\frac{1}{f} = (n-1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)$ then $t(x,y) = \exp(-i \frac{k}{2f}(x^2 + y^2)) P(x,y)$
-    \item In $f$ we find Fourier transform of what we had as input in position $d$
-    \item For a finite aperture (ex. $P(x,y)=1 \text{ for } x,y \in [-1,1]$) best resolution $w \sim \frac{\lambda f}{L}$
+    \item In $f$ we find Fourier transform of what we had as input in position $d$: \\
+    ${\vec{E}}(x,y) = \tilde{\vec{E}}_{\text{obj}}(\frac{kx}{f},\frac{ky}{f})\exp \left(i\frac{k(x^2 + y^2)}{2}\left[\frac{1}{f}-\frac{1}{d}\right]\right)$
+    \item$\vec{E}_{\text{image}}(x_i,y_i) = Ae^{i\Phi} \int \ud x \ud y P(x,y) \exp \left(-\frac{ik}{z_2} [(x_i- M x_0)x + (y_i - M y_0)y]\right)$ \quad $M = -\frac{z_2}{z_1}$ \\
+    $\vec{E}_{\text{image}}(x_i,y_i) \propto \delta [x_i - M x_0, y_i - M y_0]$
+    \item For a finite aperture (e.g.\ $P(x,y)=1 \text{ for } x,y \in [-1,1]$) the image of a point source is the FT of pupil function, with $w = \frac{2\pi}{k}\frac{z_2}{L} = \frac{\lambda z_2}{L}$ and the min value of $z_2$ is $f$ ($z_1 = \infty$) $\Longrightarrow$
+    best resolution $w \sim \frac{\lambda f}{L}$ 
 \end{squishlist}
 
 \graysec{Light-matter interaction}
 \graypar{Out-of-equilibrium atom}
 \begin{squishlist}
-    \item $\kpsi = \frac{1}{N}(\ket{1s} + \epsilon \ket{2p}) \; \Rightarrow \; \ket{\psi(t)} = \ket{1s} + \epsilon e^{-i\omega_{2p}t}\ket{2p} \; \Rightarrow \; \rho(t) = -e |\psi|^2 = \rho_0(\vec{r}) + \epsilon \delta \rho(\vec{r}, t)$
-    \item $\delta(\vec{r},t) = -e R_{1s}(\vr) R_{2p} \left\{
+    \item $\kpsi = \frac{1}{N}(\ket{1s} + \epsilon \ket{2p}) \; \Rightarrow \; \ket{\psi(t)} = \ket{1s} + \epsilon e^{-i\omega_{2p}t}\ket{2p} \;  \Rightarrow \; \rho(t) = -e |\psi|^2 = \rho_0(\vec{r}) + \epsilon \delta \rho(\vec{r}, t)$
+    \item $\delta \rho(\vec{r},t) = -e R_{1s}(\vr) R_{2p} \left\{
     \begin{aligned}
         &\frac{2z}{r}\cos(\omega t) \quad m=0 \\
         &\frac{2}{r} (x \cos(\omega t) \pm y\sin(\omega t)) \quad m=\pm 1
     \end{aligned}
     \right.$
+    Time-dep.\ charge distribution
     \item Radiation emitted (frequency $\omega$), energy leaving atom. $E_{\text{initial}} \sim \braket{\psi|H|\psi} = \epsilon^2 \hbar \omega_{2p}$
     \item Decay of atom in $\ket{2p}$ at rate $\Gamma$: \textbf{spontaneous emission}
 \end{squishlist}
 
 \graypar{Semi-classical theory}
 \begin{squishlist}
-    \item $\hat{H} = \frac{(\hat{p} + e\vec{A})^2}{2m} - e\phi \quad \overset{\text{long wavelength}}{\Longrightarrow} \quad \hat{H} = \hat{H}_{\text{atom}} - {\hat{\vec{d}}\cdot \vec{E}(\vr=0,t)} = \hat{H}_{\text{atom}} - \hat{H}_{\text{lm}}(t)$
+    \item $\hat{H} = \frac{(\hat{p} + e\vec{A})^2}{2m} - e\phi  = \ham _{\text{atom}} + \ham_{\text{lm}} \qquad \ham_{\text{lm}}= \frac{e}{m}\vec{p}\cdot \vec{A}_{\text{ext}} + \frac{e^2}{2m}\vec{A}_{\text{ext}}^2$ \quad ($\vec{A}^2$ neglig.\ )\\
+    \textbf{Long wavelength approx.} \quad$ \hat{H} = \hat{H}_{\text{atom}} - {\hat{\vec{d}}\cdot \vec{E}(\vr=0,t)} = \hat{H}_{\text{atom}} + \hat{H}_{\text{lm}}(t)$ \quad $\vec{d} = e\vr$
     \item Perturb. th. $\Rightarrow P_{g\rightarrow e} = P_{e \rightarrow g} = \frac{T^2}{4 \pi \hbar^2}\left| \braket{g|\hat{H}_{lm}|e}\right|^2 \left(\frac{\sin (\delta T / 2)}{\delta T / 2}\right)^2 \quad \delta = \omega - \frac{|E_g - E_e}{\hbar}$  \\
     respectively absorption and stimulated emission.
+\end{squishlist}
+
+\graypar{Atomic transitions}
+\begin{squishlist}
+    \item Pert.\ theory: $P_{i\rightarrow f}(T) = \frac{1}{4\pi \hbar^2} \left|\braket{f|\ham_{lm}|i}\right|^2 T^2 \left|\frac{\sin(\delta T / 2)}{\delta T / 2}\right|^2$ \quad $\delta = \omega - \left|\frac{E_i - E_f}{\hbar}\right|$ \\
+    $\Longrightarrow$ \textbf{Absorption} and \textbf{stimulated emission} caused by EM field interacting. \\
+    Atoms absorb at discrete freq., which are the $E$ diff.\ between levels.
+    \item \textbf{Selection rules}: $\braket{f|\ham_{\text{lm}}|i} = - \braket{f| \vec{d}|i} \cdot \vec{E}(t)$ \quad $d$ a vector operator $\Rightarrow$ Wigner-Eckart \\
+    $z$-polarised light: \quad $j-1 \leq j' \leq j+1$ \quad $m = m'$ \quad ($\pi$-transitions) \\
+    circ.\ polarised light: \quad $j-1 \leq j' \leq j+1$ \quad $m = m' \pm 1$ \quad ($\sigma$-transitions)
+\end{squishlist}
+
+\graypar{Two-level atom}
+\begin{squishlist}
+    \item $\ham = \ham_{\text{atom}} + \ham_{\text{lm}} = \hbar \omega_e \ket{e}\bra{e} \cancel{+ \hbar \omega_g \ket{g}\bra{g}} - \vec{d}\cdot \vec{E}_0 \cos(\omega t)$ \quad $d = d_0 (\ket{g}\bra{e} + \ket{e}\bra{g})$ \\
+    $\Rightarrow \ham = \hbar \omega_e \ket{e}\bra{e} - \hbar \Omega_1 \cos(\omega t)(\ket{g}\bra{e} + \ket{e}\bra{g})$ \quad $\hbar \Omega_1 = d_0 E_0$ \textbf{Rabi frequency (pulsation)}
+    \item $\kpsi = \gamma_g(t)\ket{g} + \gamma_e(t)e^{-i\omega_e t} \ket{e}$ and solve Schröd.\ $i\hbar \partial_t \kpsi = \ham \kpsi$
+    \item $\tilde{\gamma_g}(t) = \cos(\Omega \frac{t}{2}) - i \frac{\delta}{\Omega} \sin( \Omega \frac{t}{2}) \quad \tilde{\gamma_e}- i \frac{\Omega_i}{\Omega} \sin( \Omega \frac{t}{2})$ \qquad $\Omega = \sqrt{\omega_1^2 + \delta^2}$ \quad $\gamma_{g/e} = \tilde{\gamma}_{g/e}e^{\pm \delta t / 2}$ \\
+    $P_e(t) = |\tilde{\gamma}_e(t)|^2 = \frac{\Omega_1^2}{\omega_1^2 + \delta^2} \sin^2(\Omega \frac{t}{2})$ \quad \textbf{Rabi oscillations}
+
+    \squishline
+
+    \textbf{Populations of two-level atoms}
+    \item $N = N_e + N_g$ \quad \textbf{Decay:} $\der{t}{N_{e/g}} = - \Gamma_D N_{e/g}$ \quad \textbf{Injection:} $\der{t}{N_{e/g}} = \Lambda_{e/g}$ \\
+    \textbf{Equilibrium:} $\bar{N}_{e/g} = \frac{\Lambda_{e/g}}{\Gamma_D}$
 \end{squishlist}
 
 \graysec{Molecular spectroscopy}

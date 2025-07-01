@@ -6,15 +6,15 @@
     \item $H = - \frac{\hbar^2}{2m}\nabla^2_r - \frac{Z e^2}{4 \pi \varepsilon r} $ \qquad 
     $\psi_{n'lm} = R_{n'l}(r) Y_l^m(\theta, \phi)$ \\
     $ - \frac{\hbar^2}{2m_r}u_{n'l}'' + \left[-\frac{1}{4\pi \varepsilon_0}\frac{Ze^2}{r} + \frac{\hbar^2}{2m_r}\frac{l(l+1)}{r^2}\right] u_{n'l} = \epsilon_{n'l}u_{n'l}$ \quad $u_{n'l} = r R_{n'l} \quad m_r = \frac{m_nm_{\elec}}{m_n + m_{\elec}}$ \\
-    if $\rho = \frac{r}{a_0^*}$, $\tilde{u}_{n'l}$ dimension'less solut.\ : $\tilde{u}_{n'l}'' + 2(\frac{z}{\rho} - \frac{l(l+1)}{\rho^2})\tilde{u}_{n'l} = \frac{m_r a_0^*2}{\hbar^2} \varepsilon_{n'l} \tilde{u}_{n'l}$
+    if $\rho = \frac{r}{a_0^*}$, $\tilde{u}_{n'l}$ dimensionless solut.\ : $\tilde{u}_{n'l}'' + 2(\frac{z}{\rho} - \frac{l(l+1)}{\rho^2})\tilde{u}_{n'l} = \frac{m_r a_0^*2}{\hbar^2} \varepsilon_{n'l} \tilde{u}_{n'l}$
     \item $ a = \frac{a_0}{Z} = \frac{1}{Z} \frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$ \quad $a_0^* = \frac{m_e}{m_r}a_0$
     \squishsep $\braket{r}_{nl} = \frac{a}{2Z} [3n^2 - l(l+1)]$
     \item $\frac{1}{Z^2}H_{\text{Hydrogenic}}\left(\rho:=\frac{r}{Z}\right) = H_{\text{Hydrogen}} \Longrightarrow$ lengths scale as $Z^{-1}$
     \item Ground state $\phi_{1s} = \left(\frac{1}{\pi a_0^3}\right)^{1/2} e^{-|\vr|/a_0} $
     \squishsep $s$-orbitals have $\left|\psi_{nl}(0)\right|^2 \neq 0$
-    \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $n = n' + l + 1$ \quad $R_{\infty} = \frac{m_e e^4}{8 \varepsilon_0^2 h^3 c}$ \quad $R_y = 13.6$ eV\\
-     $\frac{1}{\lambda_n} = - R_{\infty} \frac{m_r}{m_e} \left[ \frac{1}{n^2} - \frac{1}{n_0^2}\right]$ when trans.between states \quad RY DEF FACILE
-    
+    \item \textbf{Bohr:} $E_n = - \frac{z^2}{n^2} R_y = - \frac{z^2}{n^2}h c R_{\infty}$ \quad $n = n' + l + 1$ \quad $R_{\infty} = \frac{m_e e^4}{8 \varepsilon_0^2 h^3 c}$, $R_y = \frac{\alpha^2 m_e c^2 }{2} = 13.6$ eV\\
+     $\frac{1}{\lambda_n} = - R_{\infty} \frac{m_r}{m_e} \left[ \frac{1}{n^2} - \frac{1}{n_0^2}\right]$ when trans.between states
+
     \item \textbf{Degeneracies:} (1) Different $m$ are degenerate. (2) $n'+l =$cst degenerate (accidental, only for $V(r) = -\frac{1}{r}$) $\Longrightarrow$ $n$ labels electron shells
     
 
@@ -60,7 +60,7 @@
     Interaction between magnetic moments of nucleus and of $e^-$:
     $H_{HFS} \sim \vec{\mu_N}\cdot \vec{\mu_{e^-}} \propto Z^3$ \\
     $H_{HFS} = a_{HFS} \frac{h}{\hbar^2} \; \hat{J}_{\text{elec}}\cdot \hat{I}_{\text{nucl}}$
-    \item \textbf{Quadruple moment of nucleus} (only states $l \neq 0$, $I \geq 1$). Depends on $m$ thus lifts fine structure degeneracy. [MORE DETAILS?]
+    \item \textbf{Quadruple moment of nucleus} (only states $l \neq 0$, $I \geq 1$). Charge distrib.\ is no longer spheric.\ symmetr.\. Depends on $m$ thus lifts fine structure degeneracy.
 \end{squishlist}
 
 \graypar{Atoms in external fields}
@@ -68,11 +68,11 @@
     \item \textbf{Zeeman effect:} the magnetic moments of the electrons interact with externally applied magnetic fields
     \begin{itemize}
         \item \textbf{Normal} (zero spin angular momentum) \\
-        $H^{(1)} = \frac{\mu_B}{\hbar} \hat{L}\cdot \vec{B_0} = - \hat{m}_L B = -\gamma_e l_z B$ (there is diamagnetic term too, but small for small $m$) \\
+        $H^{(1)} = \frac{\mu_B}{\hbar} \hat{L}\cdot \vec{B_0} = - \hat{m}_L B = -\gamma_e l_z B$ (plus diamag.\ term, but small for small $m$) \\
         $\Delta E^{(1)} = \braket{nlm| \frac{\mu_B}{\hbar} L_z B_z |nlm} = \mu_B B_0 m_L$
         \item \textbf{Anomalous} (non-zero spin angular momentum, more common) \\
-        $H^{(1)} = \frac{\mu_B}{\hbar}(\hat{L} + 2 \hat{S}) \cdot \vec{B_0}= -\gamma_e (\vec{L} + 2\vec{S}) \cdot \vec{B}$ \\
-        $\Delta E^{(1)} = \mu_0 g_J B_0 m_j$ (GUARDA PAGINA 250 LIBRO)
+        $H^{(1)} = \frac{\mu_B}{\hbar}(\hat{L} + 2 \hat{S}) \cdot \vec{B_0}= -\gamma_e (\vec{L} + 2\vec{S}) \cdot \vec{B}$ \qquad
+        $\Delta E^{(1)} = \mu_B g_J B_0 m_j$
     \end{itemize}
 
     \item \textbf{Stark effect:} interaction with electric field of strength $E$ in $z$-direction \\
@@ -81,6 +81,12 @@
     \textbf{Exception:} The correction to energy is linear in the case of a degeneracy between the two wavefunctions that the perturbation mixes, e.g.\ $2s_{1/2}, 2p_{1/2}$
 \end{squishlist}
 
+\graypar{Rydberg atoms (Hydrogen-like atom excited to a very high $n$)}
+
+\begin{squishlist}
+    \item $\psi_{n,l,j,m_j}(r,\theta, \phi) = R_{n,l}(r) A_{l,j,m_j}(\theta,\phi)$ \quad $E_{n,l,j} = - \frac{E_I}{(n - \delta_{nlj})^2}$
+    \item $\braket{n,l,j,m_j|\vec{r}|n',l',j',m_j'} = \vec{A}(ljm_j, l'j'm_j')R(nl,n'l')$ \, $\braket{||\vec{r}||} = R(nl,nl)$ \, $R(nl,n'l') \propto nn'$
+\end{squishlist}
 
 \graypar{Helium atom}
 \begin{squishlist}
@@ -93,11 +99,10 @@
     \item \textbf{Electron-electron interactions} (repulsion term):
     \begin{squishitemize}
         \item First order correction to energy $\Rightarrow$ Coulomb integral \\
-        $ \displaystyle J = j_0 \int \left|\psi_{n_1 l_1 m_1}(\vec{r_1})\right|^2 \left(\frac{1}{r_{12}}\right) |\psi_{n_2 l_2 m_2}(\vec{r_2})|^2  \ud \tau_1 \ud \tau_2$ [RESULTS?] \\
+        $ \displaystyle \delta E = J = j_0 \int \left|\psi_{n_1 l_1 m_1}(\vec{r_1})\right|^2 \left(\frac{1}{r_{12}}\right) |\psi_{n_2 l_2 m_2}(\vec{r_2})|^2  \ud \tau_1 \ud \tau_2 = \frac{e^2}{4 \pi \varepsilon_0 a_0} \frac{5}{8}Z$ \\
         $E_{1s^2} = 2 R_y [-z^2 + 5/8 z]$ \qquad $\Longrightarrow E = -2\times 2.75$ Ry for $z=2$
         \item We can also use \textbf{variational method} to find an effective charge $z_e$ which minimises the energy. Guess function $\psi(\vr_1 \vr_2) = \frac{z_e^3}{\pi}\exp\left(-\frac{z_e}{a_0}(\vr_1 + \vr_2) \right) = \phi_{1s,Z_e}(\vr_1)\phi_{1s,Z_e}(\vr_2)$ \\
-        We find $E_{\min} = -2 R_y (z - 5/16)^2$ \qquad $\Longrightarrow E = -2\times 2.848$ Ry for $z=2$ \\
-        RIFARE CALCOLI 
+        We find $E_{\min} = -2 R_y (z - 5/16)^2$ \qquad $\Longrightarrow E = -2\times 2.848$ Ry for $z=2$ 
     \end{squishitemize}
 
     \item \textbf{Excited states:} when two $e^-$ occupy different orbitals the wavefuncs.\ are either
@@ -109,24 +114,23 @@
     $K_{nl} = \braket{1s,nlm|\hat{H}_c|nlm,1s} \propto \int \phi_{1s}^*(\vr_1) \phi_{nlm}^*(\vr_2) \frac{1}{|\vr_1 - \vr_2}\phi_{1s}^*(\vr_2) \phi_{nlm}^*(\vr_1) $ \\
     $\Longrightarrow$ antisym has lower energy: $S=1$ is favored
 
-    \item Notation: $n^{2S_{\text{tot}}+1} L_{\text{tot}\; J_{\text{tot}}}$ MA N QUALE??
+    \item Notation: $n^{2S_{\text{tot}}+1} L_{\text{tot}\; J_{\text{tot}}}$
 \end{squishlist}
 
 \graypar{Many-electron atoms}
 \begin{squishlist}
-    \item $\ham = \sum_{i=1}^{Z}\left( - \frac{\hbar^2}{2m}\Delta_i - \frac{Ze^2}{4\pi \varepsilon_0 r_i}\right) + \sum_{i < j} \frac{e^2}{4\pi \varepsilon_0 |\vr_i - \vr_j}$ \\
+    \item $\ham = \sum_{i=1}^{Z}\left( - \frac{\hbar^2}{2m}\Delta_i - \frac{Ze^2}{4\pi \varepsilon_0 r_i}\right) + \sum_{i < j} \frac{e^2}{4\pi \varepsilon_0 |\vr_i - \vr_j}$ 
     acts on $\mathcal{H} = \otimes_i \mathcal{H}_i,\, \mathcal{H}_i =  \mathcal{H}_{i, orb} \otimes \mathcal{H}_{i, spin}$
     \item \textbf{Central field approximation}: every electron sees an identical potential $V(r)$ that is only a function of its distance from the nucleus.
     
-    \item The inter-electronic contribution is replaced by a screening of the nucleus  \\ $\Longrightarrow Z_{\mathrm{eff}}(r)$ \quad $Z_{\mathrm{eff}}(r) \overset{r_i\rightarrow 0}{\rightarrow} 0$ \quad $Z_{\mathrm{eff}}(r) \overset{r_i\rightarrow \infty}{\rightarrow} Z$\quad $V(r) \sim \frac{Z_{\mathrm{eff}}(r)}{r}$
+    \item The inter-electronic contribution is replaced by a screening of the nucleus  \\ $\Longrightarrow Z_{\mathrm{eff}}(r)$ \quad $Z_{\mathrm{eff}}(r) \overset{r_i\rightarrow 0}{\rightarrow} Z$ \quad $Z_{\mathrm{eff}}(r) \overset{r_i\rightarrow \infty}{\rightarrow} 1$\quad $V(r) \sim \frac{Z_{\mathrm{eff}}(r)}{r}$
     \item E.g.\ Thomas-Fermi atoms: many-electron atom with screening function $F(r)$ \\
     $V(r) = -\frac{1}{4 \pi \varepsilon_0} \frac{Z e^2}{r} F(r)$ locally constant \qquad
-    $r \propto Z^{-1/3}$ \\
-    DETAILS
+    $r \propto Z^{-1/3}$
     \item Symetrisation $\rightarrow$ Slater determinants: write wavefuncs of many \elec as product of wavefuncs of \elec, all antisymetr.
     \item The best atomic orbitals are found by numerical solution of the \textbf{Hartree-Fock} eqs.:
     $\left[\hat{h}_k + \hat{J}_k + \hat{K}k\right]\psi_K = \varepsilon_k \psi_k$ \quad
-    Schrödinger = Coulomb repulsion + purely quantum contribution.
+    Schrödinger + Coulomb repulsion + purely quantum contribution.
     The wavefuncs.\ are expressed as Slater determinants.
 
     \item \textbf{Aufbau principle:} fill the orbitals with increasing values of $n+l$
@@ -141,8 +145,7 @@
 \textbf{Energy scales:} (i) Electrons: $E_e = \frac{\hbar^2}{m_e a^2}\sim 1-10$ eV (UV, vis, IR)
 (ii) Vibrations of nuclei $E_V = \sqrt{\frac{m_e}{M}}E_e \sim 0.1$ eV (IR) (iii) Rotations $E_r \approxeq \frac{\hbar^2}{Ma^2} \sim 1$ meV (far IR, MW)
 \textbf{Time scales:} $\tau = \hbar/E$ (i) $\tau_e \sim 10^{-16}$ s (ii) $\tau_V \sim 10^{-14}$ s (iii) $\tau_r \sim 10^{-12}$ s
-
-\squishline
+\columnbreak
 
 \textbf{H$_2^+$ molecule}: $\ham_e = - \frac{\hbar^2}{2m_e} \nabla^2 - \frac{j_o}{|\vr - \vR_A|} - \frac{j_o}{|\vr - \vR_B|} + \frac{j_0}{R}$ \quad $R$ the dist.\ betw.\ nuclei 
 \begin{squishlist}
@@ -161,7 +164,7 @@
 \begin{squishlist}
     \item \textbf{H$_2$ molecule:} \\
     $H = -\frac{\hbar^2}{2m}\left(\nabla_1^2 + \nabla_2^2\right) + \frac{e^2}{|\vr_1 - \vr_2|} + \frac{e^2}{R} - \left(\frac{e^2}{|\vr_1 - \vR_A|} + \frac{e^2}{|\vr_1 - \vR_B|} + \frac{e^2}{|\vr_2 - \vR_A|} + \frac{e^2}{|\vr_2 - \vR_B|}\right)$
-    \item Molecular Orbital approach: $\psi(\vr_1,\vr_2) = \psi_+(\vr_1)\psi_-(\vr_2)$
+    \item Molecular Orbital approach: $\psi(\vr_1,\vr_2) = \psi_+(\vr_1)\psi_+(\vr_2)$
     
     \item Heitler-London (Valence bond) theory: neglect terms $\phi_{A/B}(\vr_1)\phi_{A/B}(\vr_2)$ in $\psi(\vr_1, \vr_2)$ \\
     $\psi_S(1,2) = \frac{1}{\sqrt{2(1+s^2)}} \left[\phi_A(1)\phi_B(2) + \phi_B(1)\phi_A(2)\right] \chi_S$ \\
@@ -188,7 +191,7 @@
 
     \squishline
 
-    \item \textbf{Bond order} $b = \frac{1}{2} (N_{\text{bonding}} - N_{\text{antibonding}})$ ($N$ nb of electrons)
+    \item \textbf{Bond order} $b = \frac{1}{2} (N_{\text{bonding}} - N_{\text{antibonding}})$ \quad ($N$ nb of electrons)
     \item A non-bonding(core) orbital is a molec.\ orbit.\ whose occupation by \elec does not increase or decrease the bond order (equiv.\ of lone pairs)
     
     \item
@@ -214,10 +217,12 @@
     \item The nb of sign changes in the eigenvectors increases with increasing energy
 \end{squishlist}
 
+\newpage
+
 \graysec{Light propagation, Optics}
 \begin{squishlist}
-    \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$
-    \item Monochromatic waves: $\vec{E}({\vec{r}, t}) = \Re[\vec{E}(\vec{r}e^{-i \omega t})]$
+    \item Helmholz equation $\Delta \vec{E} - \frac{n^2}{c^2} \partial_t^2 \vec{E} = 0$ \hspace{-0.3cm}
+    \squishsep Monochrom.\ waves: $\vec{E}({\vec{r}, t}) = \Re[\vec{E}(\vec{r}e^{-i \omega t})]$
     \item \textbf{Angular spectrum representation} (2D Fourier transform in plane at position $z$): $\tilde{\vec{E}}(k_x, k_y, z) = \frac{1}{4\pi} \int \ud x \ud y \vec{E}(x,y,z) e^{-i(k_xx+k_yy)} \overset{\text{Helmh.}}{=} \tilde{\vec{E}}(k_x, k_y, 0) e^{\pm i k_z z}$ \\
     $\vec{E}(x,y,z) = \int \ud k_x \ud k_y \tilde{\vec{E}}(k_x,k_y,0)e^{\pm ik_z z} e^{i(k_x x + k_y y)}$
     \item $e^{\pm i k_z z}$ is the propag.\ in recipr.\ space. \squishsep if $\Im(k_z) \geq 0$ evanescent waves for $z \rightarrow \infty$ \\
@@ -228,7 +233,7 @@
     \item Consider fields in $z=0$ plane with smooth, slow spatial variations $k_x, k_y \ll k$
     \item $k_z = \pm k \sqrt{1 - \left(\frac{k_x}{k}\right)^2 - \left(\frac{k_y}{k}\right)^2}\approx k - \tfrac{k_x^2 + k_y^2}{2k} \Rightarrow \quad e^{ik_z z} = e^{ikz}e^{-i \tfrac{k_x^2 + k_y^2}{2k}z}$ \textbf{Gaussian beams}
     \item $\vec{E}(x,y,0) = \vec{E_0} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}}\right) \quad \tilde{\vec{E}}(k_x,k_y,0) = \vec{E_0} \frac{w_0^2}{4\pi} \exp \left(- \frac{(k_x^2 + k_y^2)w_0^2}{4}\right)$
-    \item $\vec{E}(x,y,z) = \vec{E_0} \frac{e^ikz}{1 + \tfrac{2iz}{kw_0^2}} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}\left(\tfrac{1}{1 + \tfrac{2iz}{kw_0^2}}\right)}\right)$
+    \item $\vec{E}(x,y,z) = \vec{E_0} \frac{e^{ikz}}{1 + \tfrac{2iz}{kw_0^2}} \exp\left({-\tfrac{x^2 + y^2}{w_0^2}\left(\tfrac{1}{1 + \tfrac{2iz}{kw_0^2}}\right)}\right)$
     \item $\vec{E}(x,y,z) = \vec{E_0} \frac{w_0}{w(z)}\exp\left(-\frac{x^2 + y^2}{w(z)^2}\right) \exp \left(i \left(kz - \eta(z) + \frac{k(x^2 + y^2)}{2 R(z)}\right)\right)$
     \item $w_0$ (waist) is a measure of the width of the beam at its narrowest point.
     \item $\eta(z) = \arctan (z/z_R)$ Gouy phase
@@ -246,7 +251,7 @@
 \graypar{Diffraction}
 \begin{squishlist}
     \item \textbf{Fresnel diffraction} $\tilde{\vec{E}}(k_x,k_y,z) = \tilde{\vec{E}}(k_x,k_y,0)e^{ikz} \exp\left({-i\frac{(k_x^2 + k_y^2)z}{2k}}\right)$\\
-    $\vec{E}(x,y,z) = \int \ud x' \ud y' \vec{E}(x',y',0) h(x-x', y-y', z)$ \\
+    $\vec{E}(x,y,z) = \int \ud x' \ud y' \vec{E}(x',y',0) h(x-x', y-y', z)$ \quad
     $h (u,v,z)= \frac{2\pi k}{iz} e^{ikz} \exp \left(i \frac{k(u^2 + v^2)}{2z}\right)$
     \item \textbf{Fraunhofer condition} (far-field) $z \gg \frac{k(x'^2 + y'^2)}{2}$ \\
     $\vec{E}(x,y,z\rightarrow \infty) = \frac{2\pi k}{iz} e^{ikz}e^{ik\frac{(x^2+y^2)}{2z}} \tilde{\vec{E}}(\frac{kx}{z}, \frac{ky}{z},0)$ \\ 
@@ -322,13 +327,11 @@
     \item $\chi = \chi' + i \chi'' \quad \vec{P} = \varepsilon_0 \chi \frac{\vec{E_0}}{2} e^{-i \omega t} +c.c. = \varepsilon_0 (\chi' \cos(\omega t) + \chi'' \sin(\omega t)) \vec{E_0} $\\
     $\chi = \frac{N}{V} \frac{d^2}{\varepsilon_0 \hbar} \frac{\omega_e - \omega + i\Gamma_D}{\Gamma_D^2 + \Omega_1^2 + (\omega - \omega_e)^2}$ \quad $n^2 = 1 + \chi$. In most situat.\ $\chi \ll 1 \Rightarrow n \approx 1 \Rightarrow n = 1 + \frac{\chi'}{2} + \frac{\chi''}{2}$
     \item $k = \frac{n \omega}{c} \quad k'=\left(1 + \frac{\chi'}{2}\right)\frac{\omega }{c} \quad k'' = \frac{\chi''}{2}\frac{\omega}{c} \quad \Longrightarrow E(z,t) = E_0 e^{-k'' z} \cos(k'z - \omega t)$
-\end{squishlist}
-
-\squishline
-
-\textbf{Laser operation}
-\begin{squishlist}
-    \item \textbf{Population inversion} $N_e - N_g > 0$ for light to be amplified
+    
+    \squishline
+    
+    \item \textbf{Laser operation}:
+    \textbf{Population inversion} $N_e - N_g > 0$ for light to be amplified
 \end{squishlist}
 
 \graysec{Molecular spectroscopy}
@@ -351,14 +354,14 @@
 \begin{squishlist}
     \item $\psi(q) = N_{\nu} H_{\nu}(q) \exp(-q^2/2)$ with $q = \left(\frac{\mu k}{\hbar^2}\right)^{1/4}x$ \squishsep $E_{\nu} = \hbar \omega (\nu + \frac{1}{2})$
     \item \textbf{Gross selection rule:} $\left.\der{\vec{d}}{q}\right|_0 \neq 0$ \quad as $\vec{d} = \vec{d}_0 + \left. \D{q}{\vec{d}}\right|_0$
-    \item \textbf{Specific selection rule:} $\Delta \nu = \pm 1$ (but $\Delta \nu = \pm 1$ transitions are always accomp. by $\Delta J = \pm 1$ trans.)
+    \item \textbf{Specific selection rule:} $\Delta \nu = \pm 1$ (but $\Delta \nu = \pm 1$ transitions \\ are always accomp. by $\Delta J = \pm 1$ trans.)
 \end{squishlist}
 
 \graypar{Rovibrational spectroscopy}
 \begin{squishlist}
     \item $E_{\nu, J} = (\nu + \frac{1}{2}) \hbar \omega + B_{\nu} J(J+1)$. Higher contrib. from $\nu$ \squishsep if rigid rotor $B_{\nu} = B$
     \item $\Delta \nu = \pm 1, \Delta J = \pm 1$.
-    \item R-Branch: $\nu \rightarrow \nu + 1,\, J \rightarrow J+1$ \quad P-Branch:  $\nu \rightarrow \nu + 1, \,  J \rightarrow J-1$
+    \item R-Branch: $\nu \leftrightarrow \nu + 1,\, J \leftrightarrow J+1$ \quad P-Branch:  $\nu \leftrightarrow \nu + 1, \,  J \leftrightarrow J-1$
     \item Absorption \quad R: $\Delta E = \hbar \omega + 2B(J+1)$, P: $\Delta E = \hbar \omega - 2BJ$ (rigid rotor)
     \item \textbf{Anharmonic Morse potential} $V(R) = D_e (1 - e^{-ax}), \, a = \sqrt{\frac{k}{2D_e}}$ \\
     $E_{\nu} = (\nu+\frac{1}{2}) \hbar \omega - (\nu - \frac{1}{2})^2 \hbar \omega \chi_e$, with $\chi_e$ anharmonicity constant \\
@@ -377,43 +380,33 @@
     \item Total ang.\ moment.\ $L^2 = L_a^2 + L_b^2 + L_c^2$, \quad $L_a = I_a \omega_a$ \quad $\Rightarrow$  \quad$\ham_{\text{rot}} = \frac{\hat{L}_a^2}{2I_a} + \frac{\hat{L}_b^2}{2I_b} + \frac{\hat{L}_c^2}{2I_c}$
     \item Linear rotor: $I_c = I_b, I_a=0$ \quad Prolate (rugby ball): $I_c = I_b > I_a$  \\
     Oblate (pancake): $I_c > I_b = I_a$ \quad Spherical: $I_a = I_b=I_c$ \quad Asym.:  $I_a \neq I_b \neq I_c$
-    \item     \item e.g. for prolate: $\ham_{\text{rot}} = \frac{\hat{L}_a^2}{2I_a} + \frac{\hat{L}_b^2}{2I_b} + \frac{\hat{L}^2 - \hat{L}_a^2 - \hat{L}_b^2}{2I_b} $ \quad $E_{\text{rot}} = B J(J+1) + (A - B)K^2$
+    \item e.g. for prolate: $\ham_{\text{rot}} = \frac{\hat{L}_a^2}{2I_a} + \frac{\hat{L}_b^2}{2I_b} + \frac{\hat{L}^2 - \hat{L}_a^2 - \hat{L}_b^2}{2I_b} $ \quad $E_{\text{rot}} = B J(J+1) + (A - B)K^2$
 \end{squishlist}
 
 \graypar{Vibrations of $N>2$ molecules}
 \begin{squishlist}
     \item Sum of $3N-6$ indip.\ harm.\ oscillat.\ ($3N-5$ if linear) \quad $E_V = \sum_{i=1}^{3N-6} \hbar \omega_i (\nu_i + \frac{1}{2})$
-    \item HOW TO?
-    \item Frank-London
+    \item Normal coordinates $Q_i = \sum_{k=1}^{3N} c_{ik} q_k$ \squishsep Select.\ rules: $\left. \D{Q_i}{\vec{d}}\right|_0 \neq 0 $ and $\Delta \nu_i = \pm 1$
+    \item \textbf{Electronic transit.\ rates:} $\Gamma_{fi} \propto |\braket{\psi_f | \vec{d}|\psi_i}|^2, \, \vec{d} = \sum_i z_i \vR_i + \sum_i e \vr_i \equiv \vec{d}_N(\{\vR\}) + \vec{d}_e(\{\vr\}) $\\
+    $\kpsi = \ket{\psi^{\text{vib}}} \ket{\psi^{\text{el}}} \Rightarrow \braket{\psi|\vec{d}_N|\psi} = 0 \Longrightarrow \braket{\psi_f | \vec{d}|\psi_i} = \braket{\psi_f^{\text{vib}}|\psi_i^{\text{vib}}} D^{\text{el}}(\vR_{\text{eq}})$ \\
+    $D^{\text{el}}(\vR_{\text{eq}}) \neq 0$ electr.\ trans.\ dipole moment \quad $\braket{\psi_f^{\text{vib}}|\psi_i^{\text{vib}}} \neq 0$ Franck-London factors
 \end{squishlist}
-
-\graysec{Stuff from exercises}
-\graypar{Rydberg atoms}
-Hydrogen-like atom excited to a very high $n$
-\begin{squishlist}
-    \item $\psi_{n,l,j,m_j}(r,\theta, \phi) = R_{n,l}(r) A_{l,j,m_j}(\theta,\phi)$ \quad $E_{n,l,j} = - \frac{E_I}{(n - \delta_{nlj})^2}$
-    \item $\braket{n,l,j,m_j|\vec{r}|n',l',j',m_j'} = \vec{A}(ljm_j, l'j'm_j')R(nl,n'l')$ \quad $\braket{||\vec{r}||} = R(nl,nl)$
-    \item $R(nl,n'l') \propto nn'$
-\end{squishlist}
-
-
 
 \graysec{Mixed}
 \begin{squishlist}
     \item \textbf{Viriel theorem:} if $V = \alpha x^s \Longrightarrow \braket{T} = \frac{1}{2}s \braket{V}$
     \squishsep $\frac{1}{2m}\hat{p}^2 = - \frac{\hbar^2}{2m} \dder{x}{}$
     \qquad $[\hat{x}, \hat{p}] = i \hbar$
-    \item $Y_{lm}(-\vr) = (-1)^l Y_{lm}(\vr)$
+    \item $Y_{lm}(-\vr) = (-1)^l Y_{lm}(\vr)$ \squishsep $J_{\pm} \ket{J,m_J} = \hbar \sqrt{(J \mp m_J)(J \pm m_J + 1)} \ket{J,m_J \pm 1 }$
     \item \textbf{Wigner-Eckart theorem:} if $T_{kq}$ is $q$ component of a spherical tensor of rank $k$ \\
     $\braket{n j m_j | T_{kq} | n' j' m_j'} = \frac{1}{\sqrt{2j'+1}} \underbrace{\braket{n j | T_k | n'j'}}_{\text{Red.\ matr.\ elem.}} \underbrace{\braket{j m_j ; k q | j' m_j'}}_{\text{Clebsch-Gordan}}$
-
-    \item $J_{\pm} \ket{J,m_J} = \hbar \sqrt{(J \mp m_J)(J \pm m_J + 1)} \ket{J,m_J \pm 1 }$
     \item \textbf{Pert.\ th.:} $E_n^{(1)}=\braket{\phi_n|V|\phi_n} \quad \ket{\psi^1_n} = \sum_{m\neq n}\frac{\braket{\phi_m|V|\phi_n}}{\varepsilon_n - \varepsilon_m} \ket{\phi_m}$ \quad
     $E_n^{(2)} = \sum_{m\neq n}\frac{|\braket{\phi_m|V|\phi_n}|^2}{\varepsilon_n - \varepsilon_m}$
     \item \textbf{Elliptical coordinates:} $\mu = \frac{1}{R} \left(|\vec{r}-\vec{R}_A| + | \vec{r} - \vec{R}_B| \right) \quad 
     \nu = \frac{1}{R} \left(|\vec{r}-\vec{R}_A| - | \vec{r} - \vec{R}_B| \right) \\
     \int d^3r = \int_1^\infty d\mu \int_{-1}^1 d \nu \int_0^{2\pi} d \phi \frac{R^3}{8} ( \mu^2 - \nu^2).$
     \item $\frac{1}{|\vr_1 - \vr_2|} = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{4\pi}{2l+1} \frac{r_<^l}{r_>^{l+1}} Y_l^{-m}(\theta_1, \phi_1) Y_l^{m}(\theta_2, \phi_2) \quad r_< = \min(r_1,r_2)$
+    \item $\vec{u} = \sqrt{\frac{4\pi}{3}}\left[Y_1^1(\theta,\phi) \vec{e}_+^* + Y_1^0(\theta,\phi)\vec{e}_0 + Y_1^{-1}(\theta,\phi)\vec{e}_-^*\right]$ où $\vec{e}_{\pm} = \frac{1}{\sqrt{2}}(\vec{e}_x \pm \vec{e}_y)$, $\vec{e}_0 = \vec{e}_z$
 \end{squishlist}
 
 \graysec{Integration stuff}
